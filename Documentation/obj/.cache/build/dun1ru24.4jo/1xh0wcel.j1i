@@ -1,1 +1,0 @@
-{"toc.yml":[{"File":"toc.yml","LogLevel":"error","Message":"Referenced TOC file C:\\Unity Projects\\My Packages\\unity-docfx\\Documentation\\manual\\toc.yml does not exist.","Phase":"BuildCommand.BuildCore.Build Document.CompilePhaseHandlerWithIncremental.TocDocumentProcessor.Prebuild.BuildTocDocument","Code":"InvalidTocInclude"}]}

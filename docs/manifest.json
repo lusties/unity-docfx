@@ -24,11 +24,47 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.LiveServer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.LiveServer.html",
+          "hash": "kqAr52xjzLGcHURe8HJTlUrTl37PYLKbIrJCA+S5KrA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.html",
+          "hash": "+bTf+5lzr287vV15+nxZK7QMNDER2zUSOFLN+rDVFYA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lustie.UnityDocfx.Docfx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lustie.UnityDocfx.Docfx.html",
+          "hash": "5phDrNEVZUgNlYZM7iCrx7JsT1rjFer+gRwAuC72p8M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Lustie.UnityDocfx.DocfxSetupTool.yml",
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.DocfxSetupTool.html",
-          "hash": "oTQGXg+K9vMwPagETBcll7M6nPWlI/YAq4HzYWvox14="
+          "hash": "EYGQdjl0o5B9yYvAPI0bXUAR4MCz0IrWQ0a+Ixb3SGw="
         }
       },
       "is_incremental": false,
@@ -40,7 +76,55 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.DocfxTemplatesPath.html",
-          "hash": "gkpgs1fdMdOvmcYbwMUJ1k2ddWWJW92sfh10r88MClY="
+          "hash": "/0Z9TFOApvcdeuPGy6LZsom+GUEgT2ou3wVf4B6As/8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lustie.UnityDocfx.JObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lustie.UnityDocfx.JObjectExtensions.html",
+          "hash": "0ftHFmXtpCWde0O6Gc+HNTyzZWj4nPggy4Fqy/FD4gQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lustie.UnityDocfx.SortOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lustie.UnityDocfx.SortOption.html",
+          "hash": "pbPsmHw8/yLnTfho6Xy2JKfrkuRmlquaC4k5rYyZVZA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lustie.UnityDocfx.SortOrder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lustie.UnityDocfx.SortOrder.html",
+          "hash": "kKK6zX/l6yZ8pFgMr79didYBI/It4A+LmVBo7BLetNs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lustie.UnityDocfx.TOC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lustie.UnityDocfx.TOC.html",
+          "hash": "L5IRk6csbI0xY4WOlIfuI6aNY1jZlLXieGQ3hjqZxyI="
         }
       },
       "is_incremental": false,
@@ -52,7 +136,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.UIPath.html",
-          "hash": "9jWYSrvnZSTb+yb/3bi9DbW11IWAC1nDtZsRoSOr4+o="
+          "hash": "bnAUpI1gPz1h1pW+BM5x7ajdPDqgQUn32PWAObadjIQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lustie.UnityDocfx.UnityDocset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lustie.UnityDocfx.UnityDocset.html",
+          "hash": "E0AOmxAO+z+tg4HO+xM7dvPC42k8f+rQBqLQma1PVic="
         }
       },
       "is_incremental": false,
@@ -64,7 +160,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.html",
-          "hash": "UdBpK+862So6rCX6Zqhl0k4s0ft+6aCctxhFE3Korq8="
+          "hash": "oQZApY5ZKbB4PvI9FRfOQa+tMTZXdhkZ0nmZkSr0YlE="
         }
       },
       "is_incremental": false,
@@ -76,7 +172,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "lAaqOx7OjTH642U/VRWSabUZoIxMZuBDw9kkPIm0IH0="
+          "hash": "9ESWXWw5gNegfawXLYD3CGdCsebGFOkKLZ3wA3Geq+Q="
         }
       },
       "is_incremental": false,
@@ -88,7 +184,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "81V5m0696aM91JcMKw/yJ7q5nRc1TeVm65LZypGJsXU="
+          "hash": "pJDZ9r4mZbR7+0piPOKr2cGW/64Trg3+pgRNMgiLALI="
         }
       },
       "is_incremental": false,
@@ -100,7 +196,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/Tutorial.html",
-          "hash": "Gm295LpFmuraCwJs3mWLw012GFqw5FDCHYkTDT7iC6M="
+          "hash": "0SDqZDQuDt1Gm9WVsW/Q+bf1x6/iUxVzwbGJd9wVJk4="
         }
       },
       "is_incremental": false,
@@ -112,7 +208,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/manual.html",
-          "hash": "RQUQ9rIqnzjEpd/4SpI55EKPn++gxEgLuugDN/u12gA="
+          "hash": "qSz1r9gipRSVIvCPc/UGJGBRsmgaqrtyLkeShgpZLN4="
         }
       },
       "is_incremental": false,
@@ -136,7 +232,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "DYLwxDfRcbZqEZpOW44oFUW0fSH7rmAe2XkdcsNctJ0="
+          "hash": "3p8KpWRO1z6fn35Pj5UknJbVpwc8D1IAUJPYYPWV5AI="
         }
       },
       "is_incremental": false,
@@ -146,25 +242,23 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because config changed.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "ConfigChanged"
+        "skipped_file_count": 0
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 3,
-          "skipped_file_count": 0
+          "skipped_file_count": 3
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 4,
-          "skipped_file_count": 0
+          "total_file_count": 12,
+          "skipped_file_count": 4
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

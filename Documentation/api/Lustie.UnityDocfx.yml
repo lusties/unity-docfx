@@ -4,9 +4,15 @@ items:
   commentId: N:Lustie.UnityDocfx
   id: Lustie.UnityDocfx
   children:
+  - Lustie.UnityDocfx.Docfx
   - Lustie.UnityDocfx.DocfxSetupTool
   - Lustie.UnityDocfx.DocfxTemplatesPath
+  - Lustie.UnityDocfx.JObjectExtensions
+  - Lustie.UnityDocfx.SortOption
+  - Lustie.UnityDocfx.SortOrder
+  - Lustie.UnityDocfx.TOC
   - Lustie.UnityDocfx.UIPath
+  - Lustie.UnityDocfx.UnityDocset
   langs:
   - csharp
   - vb
@@ -17,11 +23,44 @@ items:
   assemblies:
   - cs.temp.dll
 references:
+- uid: Lustie.UnityDocfx.Docfx
+  commentId: T:Lustie.UnityDocfx.Docfx
+  parent: Lustie.UnityDocfx
+  name: Docfx
+  nameWithType: Docfx
+  fullName: Lustie.UnityDocfx.Docfx
 - uid: Lustie.UnityDocfx.DocfxSetupTool
   commentId: T:Lustie.UnityDocfx.DocfxSetupTool
   name: DocfxSetupTool
   nameWithType: DocfxSetupTool
   fullName: Lustie.UnityDocfx.DocfxSetupTool
+- uid: Lustie.UnityDocfx.JObjectExtensions
+  commentId: T:Lustie.UnityDocfx.JObjectExtensions
+  name: JObjectExtensions
+  nameWithType: JObjectExtensions
+  fullName: Lustie.UnityDocfx.JObjectExtensions
+- uid: Lustie.UnityDocfx.SortOption
+  commentId: T:Lustie.UnityDocfx.SortOption
+  parent: Lustie.UnityDocfx
+  name: SortOption
+  nameWithType: SortOption
+  fullName: Lustie.UnityDocfx.SortOption
+- uid: Lustie.UnityDocfx.SortOrder
+  commentId: T:Lustie.UnityDocfx.SortOrder
+  parent: Lustie.UnityDocfx
+  name: SortOrder
+  nameWithType: SortOrder
+  fullName: Lustie.UnityDocfx.SortOrder
+- uid: Lustie.UnityDocfx.TOC
+  commentId: T:Lustie.UnityDocfx.TOC
+  name: TOC
+  nameWithType: TOC
+  fullName: Lustie.UnityDocfx.TOC
+- uid: Lustie.UnityDocfx.UnityDocset
+  commentId: T:Lustie.UnityDocfx.UnityDocset
+  name: UnityDocset
+  nameWithType: UnityDocset
+  fullName: Lustie.UnityDocfx.UnityDocset
 - uid: Lustie.UnityDocfx.UIPath
   commentId: T:Lustie.UnityDocfx.UIPath
   name: UIPath
@@ -32,3 +71,20 @@ references:
   name: DocfxTemplatesPath
   nameWithType: DocfxTemplatesPath
   fullName: Lustie.UnityDocfx.DocfxTemplatesPath
+- uid: Lustie.UnityDocfx
+  commentId: N:Lustie.UnityDocfx
+  name: Lustie.UnityDocfx
+  nameWithType: Lustie.UnityDocfx
+  fullName: Lustie.UnityDocfx
+  spec.csharp:
+  - uid: Lustie
+    name: Lustie
+  - name: .
+  - uid: Lustie.UnityDocfx
+    name: UnityDocfx
+  spec.vb:
+  - uid: Lustie
+    name: Lustie
+  - name: .
+  - uid: Lustie.UnityDocfx
+    name: UnityDocfx

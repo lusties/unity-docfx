@@ -40,5 +40,10 @@
 }
 
 .label-s {
-    font-size: 18px;
+    font-size: 17px;
+}
+
+.list-reorderable {
+    margin-bottom: 5px;
+    margin-top: 5px;
 }

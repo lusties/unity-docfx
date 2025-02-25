@@ -1,5 +1,10 @@
-# Welcome to My Docs
+# unity-docfx
 
-This is an auto-generated **index.md** file because no README.md was found.
+## Installation
 
-Feel free to edit this file to customize your documentation's home page.
+```
+https://github.com/lusties/unity-docfx.git?path=Assets/UnityDocfx
+```
+
+Example:
+https://lusties.github.io/unity-docfx/

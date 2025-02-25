@@ -1,0 +1,21 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global
+  id: Global
+  children:
+  - Global.LiveServer
+  langs:
+  - csharp
+  - vb
+  name: ''
+  nameWithType: ''
+  fullName: ''
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Global.LiveServer
+  commentId: T:Global.LiveServer
+  name: LiveServer
+  nameWithType: LiveServer
+  fullName: LiveServer

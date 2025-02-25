@@ -14,10 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   folder: Documentation
   docfxJson:
+    src:
+    - Assets/**/*.cs
+    exclude:
+    - Assets/Plugins/**
+    - Assets/Editor/**
     _appTitle: Unity Docfx title wtf baby a
     _appFooter: Unity Docfx footer
     _enableSearch: 1
-    dest: C:/Unity Projects/My Packages/unity-docfx/_site
+    baseUrl: a
+    dest: C:/Unity Projects/My Packages/unity-docfx/docs
   TOC:
   - name: Home
     href: index.md

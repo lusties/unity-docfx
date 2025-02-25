@@ -34,7 +34,7 @@ namespace Lustie.UnityDocfx
         }
 
         /// <summary>
-        /// Get property as <see cref="JObject"/>
+        /// Get property as JObject
         /// </summary>
         public static JObject GetJObject(this JObject jobject, string propertyName)
         {
@@ -42,13 +42,24 @@ namespace Lustie.UnityDocfx
         }
 
         /// <summary>
-        /// Get property as <see cref="JValue"/>
+        /// Get property as JArray
+        /// </summary>
+        public static JArray GetJArray(this JObject jobject, string propertyName)
+        {
+            return jobject.GetValue(propertyName) as JArray;
+        }
+
+        /// <summary>
+        /// Get property as JValue
         /// </summary>
         public static JValue GetJValue(this JObject jobject, string propertyName)
         {
             return jobject.GetValue(propertyName) as JValue;
         }
 
+        /// <summary>
+        /// Get property value (JToken)
+        /// </summary>
         public static T GetValue<T>(this JObject jobject, string propertyName)
             where T : JToken
         {

@@ -12,39 +12,27 @@ using System.Linq;
 using System.Text;
 using Unity.Plastic.Newtonsoft.Json.Linq;
 using UnityEditor.UIElements;
+using System.Text.RegularExpressions;
+using System.Net.Http;
+using System;
+using System.Threading.Tasks;
+using static PlasticPipe.PlasticProtocol.Messages.NegotiationCommand;
 
 namespace Lustie.UnityDocfx
 {
     public class DocfxSetupTool : EditorWindow
     {
-        private string githubRepo = "your-username/your-repo";
+        private const string Url = "http://localhost:8080";
+
         private string unityVersion = "2022.3.27f1";
         private bool includeEditor = false;
 
         private const string docfxExecutable = "docfx";
 
-        [MenuItem("Lustie/UnityDocfx Generator")]
+        [MenuItem("Lustie/UnityDocfx Tool")]
         public static void ShowWindow()
         {
-            GetWindow<DocfxSetupTool>("DocFX Setup Tool");
-        }
-
-        void OnGUI()
-        {
-            GUILayout.Label("Auto Setup DocFX for Unity Project", EditorStyles.boldLabel);
-
-
-            includeEditor = EditorGUILayout.Toggle("Include Editor Scripts", includeEditor);
-
-            GUILayout.Space(10);
-
-
-            GUILayout.Space(10);
-            if (GUILayout.Button("Copy README.md to index.md"))
-            {
-                CopyReadmeToIndex();
-            }
-
+            GetWindow<DocfxSetupTool>("UnityDocfx Tool");
         }
 
         private void CreateGUI()
@@ -59,6 +47,7 @@ namespace Lustie.UnityDocfx
             var btnBuild = templateContainer.Q<Button>("btn-build");
             btnBuild.RegisterCallback<ClickEvent>(evt =>
             {
+                CopyReadmeToIndex();
                 GenerateDocfxJson();
                 GenerateApiRulesConfig();
                 GenerateTocYml();
@@ -72,15 +61,13 @@ namespace Lustie.UnityDocfx
             });
 
             templateContainer.Q<TextField>("txt-doc-folder").BindProperty(docsetSerObj.FindProperty("folder"));
-            var txtGithubName = templateContainer.Q<TextField>("txt-git-name");
+
+
+            templateContainer.Q<TextField>("txt-git-name").BindProperty(docsetSerObj.FindProperty("docfxJson.baseUrl"));
+
+
             var txtUntiyVersion = templateContainer.Q<TextField>("txt-unity-v");
 
-
-            txtGithubName.value = githubRepo;
-            txtGithubName.RegisterValueChangedCallback(evt =>
-            {
-                githubRepo = evt.newValue;
-            });
 
             txtUntiyVersion.value = unityVersion;
             txtUntiyVersion.RegisterValueChangedCallback(evt =>
@@ -89,15 +76,18 @@ namespace Lustie.UnityDocfx
             });
 
 
-            var btnGitAction = templateContainer.Q<Button>("btn-git-action");
-            btnGitAction.RegisterCallback<ClickEvent>(evt =>
+            templateContainer.Q<Button>("btn-git-action").RegisterCallback<ClickEvent>(evt =>
             {
                 GenerateGitHubAction();
             });
 
+            templateContainer.Q<Button>("btn-build-cmd").RegisterCallback<ClickEvent>(evt =>
+            {
+                BuildAndServeDocfxWithCmd();
+            });
+
             QueryDocfxSettings();
-            QueryTOCSettings();
-            CreateTOCListView();
+            QueryTOCLSettings();
             QueryOutputSettings();
         }
 
@@ -127,6 +117,9 @@ namespace Lustie.UnityDocfx
             docfxSettingsContainer.Q<TextField>("_appTitle").BindProperty(docsetSerObj.FindProperty("docfxJson._appTitle"));
             docfxSettingsContainer.Q<TextField>("_appFooter").BindProperty(docsetSerObj.FindProperty("docfxJson._appFooter"));
             docfxSettingsContainer.Q<Toggle>("_enableSearch").BindProperty(docsetSerObj.FindProperty("docfxJson._enableSearch"));
+
+            docfxSettingsContainer.Q<ListView>("list-src").BindProperty(docsetSerObj.FindProperty("docfxJson.src"));
+            docfxSettingsContainer.Q<ListView>("list-exclude").BindProperty(docsetSerObj.FindProperty("docfxJson.exclude"));
         }
 
         void QueryOutputSettings()
@@ -138,7 +131,7 @@ namespace Lustie.UnityDocfx
             outputContainer.Q<Button>("btn-output-choose").RegisterCallback<ClickEvent>(evt =>
             {
                 string outputDir = EditorUtility.OpenFolderPanel("Choose Output Directory", "", "");
-                if(!string.IsNullOrWhiteSpace(outputDir))
+                if (!string.IsNullOrWhiteSpace(outputDir))
                     txtDest.value = outputDir;
             });
 
@@ -149,73 +142,52 @@ namespace Lustie.UnityDocfx
                 {
                     Process.Start("explorer.exe", folderPath);
                 }
+                else
+                {
+                    EditorUtility.DisplayDialog("Path doesn't exist", $"Path: {folderPath} DOES NOT EXIST", "OK");
+                }
+            });
+
+            // Go live
+            outputContainer.Q<Button>("btn-go-live").RegisterCallback<ClickEvent>(evt =>
+            {
+                GoLive();
             });
         }
 
         #endregion
 
         #region TABLE OF CONTENTS
-        ListView listView;
-        int selectedTOCIndex => listView.selectedIndex;
+        ListView listViewTOC;
+        int selectedTOCIndex => listViewTOC.selectedIndex;
 
-        TextField txtTocName;
-        TextField txtTocHref;
-        EnumField efSortOption;
-        EnumField efSortOrder;
-
-        void QueryTOCSettings()
+        void OnTOCItemSelected()
         {
+            SerializedProperty selectedElementSP = docsetSerObj.FindProperty("TOC").GetArrayElementAtIndex(selectedTOCIndex);
+
             VisualElement tocContentContainer = rootVisualElement.Q("toc-content-container");
-            txtTocName = tocContentContainer.Q<TextField>("toc-name");
-            txtTocHref = tocContentContainer.Q<TextField>("toc-href");
-            efSortOption = tocContentContainer.Q<EnumField>("sort-option");
-            efSortOrder = tocContentContainer.Q<EnumField>("sort-order");
-
-            txtTocName.RegisterValueChangedCallback(evt =>
-            {
-                unityDocset.TOC[selectedTOCIndex].name = evt.newValue;
-            });
-            txtTocHref.RegisterValueChangedCallback(evt =>
-            {
-                unityDocset.TOC[selectedTOCIndex].href = evt.newValue;
-            });
-            efSortOption.RegisterValueChangedCallback(evt =>
-            {
-                unityDocset.TOC[selectedTOCIndex].sortOption = (SortOption)evt.newValue;
-            });
-            efSortOrder.RegisterValueChangedCallback(evt =>
-            {
-                unityDocset.TOC[selectedTOCIndex].sortOrder = (SortOrder)evt.newValue;
-            });
+            tocContentContainer.Q<TextField>("toc-name").BindProperty(selectedElementSP.FindPropertyRelative("name"));
+            tocContentContainer.Q<TextField>("toc-href").BindProperty(selectedElementSP.FindPropertyRelative("href"));
+            tocContentContainer.Q<EnumField>("sort-option").BindProperty(selectedElementSP.FindPropertyRelative("sortOption"));
+            tocContentContainer.Q<EnumField>("sort-order").BindProperty(selectedElementSP.FindPropertyRelative("sortOrder"));
         }
 
-        void OnTOCItemSelected(TOC toc)
+        void QueryTOCLSettings()
         {
-            txtTocName.SetValueWithoutNotify(toc.name);
-            txtTocHref.SetValueWithoutNotify(toc.href);
-            efSortOption.SetValueWithoutNotify(toc.sortOption);
-            efSortOrder.SetValueWithoutNotify(toc.sortOrder);
-        }
-
-        void CreateTOCListView()
-        {
-            listView = rootVisualElement.Q<ListView>();
-            listView.selectionType = SelectionType.Single;
-            listView.fixedItemHeight = 25;
-
-
-            listView.showAddRemoveFooter = true;
-            listView.reorderable = true;
+            listViewTOC = rootVisualElement.Q<ListView>("list-toc");
+            listViewTOC.selectionType = SelectionType.Single;
+            listViewTOC.fixedItemHeight = 25;
+            listViewTOC.showBorder = true;
+            listViewTOC.showAddRemoveFooter = true;
+            listViewTOC.reorderable = true;
             //listView.horizontalScrollingEnabled = true;
-            listView.reorderMode = ListViewReorderMode.Animated;
-            listView.itemsSource = unityDocset.TOC;
-            listView.makeItem = MakeItem;
-            listView.bindItem = BindItem;
-            listView.itemsChosen += (items) =>
-            {
-                OnTOCItemSelected(items.FirstOrDefault() as TOC);
-            };
-            OnTOCItemSelected(unityDocset.TOC[listView.selectedIndex = 0]);
+            listViewTOC.reorderMode = ListViewReorderMode.Animated;
+            listViewTOC.itemsSource = unityDocset.TOC;
+            listViewTOC.makeItem = MakeItem;
+            listViewTOC.bindItem = BindItem;
+            listViewTOC.itemsChosen += (items) => { OnTOCItemSelected(); };
+            listViewTOC.selectedIndex = 0;
+            OnTOCItemSelected();
         }
 
         VisualElement MakeItem()
@@ -245,10 +217,8 @@ namespace Lustie.UnityDocfx
             SaveDocset();
         }
 
+        #region FILES GENERATOR
 
-        /// <summary>
-        /// Generate docfx.json
-        /// </summary>
         void GenerateDocfxJson()
         {
             if (!DocfxTemplatesPath.LoadTemplates("docfx.json", out string templateFilePath))
@@ -258,18 +228,26 @@ namespace Lustie.UnityDocfx
             }
 
             string docfxJson = File.ReadAllText(templateFilePath);
-            JObject metadata = JObject.Parse(docfxJson);
-            JObject build = metadata.GetJObject("build");
+            JObject docfxRoot = JObject.Parse(docfxJson);
 
-            //build >> global metadata
+            //metadata.src files:
+            JArray metadata = docfxRoot.GetValue<JArray>("metadata");
+            JObject srcObj = metadata[0] as JObject;
+            JArray srcArr = srcObj.GetValue<JArray>("src");
+            JObject srcArrObj = srcArr[0] as JObject;
+            srcArrObj.GetValue<JArray>("files").ReplaceAll(unityDocset.docfxJson.src);
+            srcArrObj.GetValue<JArray>("exclude").ReplaceAll(unityDocset.docfxJson.exclude);
+
+            JObject build = docfxRoot.GetJObject("build");
+
+            //build.global metadata
             JObject globalMetadata = build.GetJObject("globalMetadata");
             globalMetadata.GetJValue("_appTitle").Replace(unityDocset.docfxJson._appTitle);
             globalMetadata.GetJValue("_appFooter").Replace(unityDocset.docfxJson._appFooter);
             globalMetadata.GetJValue("_enableSearch").Replace(unityDocset.docfxJson._enableSearch);
 
             //dest
-            metadata.GetJValue("dest").Replace(unityDocset.docfxJson.dest);
-
+            build.GetJValue("dest").Replace(unityDocset.docfxJson.dest);
 
             string docfxFolderPath = Path.Combine(Directory.GetCurrentDirectory(), unityDocset.folder);
 
@@ -281,13 +259,10 @@ namespace Lustie.UnityDocfx
             string tocFilePath = Path.Combine(docfxFolderPath, "docfx.json");
 
             //File.Copy(templateFilePath, tocFilePath, true);
-            File.WriteAllText(tocFilePath, metadata.ToString());
+            File.WriteAllText(tocFilePath, docfxRoot.ToString());
             Debug.Log("docfx.json generated at " + tocFilePath);
         }
 
-        /// <summary>
-        /// Generate Github workflow
-        /// </summary>
         void GenerateGitHubAction()
         {
             string workflowContent = @"name: Build and Deploy DocFX
@@ -329,29 +304,26 @@ jobs:
             EditorUtility.DisplayDialog("Success", "GitHub Action workflow generated at " + workflowPath, "OK");
         }
 
-        /// <summary>
-        /// Create or Copy README.md to index.md
-        /// </summary>
         private void CopyReadmeToIndex()
         {
             string readmePath = Path.Combine(Directory.GetCurrentDirectory(), "README.md");
             string indexPath = Path.Combine(Directory.GetCurrentDirectory(), unityDocset.folder, "index.md");
 
-            
+
             if (!Directory.Exists(Path.Combine(Directory.GetCurrentDirectory(), unityDocset.folder)))
             {
                 Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory(), unityDocset.folder));
             }
 
-            
+
             if (File.Exists(readmePath))
             {
                 File.Copy(readmePath, indexPath, true);
-                EditorUtility.DisplayDialog("Success", $"Copied README.md to {indexPath}", "OK");
+                Debug.Log($"Copied README.md to {indexPath}");
             }
             else
             {
-               
+
                 string defaultIndexContent = @"# Welcome to My Docs
 
 This is an auto-generated **index.md** file because no README.md was found.
@@ -359,13 +331,10 @@ This is an auto-generated **index.md** file because no README.md was found.
 Feel free to edit this file to customize your documentation's home page.
 ";
                 File.WriteAllText(indexPath, defaultIndexContent);
-                EditorUtility.DisplayDialog("Info", $"No README.md found.\nCreated a default index.md at {indexPath}", "OK");
+                Debug.Log($"No README.md found.\nCreated a default index.md at {indexPath}");
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         void GenerateApiRulesConfig()
         {
             if (!DocfxTemplatesPath.LoadTemplates("apiRules.yml", out string templateFilePath))
@@ -452,34 +421,120 @@ Feel free to edit this file to customize your documentation's home page.
             File.WriteAllText(tocFilePath, docTOCContent.ToString());
         }
 
-        /// <summary>
-        /// RUn DocFX cmd (build or serve)
-        /// </summary>
+        #endregion
+
+        #region BUILD / SERVE DOCFX
+
+        void BuildAndServeDocfxWithCmd()
+        {
+            string path = Directory.GetParent(Application.dataPath).FullName;
+            string command = $"copy this command to build: docfx {unityDocset.folder}/docfx.json --serve";
+            ProcessStartInfo startInfo = new ProcessStartInfo
+            {
+                FileName = "cmd.exe",
+                WorkingDirectory = path,
+                Arguments = $"/K echo {command}",
+                UseShellExecute = true,
+                CreateNoWindow = false,
+            };
+
+            using Process process = new Process { StartInfo = startInfo };
+            process.Disposed += (e, i) => { Debug.Log($"build with cmd ended"); };
+            process.Start();
+            EditorUtility.DisplayDialog("Being build with cmd", "See cmd window", "OK");
+            process.WaitForExit();
+        }
+
         void RunDocfxCommand(string argument)
         {
             string docfxJsonFullPath = Path.Combine(Directory.GetCurrentDirectory(), unityDocset.folder, "docfx.json");
-
             ProcessStartInfo psi = new ProcessStartInfo
             {
                 FileName = "cmd.exe",
                 Arguments = $"/C {docfxExecutable} \"{docfxJsonFullPath}\" {argument}",
+                //WorkingDirectory = Directory.GetParent(Application.dataPath).FullName,
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
                 UseShellExecute = false,
                 CreateNoWindow = true
             };
 
-            Process process = new Process { StartInfo = psi };
+            using Process process = new Process { StartInfo = psi };
 
-            process.OutputDataReceived += (sender, e) => { if (!string.IsNullOrEmpty(e.Data)) UnityEngine.Debug.Log(e.Data); };
-            process.ErrorDataReceived += (sender, e) => { if (!string.IsNullOrEmpty(e.Data)) UnityEngine.Debug.LogError(e.Data); };
+            HashSet<string> warnings = new HashSet<string>()
+            {
+                "No files",
+                "Unable to",
+                "Invalid",
+                "404 (Not Found)",
+                "will be ignored",
+                "No detected",
+            };
+
+            string warningPattern = string.Join("|", warnings);
+            Regex warningRegex = new Regex(warningPattern, RegexOptions.IgnoreCase);
+
+            process.OutputDataReceived += (sender, e) =>
+            {
+                if (!string.IsNullOrEmpty(e.Data))
+                {
+                    if (warningRegex.IsMatch(e.Data))
+                        UnityEngine.Debug.LogWarning($"[Warning] {e.Data}");
+                    else
+                        UnityEngine.Debug.Log(e.Data);
+                }
+            };
+
+            process.ErrorDataReceived += (sender, e) =>
+            {
+                if (!string.IsNullOrEmpty(e.Data))
+                {
+                    if (Regex.IsMatch(e.Data, @"\bCS\d{4}:\b"))
+                        UnityEngine.Debug.LogWarning($"[Warning] {e.Data}");
+                    else
+                        UnityEngine.Debug.LogError($"[Error] {e.Data}");
+                }
+            };
 
             process.Start();
             process.BeginOutputReadLine();
             process.BeginErrorReadLine();
             process.WaitForExit();
+            process.Exited += (sender, e) => { Debug.Log("finished"); };
+            process.Disposed += (sender, e) => { Debug.Log("finished"); };
 
-            EditorUtility.DisplayDialog("DocFX", $"DocFX command '{argument}' finished with exit code {process.ExitCode}", "OK");
+            int port = 18080;
+            string folderPath = unityDocset.docfxJson.dest;
+
+            if(server)
+            {
+                server.Dispose();
+            }
+            server = new LiveServer(folderPath, port);
+            server.Run();
+            Application.OpenURL(server.GetUrl());
         }
+
+        #endregion
+
+        #region
+
+        static LiveServer server;
+
+        void GoLive()
+        {
+            int port = 18080;
+            string folderPath = unityDocset.docfxJson.dest;
+
+            if (server)
+            {
+                server.Dispose();
+            }
+            server = new LiveServer(folderPath, port);
+            server.Run();
+            //Application.OpenURL(server.GetUrl());
+        }
+        
+        #endregion
     }
 }

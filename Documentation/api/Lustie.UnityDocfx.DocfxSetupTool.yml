@@ -16,7 +16,7 @@ items:
   source:
     id: DocfxSetupTool
     path: ''
-    startLine: 11
+    startLine: 68
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -39,7 +39,7 @@ items:
   source:
     id: ShowWindow
     path: ''
-    startLine: 20
+    startLine: 77
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx

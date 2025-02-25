@@ -1,37 +1,77 @@
 {
+  "api/Global.html": {
+    "href": "api/Global.html",
+    "title": "Namespace | Unity Docfx title wtf baby a",
+    "keywords": "Namespace Classes LiveServer"
+  },
+  "api/Global.LiveServer.html": {
+    "href": "api/Global.LiveServer.html",
+    "title": "Class LiveServer | Unity Docfx title wtf baby a",
+    "keywords": "Class LiveServer Inheritance object LiveServer Implements System.IDisposable Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Global Assembly: cs.temp.dll.dll Syntax public class LiveServer : IDisposable Constructors LiveServer(string, int) Declaration public LiveServer(string folderPath, int port) Parameters Type Name Description string folderPath int port Methods Dispose() Declaration public void Dispose() GetUrl() Declaration public string GetUrl() Returns Type Description string Run() Declaration public void Run() Operators implicit operator bool(LiveServer) Declaration public static implicit operator bool(LiveServer server) Parameters Type Name Description LiveServer server Returns Type Description bool Implements System.IDisposable"
+  },
+  "api/Lustie.UnityDocfx.Docfx.html": {
+    "href": "api/Lustie.UnityDocfx.Docfx.html",
+    "title": "Class Docfx | Unity Docfx title wtf baby a",
+    "keywords": "Class Docfx Inheritance object Docfx Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax [Serializable] public class Docfx Fields _appFooter build.globalMetadata._appFooter Declaration public string _appFooter Field Value Type Description string _appTitle build.globalMetadata._appTitle Declaration public string _appTitle Field Value Type Description string _enableSearch build.globalMetadata._enableSearch Declaration public bool _enableSearch Field Value Type Description bool baseUrl sitemap.baseUrl Declaration public string baseUrl Field Value Type Description string dest build.dest Declaration public string dest Field Value Type Description string exclude metadata.src.exclude Declaration public List<string> exclude Field Value Type Description System.Collections.Generic.List<T><string> src metadata.src.files Declaration public List<string> src Field Value Type Description System.Collections.Generic.List<T><string>"
+  },
   "api/Lustie.UnityDocfx.DocfxSetupTool.html": {
     "href": "api/Lustie.UnityDocfx.DocfxSetupTool.html",
-    "title": "Class DocfxSetupTool | Example Unity Documentation",
+    "title": "Class DocfxSetupTool | Unity Docfx title wtf baby a",
     "keywords": "Class DocfxSetupTool Inheritance object DocfxSetupTool Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax public class DocfxSetupTool : EditorWindow Methods ShowWindow() Declaration public static void ShowWindow()"
   },
   "api/Lustie.UnityDocfx.DocfxTemplatesPath.html": {
     "href": "api/Lustie.UnityDocfx.DocfxTemplatesPath.html",
-    "title": "Class DocfxTemplatesPath | Example Unity Documentation",
+    "title": "Class DocfxTemplatesPath | Unity Docfx title wtf baby a",
     "keywords": "Class DocfxTemplatesPath Inheritance object DocfxTemplatesPath Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax public class DocfxTemplatesPath Methods CurrentPath() Get current path Declaration public static string CurrentPath() Returns Type Description string LoadTemplates(string, out string) Declaration public static bool LoadTemplates(string fileName, out string filePath) Parameters Type Name Description string fileName string filePath Returns Type Description bool"
   },
   "api/Lustie.UnityDocfx.html": {
     "href": "api/Lustie.UnityDocfx.html",
-    "title": "Namespace Lustie.UnityDocfx | Example Unity Documentation",
-    "keywords": "Namespace Lustie.UnityDocfx Classes DocfxSetupTool DocfxTemplatesPath UIPath"
+    "title": "Namespace Lustie.UnityDocfx | Unity Docfx title wtf baby a",
+    "keywords": "Namespace Lustie.UnityDocfx Classes Docfx DocfxSetupTool DocfxTemplatesPath JObjectExtensions TOC UIPath UnityDocset Enums SortOption SortOrder"
+  },
+  "api/Lustie.UnityDocfx.JObjectExtensions.html": {
+    "href": "api/Lustie.UnityDocfx.JObjectExtensions.html",
+    "title": "Class JObjectExtensions | Unity Docfx title wtf baby a",
+    "keywords": "Class JObjectExtensions Inheritance object JObjectExtensions Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax public static class JObjectExtensions Methods GetJArray(JObject, string) Get property as JArray Declaration public static JArray GetJArray(this JObject jobject, string propertyName) Parameters Type Name Description JObject jobject string propertyName Returns Type Description JArray GetJObject(JObject, string) Get property as JObject Declaration public static JObject GetJObject(this JObject jobject, string propertyName) Parameters Type Name Description JObject jobject string propertyName Returns Type Description JObject GetJValue(JObject, string) Get property as JValue Declaration public static JValue GetJValue(this JObject jobject, string propertyName) Parameters Type Name Description JObject jobject string propertyName Returns Type Description JValue GetValue<T>(JObject, string) Get property value (JToken) Declaration public static T GetValue<T>(this JObject jobject, string propertyName) where T : JToken Parameters Type Name Description JObject jobject string propertyName Returns Type Description T Type Parameters Name Description T ReplaceValues(JToken, string, string) Function to recursively replace values Declaration public static void ReplaceValues(this JToken token, string target, string replacement) Parameters Type Name Description JToken token string target string replacement"
+  },
+  "api/Lustie.UnityDocfx.SortOption.html": {
+    "href": "api/Lustie.UnityDocfx.SortOption.html",
+    "title": "Enum SortOption | Unity Docfx title wtf baby a",
+    "keywords": "Enum SortOption Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax public enum SortOption Fields Name Description Custom Name"
+  },
+  "api/Lustie.UnityDocfx.SortOrder.html": {
+    "href": "api/Lustie.UnityDocfx.SortOrder.html",
+    "title": "Enum SortOrder | Unity Docfx title wtf baby a",
+    "keywords": "Enum SortOrder Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax public enum SortOrder Fields Name Description Ascending Decending"
+  },
+  "api/Lustie.UnityDocfx.TOC.html": {
+    "href": "api/Lustie.UnityDocfx.TOC.html",
+    "title": "Class TOC | Unity Docfx title wtf baby a",
+    "keywords": "Class TOC Inheritance object TOC Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax [Serializable] public class TOC Constructors TOC(string, string) Declaration public TOC(string name, string href) Parameters Type Name Description string name string href Fields href Declaration public string href Field Value Type Description string name Declaration public string name Field Value Type Description string sortOption Declaration public SortOption sortOption Field Value Type Description SortOption sortOrder Declaration public SortOrder sortOrder Field Value Type Description SortOrder"
   },
   "api/Lustie.UnityDocfx.UIPath.html": {
     "href": "api/Lustie.UnityDocfx.UIPath.html",
-    "title": "Class UIPath | Example Unity Documentation",
+    "title": "Class UIPath | Unity Docfx title wtf baby a",
     "keywords": "Class UIPath Inheritance object UIPath Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax public static class UIPath Methods LoadUss(string) Declaration public static StyleSheet LoadUss(string fileName) Parameters Type Name Description string fileName Returns Type Description StyleSheet LoadUxml(string) Declaration public static VisualTreeAsset LoadUxml(string fileName) Parameters Type Name Description string fileName Returns Type Description VisualTreeAsset UxmlAssetPath(string) Declaration public static string UxmlAssetPath(string fileName) Parameters Type Name Description string fileName Returns Type Description string"
+  },
+  "api/Lustie.UnityDocfx.UnityDocset.html": {
+    "href": "api/Lustie.UnityDocfx.UnityDocset.html",
+    "title": "Class UnityDocset | Unity Docfx title wtf baby a",
+    "keywords": "Class UnityDocset Inheritance object UnityDocset Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax public class UnityDocset : ScriptableObject Fields docfxJson Declaration public Docfx docfxJson Field Value Type Description Docfx folder Declaration public string folder Field Value Type Description string TOC Declaration public List<TOC> TOC Field Value Type Description System.Collections.Generic.List<T><TOC>"
   },
   "index.html": {
     "href": "index.html",
-    "title": "Welcome to My Docs | Example Unity Documentation",
-    "keywords": "Welcome to My Docs This is an auto-generated index.md file because no README.md was found. Feel free to edit this file to customize your documentation's home page."
+    "title": "unity-docfx | Unity Docfx title wtf baby a",
+    "keywords": "unity-docfx Installation https://github.com/lusties/unity-docfx.git?path=Assets/UnityDocfx Example: https://lusties.github.io/unity-docfx/"
   },
   "manual/manual.html": {
     "href": "manual/manual.html",
-    "title": "| Example Unity Documentation",
+    "title": "| Unity Docfx title wtf baby a",
     "keywords": "Note Information the user should notice even if skimming. Tip Optional information to help a user be more successful. Important Essential information required for user success. Caution Negative potential consequences of an action. Warning Dangerous certain consequences of an action. This sentence uses $ delimiters to show math inline: $\\sqrt{3x-1}+(1+x)^2$ flowchart LR A[Hard] -->|Text| B(Round) B --> C{Decision} C -->|One| D[Result 1] C -->|Two| E[Result 2] Linux Windows Content for Linux... Content for Windows..."
   },
   "manual/Tutorial.html": {
     "href": "manual/Tutorial.html",
-    "title": "| Example Unity Documentation",
+    "title": "| Unity Docfx title wtf baby a",
     "keywords": "Note Information the user should notice even if skimming. Tip Optional information to help a user be more successful. Important Essential information required for user success. Caution Negative potential consequences of an action. Warning Dangerous certain consequences of an action. This sentence uses $ delimiters to show math inline: $\\sqrt{3x-1}+(1+x)^2$ flowchart LR A[Hard] -->|Text| B(Round) B --> C{Decision} C -->|One| D[Result 1] C -->|Two| E[Result 2] Linux Windows Content for Linux... Content for Windows..."
   }
 }

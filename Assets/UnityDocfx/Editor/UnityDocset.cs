@@ -10,10 +10,23 @@ namespace Lustie.UnityDocfx
 
         public Docfx docfxJson = new Docfx()
         {
+            src = new List<string>()
+            {
+                "Assets/**/*.cs"
+            },
+
+            exclude = new List<string>()
+            {
+                "Assets/Plugins/**",
+            },
+
             _appTitle = "Unity Docfx title",
             _appFooter = "Unity Docfx footer",
             _enableSearch = true,
-            dest = "../_site",
+
+            baseUrl = "",
+
+            dest = "../docs",
 
         };
 

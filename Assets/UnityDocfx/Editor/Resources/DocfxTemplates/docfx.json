@@ -5,7 +5,6 @@
         {
           "src": "..",
           "files": [
-            "Assets/*.cs"
           ],
           "exclude": [
             "Assets/Plugins/**",
@@ -15,14 +14,6 @@
       ],
       "globalNamespaceId": "Global",
       "dest": "api",
-      "references": [
-        {
-          "assembly": "C:/Program Files/Unity/Hub/Editor/2022.3.27f1/Editor/Data/Managed/UnityEngine.dll"
-        },
-        {
-          "assembly": "C:/Program Files/Unity/Hub/Editor/2022.3.27f1/Editor/Data/Managed/UnityEditor.dll"
-        }
-      ]
     }
   ],
   "build": {
@@ -30,7 +21,6 @@
       "_appTitle": "Example Unity Documentation",
       "_appFooter": "Example Unity Documentation",
       "_enableSearch": true,
-      "_enableDarkMode": true,
     },
     "content": [
       {

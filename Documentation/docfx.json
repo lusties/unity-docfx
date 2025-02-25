@@ -5,7 +5,7 @@
         {
           "src": "..",
           "files": [
-            "Assets/*.cs"
+            "Assets/**/*.cs"
           ],
           "exclude": [
             "Assets/Plugins/**",
@@ -14,23 +14,14 @@
         }
       ],
       "globalNamespaceId": "Global",
-      "dest": "api",
-      "references": [
-        {
-          "assembly": "C:/Program Files/Unity/Hub/Editor/2022.3.27f1/Editor/Data/Managed/UnityEngine.dll"
-        },
-        {
-          "assembly": "C:/Program Files/Unity/Hub/Editor/2022.3.27f1/Editor/Data/Managed/UnityEditor.dll"
-        }
-      ]
+      "dest": "api"
     }
   ],
   "build": {
     "globalMetadata": {
-      "_appTitle": "Unity docfx title",
-      "_appFooter": "Unity docfx footer",
-      "_enableSearch": true,
-      "_enableDarkMode": true
+      "_appTitle": "Unity Docfx title wtf baby a",
+      "_appFooter": "Unity Docfx footer",
+      "_enableSearch": true
     },
     "content": [
       {
@@ -85,6 +76,6 @@
     "xrefService": [
       "https://xref.docs.microsoft.com/query?uid={uid}"
     ],
-    "dest": "C:/Unity Projects/My Packages/_site"
+    "dest": "C:/Unity Projects/My Packages/unity-docfx/docs"
   }
 }

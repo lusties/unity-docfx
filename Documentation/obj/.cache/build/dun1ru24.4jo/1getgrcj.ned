@@ -1,1 +1,0 @@
-{"Models":{"api/Global.DocfxSetupTool.yml":[{"SourceFilePath":"api/Global.DocfxSetupTool.yml","FilePath":"ntfabvrw.3kz"}],"api/Global.yml":[{"SourceFilePath":"api/Global.yml","FilePath":"o30gxlhn.jwf"}]}}

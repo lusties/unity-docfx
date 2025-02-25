@@ -1,10 +1,27 @@
 ### YamlMime:TableOfContent
+- uid: Global
+  name: ''
+  items:
+  - uid: Global.LiveServer
+    name: LiveServer
 - uid: Lustie.UnityDocfx
   name: Lustie.UnityDocfx
   items:
+  - uid: Lustie.UnityDocfx.Docfx
+    name: Docfx
   - uid: Lustie.UnityDocfx.DocfxSetupTool
     name: DocfxSetupTool
   - uid: Lustie.UnityDocfx.DocfxTemplatesPath
     name: DocfxTemplatesPath
+  - uid: Lustie.UnityDocfx.JObjectExtensions
+    name: JObjectExtensions
+  - uid: Lustie.UnityDocfx.SortOption
+    name: SortOption
+  - uid: Lustie.UnityDocfx.SortOrder
+    name: SortOrder
+  - uid: Lustie.UnityDocfx.TOC
+    name: TOC
   - uid: Lustie.UnityDocfx.UIPath
     name: UIPath
+  - uid: Lustie.UnityDocfx.UnityDocset
+    name: UnityDocset
