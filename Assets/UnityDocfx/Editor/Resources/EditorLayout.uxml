@@ -1,0 +1,70 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UnityDocfx/Editor/Resources/Styles.uss?fileID=7433441132597879392&amp;guid=754e0c5d3bb64b94ca735c4e6526e3e0&amp;type=3#Styles" />
+    <ui:ScrollView style="background-color: rgb(32, 32, 32); width: 100%; height: 100%;">
+        <ui:VisualElement style="flex-grow: 1; margin-top: 8px; margin-right: 8px; margin-bottom: 8px; margin-left: 8px;">
+            <ui:Label tabindex="-1" text="Unity Docfx Tool" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 25px; -unity-font-style: bold;" />
+            <ui:VisualElement class="settings-area" style="flex-grow: 1;">
+                <ui:TextField picking-mode="Ignore" label="Folder:" value="filler text" name="txt-doc-folder" />
+                <ui:TextField picking-mode="Ignore" label="Github:" value="filler text" name="txt-git-name" />
+                <ui:TextField picking-mode="Ignore" label="Unity version" value="filler text" name="txt-unity-v" />
+            </ui:VisualElement>
+            <ui:VisualElement name="docfx-settings" class="settings-area" style="flex-grow: 1;">
+                <ui:Foldout text="Docfx Config" name="Foldout" class="label-s">
+                    <ui:VisualElement name="docfx-s-container" style="flex-grow: 1; font-size: 12px;">
+                        <ui:TextField picking-mode="Ignore" label="Title:" value="Unity docfx title" name="_appTitle" />
+                        <ui:TextField picking-mode="Ignore" label="Footer:" value="Unity docfx footer" name="_appFooter" />
+                        <ui:Toggle label="Enable Search:" value="true" name="_enableSearch" />
+                        <ui:Toggle label="Enable Darkmode:" value="true" />
+                        <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
+                            <ui:TextField picking-mode="Ignore" label="Enabl" value="filler text" style="flex-shrink: 1; flex-grow: 1;" />
+                            <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 50px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:Foldout>
+            </ui:VisualElement>
+            <ui:VisualElement name="config-settings" class="settings-area" style="flex-grow: 1;">
+                <ui:VisualElement class="settings-h" style="flex-grow: 1;">
+                    <ui:Label tabindex="-1" text="Filter Config" parse-escape-sequences="true" display-tooltip-when-elided="true" class="label-s" style="margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; -unity-text-align: middle-left;" />
+                    <ui:Button text="Generate API Rules Config" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btn-config" class="button-s" />
+                </ui:VisualElement>
+                <ui:Foldout text="Filter Cofig" />
+            </ui:VisualElement>
+            <ui:VisualElement name="github-action" class="settings-area" style="flex-grow: 1;">
+                <ui:VisualElement class="settings-h" style="flex-grow: 1;">
+                    <ui:Label tabindex="-1" text="Github Page" parse-escape-sequences="true" display-tooltip-when-elided="true" class="label-s" style="margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; -unity-text-align: middle-left;" />
+                    <ui:Button text="Generate github action" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btn-git-action" class="button-s" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="toc-settings" class="settings-area" style="flex-grow: 1;">
+                <ui:VisualElement class="settings-h" style="flex-grow: 1;">
+                    <ui:Label tabindex="-1" text="Table Of Contents" parse-escape-sequences="true" display-tooltip-when-elided="true" class="label-s" style="margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; -unity-text-align: middle-left;" />
+                    <ui:Button text="Generate TOC" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btn-toc" class="button-s" style="align-self: center;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="horizontal-line" style="flex-grow: 1; height: 2px; background-color: rgb(22, 22, 22); margin-top: 5px; margin-right: -5px; margin-bottom: 5px; margin-left: -5px;" />
+                <ui:VisualElement name="toc-content-container" style="flex-grow: 1; flex-direction: row; margin-top: 5px;">
+                    <ui:ListView style="flex-grow: 1; width: 25%;" />
+                    <ui:VisualElement style="flex-grow: 1; width: 75%;">
+                        <ui:TextField picking-mode="Ignore" label="Name:" name="toc-name" />
+                        <ui:TextField picking-mode="Ignore" label="Href:" name="toc-href" />
+                        <ui:EnumField label="Sort Option:" type="Lustie.UnityDocfx.SortOption, Lustie.UnityDocfx" name="sort-option" value="Name" />
+                        <ui:EnumField label="Sort Order:" type="Lustie.UnityDocfx.SortOrder, Lustie.UnityDocfx" name="sort-order" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="output-container" class="settings-area" style="flex-grow: 1;">
+                <ui:VisualElement class="settings-h" style="flex-grow: 1;">
+                    <ui:Label tabindex="-1" text="Output" parse-escape-sequences="true" display-tooltip-when-elided="true" class="label-s" style="margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; -unity-text-align: middle-left;" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
+                    <ui:TextField picking-mode="Ignore" label="Output:" value="../_site" name="dest" style="flex-shrink: 1; flex-grow: 1;" />
+                    <ui:Button text="Choose" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btn-output-choose" style="width: 50px;" />
+                    <ui:Button text="View" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btn-output-view" style="width: 50px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1; margin-top: 42px;">
+                <ui:Button text="Build Documentation" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btn-build" class="btn-cmd" />
+                <ui:Button text="Serve Documentation" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btn-serve" class="btn-cmd" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:ScrollView>
+</ui:UXML>

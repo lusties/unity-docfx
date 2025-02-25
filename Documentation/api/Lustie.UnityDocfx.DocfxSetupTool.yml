@@ -1,0 +1,88 @@
+### YamlMime:ManagedReference
+items:
+- uid: Lustie.UnityDocfx.DocfxSetupTool
+  commentId: T:Lustie.UnityDocfx.DocfxSetupTool
+  id: DocfxSetupTool
+  parent: Lustie.UnityDocfx
+  children:
+  - Lustie.UnityDocfx.DocfxSetupTool.ShowWindow
+  langs:
+  - csharp
+  - vb
+  name: DocfxSetupTool
+  nameWithType: DocfxSetupTool
+  fullName: Lustie.UnityDocfx.DocfxSetupTool
+  type: Class
+  source:
+    id: DocfxSetupTool
+    path: ''
+    startLine: 11
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: 'public class DocfxSetupTool : EditorWindow'
+    content.vb: Public Class DocfxSetupTool Inherits EditorWindow
+  inheritance:
+  - System.Object
+- uid: Lustie.UnityDocfx.DocfxSetupTool.ShowWindow
+  commentId: M:Lustie.UnityDocfx.DocfxSetupTool.ShowWindow
+  id: ShowWindow
+  parent: Lustie.UnityDocfx.DocfxSetupTool
+  langs:
+  - csharp
+  - vb
+  name: ShowWindow()
+  nameWithType: DocfxSetupTool.ShowWindow()
+  fullName: Lustie.UnityDocfx.DocfxSetupTool.ShowWindow()
+  type: Method
+  source:
+    id: ShowWindow
+    path: ''
+    startLine: 20
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public static void ShowWindow()
+    content.vb: Public Shared Sub ShowWindow()
+  overload: Lustie.UnityDocfx.DocfxSetupTool.ShowWindow*
+references:
+- uid: Lustie.UnityDocfx
+  commentId: N:Lustie.UnityDocfx
+  name: Lustie.UnityDocfx
+  nameWithType: Lustie.UnityDocfx
+  fullName: Lustie.UnityDocfx
+  spec.csharp:
+  - uid: Lustie
+    name: Lustie
+  - name: .
+  - uid: Lustie.UnityDocfx
+    name: UnityDocfx
+  spec.vb:
+  - uid: Lustie
+    name: Lustie
+  - name: .
+  - uid: Lustie.UnityDocfx
+    name: UnityDocfx
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Lustie.UnityDocfx.DocfxSetupTool.ShowWindow*
+  commentId: Overload:Lustie.UnityDocfx.DocfxSetupTool.ShowWindow
+  name: ShowWindow
+  nameWithType: DocfxSetupTool.ShowWindow
+  fullName: Lustie.UnityDocfx.DocfxSetupTool.ShowWindow

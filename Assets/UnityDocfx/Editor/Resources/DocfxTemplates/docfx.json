@@ -1,0 +1,90 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "..",
+          "files": [
+            "Assets/*.cs"
+          ],
+          "exclude": [
+            "Assets/Plugins/**",
+            "Assets/Editor/**"
+          ]
+        }
+      ],
+      "globalNamespaceId": "Global",
+      "dest": "api",
+      "references": [
+        {
+          "assembly": "C:/Program Files/Unity/Hub/Editor/2022.3.27f1/Editor/Data/Managed/UnityEngine.dll"
+        },
+        {
+          "assembly": "C:/Program Files/Unity/Hub/Editor/2022.3.27f1/Editor/Data/Managed/UnityEditor.dll"
+        }
+      ]
+    }
+  ],
+  "build": {
+    "globalMetadata": {
+      "_appTitle": "Example Unity Documentation",
+      "_appFooter": "Example Unity Documentation",
+      "_enableSearch": true,
+      "_enableDarkMode": true,
+    },
+    "content": [
+      {
+        "files": [
+          "toc.yml",
+          "index.md"
+        ]
+      },
+      {
+        "src": "api",
+        "files": [
+          "*.yml"
+        ],
+        "dest": "api"
+      },
+      {
+        "src": "manual",
+        "files": [
+          "toc.yml",
+          "*.md"
+        ],
+        "dest": "manual"
+      }
+    ],
+    "overwrite": [
+      {
+        "src": "..",
+        "files": [
+          "Assets/Scripts/**/*.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "resources/**/*"
+        ]
+      }
+    ],
+    "sitemap": {
+      "baseUrl": "https://your-username.github.io/your-repo",
+      "changefreq": "weekly",
+      "fileOptions": {
+        "api/*": {
+          "changefreq": "daily"
+        }
+      }
+    },
+    "xref": [
+      "https://your-username.github.io/UnityXrefMaps/xrefmap.yml"
+    ],
+    "xrefService": [
+      "https://xref.docs.microsoft.com/query?uid={uid}"
+    ],
+    "dest": "../_site"
+  }
+}

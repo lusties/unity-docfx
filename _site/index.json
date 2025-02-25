@@ -1,0 +1,37 @@
+{
+  "api/Lustie.UnityDocfx.DocfxSetupTool.html": {
+    "href": "api/Lustie.UnityDocfx.DocfxSetupTool.html",
+    "title": "Class DocfxSetupTool | Example Unity Documentation",
+    "keywords": "Class DocfxSetupTool Inheritance object DocfxSetupTool Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax public class DocfxSetupTool : EditorWindow Methods ShowWindow() Declaration public static void ShowWindow()"
+  },
+  "api/Lustie.UnityDocfx.DocfxTemplatesPath.html": {
+    "href": "api/Lustie.UnityDocfx.DocfxTemplatesPath.html",
+    "title": "Class DocfxTemplatesPath | Example Unity Documentation",
+    "keywords": "Class DocfxTemplatesPath Inheritance object DocfxTemplatesPath Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax public class DocfxTemplatesPath Methods CurrentPath() Get current path Declaration public static string CurrentPath() Returns Type Description string LoadTemplates(string, out string) Declaration public static bool LoadTemplates(string fileName, out string filePath) Parameters Type Name Description string fileName string filePath Returns Type Description bool"
+  },
+  "api/Lustie.UnityDocfx.html": {
+    "href": "api/Lustie.UnityDocfx.html",
+    "title": "Namespace Lustie.UnityDocfx | Example Unity Documentation",
+    "keywords": "Namespace Lustie.UnityDocfx Classes DocfxSetupTool DocfxTemplatesPath UIPath"
+  },
+  "api/Lustie.UnityDocfx.UIPath.html": {
+    "href": "api/Lustie.UnityDocfx.UIPath.html",
+    "title": "Class UIPath | Example Unity Documentation",
+    "keywords": "Class UIPath Inheritance object UIPath Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax public static class UIPath Methods LoadUss(string) Declaration public static StyleSheet LoadUss(string fileName) Parameters Type Name Description string fileName Returns Type Description StyleSheet LoadUxml(string) Declaration public static VisualTreeAsset LoadUxml(string fileName) Parameters Type Name Description string fileName Returns Type Description VisualTreeAsset UxmlAssetPath(string) Declaration public static string UxmlAssetPath(string fileName) Parameters Type Name Description string fileName Returns Type Description string"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "Welcome to My Docs | Example Unity Documentation",
+    "keywords": "Welcome to My Docs This is an auto-generated index.md file because no README.md was found. Feel free to edit this file to customize your documentation's home page."
+  },
+  "manual/manual.html": {
+    "href": "manual/manual.html",
+    "title": "| Example Unity Documentation",
+    "keywords": "Note Information the user should notice even if skimming. Tip Optional information to help a user be more successful. Important Essential information required for user success. Caution Negative potential consequences of an action. Warning Dangerous certain consequences of an action. This sentence uses $ delimiters to show math inline: $\\sqrt{3x-1}+(1+x)^2$ flowchart LR A[Hard] -->|Text| B(Round) B --> C{Decision} C -->|One| D[Result 1] C -->|Two| E[Result 2] Linux Windows Content for Linux... Content for Windows..."
+  },
+  "manual/Tutorial.html": {
+    "href": "manual/Tutorial.html",
+    "title": "| Example Unity Documentation",
+    "keywords": "Note Information the user should notice even if skimming. Tip Optional information to help a user be more successful. Important Essential information required for user success. Caution Negative potential consequences of an action. Warning Dangerous certain consequences of an action. This sentence uses $ delimiters to show math inline: $\\sqrt{3x-1}+(1+x)^2$ flowchart LR A[Hard] -->|Text| B(Round) B --> C{Decision} C -->|One| D[Result 1] C -->|Two| E[Result 2] Linux Windows Content for Linux... Content for Windows..."
+  }
+}

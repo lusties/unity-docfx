@@ -1,0 +1,15 @@
+{
+  "name": "com.lustie.unity-docfx",
+  "version": "1.0.0",
+  "displayName": "UnityDocfx",
+  "description": "Unity Editor tool for generating document website using docfx",
+  "unity": "2022.2",
+  "documentationUrl": "https://docs.finistate.com/",
+  "changelogUrl": "https://example.com/changelog.html",
+  "licensesUrl": "https://example.com/licensing.html",
+  "author": {
+    "name": "Lustie",
+    "email": "lustie@example.com",
+    "url": "https://github.com/lusties"
+  }
+}

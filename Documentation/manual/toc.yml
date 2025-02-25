@@ -1,0 +1,4 @@
+- name: manual
+  href: manual.md
+- name: Tutorial
+  href: Tutorial.md

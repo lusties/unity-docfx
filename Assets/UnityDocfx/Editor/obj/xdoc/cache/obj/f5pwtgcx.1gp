@@ -1,0 +1,1447 @@
+id: cs.temp.dll
+language: CSharp
+name:
+  Default: cs.temp.dll
+qualifiedName:
+  Default: cs.temp.dll
+type: Assembly
+items:
+- id: Lustie.UnityDocfx
+  commentId: N:Lustie.UnityDocfx
+  language: CSharp
+  name:
+    CSharp: Lustie.UnityDocfx
+    VB: Lustie.UnityDocfx
+  nameWithType:
+    CSharp: Lustie.UnityDocfx
+    VB: Lustie.UnityDocfx
+  qualifiedName:
+    CSharp: Lustie.UnityDocfx
+    VB: Lustie.UnityDocfx
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+  items:
+  - id: Lustie.UnityDocfx.DocfxSetupTool
+    commentId: T:Lustie.UnityDocfx.DocfxSetupTool
+    language: CSharp
+    name:
+      CSharp: DocfxSetupTool
+      VB: DocfxSetupTool
+    nameWithType:
+      CSharp: DocfxSetupTool
+      VB: DocfxSetupTool
+    qualifiedName:
+      CSharp: Lustie.UnityDocfx.DocfxSetupTool
+      VB: Lustie.UnityDocfx.DocfxSetupTool
+    type: Class
+    assemblies:
+    - cs.temp.dll
+    namespace: Lustie.UnityDocfx
+    source:
+      id: DocfxSetupTool
+      path: ''
+      startLine: 11
+    syntax:
+      content:
+        CSharp: 'public class DocfxSetupTool : EditorWindow'
+        VB: Public Class DocfxSetupTool Inherits EditorWindow
+    inheritance:
+    - System.Object
+    items:
+    - id: Lustie.UnityDocfx.DocfxSetupTool.ShowWindow
+      commentId: M:Lustie.UnityDocfx.DocfxSetupTool.ShowWindow
+      language: CSharp
+      name:
+        CSharp: ShowWindow()
+        VB: ShowWindow()
+      nameWithType:
+        CSharp: DocfxSetupTool.ShowWindow()
+        VB: DocfxSetupTool.ShowWindow()
+      qualifiedName:
+        CSharp: Lustie.UnityDocfx.DocfxSetupTool.ShowWindow()
+        VB: Lustie.UnityDocfx.DocfxSetupTool.ShowWindow()
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: Lustie.UnityDocfx
+      source:
+        id: ShowWindow
+        path: ''
+        startLine: 20
+      syntax:
+        content:
+          CSharp: public static void ShowWindow()
+          VB: Public Shared Sub ShowWindow()
+      overload: Lustie.UnityDocfx.DocfxSetupTool.ShowWindow*
+  - id: Lustie.UnityDocfx.UIPath
+    commentId: T:Lustie.UnityDocfx.UIPath
+    language: CSharp
+    name:
+      CSharp: UIPath
+      VB: UIPath
+    nameWithType:
+      CSharp: UIPath
+      VB: UIPath
+    qualifiedName:
+      CSharp: Lustie.UnityDocfx.UIPath
+      VB: Lustie.UnityDocfx.UIPath
+    type: Class
+    assemblies:
+    - cs.temp.dll
+    namespace: Lustie.UnityDocfx
+    source:
+      id: UIPath
+      path: ''
+      startLine: 401
+    syntax:
+      content:
+        CSharp: public static class UIPath
+        VB: Public Module UIPath
+    inheritance:
+    - System.Object
+    inheritedMembers:
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.ToString
+    items:
+    - id: Lustie.UnityDocfx.UIPath.UxmlAssetPath(System.String)
+      commentId: M:Lustie.UnityDocfx.UIPath.UxmlAssetPath(System.String)
+      language: CSharp
+      name:
+        CSharp: UxmlAssetPath(string)
+        VB: UxmlAssetPath(String)
+      nameWithType:
+        CSharp: UIPath.UxmlAssetPath(string)
+        VB: UIPath.UxmlAssetPath(String)
+      qualifiedName:
+        CSharp: Lustie.UnityDocfx.UIPath.UxmlAssetPath(string)
+        VB: Lustie.UnityDocfx.UIPath.UxmlAssetPath(String)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: Lustie.UnityDocfx
+      source:
+        id: UxmlAssetPath
+        path: ''
+        startLine: 403
+      syntax:
+        content:
+          CSharp: public static string UxmlAssetPath(string fileName)
+          VB: Public Shared Function UxmlAssetPath(fileName As String) As String
+        parameters:
+        - id: fileName
+          type: System.String
+        return:
+          type: System.String
+      overload: Lustie.UnityDocfx.UIPath.UxmlAssetPath*
+    - id: Lustie.UnityDocfx.UIPath.LoadUxml(System.String)
+      commentId: M:Lustie.UnityDocfx.UIPath.LoadUxml(System.String)
+      language: CSharp
+      name:
+        CSharp: LoadUxml(string)
+        VB: LoadUxml(String)
+      nameWithType:
+        CSharp: UIPath.LoadUxml(string)
+        VB: UIPath.LoadUxml(String)
+      qualifiedName:
+        CSharp: Lustie.UnityDocfx.UIPath.LoadUxml(string)
+        VB: Lustie.UnityDocfx.UIPath.LoadUxml(String)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: Lustie.UnityDocfx
+      source:
+        id: LoadUxml
+        path: ''
+        startLine: 408
+      syntax:
+        content:
+          CSharp: public static VisualTreeAsset LoadUxml(string fileName)
+          VB: Public Shared Function LoadUxml(fileName As String) As VisualTreeAsset
+        parameters:
+        - id: fileName
+          type: System.String
+        return:
+          type: Global.VisualTreeAsset
+      overload: Lustie.UnityDocfx.UIPath.LoadUxml*
+    - id: Lustie.UnityDocfx.UIPath.LoadUss(System.String)
+      commentId: M:Lustie.UnityDocfx.UIPath.LoadUss(System.String)
+      language: CSharp
+      name:
+        CSharp: LoadUss(string)
+        VB: LoadUss(String)
+      nameWithType:
+        CSharp: UIPath.LoadUss(string)
+        VB: UIPath.LoadUss(String)
+      qualifiedName:
+        CSharp: Lustie.UnityDocfx.UIPath.LoadUss(string)
+        VB: Lustie.UnityDocfx.UIPath.LoadUss(String)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: Lustie.UnityDocfx
+      source:
+        id: LoadUss
+        path: ''
+        startLine: 413
+      syntax:
+        content:
+          CSharp: public static StyleSheet LoadUss(string fileName)
+          VB: Public Shared Function LoadUss(fileName As String) As StyleSheet
+        parameters:
+        - id: fileName
+          type: System.String
+        return:
+          type: Global.StyleSheet
+      overload: Lustie.UnityDocfx.UIPath.LoadUss*
+  - id: Lustie.UnityDocfx.DocfxTemplatesPath
+    commentId: T:Lustie.UnityDocfx.DocfxTemplatesPath
+    language: CSharp
+    name:
+      CSharp: DocfxTemplatesPath
+      VB: DocfxTemplatesPath
+    nameWithType:
+      CSharp: DocfxTemplatesPath
+      VB: DocfxTemplatesPath
+    qualifiedName:
+      CSharp: Lustie.UnityDocfx.DocfxTemplatesPath
+      VB: Lustie.UnityDocfx.DocfxTemplatesPath
+    type: Class
+    assemblies:
+    - cs.temp.dll
+    namespace: Lustie.UnityDocfx
+    source:
+      id: DocfxTemplatesPath
+      path: ''
+      startLine: 434
+    syntax:
+      content:
+        CSharp: public class DocfxTemplatesPath
+        VB: Public Class DocfxTemplatesPath
+    inheritance:
+    - System.Object
+    inheritedMembers:
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.ToString
+    items:
+    - id: Lustie.UnityDocfx.DocfxTemplatesPath.CurrentPath
+      commentId: M:Lustie.UnityDocfx.DocfxTemplatesPath.CurrentPath
+      language: CSharp
+      name:
+        CSharp: CurrentPath()
+        VB: CurrentPath()
+      nameWithType:
+        CSharp: DocfxTemplatesPath.CurrentPath()
+        VB: DocfxTemplatesPath.CurrentPath()
+      qualifiedName:
+        CSharp: Lustie.UnityDocfx.DocfxTemplatesPath.CurrentPath()
+        VB: Lustie.UnityDocfx.DocfxTemplatesPath.CurrentPath()
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: Lustie.UnityDocfx
+      source:
+        id: CurrentPath
+        path: ''
+        startLine: 440
+      summary: "\nGet current path\n"
+      example: []
+      syntax:
+        content:
+          CSharp: public static string CurrentPath()
+          VB: Public Shared Function CurrentPath() As String
+        return:
+          type: System.String
+          description: ''
+      overload: Lustie.UnityDocfx.DocfxTemplatesPath.CurrentPath*
+    - id: Lustie.UnityDocfx.DocfxTemplatesPath.LoadTemplates(System.String,System.String@)
+      commentId: M:Lustie.UnityDocfx.DocfxTemplatesPath.LoadTemplates(System.String,System.String@)
+      language: CSharp
+      name:
+        CSharp: LoadTemplates(string, out string)
+        VB: LoadTemplates(String, String)
+      nameWithType:
+        CSharp: DocfxTemplatesPath.LoadTemplates(string, out string)
+        VB: DocfxTemplatesPath.LoadTemplates(String, String)
+      qualifiedName:
+        CSharp: Lustie.UnityDocfx.DocfxTemplatesPath.LoadTemplates(string, out string)
+        VB: Lustie.UnityDocfx.DocfxTemplatesPath.LoadTemplates(String, String)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: Lustie.UnityDocfx
+      source:
+        id: LoadTemplates
+        path: ''
+        startLine: 446
+      syntax:
+        content:
+          CSharp: public static bool LoadTemplates(string fileName, out string filePath)
+          VB: Public Shared Function LoadTemplates(fileName As String, filePath As String) As Boolean
+        parameters:
+        - id: fileName
+          type: System.String
+        - id: filePath
+          type: System.String
+        return:
+          type: System.Boolean
+      overload: Lustie.UnityDocfx.DocfxTemplatesPath.LoadTemplates*
+references:
+  Lustie.UnityDocfx.DocfxSetupTool.ShowWindow*:
+    name:
+      CSharp:
+      - id: Lustie.UnityDocfx.DocfxSetupTool.ShowWindow*
+        name: ShowWindow
+      VB:
+      - id: Lustie.UnityDocfx.DocfxSetupTool.ShowWindow*
+        name: ShowWindow
+    nameWithType:
+      CSharp:
+      - id: Lustie.UnityDocfx.DocfxSetupTool*
+        name: DocfxSetupTool
+      - name: .
+      - id: Lustie.UnityDocfx.DocfxSetupTool.ShowWindow*
+        name: ShowWindow
+      VB:
+      - id: Lustie.UnityDocfx.DocfxSetupTool*
+        name: DocfxSetupTool
+      - name: .
+      - id: Lustie.UnityDocfx.DocfxSetupTool.ShowWindow*
+        name: ShowWindow
+    qualifiedName:
+      CSharp:
+      - id: Lustie*
+        name: Lustie
+      - name: .
+      - id: Lustie.UnityDocfx*
+        name: UnityDocfx
+      - name: .
+      - id: Lustie.UnityDocfx.DocfxSetupTool*
+        name: DocfxSetupTool
+      - name: .
+      - id: Lustie.UnityDocfx.DocfxSetupTool.ShowWindow*
+        name: ShowWindow
+      VB:
+      - id: Lustie*
+        name: Lustie
+      - name: .
+      - id: Lustie.UnityDocfx*
+        name: UnityDocfx
+      - name: .
+      - id: Lustie.UnityDocfx.DocfxSetupTool*
+        name: DocfxSetupTool
+      - name: .
+      - id: Lustie.UnityDocfx.DocfxSetupTool.ShowWindow*
+        name: ShowWindow
+    isDefinition: true
+    commentId: Overload:Lustie.UnityDocfx.DocfxSetupTool.ShowWindow
+  Lustie.UnityDocfx.DocfxSetupTool:
+    name:
+      CSharp:
+      - id: Lustie.UnityDocfx.DocfxSetupTool
+        name: DocfxSetupTool
+      VB:
+      - id: Lustie.UnityDocfx.DocfxSetupTool
+        name: DocfxSetupTool
+    nameWithType:
+      CSharp:
+      - id: Lustie.UnityDocfx.DocfxSetupTool
+        name: DocfxSetupTool
+      VB:
+      - id: Lustie.UnityDocfx.DocfxSetupTool
+        name: DocfxSetupTool
+    qualifiedName:
+      CSharp:
+      - id: Lustie
+        name: Lustie
+      - name: .
+      - id: Lustie.UnityDocfx
+        name: UnityDocfx
+      - name: .
+      - id: Lustie.UnityDocfx.DocfxSetupTool
+        name: DocfxSetupTool
+      VB:
+      - id: Lustie
+        name: Lustie
+      - name: .
+      - id: Lustie.UnityDocfx
+        name: UnityDocfx
+      - name: .
+      - id: Lustie.UnityDocfx.DocfxSetupTool
+        name: DocfxSetupTool
+    isDefinition: true
+    commentId: T:Lustie.UnityDocfx.DocfxSetupTool
+  System:
+    name:
+      CSharp:
+      - id: System
+        name: System
+        isExternal: true
+      VB:
+      - id: System
+        name: System
+        isExternal: true
+    nameWithType:
+      CSharp:
+      - id: System
+        name: System
+        isExternal: true
+      VB:
+      - id: System
+        name: System
+        isExternal: true
+    qualifiedName:
+      CSharp:
+      - id: System
+        name: System
+        isExternal: true
+      VB:
+      - id: System
+        name: System
+        isExternal: true
+    isDefinition: true
+    commentId: N:System
+  System.Object:
+    name:
+      CSharp:
+      - id: System.Object
+        name: object
+        isExternal: true
+      VB:
+      - id: System.Object
+        name: Object
+        isExternal: true
+    nameWithType:
+      CSharp:
+      - id: System.Object
+        name: object
+        isExternal: true
+      VB:
+      - id: System.Object
+        name: Object
+        isExternal: true
+    qualifiedName:
+      CSharp:
+      - id: System.Object
+        name: object
+        isExternal: true
+      VB:
+      - id: System.Object
+        name: Object
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.Object
+  System.Object.Equals(System.Object):
+    name:
+      CSharp:
+      - id: System.Object.Equals(System.Object)
+        name: Equals
+        isExternal: true
+      - name: (
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: )
+      VB:
+      - id: System.Object.Equals(System.Object)
+        name: Equals
+        isExternal: true
+      - name: (
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: )
+    nameWithType:
+      CSharp:
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: .
+      - id: System.Object.Equals(System.Object)
+        name: Equals
+        isExternal: true
+      - name: (
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: )
+      VB:
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: .
+      - id: System.Object.Equals(System.Object)
+        name: Equals
+        isExternal: true
+      - name: (
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: )
+    qualifiedName:
+      CSharp:
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: .
+      - id: System.Object.Equals(System.Object)
+        name: Equals
+        isExternal: true
+      - name: (
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: )
+      VB:
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: .
+      - id: System.Object.Equals(System.Object)
+        name: Equals
+        isExternal: true
+      - name: (
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.Equals(System.Object)
+  System.Object.Equals(System.Object,System.Object):
+    name:
+      CSharp:
+      - id: System.Object.Equals(System.Object,System.Object)
+        name: Equals
+        isExternal: true
+      - name: (
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: ','
+      - name: " "
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: )
+      VB:
+      - id: System.Object.Equals(System.Object,System.Object)
+        name: Equals
+        isExternal: true
+      - name: (
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: ','
+      - name: " "
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: )
+    nameWithType:
+      CSharp:
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: .
+      - id: System.Object.Equals(System.Object,System.Object)
+        name: Equals
+        isExternal: true
+      - name: (
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: ','
+      - name: " "
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: )
+      VB:
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: .
+      - id: System.Object.Equals(System.Object,System.Object)
+        name: Equals
+        isExternal: true
+      - name: (
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: ','
+      - name: " "
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: )
+    qualifiedName:
+      CSharp:
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: .
+      - id: System.Object.Equals(System.Object,System.Object)
+        name: Equals
+        isExternal: true
+      - name: (
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: ','
+      - name: " "
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: )
+      VB:
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: .
+      - id: System.Object.Equals(System.Object,System.Object)
+        name: Equals
+        isExternal: true
+      - name: (
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: ','
+      - name: " "
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.Equals(System.Object,System.Object)
+  System.Object.GetHashCode:
+    name:
+      CSharp:
+      - id: System.Object.GetHashCode
+        name: GetHashCode
+        isExternal: true
+      - name: (
+      - name: )
+      VB:
+      - id: System.Object.GetHashCode
+        name: GetHashCode
+        isExternal: true
+      - name: (
+      - name: )
+    nameWithType:
+      CSharp:
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: .
+      - id: System.Object.GetHashCode
+        name: GetHashCode
+        isExternal: true
+      - name: (
+      - name: )
+      VB:
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: .
+      - id: System.Object.GetHashCode
+        name: GetHashCode
+        isExternal: true
+      - name: (
+      - name: )
+    qualifiedName:
+      CSharp:
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: .
+      - id: System.Object.GetHashCode
+        name: GetHashCode
+        isExternal: true
+      - name: (
+      - name: )
+      VB:
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: .
+      - id: System.Object.GetHashCode
+        name: GetHashCode
+        isExternal: true
+      - name: (
+      - name: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.GetHashCode
+  System.Object.GetType:
+    name:
+      CSharp:
+      - id: System.Object.GetType
+        name: GetType
+        isExternal: true
+      - name: (
+      - name: )
+      VB:
+      - id: System.Object.GetType
+        name: GetType
+        isExternal: true
+      - name: (
+      - name: )
+    nameWithType:
+      CSharp:
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: .
+      - id: System.Object.GetType
+        name: GetType
+        isExternal: true
+      - name: (
+      - name: )
+      VB:
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: .
+      - id: System.Object.GetType
+        name: GetType
+        isExternal: true
+      - name: (
+      - name: )
+    qualifiedName:
+      CSharp:
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: .
+      - id: System.Object.GetType
+        name: GetType
+        isExternal: true
+      - name: (
+      - name: )
+      VB:
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: .
+      - id: System.Object.GetType
+        name: GetType
+        isExternal: true
+      - name: (
+      - name: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.GetType
+  System.Object.MemberwiseClone:
+    name:
+      CSharp:
+      - id: System.Object.MemberwiseClone
+        name: MemberwiseClone
+        isExternal: true
+      - name: (
+      - name: )
+      VB:
+      - id: System.Object.MemberwiseClone
+        name: MemberwiseClone
+        isExternal: true
+      - name: (
+      - name: )
+    nameWithType:
+      CSharp:
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: .
+      - id: System.Object.MemberwiseClone
+        name: MemberwiseClone
+        isExternal: true
+      - name: (
+      - name: )
+      VB:
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: .
+      - id: System.Object.MemberwiseClone
+        name: MemberwiseClone
+        isExternal: true
+      - name: (
+      - name: )
+    qualifiedName:
+      CSharp:
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: .
+      - id: System.Object.MemberwiseClone
+        name: MemberwiseClone
+        isExternal: true
+      - name: (
+      - name: )
+      VB:
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: .
+      - id: System.Object.MemberwiseClone
+        name: MemberwiseClone
+        isExternal: true
+      - name: (
+      - name: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.MemberwiseClone
+  System.Object.ReferenceEquals(System.Object,System.Object):
+    name:
+      CSharp:
+      - id: System.Object.ReferenceEquals(System.Object,System.Object)
+        name: ReferenceEquals
+        isExternal: true
+      - name: (
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: ','
+      - name: " "
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: )
+      VB:
+      - id: System.Object.ReferenceEquals(System.Object,System.Object)
+        name: ReferenceEquals
+        isExternal: true
+      - name: (
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: ','
+      - name: " "
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: )
+    nameWithType:
+      CSharp:
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: .
+      - id: System.Object.ReferenceEquals(System.Object,System.Object)
+        name: ReferenceEquals
+        isExternal: true
+      - name: (
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: ','
+      - name: " "
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: )
+      VB:
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: .
+      - id: System.Object.ReferenceEquals(System.Object,System.Object)
+        name: ReferenceEquals
+        isExternal: true
+      - name: (
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: ','
+      - name: " "
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: )
+    qualifiedName:
+      CSharp:
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: .
+      - id: System.Object.ReferenceEquals(System.Object,System.Object)
+        name: ReferenceEquals
+        isExternal: true
+      - name: (
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: ','
+      - name: " "
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: )
+      VB:
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: .
+      - id: System.Object.ReferenceEquals(System.Object,System.Object)
+        name: ReferenceEquals
+        isExternal: true
+      - name: (
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: ','
+      - name: " "
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  System.Object.ToString:
+    name:
+      CSharp:
+      - id: System.Object.ToString
+        name: ToString
+        isExternal: true
+      - name: (
+      - name: )
+      VB:
+      - id: System.Object.ToString
+        name: ToString
+        isExternal: true
+      - name: (
+      - name: )
+    nameWithType:
+      CSharp:
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: .
+      - id: System.Object.ToString
+        name: ToString
+        isExternal: true
+      - name: (
+      - name: )
+      VB:
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: .
+      - id: System.Object.ToString
+        name: ToString
+        isExternal: true
+      - name: (
+      - name: )
+    qualifiedName:
+      CSharp:
+      - id: System.Object
+        name: object
+        isExternal: true
+      - name: .
+      - id: System.Object.ToString
+        name: ToString
+        isExternal: true
+      - name: (
+      - name: )
+      VB:
+      - id: System.Object
+        name: Object
+        isExternal: true
+      - name: .
+      - id: System.Object.ToString
+        name: ToString
+        isExternal: true
+      - name: (
+      - name: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.ToString
+  System.String:
+    name:
+      CSharp:
+      - id: System.String
+        name: string
+        isExternal: true
+      VB:
+      - id: System.String
+        name: String
+        isExternal: true
+    nameWithType:
+      CSharp:
+      - id: System.String
+        name: string
+        isExternal: true
+      VB:
+      - id: System.String
+        name: String
+        isExternal: true
+    qualifiedName:
+      CSharp:
+      - id: System.String
+        name: string
+        isExternal: true
+      VB:
+      - id: System.String
+        name: String
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.String
+  Lustie.UnityDocfx.UIPath.UxmlAssetPath*:
+    name:
+      CSharp:
+      - id: Lustie.UnityDocfx.UIPath.UxmlAssetPath*
+        name: UxmlAssetPath
+      VB:
+      - id: Lustie.UnityDocfx.UIPath.UxmlAssetPath*
+        name: UxmlAssetPath
+    nameWithType:
+      CSharp:
+      - id: Lustie.UnityDocfx.UIPath*
+        name: UIPath
+      - name: .
+      - id: Lustie.UnityDocfx.UIPath.UxmlAssetPath*
+        name: UxmlAssetPath
+      VB:
+      - id: Lustie.UnityDocfx.UIPath*
+        name: UIPath
+      - name: .
+      - id: Lustie.UnityDocfx.UIPath.UxmlAssetPath*
+        name: UxmlAssetPath
+    qualifiedName:
+      CSharp:
+      - id: Lustie*
+        name: Lustie
+      - name: .
+      - id: Lustie.UnityDocfx*
+        name: UnityDocfx
+      - name: .
+      - id: Lustie.UnityDocfx.UIPath*
+        name: UIPath
+      - name: .
+      - id: Lustie.UnityDocfx.UIPath.UxmlAssetPath*
+        name: UxmlAssetPath
+      VB:
+      - id: Lustie*
+        name: Lustie
+      - name: .
+      - id: Lustie.UnityDocfx*
+        name: UnityDocfx
+      - name: .
+      - id: Lustie.UnityDocfx.UIPath*
+        name: UIPath
+      - name: .
+      - id: Lustie.UnityDocfx.UIPath.UxmlAssetPath*
+        name: UxmlAssetPath
+    isDefinition: true
+    commentId: Overload:Lustie.UnityDocfx.UIPath.UxmlAssetPath
+  Global.VisualTreeAsset:
+    name:
+      CSharp:
+      - id: Global.VisualTreeAsset
+        name: VisualTreeAsset
+        isExternal: true
+      VB:
+      - id: Global.VisualTreeAsset
+        name: VisualTreeAsset
+        isExternal: true
+    nameWithType:
+      CSharp:
+      - id: Global.VisualTreeAsset
+        name: VisualTreeAsset
+        isExternal: true
+      VB:
+      - id: Global.VisualTreeAsset
+        name: VisualTreeAsset
+        isExternal: true
+    qualifiedName:
+      CSharp:
+      - id: Global.VisualTreeAsset
+        name: VisualTreeAsset
+        isExternal: true
+      VB:
+      - id: Global.VisualTreeAsset
+        name: VisualTreeAsset
+        isExternal: true
+    isDefinition: true
+    commentId: '!:Global.VisualTreeAsset'
+  Lustie.UnityDocfx.UIPath.LoadUxml*:
+    name:
+      CSharp:
+      - id: Lustie.UnityDocfx.UIPath.LoadUxml*
+        name: LoadUxml
+      VB:
+      - id: Lustie.UnityDocfx.UIPath.LoadUxml*
+        name: LoadUxml
+    nameWithType:
+      CSharp:
+      - id: Lustie.UnityDocfx.UIPath*
+        name: UIPath
+      - name: .
+      - id: Lustie.UnityDocfx.UIPath.LoadUxml*
+        name: LoadUxml
+      VB:
+      - id: Lustie.UnityDocfx.UIPath*
+        name: UIPath
+      - name: .
+      - id: Lustie.UnityDocfx.UIPath.LoadUxml*
+        name: LoadUxml
+    qualifiedName:
+      CSharp:
+      - id: Lustie*
+        name: Lustie
+      - name: .
+      - id: Lustie.UnityDocfx*
+        name: UnityDocfx
+      - name: .
+      - id: Lustie.UnityDocfx.UIPath*
+        name: UIPath
+      - name: .
+      - id: Lustie.UnityDocfx.UIPath.LoadUxml*
+        name: LoadUxml
+      VB:
+      - id: Lustie*
+        name: Lustie
+      - name: .
+      - id: Lustie.UnityDocfx*
+        name: UnityDocfx
+      - name: .
+      - id: Lustie.UnityDocfx.UIPath*
+        name: UIPath
+      - name: .
+      - id: Lustie.UnityDocfx.UIPath.LoadUxml*
+        name: LoadUxml
+    isDefinition: true
+    commentId: Overload:Lustie.UnityDocfx.UIPath.LoadUxml
+  Global.StyleSheet:
+    name:
+      CSharp:
+      - id: Global.StyleSheet
+        name: StyleSheet
+        isExternal: true
+      VB:
+      - id: Global.StyleSheet
+        name: StyleSheet
+        isExternal: true
+    nameWithType:
+      CSharp:
+      - id: Global.StyleSheet
+        name: StyleSheet
+        isExternal: true
+      VB:
+      - id: Global.StyleSheet
+        name: StyleSheet
+        isExternal: true
+    qualifiedName:
+      CSharp:
+      - id: Global.StyleSheet
+        name: StyleSheet
+        isExternal: true
+      VB:
+      - id: Global.StyleSheet
+        name: StyleSheet
+        isExternal: true
+    isDefinition: true
+    commentId: '!:Global.StyleSheet'
+  Lustie.UnityDocfx.UIPath.LoadUss*:
+    name:
+      CSharp:
+      - id: Lustie.UnityDocfx.UIPath.LoadUss*
+        name: LoadUss
+      VB:
+      - id: Lustie.UnityDocfx.UIPath.LoadUss*
+        name: LoadUss
+    nameWithType:
+      CSharp:
+      - id: Lustie.UnityDocfx.UIPath*
+        name: UIPath
+      - name: .
+      - id: Lustie.UnityDocfx.UIPath.LoadUss*
+        name: LoadUss
+      VB:
+      - id: Lustie.UnityDocfx.UIPath*
+        name: UIPath
+      - name: .
+      - id: Lustie.UnityDocfx.UIPath.LoadUss*
+        name: LoadUss
+    qualifiedName:
+      CSharp:
+      - id: Lustie*
+        name: Lustie
+      - name: .
+      - id: Lustie.UnityDocfx*
+        name: UnityDocfx
+      - name: .
+      - id: Lustie.UnityDocfx.UIPath*
+        name: UIPath
+      - name: .
+      - id: Lustie.UnityDocfx.UIPath.LoadUss*
+        name: LoadUss
+      VB:
+      - id: Lustie*
+        name: Lustie
+      - name: .
+      - id: Lustie.UnityDocfx*
+        name: UnityDocfx
+      - name: .
+      - id: Lustie.UnityDocfx.UIPath*
+        name: UIPath
+      - name: .
+      - id: Lustie.UnityDocfx.UIPath.LoadUss*
+        name: LoadUss
+    isDefinition: true
+    commentId: Overload:Lustie.UnityDocfx.UIPath.LoadUss
+  Lustie.UnityDocfx.UIPath:
+    name:
+      CSharp:
+      - id: Lustie.UnityDocfx.UIPath
+        name: UIPath
+      VB:
+      - id: Lustie.UnityDocfx.UIPath
+        name: UIPath
+    nameWithType:
+      CSharp:
+      - id: Lustie.UnityDocfx.UIPath
+        name: UIPath
+      VB:
+      - id: Lustie.UnityDocfx.UIPath
+        name: UIPath
+    qualifiedName:
+      CSharp:
+      - id: Lustie
+        name: Lustie
+      - name: .
+      - id: Lustie.UnityDocfx
+        name: UnityDocfx
+      - name: .
+      - id: Lustie.UnityDocfx.UIPath
+        name: UIPath
+      VB:
+      - id: Lustie
+        name: Lustie
+      - name: .
+      - id: Lustie.UnityDocfx
+        name: UnityDocfx
+      - name: .
+      - id: Lustie.UnityDocfx.UIPath
+        name: UIPath
+    isDefinition: true
+    commentId: T:Lustie.UnityDocfx.UIPath
+  Lustie.UnityDocfx.DocfxTemplatesPath.CurrentPath*:
+    name:
+      CSharp:
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath.CurrentPath*
+        name: CurrentPath
+      VB:
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath.CurrentPath*
+        name: CurrentPath
+    nameWithType:
+      CSharp:
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath*
+        name: DocfxTemplatesPath
+      - name: .
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath.CurrentPath*
+        name: CurrentPath
+      VB:
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath*
+        name: DocfxTemplatesPath
+      - name: .
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath.CurrentPath*
+        name: CurrentPath
+    qualifiedName:
+      CSharp:
+      - id: Lustie*
+        name: Lustie
+      - name: .
+      - id: Lustie.UnityDocfx*
+        name: UnityDocfx
+      - name: .
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath*
+        name: DocfxTemplatesPath
+      - name: .
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath.CurrentPath*
+        name: CurrentPath
+      VB:
+      - id: Lustie*
+        name: Lustie
+      - name: .
+      - id: Lustie.UnityDocfx*
+        name: UnityDocfx
+      - name: .
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath*
+        name: DocfxTemplatesPath
+      - name: .
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath.CurrentPath*
+        name: CurrentPath
+    isDefinition: true
+    commentId: Overload:Lustie.UnityDocfx.DocfxTemplatesPath.CurrentPath
+  System.Boolean:
+    name:
+      CSharp:
+      - id: System.Boolean
+        name: bool
+        isExternal: true
+      VB:
+      - id: System.Boolean
+        name: Boolean
+        isExternal: true
+    nameWithType:
+      CSharp:
+      - id: System.Boolean
+        name: bool
+        isExternal: true
+      VB:
+      - id: System.Boolean
+        name: Boolean
+        isExternal: true
+    qualifiedName:
+      CSharp:
+      - id: System.Boolean
+        name: bool
+        isExternal: true
+      VB:
+      - id: System.Boolean
+        name: Boolean
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.Boolean
+  Lustie.UnityDocfx.DocfxTemplatesPath.LoadTemplates*:
+    name:
+      CSharp:
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath.LoadTemplates*
+        name: LoadTemplates
+      VB:
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath.LoadTemplates*
+        name: LoadTemplates
+    nameWithType:
+      CSharp:
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath*
+        name: DocfxTemplatesPath
+      - name: .
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath.LoadTemplates*
+        name: LoadTemplates
+      VB:
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath*
+        name: DocfxTemplatesPath
+      - name: .
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath.LoadTemplates*
+        name: LoadTemplates
+    qualifiedName:
+      CSharp:
+      - id: Lustie*
+        name: Lustie
+      - name: .
+      - id: Lustie.UnityDocfx*
+        name: UnityDocfx
+      - name: .
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath*
+        name: DocfxTemplatesPath
+      - name: .
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath.LoadTemplates*
+        name: LoadTemplates
+      VB:
+      - id: Lustie*
+        name: Lustie
+      - name: .
+      - id: Lustie.UnityDocfx*
+        name: UnityDocfx
+      - name: .
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath*
+        name: DocfxTemplatesPath
+      - name: .
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath.LoadTemplates*
+        name: LoadTemplates
+    isDefinition: true
+    commentId: Overload:Lustie.UnityDocfx.DocfxTemplatesPath.LoadTemplates
+  Lustie.UnityDocfx.DocfxTemplatesPath:
+    name:
+      CSharp:
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath
+        name: DocfxTemplatesPath
+      VB:
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath
+        name: DocfxTemplatesPath
+    nameWithType:
+      CSharp:
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath
+        name: DocfxTemplatesPath
+      VB:
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath
+        name: DocfxTemplatesPath
+    qualifiedName:
+      CSharp:
+      - id: Lustie
+        name: Lustie
+      - name: .
+      - id: Lustie.UnityDocfx
+        name: UnityDocfx
+      - name: .
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath
+        name: DocfxTemplatesPath
+      VB:
+      - id: Lustie
+        name: Lustie
+      - name: .
+      - id: Lustie.UnityDocfx
+        name: UnityDocfx
+      - name: .
+      - id: Lustie.UnityDocfx.DocfxTemplatesPath
+        name: DocfxTemplatesPath
+    isDefinition: true
+    commentId: T:Lustie.UnityDocfx.DocfxTemplatesPath
+  Lustie.UnityDocfx:
+    name:
+      CSharp:
+      - id: Lustie
+        name: Lustie
+      - name: .
+      - id: Lustie.UnityDocfx
+        name: UnityDocfx
+      VB:
+      - id: Lustie
+        name: Lustie
+      - name: .
+      - id: Lustie.UnityDocfx
+        name: UnityDocfx
+    nameWithType:
+      CSharp:
+      - id: Lustie
+        name: Lustie
+      - name: .
+      - id: Lustie.UnityDocfx
+        name: UnityDocfx
+      VB:
+      - id: Lustie
+        name: Lustie
+      - name: .
+      - id: Lustie.UnityDocfx
+        name: UnityDocfx
+    qualifiedName:
+      CSharp:
+      - id: Lustie
+        name: Lustie
+      - name: .
+      - id: Lustie.UnityDocfx
+        name: UnityDocfx
+      VB:
+      - id: Lustie
+        name: Lustie
+      - name: .
+      - id: Lustie.UnityDocfx
+        name: UnityDocfx
+    isDefinition: true
+    commentId: N:Lustie.UnityDocfx

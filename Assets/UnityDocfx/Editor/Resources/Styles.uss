@@ -1,0 +1,44 @@
+.btn-cmd {
+    height: 45px;
+}
+
+:root {
+    width: 100%;
+    height: 100%;
+}
+
+.settings-area {
+    border-left-color: rgb(22, 22, 22);
+    border-right-color: rgb(22, 22, 22);
+    border-top-color: rgb(22, 22, 22);
+    border-bottom-color: rgb(22, 22, 22);
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+    background-color: rgb(46, 46, 46);
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.settings-h {
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.button-s {
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    height: 40px;
+    flex-shrink: 1;
+}
+
+.label-s {
+    font-size: 18px;
+}

@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: Lustie.UnityDocfx
+  commentId: N:Lustie.UnityDocfx
+  id: Lustie.UnityDocfx
+  children:
+  - Lustie.UnityDocfx.DocfxSetupTool
+  - Lustie.UnityDocfx.DocfxTemplatesPath
+  - Lustie.UnityDocfx.UIPath
+  langs:
+  - csharp
+  - vb
+  name: Lustie.UnityDocfx
+  nameWithType: Lustie.UnityDocfx
+  fullName: Lustie.UnityDocfx
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Lustie.UnityDocfx.DocfxSetupTool
+  commentId: T:Lustie.UnityDocfx.DocfxSetupTool
+  name: DocfxSetupTool
+  nameWithType: DocfxSetupTool
+  fullName: Lustie.UnityDocfx.DocfxSetupTool
+- uid: Lustie.UnityDocfx.UIPath
+  commentId: T:Lustie.UnityDocfx.UIPath
+  name: UIPath
+  nameWithType: UIPath
+  fullName: Lustie.UnityDocfx.UIPath
+- uid: Lustie.UnityDocfx.DocfxTemplatesPath
+  commentId: T:Lustie.UnityDocfx.DocfxTemplatesPath
+  name: DocfxTemplatesPath
+  nameWithType: DocfxTemplatesPath
+  fullName: Lustie.UnityDocfx.DocfxTemplatesPath

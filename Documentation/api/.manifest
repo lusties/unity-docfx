@@ -1,0 +1,12 @@
+{
+  "Lustie.UnityDocfx": "Lustie.UnityDocfx.yml",
+  "Lustie.UnityDocfx.DocfxSetupTool": "Lustie.UnityDocfx.DocfxSetupTool.yml",
+  "Lustie.UnityDocfx.DocfxSetupTool.ShowWindow": "Lustie.UnityDocfx.DocfxSetupTool.yml",
+  "Lustie.UnityDocfx.DocfxTemplatesPath": "Lustie.UnityDocfx.DocfxTemplatesPath.yml",
+  "Lustie.UnityDocfx.DocfxTemplatesPath.CurrentPath": "Lustie.UnityDocfx.DocfxTemplatesPath.yml",
+  "Lustie.UnityDocfx.DocfxTemplatesPath.LoadTemplates(System.String,System.String@)": "Lustie.UnityDocfx.DocfxTemplatesPath.yml",
+  "Lustie.UnityDocfx.UIPath": "Lustie.UnityDocfx.UIPath.yml",
+  "Lustie.UnityDocfx.UIPath.LoadUss(System.String)": "Lustie.UnityDocfx.UIPath.yml",
+  "Lustie.UnityDocfx.UIPath.LoadUxml(System.String)": "Lustie.UnityDocfx.UIPath.yml",
+  "Lustie.UnityDocfx.UIPath.UxmlAssetPath(System.String)": "Lustie.UnityDocfx.UIPath.yml"
+}

@@ -1,0 +1,10 @@
+### YamlMime:TableOfContent
+- uid: Lustie.UnityDocfx
+  name: Lustie.UnityDocfx
+  items:
+  - uid: Lustie.UnityDocfx.DocfxSetupTool
+    name: DocfxSetupTool
+  - uid: Lustie.UnityDocfx.DocfxTemplatesPath
+    name: DocfxTemplatesPath
+  - uid: Lustie.UnityDocfx.UIPath
+    name: UIPath
