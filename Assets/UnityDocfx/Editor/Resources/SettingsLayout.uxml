@@ -4,12 +4,11 @@
     <ui:VisualElement style="flex-grow: 1; margin-top: 8px; margin-right: 8px; margin-bottom: 8px; margin-left: 8px;">
         <ui:Label tabindex="-1" text="Unity Docfx Tool" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 25px; -unity-font-style: bold;" />
         <ui:VisualElement class="settings-area" style="flex-grow: 1;">
-            <ui:TextField picking-mode="Ignore" label="Folder:" value="filler text" name="txt-doc-folder" />
             <ui:TextField picking-mode="Ignore" label="Github:" value="filler text" name="txt-git-name" />
             <ui:TextField picking-mode="Ignore" label="Unity version" value="filler text" name="txt-unity-v" />
         </ui:VisualElement>
         <ui:VisualElement name="docfx-settings" class="settings-area" style="flex-grow: 1;">
-            <ui:Foldout text="Docfx Settings:" name="Foldout" class="label-s">
+            <ui:Foldout text="Docfx Settings:" name="Foldout" value="false" class="label-s">
                 <ui:Instance template="horizontal-line" name="horizontal-line" />
                 <ui:VisualElement name="docfx-s-container" style="flex-grow: 1; font-size: 12px;">
                     <ui:ListView name="list-src" header-title="Src:" reorderable="true" show-foldout-header="true" reorder-mode="Animated" show-add-remove-footer="true" selection-type="Multiple" show-border="true" class="list-reorderable" />
@@ -37,7 +36,7 @@
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="toc-settings" class="settings-area" style="flex-grow: 1;">
-            <ui:Foldout text="Table of contents" class="label-s">
+            <ui:Foldout text="Table of contents" value="false" class="label-s">
                 <ui:Instance template="horizontal-line" name="horizontal-line" />
                 <ui:VisualElement name="toc-content-container" style="flex-grow: 1; flex-direction: row; margin-top: 5px; font-size: 12px;">
                     <ui:ListView name="list-toc" style="flex-grow: 1; width: 25%;" />
@@ -54,14 +53,14 @@
             <ui:VisualElement class="settings-h" style="flex-grow: 1;">
                 <ui:Label tabindex="-1" text="Output" parse-escape-sequences="true" display-tooltip-when-elided="true" class="label-s" style="margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; -unity-text-align: middle-left;" />
             </ui:VisualElement>
+            <ui:TextField picking-mode="Ignore" label="Folder:" value="filler text" name="txt-doc-folder" />
             <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                <ui:TextField picking-mode="Ignore" label="Output:" value="../_site" name="dest" style="flex-shrink: 1; flex-grow: 1;" />
-                <ui:Button text="Choose" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btn-output-choose" style="width: 50px;" />
+                <ui:TextField picking-mode="Ignore" label="Output:" name="dest" tooltip="Destination of the final document web project containing index.html. If you are about to build with GitHub Pages, you should keep it in the &apos;docs&apos; folder." style="flex-shrink: 1; flex-grow: 1;" />
+                <ui:Button text="Browse" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btn-output-browse" style="width: 50px;" />
                 <ui:Button text="View" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btn-output-view" style="width: 50px;" />
             </ui:VisualElement>
-            <ui:Button text="Go live" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btn-go-live" />
         </ui:VisualElement>
-        <ui:VisualElement style="flex-grow: 1; margin-top: 42px;">
+        <ui:VisualElement style="flex-grow: 1; margin-top: 35px;">
             <ui:Button text="Build Documentation" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btn-build" class="btn-cmd" />
             <ui:Button text="Serve Documentation" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btn-serve" class="btn-cmd" />
             <ui:Button text="Build with Cmd" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btn-build-cmd" class="btn-cmd" />

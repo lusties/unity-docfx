@@ -20,7 +20,7 @@ items:
   source:
     id: JObjectExtensions
     path: ''
-    startLine: 571
+    startLine: 613
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -52,7 +52,7 @@ items:
   source:
     id: ReplaceValues
     path: ''
-    startLine: 576
+    startLine: 618
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -87,7 +87,7 @@ items:
   source:
     id: GetJObject
     path: ''
-    startLine: 605
+    startLine: 647
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -122,7 +122,7 @@ items:
   source:
     id: GetJArray
     path: ''
-    startLine: 613
+    startLine: 655
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -157,7 +157,7 @@ items:
   source:
     id: GetJValue
     path: ''
-    startLine: 621
+    startLine: 663
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -192,7 +192,7 @@ items:
   source:
     id: GetValue
     path: ''
-    startLine: 629
+    startLine: 671
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx

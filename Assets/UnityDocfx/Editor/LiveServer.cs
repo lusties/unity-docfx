@@ -124,6 +124,8 @@ namespace Lustie.UnityDocfx
             serverThread?.Join();
         }
 
+        public bool IsRunning => serverThread.IsAlive;
+
         public string GetUrl() => $"http://localhost:{port}/";
 
         public static implicit operator bool(LiveServer server)

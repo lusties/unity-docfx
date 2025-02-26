@@ -60,10 +60,10 @@ namespace Lustie.UnityDocfx
                 RunDocfxCommand("serve");
             });
 
-            templateContainer.Q<TextField>("txt-doc-folder").BindProperty(docsetSerObj.FindProperty("folder"));
+            templateContainer.Q<TextField>("txt-doc-folder").BindProperty(FindProp("folder"));
 
 
-            templateContainer.Q<TextField>("txt-git-name").BindProperty(docsetSerObj.FindProperty("docfxJson.baseUrl"));
+            templateContainer.Q<TextField>("txt-git-name").BindProperty(FindProp("docfxJson.baseUrl"));
 
 
             var txtUntiyVersion = templateContainer.Q<TextField>("txt-unity-v");
@@ -89,10 +89,11 @@ namespace Lustie.UnityDocfx
             QueryDocfxSettings();
             QueryTOCLSettings();
             QueryOutputSettings();
+            QueryServerSettings();
         }
 
         UnityDocset unityDocset;
-        SerializedObject docsetSerObj;
+        SerializedObject uniDocsetSerObj;
 
         void LoadDocsetAsset()
         {
@@ -106,31 +107,31 @@ namespace Lustie.UnityDocfx
 
 
             unityDocset = docset;
-            docsetSerObj = new SerializedObject(unityDocset);
-            rootVisualElement.Bind(docsetSerObj);
+            uniDocsetSerObj = new SerializedObject(unityDocset);
+            rootVisualElement.Bind(uniDocsetSerObj);
         }
 
         #region QUERY AND BINDING
         void QueryDocfxSettings()
         {
             VisualElement docfxSettingsContainer = rootVisualElement.Q<VisualElement>("docfx-s-container");
-            docfxSettingsContainer.Q<TextField>("_appTitle").BindProperty(docsetSerObj.FindProperty("docfxJson._appTitle"));
-            docfxSettingsContainer.Q<TextField>("_appFooter").BindProperty(docsetSerObj.FindProperty("docfxJson._appFooter"));
-            docfxSettingsContainer.Q<Toggle>("_enableSearch").BindProperty(docsetSerObj.FindProperty("docfxJson._enableSearch"));
+            docfxSettingsContainer.Q<TextField>("_appTitle").BindProperty(FindProp("docfxJson._appTitle"));
+            docfxSettingsContainer.Q<TextField>("_appFooter").BindProperty(FindProp("docfxJson._appFooter"));
+            docfxSettingsContainer.Q<Toggle>("_enableSearch").BindProperty(FindProp("docfxJson._enableSearch"));
 
-            docfxSettingsContainer.Q<ListView>("list-src").BindProperty(docsetSerObj.FindProperty("docfxJson.src"));
-            docfxSettingsContainer.Q<ListView>("list-exclude").BindProperty(docsetSerObj.FindProperty("docfxJson.exclude"));
+            docfxSettingsContainer.Q<ListView>("list-src").BindProperty(FindProp("docfxJson.src"));
+            docfxSettingsContainer.Q<ListView>("list-exclude").BindProperty(FindProp("docfxJson.exclude"));
         }
 
         void QueryOutputSettings()
         {
             VisualElement outputContainer = rootVisualElement.Q<VisualElement>("output-container");
             var txtDest = outputContainer.Q<TextField>("dest");
-            txtDest.BindProperty(docsetSerObj.FindProperty("docfxJson.dest"));
+            txtDest.BindProperty(FindProp("docfxJson.dest"));
 
-            outputContainer.Q<Button>("btn-output-choose").RegisterCallback<ClickEvent>(evt =>
+            outputContainer.Q<Button>("btn-output-browse").RegisterCallback<ClickEvent>(evt =>
             {
-                string outputDir = EditorUtility.OpenFolderPanel("Choose Output Directory", "", "");
+                string outputDir = EditorUtility.OpenFolderPanel("Browse Output Directory", "", "");
                 if (!string.IsNullOrWhiteSpace(outputDir))
                     txtDest.value = outputDir;
             });
@@ -147,12 +148,27 @@ namespace Lustie.UnityDocfx
                     EditorUtility.DisplayDialog("Path doesn't exist", $"Path: {folderPath} DOES NOT EXIST", "OK");
                 }
             });
+        }
 
+        void QueryServerSettings()
+        {
+            VisualElement footer = rootVisualElement.Q<VisualElement>("footer");
             // Go live
-            outputContainer.Q<Button>("btn-go-live").RegisterCallback<ClickEvent>(evt =>
+            Button btnServer = footer.Q<Button>("btn-go-live");
+            btnServer.RegisterCallback<ClickEvent>(evt =>
             {
-                GoLive();
+                if (isLiving)
+                {
+                    DisposeServer();
+                    btnServer.text = "Go live";
+                    return;
+                }
+
+                GoLiveServer();
+                btnServer.text = "Dispose";
             });
+
+            footer.Q<IntegerField>("txt-port").BindProperty(FindProp("port"));
         }
 
         #endregion
@@ -163,7 +179,7 @@ namespace Lustie.UnityDocfx
 
         void OnTOCItemSelected()
         {
-            SerializedProperty selectedElementSP = docsetSerObj.FindProperty("TOC").GetArrayElementAtIndex(selectedTOCIndex);
+            SerializedProperty selectedElementSP = FindProp("TOC").GetArrayElementAtIndex(selectedTOCIndex);
 
             VisualElement tocContentContainer = rootVisualElement.Q("toc-content-container");
             tocContentContainer.Q<TextField>("toc-name").BindProperty(selectedElementSP.FindPropertyRelative("name"));
@@ -205,6 +221,11 @@ namespace Lustie.UnityDocfx
             e.Q<Label>("txt-toc-name").text = unityDocset.TOC[i].name;
         }
         #endregion
+
+        SerializedProperty FindProp(string propName)
+        {
+            return uniDocsetSerObj.FindProperty(propName);
+        }
 
         void SaveDocset()
         {
@@ -520,19 +541,21 @@ Feel free to edit this file to customize your documentation's home page.
         #region
 
         static LiveServer server;
+        static bool isLiving => server != null && server.IsRunning;
 
-        void GoLive()
+        void GoLiveServer()
         {
-            int port = 18080;
+            int port = unityDocset.port;
             string folderPath = unityDocset.docfxJson.dest;
 
-            if (server)
-            {
-                server.Dispose();
-            }
             server = new LiveServer(folderPath, port);
             server.Run();
             //Application.OpenURL(server.GetUrl());
+        }
+
+        void DisposeServer()
+        {
+            if(server) server.Dispose();
         }
         
         #endregion

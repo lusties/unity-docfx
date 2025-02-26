@@ -1,29 +1,30 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Global.LiveServer
-  commentId: T:Global.LiveServer
+- uid: Lustie.UnityDocfx.LiveServer
+  commentId: T:Lustie.UnityDocfx.LiveServer
   id: LiveServer
-  parent: Global
+  parent: Lustie.UnityDocfx
   children:
-  - Global.LiveServer.#ctor(System.String,System.Int32)
-  - Global.LiveServer.Dispose
-  - Global.LiveServer.GetUrl
-  - Global.LiveServer.op_Implicit(LiveServer)~System.Boolean
-  - Global.LiveServer.Run
+  - Lustie.UnityDocfx.LiveServer.#ctor(System.String,System.Int32)
+  - Lustie.UnityDocfx.LiveServer.Dispose
+  - Lustie.UnityDocfx.LiveServer.GetUrl
+  - Lustie.UnityDocfx.LiveServer.IsRunning
+  - Lustie.UnityDocfx.LiveServer.op_Implicit(Lustie.UnityDocfx.LiveServer)~System.Boolean
+  - Lustie.UnityDocfx.LiveServer.Run
   langs:
   - csharp
   - vb
   name: LiveServer
   nameWithType: LiveServer
-  fullName: LiveServer
+  fullName: Lustie.UnityDocfx.LiveServer
   type: Class
   source:
     id: LiveServer
     path: ''
-    startLine: 644
+    startLine: 688
   assemblies:
   - cs.temp.dll
-  namespace: Global
+  namespace: Lustie.UnityDocfx
   syntax:
     content: 'public class LiveServer : IDisposable'
     content.vb: Public Class LiveServer Implements IDisposable
@@ -39,24 +40,24 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: Global.LiveServer.#ctor(System.String,System.Int32)
-  commentId: M:Global.LiveServer.#ctor(System.String,System.Int32)
+- uid: Lustie.UnityDocfx.LiveServer.#ctor(System.String,System.Int32)
+  commentId: M:Lustie.UnityDocfx.LiveServer.#ctor(System.String,System.Int32)
   id: '#ctor(System.String,System.Int32)'
-  parent: Global.LiveServer
+  parent: Lustie.UnityDocfx.LiveServer
   langs:
   - csharp
   - vb
   name: LiveServer(string, int)
   nameWithType: LiveServer.LiveServer(string, int)
-  fullName: LiveServer.LiveServer(string, int)
+  fullName: Lustie.UnityDocfx.LiveServer.LiveServer(string, int)
   type: Constructor
   source:
     id: .ctor
     path: ''
-    startLine: 652
+    startLine: 696
   assemblies:
   - cs.temp.dll
-  namespace: Global
+  namespace: Lustie.UnityDocfx
   syntax:
     content: public LiveServer(string folderPath, int port)
     parameters:
@@ -65,112 +66,153 @@ items:
     - id: port
       type: System.Int32
     content.vb: Public Sub New(folderPath As String, port As Integer)
-  overload: Global.LiveServer.#ctor*
+  overload: Lustie.UnityDocfx.LiveServer.#ctor*
   nameWithType.vb: LiveServer.New(String, Integer)
-  fullName.vb: LiveServer.New(String, Integer)
+  fullName.vb: Lustie.UnityDocfx.LiveServer.New(String, Integer)
   name.vb: New(String, Integer)
-- uid: Global.LiveServer.Run
-  commentId: M:Global.LiveServer.Run
+- uid: Lustie.UnityDocfx.LiveServer.Run
+  commentId: M:Lustie.UnityDocfx.LiveServer.Run
   id: Run
-  parent: Global.LiveServer
+  parent: Lustie.UnityDocfx.LiveServer
   langs:
   - csharp
   - vb
   name: Run()
   nameWithType: LiveServer.Run()
-  fullName: LiveServer.Run()
+  fullName: Lustie.UnityDocfx.LiveServer.Run()
   type: Method
   source:
     id: Run
     path: ''
-    startLine: 663
+    startLine: 707
   assemblies:
   - cs.temp.dll
-  namespace: Global
+  namespace: Lustie.UnityDocfx
   syntax:
     content: public void Run()
     content.vb: Public Sub Run()
-  overload: Global.LiveServer.Run*
-- uid: Global.LiveServer.Dispose
-  commentId: M:Global.LiveServer.Dispose
+  overload: Lustie.UnityDocfx.LiveServer.Run*
+- uid: Lustie.UnityDocfx.LiveServer.Dispose
+  commentId: M:Lustie.UnityDocfx.LiveServer.Dispose
   id: Dispose
-  parent: Global.LiveServer
+  parent: Lustie.UnityDocfx.LiveServer
   langs:
   - csharp
   - vb
   name: Dispose()
   nameWithType: LiveServer.Dispose()
-  fullName: LiveServer.Dispose()
+  fullName: Lustie.UnityDocfx.LiveServer.Dispose()
   type: Method
   source:
     id: Dispose
     path: ''
-    startLine: 754
+    startLine: 798
   assemblies:
   - cs.temp.dll
-  namespace: Global
+  namespace: Lustie.UnityDocfx
   syntax:
     content: public void Dispose()
     content.vb: Public Sub Dispose()
-  overload: Global.LiveServer.Dispose*
+  overload: Lustie.UnityDocfx.LiveServer.Dispose*
   implements:
   - System.IDisposable.Dispose
-- uid: Global.LiveServer.GetUrl
-  commentId: M:Global.LiveServer.GetUrl
+- uid: Lustie.UnityDocfx.LiveServer.IsRunning
+  commentId: P:Lustie.UnityDocfx.LiveServer.IsRunning
+  id: IsRunning
+  parent: Lustie.UnityDocfx.LiveServer
+  langs:
+  - csharp
+  - vb
+  name: IsRunning
+  nameWithType: LiveServer.IsRunning
+  fullName: Lustie.UnityDocfx.LiveServer.IsRunning
+  type: Property
+  source:
+    id: IsRunning
+    path: ''
+    startLine: 805
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public bool IsRunning { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRunning As Boolean
+  overload: Lustie.UnityDocfx.LiveServer.IsRunning*
+- uid: Lustie.UnityDocfx.LiveServer.GetUrl
+  commentId: M:Lustie.UnityDocfx.LiveServer.GetUrl
   id: GetUrl
-  parent: Global.LiveServer
+  parent: Lustie.UnityDocfx.LiveServer
   langs:
   - csharp
   - vb
   name: GetUrl()
   nameWithType: LiveServer.GetUrl()
-  fullName: LiveServer.GetUrl()
+  fullName: Lustie.UnityDocfx.LiveServer.GetUrl()
   type: Method
   source:
     id: GetUrl
     path: ''
-    startLine: 761
+    startLine: 807
   assemblies:
   - cs.temp.dll
-  namespace: Global
+  namespace: Lustie.UnityDocfx
   syntax:
     content: public string GetUrl()
     return:
       type: System.String
     content.vb: Public Function GetUrl() As String
-  overload: Global.LiveServer.GetUrl*
-- uid: Global.LiveServer.op_Implicit(LiveServer)~System.Boolean
-  commentId: M:Global.LiveServer.op_Implicit(LiveServer)~System.Boolean
-  id: op_Implicit(LiveServer)~System.Boolean
-  parent: Global.LiveServer
+  overload: Lustie.UnityDocfx.LiveServer.GetUrl*
+- uid: Lustie.UnityDocfx.LiveServer.op_Implicit(Lustie.UnityDocfx.LiveServer)~System.Boolean
+  commentId: M:Lustie.UnityDocfx.LiveServer.op_Implicit(Lustie.UnityDocfx.LiveServer)~System.Boolean
+  id: op_Implicit(Lustie.UnityDocfx.LiveServer)~System.Boolean
+  parent: Lustie.UnityDocfx.LiveServer
   langs:
   - csharp
   - vb
   name: implicit operator bool(LiveServer)
   nameWithType: LiveServer.implicit operator bool(LiveServer)
-  fullName: LiveServer.implicit operator bool(LiveServer)
+  fullName: Lustie.UnityDocfx.LiveServer.implicit operator bool(Lustie.UnityDocfx.LiveServer)
   type: Operator
   source:
     id: op_Implicit
     path: ''
-    startLine: 763
+    startLine: 809
   assemblies:
   - cs.temp.dll
-  namespace: Global
+  namespace: Lustie.UnityDocfx
   syntax:
     content: public static implicit operator bool(LiveServer server)
     parameters:
     - id: server
-      type: Global.LiveServer
+      type: Lustie.UnityDocfx.LiveServer
     return:
       type: System.Boolean
     content.vb: Public Shared Widening Operator CType(server As LiveServer) As Boolean
-  overload: Global.LiveServer.op_Implicit*
+  overload: Lustie.UnityDocfx.LiveServer.op_Implicit*
   nameWithType.vb: LiveServer.CType(LiveServer)
-  fullName.vb: LiveServer.CType(LiveServer)
+  fullName.vb: Lustie.UnityDocfx.LiveServer.CType(Lustie.UnityDocfx.LiveServer)
   name.vb: CType(LiveServer)
 references:
-- uid: Global
+- uid: Lustie.UnityDocfx
+  commentId: N:Lustie.UnityDocfx
+  name: Lustie.UnityDocfx
+  nameWithType: Lustie.UnityDocfx
+  fullName: Lustie.UnityDocfx
+  spec.csharp:
+  - uid: Lustie
+    name: Lustie
+  - name: .
+  - uid: Lustie.UnityDocfx
+    name: UnityDocfx
+  spec.vb:
+  - uid: Lustie
+    name: Lustie
+  - name: .
+  - uid: Lustie.UnityDocfx
+    name: UnityDocfx
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -382,13 +424,13 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Global.LiveServer.#ctor*
-  commentId: Overload:Global.LiveServer.#ctor
+- uid: Lustie.UnityDocfx.LiveServer.#ctor*
+  commentId: Overload:Lustie.UnityDocfx.LiveServer.#ctor
   name: LiveServer
   nameWithType: LiveServer.LiveServer
-  fullName: LiveServer.LiveServer
+  fullName: Lustie.UnityDocfx.LiveServer.LiveServer
   nameWithType.vb: LiveServer.New
-  fullName.vb: LiveServer.New
+  fullName.vb: Lustie.UnityDocfx.LiveServer.New
   name.vb: New
 - uid: System.String
   commentId: T:System.String
@@ -410,16 +452,16 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
-- uid: Global.LiveServer.Run*
-  commentId: Overload:Global.LiveServer.Run
+- uid: Lustie.UnityDocfx.LiveServer.Run*
+  commentId: Overload:Lustie.UnityDocfx.LiveServer.Run
   name: Run
   nameWithType: LiveServer.Run
-  fullName: LiveServer.Run
-- uid: Global.LiveServer.Dispose*
-  commentId: Overload:Global.LiveServer.Dispose
+  fullName: Lustie.UnityDocfx.LiveServer.Run
+- uid: Lustie.UnityDocfx.LiveServer.Dispose*
+  commentId: Overload:Lustie.UnityDocfx.LiveServer.Dispose
   name: Dispose
   nameWithType: LiveServer.Dispose
-  fullName: LiveServer.Dispose
+  fullName: Lustie.UnityDocfx.LiveServer.Dispose
 - uid: System.IDisposable.Dispose
   commentId: M:System.IDisposable.Dispose
   parent: System.IDisposable
@@ -439,33 +481,11 @@ references:
     isExternal: true
   - name: (
   - name: )
-- uid: Global.LiveServer.GetUrl*
-  commentId: Overload:Global.LiveServer.GetUrl
-  name: GetUrl
-  nameWithType: LiveServer.GetUrl
-  fullName: LiveServer.GetUrl
-- uid: Global.LiveServer.op_Implicit*
-  commentId: Overload:Global.LiveServer.op_Implicit
-  isExternal: true
-  name: implicit operator bool
-  nameWithType: LiveServer.implicit operator bool
-  fullName: LiveServer.implicit operator bool
-  nameWithType.vb: LiveServer.CType
-  fullName.vb: LiveServer.CType
-  name.vb: CType
-  spec.csharp:
-  - name: implicit
-  - name: " "
-  - name: operator
-  - name: " "
-  - uid: System.Boolean*
-    name: bool
-    isExternal: true
-- uid: Global.LiveServer
-  commentId: T:Global.LiveServer
-  name: LiveServer
-  nameWithType: LiveServer
-  fullName: LiveServer
+- uid: Lustie.UnityDocfx.LiveServer.IsRunning*
+  commentId: Overload:Lustie.UnityDocfx.LiveServer.IsRunning
+  name: IsRunning
+  nameWithType: LiveServer.IsRunning
+  fullName: Lustie.UnityDocfx.LiveServer.IsRunning
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -476,3 +496,31 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: Lustie.UnityDocfx.LiveServer.GetUrl*
+  commentId: Overload:Lustie.UnityDocfx.LiveServer.GetUrl
+  name: GetUrl
+  nameWithType: LiveServer.GetUrl
+  fullName: Lustie.UnityDocfx.LiveServer.GetUrl
+- uid: Lustie.UnityDocfx.LiveServer.op_Implicit*
+  commentId: Overload:Lustie.UnityDocfx.LiveServer.op_Implicit
+  isExternal: true
+  name: implicit operator bool
+  nameWithType: LiveServer.implicit operator bool
+  fullName: Lustie.UnityDocfx.LiveServer.implicit operator bool
+  nameWithType.vb: LiveServer.CType
+  fullName.vb: Lustie.UnityDocfx.LiveServer.CType
+  name.vb: CType
+  spec.csharp:
+  - name: implicit
+  - name: " "
+  - name: operator
+  - name: " "
+  - uid: System.Boolean*
+    name: bool
+    isExternal: true
+- uid: Lustie.UnityDocfx.LiveServer
+  commentId: T:Lustie.UnityDocfx.LiveServer
+  parent: Lustie.UnityDocfx
+  name: LiveServer
+  nameWithType: LiveServer
+  fullName: Lustie.UnityDocfx.LiveServer

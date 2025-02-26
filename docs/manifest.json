@@ -24,30 +24,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Global.LiveServer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Global.LiveServer.html",
-          "hash": "kqAr52xjzLGcHURe8HJTlUrTl37PYLKbIrJCA+S5KrA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Global.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Global.html",
-          "hash": "+bTf+5lzr287vV15+nxZK7QMNDER2zUSOFLN+rDVFYA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Lustie.UnityDocfx.Docfx.yml",
       "output": {
         ".html": {
@@ -89,6 +65,18 @@
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.JObjectExtensions.html",
           "hash": "0ftHFmXtpCWde0O6Gc+HNTyzZWj4nPggy4Fqy/FD4gQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lustie.UnityDocfx.LiveServer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lustie.UnityDocfx.LiveServer.html",
+          "hash": "qGabHnPrx1BpNuUzHMqPiRswQ7PIEOX65EDptBj51b0="
         }
       },
       "is_incremental": false,
@@ -148,7 +136,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.UnityDocset.html",
-          "hash": "E0AOmxAO+z+tg4HO+xM7dvPC42k8f+rQBqLQma1PVic="
+          "hash": "Z0bop4exrJIDQRrzxMhOLw2sOCL3bG9S9y3KDxayW8Y="
         }
       },
       "is_incremental": false,
@@ -160,7 +148,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.html",
-          "hash": "oQZApY5ZKbB4PvI9FRfOQa+tMTZXdhkZ0nmZkSr0YlE="
+          "hash": "1GwiDaMg7UXh/oPCw33o7J5qdqCAgWwgVglIWT3PKB0="
         }
       },
       "is_incremental": false,
@@ -172,7 +160,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "9ESWXWw5gNegfawXLYD3CGdCsebGFOkKLZ3wA3Geq+Q="
+          "hash": "1MxCt19H8Sz3PBjONHkZRqJDh4S5qFC82L7RT3w7ljs="
         }
       },
       "is_incremental": false,
@@ -232,7 +220,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "3p8KpWRO1z6fn35Pj5UknJbVpwc8D1IAUJPYYPWV5AI="
+          "hash": "DYLwxDfRcbZqEZpOW44oFUW0fSH7rmAe2XkdcsNctJ0="
         }
       },
       "is_incremental": false,
@@ -242,23 +230,25 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Cannot build incrementally because config changed.",
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ConfigChanged"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 3,
-          "skipped_file_count": 3
+          "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 12,
-          "skipped_file_count": 4
+          "total_file_count": 11,
+          "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

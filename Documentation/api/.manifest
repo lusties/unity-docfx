@@ -1,11 +1,4 @@
 {
-  "Global": "Global.yml",
-  "Global.LiveServer": "Global.LiveServer.yml",
-  "Global.LiveServer.#ctor(System.String,System.Int32)": "Global.LiveServer.yml",
-  "Global.LiveServer.Dispose": "Global.LiveServer.yml",
-  "Global.LiveServer.GetUrl": "Global.LiveServer.yml",
-  "Global.LiveServer.op_Implicit(LiveServer)~System.Boolean": "Global.LiveServer.yml",
-  "Global.LiveServer.Run": "Global.LiveServer.yml",
   "Lustie.UnityDocfx": "Lustie.UnityDocfx.yml",
   "Lustie.UnityDocfx.Docfx": "Lustie.UnityDocfx.Docfx.yml",
   "Lustie.UnityDocfx.Docfx._appFooter": "Lustie.UnityDocfx.Docfx.yml",
@@ -26,6 +19,13 @@
   "Lustie.UnityDocfx.JObjectExtensions.GetJValue(JObject,System.String)": "Lustie.UnityDocfx.JObjectExtensions.yml",
   "Lustie.UnityDocfx.JObjectExtensions.GetValue``1(JObject,System.String)": "Lustie.UnityDocfx.JObjectExtensions.yml",
   "Lustie.UnityDocfx.JObjectExtensions.ReplaceValues(JToken,System.String,System.String)": "Lustie.UnityDocfx.JObjectExtensions.yml",
+  "Lustie.UnityDocfx.LiveServer": "Lustie.UnityDocfx.LiveServer.yml",
+  "Lustie.UnityDocfx.LiveServer.#ctor(System.String,System.Int32)": "Lustie.UnityDocfx.LiveServer.yml",
+  "Lustie.UnityDocfx.LiveServer.Dispose": "Lustie.UnityDocfx.LiveServer.yml",
+  "Lustie.UnityDocfx.LiveServer.GetUrl": "Lustie.UnityDocfx.LiveServer.yml",
+  "Lustie.UnityDocfx.LiveServer.IsRunning": "Lustie.UnityDocfx.LiveServer.yml",
+  "Lustie.UnityDocfx.LiveServer.op_Implicit(Lustie.UnityDocfx.LiveServer)~System.Boolean": "Lustie.UnityDocfx.LiveServer.yml",
+  "Lustie.UnityDocfx.LiveServer.Run": "Lustie.UnityDocfx.LiveServer.yml",
   "Lustie.UnityDocfx.SortOption": "Lustie.UnityDocfx.SortOption.yml",
   "Lustie.UnityDocfx.SortOption.Custom": "Lustie.UnityDocfx.SortOption.yml",
   "Lustie.UnityDocfx.SortOption.Name": "Lustie.UnityDocfx.SortOption.yml",
@@ -45,5 +45,6 @@
   "Lustie.UnityDocfx.UnityDocset": "Lustie.UnityDocfx.UnityDocset.yml",
   "Lustie.UnityDocfx.UnityDocset.docfxJson": "Lustie.UnityDocfx.UnityDocset.yml",
   "Lustie.UnityDocfx.UnityDocset.folder": "Lustie.UnityDocfx.UnityDocset.yml",
+  "Lustie.UnityDocfx.UnityDocset.port": "Lustie.UnityDocfx.UnityDocset.yml",
   "Lustie.UnityDocfx.UnityDocset.TOC": "Lustie.UnityDocfx.UnityDocset.yml"
 }

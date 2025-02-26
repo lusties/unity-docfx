@@ -1,14 +1,4 @@
 {
-  "api/Global.html": {
-    "href": "api/Global.html",
-    "title": "Namespace | Unity Docfx title wtf baby a",
-    "keywords": "Namespace Classes LiveServer"
-  },
-  "api/Global.LiveServer.html": {
-    "href": "api/Global.LiveServer.html",
-    "title": "Class LiveServer | Unity Docfx title wtf baby a",
-    "keywords": "Class LiveServer Inheritance object LiveServer Implements System.IDisposable Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Global Assembly: cs.temp.dll.dll Syntax public class LiveServer : IDisposable Constructors LiveServer(string, int) Declaration public LiveServer(string folderPath, int port) Parameters Type Name Description string folderPath int port Methods Dispose() Declaration public void Dispose() GetUrl() Declaration public string GetUrl() Returns Type Description string Run() Declaration public void Run() Operators implicit operator bool(LiveServer) Declaration public static implicit operator bool(LiveServer server) Parameters Type Name Description LiveServer server Returns Type Description bool Implements System.IDisposable"
-  },
   "api/Lustie.UnityDocfx.Docfx.html": {
     "href": "api/Lustie.UnityDocfx.Docfx.html",
     "title": "Class Docfx | Unity Docfx title wtf baby a",
@@ -27,12 +17,17 @@
   "api/Lustie.UnityDocfx.html": {
     "href": "api/Lustie.UnityDocfx.html",
     "title": "Namespace Lustie.UnityDocfx | Unity Docfx title wtf baby a",
-    "keywords": "Namespace Lustie.UnityDocfx Classes Docfx DocfxSetupTool DocfxTemplatesPath JObjectExtensions TOC UIPath UnityDocset Enums SortOption SortOrder"
+    "keywords": "Namespace Lustie.UnityDocfx Classes Docfx DocfxSetupTool DocfxTemplatesPath JObjectExtensions LiveServer TOC UIPath UnityDocset Enums SortOption SortOrder"
   },
   "api/Lustie.UnityDocfx.JObjectExtensions.html": {
     "href": "api/Lustie.UnityDocfx.JObjectExtensions.html",
     "title": "Class JObjectExtensions | Unity Docfx title wtf baby a",
     "keywords": "Class JObjectExtensions Inheritance object JObjectExtensions Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax public static class JObjectExtensions Methods GetJArray(JObject, string) Get property as JArray Declaration public static JArray GetJArray(this JObject jobject, string propertyName) Parameters Type Name Description JObject jobject string propertyName Returns Type Description JArray GetJObject(JObject, string) Get property as JObject Declaration public static JObject GetJObject(this JObject jobject, string propertyName) Parameters Type Name Description JObject jobject string propertyName Returns Type Description JObject GetJValue(JObject, string) Get property as JValue Declaration public static JValue GetJValue(this JObject jobject, string propertyName) Parameters Type Name Description JObject jobject string propertyName Returns Type Description JValue GetValue<T>(JObject, string) Get property value (JToken) Declaration public static T GetValue<T>(this JObject jobject, string propertyName) where T : JToken Parameters Type Name Description JObject jobject string propertyName Returns Type Description T Type Parameters Name Description T ReplaceValues(JToken, string, string) Function to recursively replace values Declaration public static void ReplaceValues(this JToken token, string target, string replacement) Parameters Type Name Description JToken token string target string replacement"
+  },
+  "api/Lustie.UnityDocfx.LiveServer.html": {
+    "href": "api/Lustie.UnityDocfx.LiveServer.html",
+    "title": "Class LiveServer | Unity Docfx title wtf baby a",
+    "keywords": "Class LiveServer Inheritance object LiveServer Implements System.IDisposable Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax public class LiveServer : IDisposable Constructors LiveServer(string, int) Declaration public LiveServer(string folderPath, int port) Parameters Type Name Description string folderPath int port Properties IsRunning Declaration public bool IsRunning { get; } Property Value Type Description bool Methods Dispose() Declaration public void Dispose() GetUrl() Declaration public string GetUrl() Returns Type Description string Run() Declaration public void Run() Operators implicit operator bool(LiveServer) Declaration public static implicit operator bool(LiveServer server) Parameters Type Name Description LiveServer server Returns Type Description bool Implements System.IDisposable"
   },
   "api/Lustie.UnityDocfx.SortOption.html": {
     "href": "api/Lustie.UnityDocfx.SortOption.html",
@@ -57,7 +52,7 @@
   "api/Lustie.UnityDocfx.UnityDocset.html": {
     "href": "api/Lustie.UnityDocfx.UnityDocset.html",
     "title": "Class UnityDocset | Unity Docfx title wtf baby a",
-    "keywords": "Class UnityDocset Inheritance object UnityDocset Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax public class UnityDocset : ScriptableObject Fields docfxJson Declaration public Docfx docfxJson Field Value Type Description Docfx folder Declaration public string folder Field Value Type Description string TOC Declaration public List<TOC> TOC Field Value Type Description System.Collections.Generic.List<T><TOC>"
+    "keywords": "Class UnityDocset Inheritance object UnityDocset Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax public class UnityDocset : ScriptableObject Fields docfxJson docfx.json data Declaration public Docfx docfxJson Field Value Type Description Docfx folder Folder Declaration public string folder Field Value Type Description string port Server's port Declaration public int port Field Value Type Description int TOC Table of contents list Declaration public List<TOC> TOC Field Value Type Description System.Collections.Generic.List<T><TOC>"
   },
   "index.html": {
     "href": "index.html",

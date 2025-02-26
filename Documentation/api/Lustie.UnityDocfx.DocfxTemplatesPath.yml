@@ -17,7 +17,7 @@ items:
   source:
     id: DocfxTemplatesPath
     path: ''
-    startLine: 893
+    startLine: 953
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -48,7 +48,7 @@ items:
   source:
     id: CurrentPath
     path: ''
-    startLine: 899
+    startLine: 959
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -75,7 +75,7 @@ items:
   source:
     id: LoadTemplates
     path: ''
-    startLine: 905
+    startLine: 965
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx

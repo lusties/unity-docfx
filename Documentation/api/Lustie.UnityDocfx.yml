@@ -8,6 +8,7 @@ items:
   - Lustie.UnityDocfx.DocfxSetupTool
   - Lustie.UnityDocfx.DocfxTemplatesPath
   - Lustie.UnityDocfx.JObjectExtensions
+  - Lustie.UnityDocfx.LiveServer
   - Lustie.UnityDocfx.SortOption
   - Lustie.UnityDocfx.SortOrder
   - Lustie.UnityDocfx.TOC
@@ -39,6 +40,12 @@ references:
   name: JObjectExtensions
   nameWithType: JObjectExtensions
   fullName: Lustie.UnityDocfx.JObjectExtensions
+- uid: Lustie.UnityDocfx.LiveServer
+  commentId: T:Lustie.UnityDocfx.LiveServer
+  parent: Lustie.UnityDocfx
+  name: LiveServer
+  nameWithType: LiveServer
+  fullName: Lustie.UnityDocfx.LiveServer
 - uid: Lustie.UnityDocfx.SortOption
   commentId: T:Lustie.UnityDocfx.SortOption
   parent: Lustie.UnityDocfx

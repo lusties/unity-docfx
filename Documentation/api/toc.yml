@@ -1,9 +1,4 @@
 ### YamlMime:TableOfContent
-- uid: Global
-  name: ''
-  items:
-  - uid: Global.LiveServer
-    name: LiveServer
 - uid: Lustie.UnityDocfx
   name: Lustie.UnityDocfx
   items:
@@ -15,6 +10,8 @@
     name: DocfxTemplatesPath
   - uid: Lustie.UnityDocfx.JObjectExtensions
     name: JObjectExtensions
+  - uid: Lustie.UnityDocfx.LiveServer
+    name: LiveServer
   - uid: Lustie.UnityDocfx.SortOption
     name: SortOption
   - uid: Lustie.UnityDocfx.SortOrder
