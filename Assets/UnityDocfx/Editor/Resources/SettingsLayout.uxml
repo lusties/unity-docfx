@@ -2,7 +2,7 @@
     <ui:Template name="horizontal-line" src="project://database/Assets/UnityDocfx/Editor/Resources/horizontal-line.uxml?fileID=9197481963319205126&amp;guid=53859458be77f6d42b75a63f2c9b3777&amp;type=3#horizontal-line" />
     <Style src="project://database/Assets/UnityDocfx/Editor/Resources/Styles.uss?fileID=7433441132597879392&amp;guid=754e0c5d3bb64b94ca735c4e6526e3e0&amp;type=3#Styles" />
     <ui:VisualElement style="flex-grow: 1; margin-top: 8px; margin-right: 8px; margin-bottom: 8px; margin-left: 8px;">
-        <ui:Label tabindex="-1" text="Unity Docfx Tool" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 25px; -unity-font-style: bold;" />
+        <ui:Label tabindex="-1" text="Unity Docfx Tool" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 22px; -unity-font-style: bold;" />
         <ui:VisualElement class="settings-area" style="flex-grow: 1;">
             <ui:TextField picking-mode="Ignore" label="Github:" value="filler text" name="txt-git-name" />
             <ui:TextField picking-mode="Ignore" label="Unity version" value="filler text" name="txt-unity-v" />

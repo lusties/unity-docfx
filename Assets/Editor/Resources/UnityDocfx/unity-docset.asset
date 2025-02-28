@@ -10,20 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ce96d657814a9a4c90a4a6d8b1eb8c7, type: 3}
-  m_Name: UnityDocset
+  m_Name: unity-docset
   m_EditorClassIdentifier: 
-  folder: Documentation
+  folder: Documentaion
   docfxJson:
     src:
     - Assets/**/*.cs
     exclude:
     - Assets/Plugins/**
-    - Assets/Editor/**
-    _appTitle: Unity Docfx title wtf baby a
+    _appTitle: Unity Docfx title
     _appFooter: Unity Docfx footer
     _enableSearch: 1
-    baseUrl: a
-    dest: C:/Unity Projects/My Packages/unity-docfx/docs
+    baseUrl: 
+    dest: ../docs
   TOC:
   - name: Home
     href: index.md

@@ -1,49 +1,48 @@
-﻿using UnityEngine;
-using UnityEditor;
-using System.IO;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
-using Codice.CM.Common;
-using UnityEngine.UIElements;
-
-using Debug = UnityEngine.Debug;
-using System.Collections.Generic;
-using static UnityEditor.Experimental.GraphView.GraphView;
+using System.IO;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
-using Unity.Plastic.Newtonsoft.Json.Linq;
-using UnityEditor.UIElements;
 using System.Text.RegularExpressions;
-using System.Net.Http;
-using System;
-using System.Threading.Tasks;
-using static PlasticPipe.PlasticProtocol.Messages.NegotiationCommand;
+using Unity.Plastic.Newtonsoft.Json.Linq;
+using UnityEditor;
+using UnityEditor.Callbacks;
+using UnityEditor.UIElements;
+using UnityEditor.VersionControl;
+using UnityEngine;
+using UnityEngine.UIElements;
+using Debug = UnityEngine.Debug;
 
 namespace Lustie.UnityDocfx
 {
     public class DocfxSetupTool : EditorWindow
     {
-        private const string Url = "http://localhost:8080";
-
         private string unityVersion = "2022.3.27f1";
         private bool includeEditor = false;
 
         private const string docfxExecutable = "docfx";
 
-        [MenuItem("Lustie/UnityDocfx Tool")]
-        public static void ShowWindow()
-        {
-            GetWindow<DocfxSetupTool>("UnityDocfx Tool");
-        }
+        static UnityDocset unityDocset;
+        static SerializedObject uniDocsetSerObj;
 
+        #region Initialize
         private void CreateGUI()
         {
-            LoadDocsetAsset();
-
             VisualTreeAsset visualTree = UIPath.LoadUxml("EditorLayout.uxml");
             VisualElement templateContainer = visualTree.Instantiate();
             rootVisualElement.Add(templateContainer);
 
+            if (unityDocset == null)
+            {
+                LoadDocsetAsset();
+                SetupUIElements();
+            }
+        }
 
+        void SetupUIElements()
+        {
+            VisualElement templateContainer = rootVisualElement.contentContainer;
             var btnBuild = templateContainer.Q<Button>("btn-build");
             btnBuild.RegisterCallback<ClickEvent>(evt =>
             {
@@ -92,24 +91,33 @@ namespace Lustie.UnityDocfx
             QueryServerSettings();
         }
 
-        UnityDocset unityDocset;
-        SerializedObject uniDocsetSerObj;
-
         void LoadDocsetAsset()
         {
-            var docset = Resources.Load<UnityDocfx.UnityDocset>("UnityDocset");
+            var docsets = Resources.LoadAll<UnityDocfx.UnityDocset>("UnityDocfx");
+            var docset = docsets.FirstOrDefault();
+            //Debug.Log(docset);
             if (docset == null)
             {
                 docset = ScriptableObject.CreateInstance<UnityDocfx.UnityDocset>();
-                AssetDatabase.CreateAsset(docset, "");
+                Directory.CreateDirectory("Assets/Editor/Resources/UnityDocfx");
+                string path = AssetDatabase.GenerateUniqueAssetPath("Assets/Editor/Resources/UnityDocfx/unity-docset.asset");
+                AssetDatabase.CreateAsset(docset, $"{path}");
                 AssetDatabase.SaveAssets();
+                AssetDatabase.Refresh();
+                EditorUtility.FocusProjectWindow();
+                Selection.activeObject = docset;
             }
+            Bind(docset);
+        }
 
-
+        void Bind(UnityDocset docset)
+        {
             unityDocset = docset;
             uniDocsetSerObj = new SerializedObject(unityDocset);
             rootVisualElement.Bind(uniDocsetSerObj);
         }
+
+        #endregion
 
         #region QUERY AND BINDING
         void QueryDocfxSettings()
@@ -138,7 +146,11 @@ namespace Lustie.UnityDocfx
 
             outputContainer.Q<Button>("btn-output-view").RegisterCallback<ClickEvent>(evt =>
             {
-                string folderPath = @$"{unityDocset.docfxJson.dest.Replace('/', '\\')}";
+                string folderPath = @$"{unityDocset.docfxJson.dest}";
+                if (folderPath.StartsWith("../"))
+                {
+                    folderPath = string.Join('\\', Directory.GetCurrentDirectory(), folderPath.Replace("../", ""));
+                }
                 if (Directory.Exists(folderPath))
                 {
                     Process.Start("explorer.exe", folderPath);
@@ -157,7 +169,7 @@ namespace Lustie.UnityDocfx
             Button btnServer = footer.Q<Button>("btn-go-live");
             btnServer.RegisterCallback<ClickEvent>(evt =>
             {
-                if (isLiving)
+                if (isServerLiving)
                 {
                     DisposeServer();
                     btnServer.text = "Go live";
@@ -221,22 +233,6 @@ namespace Lustie.UnityDocfx
             e.Q<Label>("txt-toc-name").text = unityDocset.TOC[i].name;
         }
         #endregion
-
-        SerializedProperty FindProp(string propName)
-        {
-            return uniDocsetSerObj.FindProperty(propName);
-        }
-
-        void SaveDocset()
-        {
-            EditorUtility.SetDirty(unityDocset);
-            AssetDatabase.SaveAssetIfDirty(unityDocset);
-        }
-
-        private void OnDisable()
-        {
-            SaveDocset();
-        }
 
         #region FILES GENERATOR
 
@@ -527,7 +523,7 @@ Feel free to edit this file to customize your documentation's home page.
             int port = 18080;
             string folderPath = unityDocset.docfxJson.dest;
 
-            if(server)
+            if (server)
             {
                 server.Dispose();
             }
@@ -538,10 +534,10 @@ Feel free to edit this file to customize your documentation's home page.
 
         #endregion
 
-        #region
+        #region LIVE SERVER
 
         static LiveServer server;
-        static bool isLiving => server != null && server.IsRunning;
+        static bool isServerLiving => server != null && server.IsRunning;
 
         void GoLiveServer()
         {
@@ -555,9 +551,61 @@ Feel free to edit this file to customize your documentation's home page.
 
         void DisposeServer()
         {
-            if(server) server.Dispose();
+            if (server) server.Dispose();
         }
-        
+
+        #endregion
+
+        SerializedProperty FindProp(string propName)
+        {
+            return uniDocsetSerObj.FindProperty(propName);
+        }
+
+        void SaveDocset()
+        {
+            if (unityDocset == null)
+                return;
+            EditorUtility.SetDirty(unityDocset);
+            AssetDatabase.SaveAssetIfDirty(unityDocset);
+        }
+
+        private void OnDisable()
+        {
+            SaveDocset();
+            if (isServerLiving) DisposeServer();
+        }
+
+        #region OPEN EDITOR
+        [MenuItem("Window/UnityDocfx Tool")]
+        public static void Open()
+        {
+            var window = GetWindow();
+            window.LoadDocsetAsset();
+        }
+
+        public static void ShowWindow(UnityDocset unityDocset)
+        {
+            var window = GetWindow();
+            window.Bind(unityDocset);
+        }
+
+        public static DocfxSetupTool GetWindow()
+        {
+            return GetWindow<DocfxSetupTool>("UnityDocfx Tool");
+        }
+
+        [OnOpenAsset(0)]
+        public static bool OpenAsset(int instanceID, int line)
+        {
+            var unityDocsetAsset = EditorUtility.InstanceIDToObject(instanceID) as UnityDocset;
+
+            if (unityDocsetAsset == null)
+                return false;
+
+            ShowWindow(unityDocsetAsset);
+
+            return true;
+        }
         #endregion
     }
 }

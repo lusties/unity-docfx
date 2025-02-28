@@ -1,7 +1,3 @@
-.btn-cmd {
-    height: 45px;
-}
-
 :root {
     width: 100%;
     height: 100%;
@@ -21,13 +17,17 @@
     padding-right: 5px;
     padding-bottom: 5px;
     padding-left: 5px;
-    margin-bottom: 5px;
-    margin-top: 5px;
+    margin-bottom: 2px;
+    margin-top: 2px;
 }
 
 .settings-h {
     justify-content: space-between;
     flex-direction: row;
+}
+
+.label-s {
+    font-size: 14px;
 }
 
 .button-s {
@@ -39,8 +39,8 @@
     flex-shrink: 1;
 }
 
-.label-s {
-    font-size: 17px;
+.btn-cmd {
+    height: 45px;
 }
 
 .list-reorderable {

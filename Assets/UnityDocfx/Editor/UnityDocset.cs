@@ -39,7 +39,7 @@ namespace Lustie.UnityDocfx
         /// <summary>
         /// Table of contents list
         /// </summary>
-        public List<TOC> TOC = new List<TOC>()        
+        public List<TOC> TOC = new List<TOC>()
         {
             new TOC("Home", "index.md"),
             new TOC("Manual", "manual/"),
