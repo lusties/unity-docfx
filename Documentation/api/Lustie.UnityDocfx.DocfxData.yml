@@ -1,26 +1,26 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Lustie.UnityDocfx.Docfx
-  commentId: T:Lustie.UnityDocfx.Docfx
-  id: Docfx
+- uid: Lustie.UnityDocfx.DocfxData
+  commentId: T:Lustie.UnityDocfx.DocfxData
+  id: DocfxData
   parent: Lustie.UnityDocfx
   children:
-  - Lustie.UnityDocfx.Docfx._appFooter
-  - Lustie.UnityDocfx.Docfx._appTitle
-  - Lustie.UnityDocfx.Docfx._enableSearch
-  - Lustie.UnityDocfx.Docfx.baseUrl
-  - Lustie.UnityDocfx.Docfx.dest
-  - Lustie.UnityDocfx.Docfx.exclude
-  - Lustie.UnityDocfx.Docfx.src
+  - Lustie.UnityDocfx.DocfxData._appFooter
+  - Lustie.UnityDocfx.DocfxData._appTitle
+  - Lustie.UnityDocfx.DocfxData._enableSearch
+  - Lustie.UnityDocfx.DocfxData.baseUrl
+  - Lustie.UnityDocfx.DocfxData.dest
+  - Lustie.UnityDocfx.DocfxData.exclude
+  - Lustie.UnityDocfx.DocfxData.src
   langs:
   - csharp
   - vb
-  name: Docfx
-  nameWithType: Docfx
-  fullName: Lustie.UnityDocfx.Docfx
+  name: DocfxData
+  nameWithType: DocfxData
+  fullName: Lustie.UnityDocfx.DocfxData
   type: Class
   source:
-    id: Docfx
+    id: DocfxData
     path: ''
     startLine: 5
   assemblies:
@@ -30,11 +30,11 @@ items:
     content: >-
       [Serializable]
 
-      public class Docfx
+      public class DocfxData
     content.vb: >-
       <Serializable>
 
-      Public Class Docfx
+      Public Class DocfxData
   inheritance:
   - System.Object
   inheritedMembers:
@@ -49,16 +49,16 @@ items:
   - type: System.SerializableAttribute
     ctor: System.SerializableAttribute.#ctor
     arguments: []
-- uid: Lustie.UnityDocfx.Docfx.src
-  commentId: F:Lustie.UnityDocfx.Docfx.src
+- uid: Lustie.UnityDocfx.DocfxData.src
+  commentId: F:Lustie.UnityDocfx.DocfxData.src
   id: src
-  parent: Lustie.UnityDocfx.Docfx
+  parent: Lustie.UnityDocfx.DocfxData
   langs:
   - csharp
   - vb
   name: src
-  nameWithType: Docfx.src
-  fullName: Lustie.UnityDocfx.Docfx.src
+  nameWithType: DocfxData.src
+  fullName: Lustie.UnityDocfx.DocfxData.src
   type: Field
   source:
     id: src
@@ -74,16 +74,16 @@ items:
     return:
       type: System.Collections.Generic.List{System.String}
     content.vb: Public src As List(Of String)
-- uid: Lustie.UnityDocfx.Docfx.exclude
-  commentId: F:Lustie.UnityDocfx.Docfx.exclude
+- uid: Lustie.UnityDocfx.DocfxData.exclude
+  commentId: F:Lustie.UnityDocfx.DocfxData.exclude
   id: exclude
-  parent: Lustie.UnityDocfx.Docfx
+  parent: Lustie.UnityDocfx.DocfxData
   langs:
   - csharp
   - vb
   name: exclude
-  nameWithType: Docfx.exclude
-  fullName: Lustie.UnityDocfx.Docfx.exclude
+  nameWithType: DocfxData.exclude
+  fullName: Lustie.UnityDocfx.DocfxData.exclude
   type: Field
   source:
     id: exclude
@@ -99,16 +99,16 @@ items:
     return:
       type: System.Collections.Generic.List{System.String}
     content.vb: Public exclude As List(Of String)
-- uid: Lustie.UnityDocfx.Docfx._appTitle
-  commentId: F:Lustie.UnityDocfx.Docfx._appTitle
+- uid: Lustie.UnityDocfx.DocfxData._appTitle
+  commentId: F:Lustie.UnityDocfx.DocfxData._appTitle
   id: _appTitle
-  parent: Lustie.UnityDocfx.Docfx
+  parent: Lustie.UnityDocfx.DocfxData
   langs:
   - csharp
   - vb
   name: _appTitle
-  nameWithType: Docfx._appTitle
-  fullName: Lustie.UnityDocfx.Docfx._appTitle
+  nameWithType: DocfxData._appTitle
+  fullName: Lustie.UnityDocfx.DocfxData._appTitle
   type: Field
   source:
     id: _appTitle
@@ -124,16 +124,16 @@ items:
     return:
       type: System.String
     content.vb: Public _appTitle As String
-- uid: Lustie.UnityDocfx.Docfx._appFooter
-  commentId: F:Lustie.UnityDocfx.Docfx._appFooter
+- uid: Lustie.UnityDocfx.DocfxData._appFooter
+  commentId: F:Lustie.UnityDocfx.DocfxData._appFooter
   id: _appFooter
-  parent: Lustie.UnityDocfx.Docfx
+  parent: Lustie.UnityDocfx.DocfxData
   langs:
   - csharp
   - vb
   name: _appFooter
-  nameWithType: Docfx._appFooter
-  fullName: Lustie.UnityDocfx.Docfx._appFooter
+  nameWithType: DocfxData._appFooter
+  fullName: Lustie.UnityDocfx.DocfxData._appFooter
   type: Field
   source:
     id: _appFooter
@@ -149,16 +149,16 @@ items:
     return:
       type: System.String
     content.vb: Public _appFooter As String
-- uid: Lustie.UnityDocfx.Docfx._enableSearch
-  commentId: F:Lustie.UnityDocfx.Docfx._enableSearch
+- uid: Lustie.UnityDocfx.DocfxData._enableSearch
+  commentId: F:Lustie.UnityDocfx.DocfxData._enableSearch
   id: _enableSearch
-  parent: Lustie.UnityDocfx.Docfx
+  parent: Lustie.UnityDocfx.DocfxData
   langs:
   - csharp
   - vb
   name: _enableSearch
-  nameWithType: Docfx._enableSearch
-  fullName: Lustie.UnityDocfx.Docfx._enableSearch
+  nameWithType: DocfxData._enableSearch
+  fullName: Lustie.UnityDocfx.DocfxData._enableSearch
   type: Field
   source:
     id: _enableSearch
@@ -174,16 +174,16 @@ items:
     return:
       type: System.Boolean
     content.vb: Public _enableSearch As Boolean
-- uid: Lustie.UnityDocfx.Docfx.baseUrl
-  commentId: F:Lustie.UnityDocfx.Docfx.baseUrl
+- uid: Lustie.UnityDocfx.DocfxData.baseUrl
+  commentId: F:Lustie.UnityDocfx.DocfxData.baseUrl
   id: baseUrl
-  parent: Lustie.UnityDocfx.Docfx
+  parent: Lustie.UnityDocfx.DocfxData
   langs:
   - csharp
   - vb
   name: baseUrl
-  nameWithType: Docfx.baseUrl
-  fullName: Lustie.UnityDocfx.Docfx.baseUrl
+  nameWithType: DocfxData.baseUrl
+  fullName: Lustie.UnityDocfx.DocfxData.baseUrl
   type: Field
   source:
     id: baseUrl
@@ -199,16 +199,16 @@ items:
     return:
       type: System.String
     content.vb: Public baseUrl As String
-- uid: Lustie.UnityDocfx.Docfx.dest
-  commentId: F:Lustie.UnityDocfx.Docfx.dest
+- uid: Lustie.UnityDocfx.DocfxData.dest
+  commentId: F:Lustie.UnityDocfx.DocfxData.dest
   id: dest
-  parent: Lustie.UnityDocfx.Docfx
+  parent: Lustie.UnityDocfx.DocfxData
   langs:
   - csharp
   - vb
   name: dest
-  nameWithType: Docfx.dest
-  fullName: Lustie.UnityDocfx.Docfx.dest
+  nameWithType: DocfxData.dest
+  fullName: Lustie.UnityDocfx.DocfxData.dest
   type: Field
   source:
     id: dest

@@ -24,11 +24,23 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Lustie.UnityDocfx.Docfx.yml",
+      "source_relative_path": "api/Lustie.UnityDocfx.DocfxData.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Lustie.UnityDocfx.Docfx.html",
-          "hash": "5phDrNEVZUgNlYZM7iCrx7JsT1rjFer+gRwAuC72p8M="
+          "relative_path": "api/Lustie.UnityDocfx.DocfxData.html",
+          "hash": "EMnKzPGgYxfKQFaPCFPb7d/yKMwnzPJHQ64VM/x4Hno="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lustie.UnityDocfx.DocfxService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lustie.UnityDocfx.DocfxService.html",
+          "hash": "bNLVBgsGj6X2CchLk1A93LJKbdASm+QSKQAAD+d9Ij4="
         }
       },
       "is_incremental": false,
@@ -40,7 +52,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.DocfxSetupTool.html",
-          "hash": "EYGQdjl0o5B9yYvAPI0bXUAR4MCz0IrWQ0a+Ixb3SGw="
+          "hash": "XryoIbHbPIXRMw5X0VQ85nJfIy+tj2VdEUnw5LBvppQ="
         }
       },
       "is_incremental": false,
@@ -52,7 +64,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.DocfxTemplatesPath.html",
-          "hash": "/0Z9TFOApvcdeuPGy6LZsom+GUEgT2ou3wVf4B6As/8="
+          "hash": "99v+FFpk+WNes7FwCRZPpjHZvUQtgGxvvZQoanIIp8k="
         }
       },
       "is_incremental": false,
@@ -64,7 +76,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.JObjectExtensions.html",
-          "hash": "0ftHFmXtpCWde0O6Gc+HNTyzZWj4nPggy4Fqy/FD4gQ="
+          "hash": "5sUfW5I6hs11xj1oOWEy/Y9ianxKjgD5qbygZI08M6E="
         }
       },
       "is_incremental": false,
@@ -76,7 +88,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.LiveServer.html",
-          "hash": "qGabHnPrx1BpNuUzHMqPiRswQ7PIEOX65EDptBj51b0="
+          "hash": "qwZ9R0UN5tu61iQL/MqaX4FXfN731MtdrmesAJwFfmM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lustie.UnityDocfx.SomeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lustie.UnityDocfx.SomeExtensions.html",
+          "hash": "9IjgNo78tCIoNDgox2jd+UDMWawzPgYQFxz0IfwPtYA="
         }
       },
       "is_incremental": false,
@@ -88,7 +112,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.SortOption.html",
-          "hash": "pbPsmHw8/yLnTfho6Xy2JKfrkuRmlquaC4k5rYyZVZA="
+          "hash": "WpCuMY8gExfZz8ZQrvPwUXFQpwVi4nc73BbkuFXv2rc="
         }
       },
       "is_incremental": false,
@@ -100,7 +124,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.SortOrder.html",
-          "hash": "kKK6zX/l6yZ8pFgMr79didYBI/It4A+LmVBo7BLetNs="
+          "hash": "1x0Wtlff6A04SL8w3bzj9/cVP75lSPmvy3KzQyJlrA0="
         }
       },
       "is_incremental": false,
@@ -112,7 +136,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.TOC.html",
-          "hash": "L5IRk6csbI0xY4WOlIfuI6aNY1jZlLXieGQ3hjqZxyI="
+          "hash": "XGFo77joUyLABRq/8oOkikFz8lJflo//8oHHP5NDbh8="
         }
       },
       "is_incremental": false,
@@ -124,7 +148,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.UIPath.html",
-          "hash": "bnAUpI1gPz1h1pW+BM5x7ajdPDqgQUn32PWAObadjIQ="
+          "hash": "27riVzFw+Fa0pwN//hjCgMzmQcgRutkmER2nUc+/oaA="
         }
       },
       "is_incremental": false,
@@ -136,7 +160,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.UnityDocset.html",
-          "hash": "Z0bop4exrJIDQRrzxMhOLw2sOCL3bG9S9y3KDxayW8Y="
+          "hash": "UoJcuiFkPgXSpLI1uF78n/0Q0uIEABP45XatiNbS6iY="
         }
       },
       "is_incremental": false,
@@ -148,7 +172,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.html",
-          "hash": "1GwiDaMg7UXh/oPCw33o7J5qdqCAgWwgVglIWT3PKB0="
+          "hash": "qkO+UlFB/DPy/DG/r5q2If4wkihVV6XFpNzMKNuVR/Y="
         }
       },
       "is_incremental": false,
@@ -160,7 +184,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "1MxCt19H8Sz3PBjONHkZRqJDh4S5qFC82L7RT3w7ljs="
+          "hash": "01BKNf9QPWygGOJQ7dQdpDUsHzo5ZztV0ahJXh77hsM="
         }
       },
       "is_incremental": false,
@@ -172,7 +196,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "pJDZ9r4mZbR7+0piPOKr2cGW/64Trg3+pgRNMgiLALI="
+          "hash": "brdUhpqiuXVY5WRiU4P50nNBs2MI82UDnx2/GiECWiE="
         }
       },
       "is_incremental": false,
@@ -184,7 +208,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/Tutorial.html",
-          "hash": "0SDqZDQuDt1Gm9WVsW/Q+bf1x6/iUxVzwbGJd9wVJk4="
+          "hash": "KuUxAmxOISTqiCDYkDozipAaaoaMKWrWg7eO8iBs7rc="
         }
       },
       "is_incremental": false,
@@ -196,7 +220,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/manual.html",
-          "hash": "qSz1r9gipRSVIvCPc/UGJGBRsmgaqrtyLkeShgpZLN4="
+          "hash": "Mn6GhZ4CvHnCIScq1zfJ7GxFD0GjpEjVlsHrDB9cdOc="
         }
       },
       "is_incremental": false,
@@ -247,7 +271,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 11,
+          "total_file_count": 13,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

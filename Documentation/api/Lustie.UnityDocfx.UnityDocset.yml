@@ -19,7 +19,7 @@ items:
   source:
     id: UnityDocset
     path: ''
-    startLine: 863
+    startLine: 1135
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -42,7 +42,7 @@ items:
   source:
     id: folder
     path: ''
-    startLine: 869
+    startLine: 1141
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -67,17 +67,17 @@ items:
   source:
     id: docfxJson
     path: ''
-    startLine: 874
+    startLine: 1146
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
   summary: "\ndocfx.json data\n"
   example: []
   syntax:
-    content: public Docfx docfxJson
+    content: public DocfxData docfxJson
     return:
-      type: Lustie.UnityDocfx.Docfx
-    content.vb: Public docfxJson As Docfx
+      type: Lustie.UnityDocfx.DocfxData
+    content.vb: Public docfxJson As DocfxData
 - uid: Lustie.UnityDocfx.UnityDocset.TOC
   commentId: F:Lustie.UnityDocfx.UnityDocset.TOC
   id: TOC
@@ -92,7 +92,7 @@ items:
   source:
     id: TOC
     path: ''
-    startLine: 899
+    startLine: 1171
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -117,7 +117,7 @@ items:
   source:
     id: port
     path: ''
-    startLine: 909
+    startLine: 1181
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -172,12 +172,12 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
-- uid: Lustie.UnityDocfx.Docfx
-  commentId: T:Lustie.UnityDocfx.Docfx
+- uid: Lustie.UnityDocfx.DocfxData
+  commentId: T:Lustie.UnityDocfx.DocfxData
   parent: Lustie.UnityDocfx
-  name: Docfx
-  nameWithType: Docfx
-  fullName: Lustie.UnityDocfx.Docfx
+  name: DocfxData
+  nameWithType: DocfxData
+  fullName: Lustie.UnityDocfx.DocfxData
 - uid: System.Collections.Generic.List{Lustie.UnityDocfx.TOC}
   commentId: T:System.Collections.Generic.List{Lustie.UnityDocfx.TOC}
   parent: System.Collections.Generic

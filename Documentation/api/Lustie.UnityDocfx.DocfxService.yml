@@ -1,0 +1,528 @@
+### YamlMime:ManagedReference
+items:
+- uid: Lustie.UnityDocfx.DocfxService
+  commentId: T:Lustie.UnityDocfx.DocfxService
+  id: DocfxService
+  parent: Lustie.UnityDocfx
+  children:
+  - Lustie.UnityDocfx.DocfxService.CheckInstallation(System.Version@)
+  - Lustie.UnityDocfx.DocfxService.GetDocfxCommand(System.String,System.String)
+  - Lustie.UnityDocfx.DocfxService.installCommand
+  - Lustie.UnityDocfx.DocfxService.InstallDocfx(System.EventHandler)
+  - Lustie.UnityDocfx.DocfxService.maxSupportVersion
+  - Lustie.UnityDocfx.DocfxService.OpenCmd(System.String,System.EventHandler,System.String)
+  - Lustie.UnityDocfx.DocfxService.uninstallCommand
+  langs:
+  - csharp
+  - vb
+  name: DocfxService
+  nameWithType: DocfxService
+  fullName: Lustie.UnityDocfx.DocfxService
+  type: Class
+  source:
+    id: DocfxService
+    path: ''
+    startLine: 59
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  summary: "\nProvides services for interacting with docfx, including checking installation,\ninstalling docfx, opening command prompts, and running docfx commands.\n"
+  example: []
+  syntax:
+    content: public static class DocfxService
+    content.vb: Public Module DocfxService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Lustie.UnityDocfx.DocfxService.maxSupportVersion
+  commentId: F:Lustie.UnityDocfx.DocfxService.maxSupportVersion
+  id: maxSupportVersion
+  parent: Lustie.UnityDocfx.DocfxService
+  langs:
+  - csharp
+  - vb
+  name: maxSupportVersion
+  nameWithType: DocfxService.maxSupportVersion
+  fullName: Lustie.UnityDocfx.DocfxService.maxSupportVersion
+  type: Field
+  source:
+    id: maxSupportVersion
+    path: ''
+    startLine: 61
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public static readonly Version maxSupportVersion
+    return:
+      type: System.Version
+    content.vb: Public Shared ReadOnly maxSupportVersion As Version
+- uid: Lustie.UnityDocfx.DocfxService.uninstallCommand
+  commentId: F:Lustie.UnityDocfx.DocfxService.uninstallCommand
+  id: uninstallCommand
+  parent: Lustie.UnityDocfx.DocfxService
+  langs:
+  - csharp
+  - vb
+  name: uninstallCommand
+  nameWithType: DocfxService.uninstallCommand
+  fullName: Lustie.UnityDocfx.DocfxService.uninstallCommand
+  type: Field
+  source:
+    id: uninstallCommand
+    path: ''
+    startLine: 62
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public static readonly string uninstallCommand
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly uninstallCommand As String
+- uid: Lustie.UnityDocfx.DocfxService.installCommand
+  commentId: F:Lustie.UnityDocfx.DocfxService.installCommand
+  id: installCommand
+  parent: Lustie.UnityDocfx.DocfxService
+  langs:
+  - csharp
+  - vb
+  name: installCommand
+  nameWithType: DocfxService.installCommand
+  fullName: Lustie.UnityDocfx.DocfxService.installCommand
+  type: Field
+  source:
+    id: installCommand
+    path: ''
+    startLine: 63
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public static readonly string installCommand
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly installCommand As String
+- uid: Lustie.UnityDocfx.DocfxService.CheckInstallation(System.Version@)
+  commentId: M:Lustie.UnityDocfx.DocfxService.CheckInstallation(System.Version@)
+  id: CheckInstallation(System.Version@)
+  parent: Lustie.UnityDocfx.DocfxService
+  langs:
+  - csharp
+  - vb
+  name: CheckInstallation(out Version)
+  nameWithType: DocfxService.CheckInstallation(out Version)
+  fullName: Lustie.UnityDocfx.DocfxService.CheckInstallation(out System.Version)
+  type: Method
+  source:
+    id: CheckInstallation
+    path: ''
+    startLine: 80
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  summary: "\nChecks if docfx is installed and retrieves its version.\n"
+  example: []
+  syntax:
+    content: public static bool CheckInstallation(out Version version)
+    parameters:
+    - id: version
+      type: System.Version
+      description: The version of docfx if installed, otherwise an error message.
+    return:
+      type: System.Boolean
+      description: True if docfx is installed, otherwise false.
+    content.vb: Public Shared Function CheckInstallation(version As Version) As Boolean
+  overload: Lustie.UnityDocfx.DocfxService.CheckInstallation*
+  nameWithType.vb: DocfxService.CheckInstallation(Version)
+  fullName.vb: Lustie.UnityDocfx.DocfxService.CheckInstallation(System.Version)
+  name.vb: CheckInstallation(Version)
+- uid: Lustie.UnityDocfx.DocfxService.InstallDocfx(System.EventHandler)
+  commentId: M:Lustie.UnityDocfx.DocfxService.InstallDocfx(System.EventHandler)
+  id: InstallDocfx(System.EventHandler)
+  parent: Lustie.UnityDocfx.DocfxService
+  langs:
+  - csharp
+  - vb
+  name: InstallDocfx(EventHandler)
+  nameWithType: DocfxService.InstallDocfx(EventHandler)
+  fullName: Lustie.UnityDocfx.DocfxService.InstallDocfx(System.EventHandler)
+  type: Method
+  source:
+    id: InstallDocfx
+    path: ''
+    startLine: 115
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  summary: "\nInstalls docfx using the dotnet tool command.\n"
+  example: []
+  syntax:
+    content: public static void InstallDocfx(EventHandler onDisposed)
+    parameters:
+    - id: onDisposed
+      type: System.EventHandler
+    content.vb: Public Shared Sub InstallDocfx(onDisposed As EventHandler)
+  overload: Lustie.UnityDocfx.DocfxService.InstallDocfx*
+- uid: Lustie.UnityDocfx.DocfxService.OpenCmd(System.String,System.EventHandler,System.String)
+  commentId: M:Lustie.UnityDocfx.DocfxService.OpenCmd(System.String,System.EventHandler,System.String)
+  id: OpenCmd(System.String,System.EventHandler,System.String)
+  parent: Lustie.UnityDocfx.DocfxService
+  langs:
+  - csharp
+  - vb
+  name: OpenCmd(string, EventHandler, string)
+  nameWithType: DocfxService.OpenCmd(string, EventHandler, string)
+  fullName: Lustie.UnityDocfx.DocfxService.OpenCmd(string, System.EventHandler, string)
+  type: Method
+  source:
+    id: OpenCmd
+    path: ''
+    startLine: 138
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  summary: "\nOpens a command prompt and executes a command.\n"
+  example: []
+  syntax:
+    content: public static void OpenCmd(string command, EventHandler onDisposed, string cmdOption = "/K")
+    parameters:
+    - id: command
+      type: System.String
+      description: The command to execute.
+    - id: onDisposed
+      type: System.EventHandler
+      description: Event handler to call when the process is disposed.
+    - id: cmdOption
+      type: System.String
+    content.vb: Public Shared Sub OpenCmd(command As String, onDisposed As EventHandler, cmdOption As String = "/K")
+  overload: Lustie.UnityDocfx.DocfxService.OpenCmd*
+  nameWithType.vb: DocfxService.OpenCmd(String, EventHandler, String)
+  fullName.vb: Lustie.UnityDocfx.DocfxService.OpenCmd(String, System.EventHandler, String)
+  name.vb: OpenCmd(String, EventHandler, String)
+- uid: Lustie.UnityDocfx.DocfxService.GetDocfxCommand(System.String,System.String)
+  commentId: M:Lustie.UnityDocfx.DocfxService.GetDocfxCommand(System.String,System.String)
+  id: GetDocfxCommand(System.String,System.String)
+  parent: Lustie.UnityDocfx.DocfxService
+  langs:
+  - csharp
+  - vb
+  name: GetDocfxCommand(string, string)
+  nameWithType: DocfxService.GetDocfxCommand(string, string)
+  fullName: Lustie.UnityDocfx.DocfxService.GetDocfxCommand(string, string)
+  type: Method
+  source:
+    id: GetDocfxCommand
+    path: ''
+    startLine: 164
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  summary: "\nGets a process to run a docfx command with specified arguments and folder.\n"
+  example: []
+  syntax:
+    content: public static Process GetDocfxCommand(string argument, string folder)
+    parameters:
+    - id: argument
+      type: System.String
+      description: The arguments to pass to the docfx command.
+    - id: folder
+      type: System.String
+      description: The folder containing the docfx.json file.
+    return:
+      type: Global.Process
+      description: A process configured to run the docfx command.
+    content.vb: Public Shared Function GetDocfxCommand(argument As String, folder As String) As Process
+  overload: Lustie.UnityDocfx.DocfxService.GetDocfxCommand*
+  nameWithType.vb: DocfxService.GetDocfxCommand(String, String)
+  fullName.vb: Lustie.UnityDocfx.DocfxService.GetDocfxCommand(String, String)
+  name.vb: GetDocfxCommand(String, String)
+references:
+- uid: Lustie.UnityDocfx
+  commentId: N:Lustie.UnityDocfx
+  name: Lustie.UnityDocfx
+  nameWithType: Lustie.UnityDocfx
+  fullName: Lustie.UnityDocfx
+  spec.csharp:
+  - uid: Lustie
+    name: Lustie
+  - name: .
+  - uid: Lustie.UnityDocfx
+    name: UnityDocfx
+  spec.vb:
+  - uid: Lustie
+    name: Lustie
+  - name: .
+  - uid: Lustie.UnityDocfx
+    name: UnityDocfx
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Version
+  commentId: T:System.Version
+  parent: System
+  isExternal: true
+  name: Version
+  nameWithType: Version
+  fullName: System.Version
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Lustie.UnityDocfx.DocfxService.CheckInstallation*
+  commentId: Overload:Lustie.UnityDocfx.DocfxService.CheckInstallation
+  name: CheckInstallation
+  nameWithType: DocfxService.CheckInstallation
+  fullName: Lustie.UnityDocfx.DocfxService.CheckInstallation
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Lustie.UnityDocfx.DocfxService.InstallDocfx*
+  commentId: Overload:Lustie.UnityDocfx.DocfxService.InstallDocfx
+  name: InstallDocfx
+  nameWithType: DocfxService.InstallDocfx
+  fullName: Lustie.UnityDocfx.DocfxService.InstallDocfx
+- uid: System.EventHandler
+  commentId: T:System.EventHandler
+  parent: System
+  isExternal: true
+  name: EventHandler
+  nameWithType: EventHandler
+  fullName: System.EventHandler
+- uid: Lustie.UnityDocfx.DocfxService.OpenCmd*
+  commentId: Overload:Lustie.UnityDocfx.DocfxService.OpenCmd
+  name: OpenCmd
+  nameWithType: DocfxService.OpenCmd
+  fullName: Lustie.UnityDocfx.DocfxService.OpenCmd
+- uid: Lustie.UnityDocfx.DocfxService.GetDocfxCommand*
+  commentId: Overload:Lustie.UnityDocfx.DocfxService.GetDocfxCommand
+  name: GetDocfxCommand
+  nameWithType: DocfxService.GetDocfxCommand
+  fullName: Lustie.UnityDocfx.DocfxService.GetDocfxCommand
+- uid: Global.Process
+  commentId: '!:Global.Process'
+  isExternal: true
+  name: Process
+  nameWithType: Process
+  fullName: Process

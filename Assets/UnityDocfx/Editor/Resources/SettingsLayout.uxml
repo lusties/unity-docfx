@@ -3,16 +3,20 @@
     <Style src="project://database/Assets/UnityDocfx/Editor/Resources/Styles.uss?fileID=7433441132597879392&amp;guid=754e0c5d3bb64b94ca735c4e6526e3e0&amp;type=3#Styles" />
     <ui:VisualElement style="flex-grow: 1; margin-top: 8px; margin-right: 8px; margin-bottom: 8px; margin-left: 8px;">
         <ui:Label tabindex="-1" text="Unity Docfx Tool" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 22px; -unity-font-style: bold;" />
-        <ui:VisualElement class="settings-area" style="flex-grow: 1;">
+        <ui:VisualElement name="docfx" class="settings-area" style="flex-grow: 1;">
             <ui:TextField picking-mode="Ignore" label="Github:" value="filler text" name="txt-git-name" />
             <ui:TextField picking-mode="Ignore" label="Unity version" value="filler text" name="txt-unity-v" />
+            <ui:VisualElement name="install-info" style="flex-grow: 1; flex-direction: row;">
+                <ui:Button text="Install docfx" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btn-i-1" class="btn-i" style="display: flex;" />
+                <ui:Button text="Install docfx with Cmd" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btn-i-2" class="btn-i" style="display: flex;" />
+            </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="docfx-settings" class="settings-area" style="flex-grow: 1;">
+        <ui:VisualElement name="docfx-json-settings" class="settings-area" style="flex-grow: 1;">
             <ui:Foldout text="Docfx Settings:" name="Foldout" value="false" class="label-s">
                 <ui:Instance template="horizontal-line" name="horizontal-line" />
                 <ui:VisualElement name="docfx-s-container" style="flex-grow: 1; font-size: 12px;">
                     <ui:ListView name="list-src" header-title="Src:" reorderable="true" show-foldout-header="true" reorder-mode="Animated" show-add-remove-footer="true" selection-type="Multiple" show-border="true" class="list-reorderable" />
-                    <ui:ListView name="list-exclude" header-title="Exclude:" reorderable="true" show-foldout-header="true" reorder-mode="Animated" show-add-remove-footer="true" selection-type="Multiple" show-border="true" class="list-reorderable" />
+                    <ui:ListView name="list-exclude" header-title="Exclude:" reorderable="true" show-foldout-header="true" reorder-mode="Animated" show-add-remove-footer="true" selection-type="Multiple" show-border="true" class="list-reorderable" style="margin-top: 4px;" />
                     <ui:TextField picking-mode="Ignore" label="Title:" value="Unity docfx title" name="_appTitle" />
                     <ui:TextField picking-mode="Ignore" label="Footer:" value="Unity docfx footer" name="_appFooter" />
                     <ui:Toggle label="Enable Search:" value="true" name="_enableSearch" />

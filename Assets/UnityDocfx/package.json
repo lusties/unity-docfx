@@ -4,9 +4,9 @@
   "displayName": "UnityDocfx",
   "description": "Unity Editor tool for generating document website using docfx",
   "unity": "2022.2",
-  "documentationUrl": "https://docs.finistate.com/",
+  "documentationUrl": "https://lusties.github.io/unity-docfx/",
   "changelogUrl": "https://example.com/changelog.html",
-  "licensesUrl": "https://example.com/licensing.html",
+  "licensesUrl": "https://github.com/lusties/unity-docfx/blob/main/LICENSE.txt",
   "author": {
     "name": "Lustie",
     "email": "lustie@example.com",

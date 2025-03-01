@@ -14,7 +14,7 @@ namespace Lustie.UnityDocfx
         /// <summary>
         /// docfx.json data
         /// </summary>
-        public Docfx docfxJson = new Docfx()
+        public DocfxData docfxJson = new DocfxData()
         {
             src = new List<string>()
             {

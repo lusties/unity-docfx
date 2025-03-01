@@ -1,10 +1,11 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 
 namespace Lustie.UnityDocfx
 {
     [Serializable]
-    public class Docfx
+    public class DocfxData
     {
         /// <summary>
         /// metadata.src.files
@@ -41,5 +42,18 @@ namespace Lustie.UnityDocfx
         /// </summary>
         public string dest;
 
+        public string fullDest
+        {
+            get
+            {
+                string folderPath = @$"{dest}";
+                if (folderPath.StartsWith("../"))
+                {
+                    return folderPath = string.Join('\\', Directory.GetCurrentDirectory(), folderPath.Replace("../", ""));
+                }
+
+                return dest;
+            }
+        }
     }
 }

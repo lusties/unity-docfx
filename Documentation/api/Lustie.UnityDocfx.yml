@@ -4,11 +4,13 @@ items:
   commentId: N:Lustie.UnityDocfx
   id: Lustie.UnityDocfx
   children:
-  - Lustie.UnityDocfx.Docfx
+  - Lustie.UnityDocfx.DocfxData
+  - Lustie.UnityDocfx.DocfxService
   - Lustie.UnityDocfx.DocfxSetupTool
   - Lustie.UnityDocfx.DocfxTemplatesPath
   - Lustie.UnityDocfx.JObjectExtensions
   - Lustie.UnityDocfx.LiveServer
+  - Lustie.UnityDocfx.SomeExtensions
   - Lustie.UnityDocfx.SortOption
   - Lustie.UnityDocfx.SortOrder
   - Lustie.UnityDocfx.TOC
@@ -24,14 +26,20 @@ items:
   assemblies:
   - cs.temp.dll
 references:
-- uid: Lustie.UnityDocfx.Docfx
-  commentId: T:Lustie.UnityDocfx.Docfx
+- uid: Lustie.UnityDocfx.DocfxData
+  commentId: T:Lustie.UnityDocfx.DocfxData
   parent: Lustie.UnityDocfx
-  name: Docfx
-  nameWithType: Docfx
-  fullName: Lustie.UnityDocfx.Docfx
+  name: DocfxData
+  nameWithType: DocfxData
+  fullName: Lustie.UnityDocfx.DocfxData
+- uid: Lustie.UnityDocfx.DocfxService
+  commentId: T:Lustie.UnityDocfx.DocfxService
+  name: DocfxService
+  nameWithType: DocfxService
+  fullName: Lustie.UnityDocfx.DocfxService
 - uid: Lustie.UnityDocfx.DocfxSetupTool
   commentId: T:Lustie.UnityDocfx.DocfxSetupTool
+  parent: Lustie.UnityDocfx
   name: DocfxSetupTool
   nameWithType: DocfxSetupTool
   fullName: Lustie.UnityDocfx.DocfxSetupTool
@@ -46,6 +54,11 @@ references:
   name: LiveServer
   nameWithType: LiveServer
   fullName: Lustie.UnityDocfx.LiveServer
+- uid: Lustie.UnityDocfx.SomeExtensions
+  commentId: T:Lustie.UnityDocfx.SomeExtensions
+  name: SomeExtensions
+  nameWithType: SomeExtensions
+  fullName: Lustie.UnityDocfx.SomeExtensions
 - uid: Lustie.UnityDocfx.SortOption
   commentId: T:Lustie.UnityDocfx.SortOption
   parent: Lustie.UnityDocfx
@@ -63,16 +76,17 @@ references:
   name: TOC
   nameWithType: TOC
   fullName: Lustie.UnityDocfx.TOC
-- uid: Lustie.UnityDocfx.UnityDocset
-  commentId: T:Lustie.UnityDocfx.UnityDocset
-  name: UnityDocset
-  nameWithType: UnityDocset
-  fullName: Lustie.UnityDocfx.UnityDocset
 - uid: Lustie.UnityDocfx.UIPath
   commentId: T:Lustie.UnityDocfx.UIPath
   name: UIPath
   nameWithType: UIPath
   fullName: Lustie.UnityDocfx.UIPath
+- uid: Lustie.UnityDocfx.UnityDocset
+  commentId: T:Lustie.UnityDocfx.UnityDocset
+  parent: Lustie.UnityDocfx
+  name: UnityDocset
+  nameWithType: UnityDocset
+  fullName: Lustie.UnityDocfx.UnityDocset
 - uid: Lustie.UnityDocfx.DocfxTemplatesPath
   commentId: T:Lustie.UnityDocfx.DocfxTemplatesPath
   name: DocfxTemplatesPath

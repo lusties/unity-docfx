@@ -43,6 +43,15 @@
     height: 45px;
 }
 
+.btn-i {
+    max-width: 90px;
+    white-space: normal;
+    text-overflow: clip;
+    -unity-text-align: middle-center;
+    flex-shrink: 0;
+    min-width: 90px;
+}
+
 .list-reorderable {
     margin-bottom: 5px;
     margin-top: 5px;

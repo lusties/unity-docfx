@@ -18,7 +18,7 @@ items:
   source:
     id: UIPath
     path: ''
-    startLine: 920
+    startLine: 1102
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -49,7 +49,7 @@ items:
   source:
     id: UxmlAssetPath
     path: ''
-    startLine: 922
+    startLine: 1104
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -79,7 +79,7 @@ items:
   source:
     id: LoadUxml
     path: ''
-    startLine: 927
+    startLine: 1109
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -109,7 +109,7 @@ items:
   source:
     id: LoadUss
     path: ''
-    startLine: 932
+    startLine: 1114
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx

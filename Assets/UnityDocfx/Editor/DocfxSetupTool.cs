@@ -1,17 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Net.Sockets;
 using System.Text;
-using System.Text.RegularExpressions;
 using Unity.Plastic.Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEditor.Callbacks;
 using UnityEditor.UIElements;
-using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static PlasticPipe.PlasticProtocol.Messages.NegotiationCommand;
 using Debug = UnityEngine.Debug;
 
 namespace Lustie.UnityDocfx
@@ -20,8 +19,6 @@ namespace Lustie.UnityDocfx
     {
         private string unityVersion = "2022.3.27f1";
         private bool includeEditor = false;
-
-        private const string docfxExecutable = "docfx";
 
         static UnityDocset unityDocset;
         static SerializedObject uniDocsetSerObj;
@@ -50,29 +47,22 @@ namespace Lustie.UnityDocfx
                 GenerateDocfxJson();
                 GenerateApiRulesConfig();
                 GenerateTocYml();
-                //RunDocfxCommand("build");
             });
 
             var btnServe = templateContainer.Q<Button>("btn-serve");
             btnServe.RegisterCallback<ClickEvent>(evt =>
             {
-                RunDocfxCommand("serve");
+                ServeDocfxCommand();
             });
 
             templateContainer.Q<TextField>("txt-doc-folder").BindProperty(FindProp("folder"));
-
-
             templateContainer.Q<TextField>("txt-git-name").BindProperty(FindProp("docfxJson.baseUrl"));
 
+            //templateContainer.Q<TextField>("txt-doc-folder").bindingPath = "folder";
+            //templateContainer.Q<TextField>("txt-git-name").bindingPath = "docfxJson.baseUrl";
 
-            var txtUntiyVersion = templateContainer.Q<TextField>("txt-unity-v");
 
-
-            txtUntiyVersion.value = unityVersion;
-            txtUntiyVersion.RegisterValueChangedCallback(evt =>
-            {
-                unityVersion = evt.newValue;
-            });
+            templateContainer.Q<TextField>("txt-unity-v");
 
 
             templateContainer.Q<Button>("btn-git-action").RegisterCallback<ClickEvent>(evt =>
@@ -84,6 +74,8 @@ namespace Lustie.UnityDocfx
             {
                 BuildAndServeDocfxWithCmd();
             });
+
+            InstallationCheck();
 
             QueryDocfxSettings();
             QueryTOCLSettings();
@@ -119,6 +111,93 @@ namespace Lustie.UnityDocfx
 
         #endregion
 
+        void InstallationCheck()
+        {
+            // Check if docfx is installed
+            bool isDocfxInstalled = DocfxService.CheckInstallation(out Version currentVersion);
+            //isDocfxInstalled = true;
+            (HelpBoxMessageType helpBoxType, string helpBoxMessage) = isDocfxInstalled ?
+                (HelpBoxMessageType.Info, $"docfx version: {currentVersion}") :
+                (HelpBoxMessageType.Error, "docfx is not installed. Please install docfx first.");
+
+            // Check if the installed version is supported
+            //Version maxSupportVersion = new Version("2.61.0");
+            Version maxSupportVersion = DocfxService.maxSupportVersion;
+            bool isVersionSupported = currentVersion <= maxSupportVersion;
+            //isVersionSupported = false;
+
+            if (!isVersionSupported && isDocfxInstalled)
+            {
+                helpBoxType = HelpBoxMessageType.Warning;
+                helpBoxMessage = $"docfx version: {currentVersion} is not supported. " +
+                    $"Versions higher than {maxSupportVersion} may not work correctly.";
+            }
+
+            //Help box message
+            HelpBox helpBox = new HelpBox(helpBoxMessage, helpBoxType);
+            helpBox.style.flexShrink = helpBox.style.flexGrow = 1;
+
+            VisualElement installInfoContainer = rootVisualElement.Q<VisualElement>("docfx").Q<VisualElement>("install-info");
+            installInfoContainer.Insert(0, helpBox);
+
+            // Install buttons
+            Button btn_i1 = installInfoContainer.Q<Button>("btn-i-1");
+            Button btn_i2 = installInfoContainer.Q<Button>("btn-i-2");
+
+            const string newLine = " & echo ";
+            string uninstallCommand = DocfxService.uninstallCommand;
+            string installCommand = DocfxService.installCommand;
+
+            if (!isDocfxInstalled)
+            {
+                btn_i1.text = "Install docfx";
+                btn_i2.text = "Install docfx (Cmd)";
+
+                btn_i1.RegisterCallback<ClickEvent>(evt =>
+                {
+                    DocfxService.InstallDocfx(static (e, i) => { Debug.Log("Installed"); });
+                });
+
+                btn_i2.RegisterCallback<ClickEvent>(evt =>
+                {
+                    string command = "echo" +
+                                     $"{installCommand} {newLine}" +
+                                     $"press right mouse or Ctrl + v to paste command";
+
+                    $"{installCommand}".CopyToClipboard();
+                    DocfxService.OpenCmd(command, static (e, i) => { Debug.Log($"install with cmd ended"); });
+
+                });
+            }
+            else if (!isVersionSupported)
+            {
+                btn_i1.text = "Install another version";
+                btn_i2.text = "Install another version (Cmd)";
+
+                btn_i1.RegisterCallback<ClickEvent>(evt =>
+                {
+                    DocfxService.OpenCmd($"{uninstallCommand} & {installCommand}", static (e, i) => { Debug.Log($"install with cmd ended"); }, "/C");
+                });
+
+                btn_i2.RegisterCallback<ClickEvent>(evt =>
+                {
+                    string command = "echo" +
+                                     $" {uninstallCommand} {newLine}" +
+                                     $"{installCommand} {newLine}" +
+                                     $"press right mouse or Ctrl + v to paste these commands";
+
+                    $"{uninstallCommand}\n{installCommand}".CopyToClipboard();
+                    DocfxService.OpenCmd(command, static (e, i) => { Debug.Log($"install with cmd ended"); });
+                });
+            }
+
+            if(isDocfxInstalled && isVersionSupported)
+            {
+                btn_i1.style.display = DisplayStyle.None;
+                btn_i2.style.display = DisplayStyle.None;
+            }
+        }
+
         #region QUERY AND BINDING
         void QueryDocfxSettings()
         {
@@ -146,11 +225,7 @@ namespace Lustie.UnityDocfx
 
             outputContainer.Q<Button>("btn-output-view").RegisterCallback<ClickEvent>(evt =>
             {
-                string folderPath = @$"{unityDocset.docfxJson.dest}";
-                if (folderPath.StartsWith("../"))
-                {
-                    folderPath = string.Join('\\', Directory.GetCurrentDirectory(), folderPath.Replace("../", ""));
-                }
+                string folderPath = unityDocset.docfxJson.fullDest;
                 if (Directory.Exists(folderPath))
                 {
                     Process.Start("explorer.exe", folderPath);
@@ -180,7 +255,7 @@ namespace Lustie.UnityDocfx
                 btnServer.text = "Dispose";
             });
 
-            footer.Q<IntegerField>("txt-port").BindProperty(FindProp("port"));
+            footer.Q<IntegerField>("txt-port").bindingPath = "port";
         }
 
         #endregion
@@ -444,81 +519,23 @@ Feel free to edit this file to customize your documentation's home page.
 
         void BuildAndServeDocfxWithCmd()
         {
-            string path = Directory.GetParent(Application.dataPath).FullName;
-            string command = $"copy this command to build: docfx {unityDocset.folder}/docfx.json --serve";
-            ProcessStartInfo startInfo = new ProcessStartInfo
-            {
-                FileName = "cmd.exe",
-                WorkingDirectory = path,
-                Arguments = $"/K echo {command}",
-                UseShellExecute = true,
-                CreateNoWindow = false,
-            };
+            string command = $"docfx {unityDocset.folder}/docfx.json --serve";
+            command.CopyToClipboard();
 
-            using Process process = new Process { StartInfo = startInfo };
-            process.Disposed += (e, i) => { Debug.Log($"build with cmd ended"); };
-            process.Start();
-            EditorUtility.DisplayDialog("Being build with cmd", "See cmd window", "OK");
-            process.WaitForExit();
+            string cmd = $"echo copy this command to build: {command} & echo " +
+                         $"or press right mouse / Ctrl + v to paste the command"; ;
+            DocfxService.OpenCmd(cmd, static (e, i) => { Debug.Log($"build with cmd ended"); });
         }
 
-        void RunDocfxCommand(string argument)
+        void ServeDocfxCommand()
         {
-            string docfxJsonFullPath = Path.Combine(Directory.GetCurrentDirectory(), unityDocset.folder, "docfx.json");
-            ProcessStartInfo psi = new ProcessStartInfo
-            {
-                FileName = "cmd.exe",
-                Arguments = $"/C {docfxExecutable} \"{docfxJsonFullPath}\" {argument}",
-                //WorkingDirectory = Directory.GetParent(Application.dataPath).FullName,
-                RedirectStandardOutput = true,
-                RedirectStandardError = true,
-                UseShellExecute = false,
-                CreateNoWindow = true
-            };
-
-            using Process process = new Process { StartInfo = psi };
-
-            HashSet<string> warnings = new HashSet<string>()
-            {
-                "No files",
-                "Unable to",
-                "Invalid",
-                "404 (Not Found)",
-                "will be ignored",
-                "No detected",
-            };
-
-            string warningPattern = string.Join("|", warnings);
-            Regex warningRegex = new Regex(warningPattern, RegexOptions.IgnoreCase);
-
-            process.OutputDataReceived += (sender, e) =>
-            {
-                if (!string.IsNullOrEmpty(e.Data))
-                {
-                    if (warningRegex.IsMatch(e.Data))
-                        UnityEngine.Debug.LogWarning($"[Warning] {e.Data}");
-                    else
-                        UnityEngine.Debug.Log(e.Data);
-                }
-            };
-
-            process.ErrorDataReceived += (sender, e) =>
-            {
-                if (!string.IsNullOrEmpty(e.Data))
-                {
-                    if (Regex.IsMatch(e.Data, @"\bCS\d{4}:\b"))
-                        UnityEngine.Debug.LogWarning($"[Warning] {e.Data}");
-                    else
-                        UnityEngine.Debug.LogError($"[Error] {e.Data}");
-                }
-            };
-
-            process.Start();
-            process.BeginOutputReadLine();
-            process.BeginErrorReadLine();
-            process.WaitForExit();
-            process.Exited += (sender, e) => { Debug.Log("finished"); };
-            process.Disposed += (sender, e) => { Debug.Log("finished"); };
+            using Process docfxProcess = DocfxService.GetDocfxCommand("serve", unityDocset.folder);
+            docfxProcess.Start();
+            docfxProcess.BeginOutputReadLine();
+            docfxProcess.BeginErrorReadLine();
+            docfxProcess.WaitForExit();
+            docfxProcess.Exited += (sender, e) => { Debug.Log("finished"); };
+            docfxProcess.Disposed += (sender, e) => { Debug.Log("finished"); };
 
             int port = 18080;
             string folderPath = unityDocset.docfxJson.dest;
@@ -542,7 +559,7 @@ Feel free to edit this file to customize your documentation's home page.
         void GoLiveServer()
         {
             int port = unityDocset.port;
-            string folderPath = unityDocset.docfxJson.dest;
+            string folderPath = unityDocset.docfxJson.fullDest;
 
             server = new LiveServer(folderPath, port);
             server.Run();
@@ -572,6 +589,9 @@ Feel free to edit this file to customize your documentation's home page.
         private void OnDisable()
         {
             SaveDocset();
+            uniDocsetSerObj.ApplyModifiedProperties();
+            unityDocset = null;
+            uniDocsetSerObj = null;
             if (isServerLiving) DisposeServer();
         }
 

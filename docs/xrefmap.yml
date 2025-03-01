@@ -7,66 +7,193 @@ references:
   commentId: N:Lustie.UnityDocfx
   fullName: Lustie.UnityDocfx
   nameWithType: Lustie.UnityDocfx
-- uid: Lustie.UnityDocfx.Docfx
-  name: Docfx
-  href: api/Lustie.UnityDocfx.Docfx.html
-  commentId: T:Lustie.UnityDocfx.Docfx
-  fullName: Lustie.UnityDocfx.Docfx
-  nameWithType: Docfx
-- uid: Lustie.UnityDocfx.Docfx._appFooter
+- uid: Lustie.UnityDocfx.DocfxData
+  name: DocfxData
+  href: api/Lustie.UnityDocfx.DocfxData.html
+  commentId: T:Lustie.UnityDocfx.DocfxData
+  fullName: Lustie.UnityDocfx.DocfxData
+  nameWithType: DocfxData
+- uid: Lustie.UnityDocfx.DocfxData._appFooter
   name: _appFooter
-  href: api/Lustie.UnityDocfx.Docfx.html#Lustie_UnityDocfx_Docfx__appFooter
-  commentId: F:Lustie.UnityDocfx.Docfx._appFooter
-  fullName: Lustie.UnityDocfx.Docfx._appFooter
-  nameWithType: Docfx._appFooter
-- uid: Lustie.UnityDocfx.Docfx._appTitle
+  href: api/Lustie.UnityDocfx.DocfxData.html#Lustie_UnityDocfx_DocfxData__appFooter
+  commentId: F:Lustie.UnityDocfx.DocfxData._appFooter
+  fullName: Lustie.UnityDocfx.DocfxData._appFooter
+  nameWithType: DocfxData._appFooter
+- uid: Lustie.UnityDocfx.DocfxData._appTitle
   name: _appTitle
-  href: api/Lustie.UnityDocfx.Docfx.html#Lustie_UnityDocfx_Docfx__appTitle
-  commentId: F:Lustie.UnityDocfx.Docfx._appTitle
-  fullName: Lustie.UnityDocfx.Docfx._appTitle
-  nameWithType: Docfx._appTitle
-- uid: Lustie.UnityDocfx.Docfx._enableSearch
+  href: api/Lustie.UnityDocfx.DocfxData.html#Lustie_UnityDocfx_DocfxData__appTitle
+  commentId: F:Lustie.UnityDocfx.DocfxData._appTitle
+  fullName: Lustie.UnityDocfx.DocfxData._appTitle
+  nameWithType: DocfxData._appTitle
+- uid: Lustie.UnityDocfx.DocfxData._enableSearch
   name: _enableSearch
-  href: api/Lustie.UnityDocfx.Docfx.html#Lustie_UnityDocfx_Docfx__enableSearch
-  commentId: F:Lustie.UnityDocfx.Docfx._enableSearch
-  fullName: Lustie.UnityDocfx.Docfx._enableSearch
-  nameWithType: Docfx._enableSearch
-- uid: Lustie.UnityDocfx.Docfx.baseUrl
+  href: api/Lustie.UnityDocfx.DocfxData.html#Lustie_UnityDocfx_DocfxData__enableSearch
+  commentId: F:Lustie.UnityDocfx.DocfxData._enableSearch
+  fullName: Lustie.UnityDocfx.DocfxData._enableSearch
+  nameWithType: DocfxData._enableSearch
+- uid: Lustie.UnityDocfx.DocfxData.baseUrl
   name: baseUrl
-  href: api/Lustie.UnityDocfx.Docfx.html#Lustie_UnityDocfx_Docfx_baseUrl
-  commentId: F:Lustie.UnityDocfx.Docfx.baseUrl
-  fullName: Lustie.UnityDocfx.Docfx.baseUrl
-  nameWithType: Docfx.baseUrl
-- uid: Lustie.UnityDocfx.Docfx.dest
+  href: api/Lustie.UnityDocfx.DocfxData.html#Lustie_UnityDocfx_DocfxData_baseUrl
+  commentId: F:Lustie.UnityDocfx.DocfxData.baseUrl
+  fullName: Lustie.UnityDocfx.DocfxData.baseUrl
+  nameWithType: DocfxData.baseUrl
+- uid: Lustie.UnityDocfx.DocfxData.dest
   name: dest
-  href: api/Lustie.UnityDocfx.Docfx.html#Lustie_UnityDocfx_Docfx_dest
-  commentId: F:Lustie.UnityDocfx.Docfx.dest
-  fullName: Lustie.UnityDocfx.Docfx.dest
-  nameWithType: Docfx.dest
-- uid: Lustie.UnityDocfx.Docfx.exclude
+  href: api/Lustie.UnityDocfx.DocfxData.html#Lustie_UnityDocfx_DocfxData_dest
+  commentId: F:Lustie.UnityDocfx.DocfxData.dest
+  fullName: Lustie.UnityDocfx.DocfxData.dest
+  nameWithType: DocfxData.dest
+- uid: Lustie.UnityDocfx.DocfxData.exclude
   name: exclude
-  href: api/Lustie.UnityDocfx.Docfx.html#Lustie_UnityDocfx_Docfx_exclude
-  commentId: F:Lustie.UnityDocfx.Docfx.exclude
-  fullName: Lustie.UnityDocfx.Docfx.exclude
-  nameWithType: Docfx.exclude
-- uid: Lustie.UnityDocfx.Docfx.src
+  href: api/Lustie.UnityDocfx.DocfxData.html#Lustie_UnityDocfx_DocfxData_exclude
+  commentId: F:Lustie.UnityDocfx.DocfxData.exclude
+  fullName: Lustie.UnityDocfx.DocfxData.exclude
+  nameWithType: DocfxData.exclude
+- uid: Lustie.UnityDocfx.DocfxData.src
   name: src
-  href: api/Lustie.UnityDocfx.Docfx.html#Lustie_UnityDocfx_Docfx_src
-  commentId: F:Lustie.UnityDocfx.Docfx.src
-  fullName: Lustie.UnityDocfx.Docfx.src
-  nameWithType: Docfx.src
+  href: api/Lustie.UnityDocfx.DocfxData.html#Lustie_UnityDocfx_DocfxData_src
+  commentId: F:Lustie.UnityDocfx.DocfxData.src
+  fullName: Lustie.UnityDocfx.DocfxData.src
+  nameWithType: DocfxData.src
+- uid: Lustie.UnityDocfx.DocfxService
+  name: DocfxService
+  href: api/Lustie.UnityDocfx.DocfxService.html
+  commentId: T:Lustie.UnityDocfx.DocfxService
+  fullName: Lustie.UnityDocfx.DocfxService
+  nameWithType: DocfxService
+- uid: Lustie.UnityDocfx.DocfxService.CheckInstallation(System.Version@)
+  name: CheckInstallation(out Version)
+  href: api/Lustie.UnityDocfx.DocfxService.html#Lustie_UnityDocfx_DocfxService_CheckInstallation_System_Version__
+  commentId: M:Lustie.UnityDocfx.DocfxService.CheckInstallation(System.Version@)
+  name.vb: CheckInstallation(Version)
+  fullName: Lustie.UnityDocfx.DocfxService.CheckInstallation(out System.Version)
+  fullName.vb: Lustie.UnityDocfx.DocfxService.CheckInstallation(System.Version)
+  nameWithType: DocfxService.CheckInstallation(out Version)
+  nameWithType.vb: DocfxService.CheckInstallation(Version)
+- uid: Lustie.UnityDocfx.DocfxService.CheckInstallation*
+  name: CheckInstallation
+  href: api/Lustie.UnityDocfx.DocfxService.html#Lustie_UnityDocfx_DocfxService_CheckInstallation_
+  commentId: Overload:Lustie.UnityDocfx.DocfxService.CheckInstallation
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.DocfxService.CheckInstallation
+  nameWithType: DocfxService.CheckInstallation
+- uid: Lustie.UnityDocfx.DocfxService.GetDocfxCommand(System.String,System.String)
+  name: GetDocfxCommand(string, string)
+  href: api/Lustie.UnityDocfx.DocfxService.html#Lustie_UnityDocfx_DocfxService_GetDocfxCommand_System_String_System_String_
+  commentId: M:Lustie.UnityDocfx.DocfxService.GetDocfxCommand(System.String,System.String)
+  name.vb: GetDocfxCommand(String, String)
+  fullName: Lustie.UnityDocfx.DocfxService.GetDocfxCommand(string, string)
+  fullName.vb: Lustie.UnityDocfx.DocfxService.GetDocfxCommand(String, String)
+  nameWithType: DocfxService.GetDocfxCommand(string, string)
+  nameWithType.vb: DocfxService.GetDocfxCommand(String, String)
+- uid: Lustie.UnityDocfx.DocfxService.GetDocfxCommand*
+  name: GetDocfxCommand
+  href: api/Lustie.UnityDocfx.DocfxService.html#Lustie_UnityDocfx_DocfxService_GetDocfxCommand_
+  commentId: Overload:Lustie.UnityDocfx.DocfxService.GetDocfxCommand
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.DocfxService.GetDocfxCommand
+  nameWithType: DocfxService.GetDocfxCommand
+- uid: Lustie.UnityDocfx.DocfxService.installCommand
+  name: installCommand
+  href: api/Lustie.UnityDocfx.DocfxService.html#Lustie_UnityDocfx_DocfxService_installCommand
+  commentId: F:Lustie.UnityDocfx.DocfxService.installCommand
+  fullName: Lustie.UnityDocfx.DocfxService.installCommand
+  nameWithType: DocfxService.installCommand
+- uid: Lustie.UnityDocfx.DocfxService.InstallDocfx(System.EventHandler)
+  name: InstallDocfx(EventHandler)
+  href: api/Lustie.UnityDocfx.DocfxService.html#Lustie_UnityDocfx_DocfxService_InstallDocfx_System_EventHandler_
+  commentId: M:Lustie.UnityDocfx.DocfxService.InstallDocfx(System.EventHandler)
+  fullName: Lustie.UnityDocfx.DocfxService.InstallDocfx(System.EventHandler)
+  nameWithType: DocfxService.InstallDocfx(EventHandler)
+- uid: Lustie.UnityDocfx.DocfxService.InstallDocfx*
+  name: InstallDocfx
+  href: api/Lustie.UnityDocfx.DocfxService.html#Lustie_UnityDocfx_DocfxService_InstallDocfx_
+  commentId: Overload:Lustie.UnityDocfx.DocfxService.InstallDocfx
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.DocfxService.InstallDocfx
+  nameWithType: DocfxService.InstallDocfx
+- uid: Lustie.UnityDocfx.DocfxService.maxSupportVersion
+  name: maxSupportVersion
+  href: api/Lustie.UnityDocfx.DocfxService.html#Lustie_UnityDocfx_DocfxService_maxSupportVersion
+  commentId: F:Lustie.UnityDocfx.DocfxService.maxSupportVersion
+  fullName: Lustie.UnityDocfx.DocfxService.maxSupportVersion
+  nameWithType: DocfxService.maxSupportVersion
+- uid: Lustie.UnityDocfx.DocfxService.OpenCmd(System.String,System.EventHandler,System.String)
+  name: OpenCmd(string, EventHandler, string)
+  href: api/Lustie.UnityDocfx.DocfxService.html#Lustie_UnityDocfx_DocfxService_OpenCmd_System_String_System_EventHandler_System_String_
+  commentId: M:Lustie.UnityDocfx.DocfxService.OpenCmd(System.String,System.EventHandler,System.String)
+  name.vb: OpenCmd(String, EventHandler, String)
+  fullName: Lustie.UnityDocfx.DocfxService.OpenCmd(string, System.EventHandler, string)
+  fullName.vb: Lustie.UnityDocfx.DocfxService.OpenCmd(String, System.EventHandler, String)
+  nameWithType: DocfxService.OpenCmd(string, EventHandler, string)
+  nameWithType.vb: DocfxService.OpenCmd(String, EventHandler, String)
+- uid: Lustie.UnityDocfx.DocfxService.OpenCmd*
+  name: OpenCmd
+  href: api/Lustie.UnityDocfx.DocfxService.html#Lustie_UnityDocfx_DocfxService_OpenCmd_
+  commentId: Overload:Lustie.UnityDocfx.DocfxService.OpenCmd
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.DocfxService.OpenCmd
+  nameWithType: DocfxService.OpenCmd
+- uid: Lustie.UnityDocfx.DocfxService.uninstallCommand
+  name: uninstallCommand
+  href: api/Lustie.UnityDocfx.DocfxService.html#Lustie_UnityDocfx_DocfxService_uninstallCommand
+  commentId: F:Lustie.UnityDocfx.DocfxService.uninstallCommand
+  fullName: Lustie.UnityDocfx.DocfxService.uninstallCommand
+  nameWithType: DocfxService.uninstallCommand
 - uid: Lustie.UnityDocfx.DocfxSetupTool
   name: DocfxSetupTool
   href: api/Lustie.UnityDocfx.DocfxSetupTool.html
   commentId: T:Lustie.UnityDocfx.DocfxSetupTool
   fullName: Lustie.UnityDocfx.DocfxSetupTool
   nameWithType: DocfxSetupTool
-- uid: Lustie.UnityDocfx.DocfxSetupTool.ShowWindow
-  name: ShowWindow()
-  href: api/Lustie.UnityDocfx.DocfxSetupTool.html#Lustie_UnityDocfx_DocfxSetupTool_ShowWindow
-  commentId: M:Lustie.UnityDocfx.DocfxSetupTool.ShowWindow
-  fullName: Lustie.UnityDocfx.DocfxSetupTool.ShowWindow()
-  nameWithType: DocfxSetupTool.ShowWindow()
+- uid: Lustie.UnityDocfx.DocfxSetupTool.GetWindow
+  name: GetWindow()
+  href: api/Lustie.UnityDocfx.DocfxSetupTool.html#Lustie_UnityDocfx_DocfxSetupTool_GetWindow
+  commentId: M:Lustie.UnityDocfx.DocfxSetupTool.GetWindow
+  fullName: Lustie.UnityDocfx.DocfxSetupTool.GetWindow()
+  nameWithType: DocfxSetupTool.GetWindow()
+- uid: Lustie.UnityDocfx.DocfxSetupTool.GetWindow*
+  name: GetWindow
+  href: api/Lustie.UnityDocfx.DocfxSetupTool.html#Lustie_UnityDocfx_DocfxSetupTool_GetWindow_
+  commentId: Overload:Lustie.UnityDocfx.DocfxSetupTool.GetWindow
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.DocfxSetupTool.GetWindow
+  nameWithType: DocfxSetupTool.GetWindow
+- uid: Lustie.UnityDocfx.DocfxSetupTool.Open
+  name: Open()
+  href: api/Lustie.UnityDocfx.DocfxSetupTool.html#Lustie_UnityDocfx_DocfxSetupTool_Open
+  commentId: M:Lustie.UnityDocfx.DocfxSetupTool.Open
+  fullName: Lustie.UnityDocfx.DocfxSetupTool.Open()
+  nameWithType: DocfxSetupTool.Open()
+- uid: Lustie.UnityDocfx.DocfxSetupTool.Open*
+  name: Open
+  href: api/Lustie.UnityDocfx.DocfxSetupTool.html#Lustie_UnityDocfx_DocfxSetupTool_Open_
+  commentId: Overload:Lustie.UnityDocfx.DocfxSetupTool.Open
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.DocfxSetupTool.Open
+  nameWithType: DocfxSetupTool.Open
+- uid: Lustie.UnityDocfx.DocfxSetupTool.OpenAsset(System.Int32,System.Int32)
+  name: OpenAsset(int, int)
+  href: api/Lustie.UnityDocfx.DocfxSetupTool.html#Lustie_UnityDocfx_DocfxSetupTool_OpenAsset_System_Int32_System_Int32_
+  commentId: M:Lustie.UnityDocfx.DocfxSetupTool.OpenAsset(System.Int32,System.Int32)
+  name.vb: OpenAsset(Integer, Integer)
+  fullName: Lustie.UnityDocfx.DocfxSetupTool.OpenAsset(int, int)
+  fullName.vb: Lustie.UnityDocfx.DocfxSetupTool.OpenAsset(Integer, Integer)
+  nameWithType: DocfxSetupTool.OpenAsset(int, int)
+  nameWithType.vb: DocfxSetupTool.OpenAsset(Integer, Integer)
+- uid: Lustie.UnityDocfx.DocfxSetupTool.OpenAsset*
+  name: OpenAsset
+  href: api/Lustie.UnityDocfx.DocfxSetupTool.html#Lustie_UnityDocfx_DocfxSetupTool_OpenAsset_
+  commentId: Overload:Lustie.UnityDocfx.DocfxSetupTool.OpenAsset
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.DocfxSetupTool.OpenAsset
+  nameWithType: DocfxSetupTool.OpenAsset
+- uid: Lustie.UnityDocfx.DocfxSetupTool.ShowWindow(Lustie.UnityDocfx.UnityDocset)
+  name: ShowWindow(UnityDocset)
+  href: api/Lustie.UnityDocfx.DocfxSetupTool.html#Lustie_UnityDocfx_DocfxSetupTool_ShowWindow_Lustie_UnityDocfx_UnityDocset_
+  commentId: M:Lustie.UnityDocfx.DocfxSetupTool.ShowWindow(Lustie.UnityDocfx.UnityDocset)
+  fullName: Lustie.UnityDocfx.DocfxSetupTool.ShowWindow(Lustie.UnityDocfx.UnityDocset)
+  nameWithType: DocfxSetupTool.ShowWindow(UnityDocset)
 - uid: Lustie.UnityDocfx.DocfxSetupTool.ShowWindow*
   name: ShowWindow
   href: api/Lustie.UnityDocfx.DocfxSetupTool.html#Lustie_UnityDocfx_DocfxSetupTool_ShowWindow_
@@ -290,6 +417,28 @@ references:
   isSpec: "True"
   fullName: Lustie.UnityDocfx.LiveServer.Run
   nameWithType: LiveServer.Run
+- uid: Lustie.UnityDocfx.SomeExtensions
+  name: SomeExtensions
+  href: api/Lustie.UnityDocfx.SomeExtensions.html
+  commentId: T:Lustie.UnityDocfx.SomeExtensions
+  fullName: Lustie.UnityDocfx.SomeExtensions
+  nameWithType: SomeExtensions
+- uid: Lustie.UnityDocfx.SomeExtensions.CopyToClipboard(System.String)
+  name: CopyToClipboard(string)
+  href: api/Lustie.UnityDocfx.SomeExtensions.html#Lustie_UnityDocfx_SomeExtensions_CopyToClipboard_System_String_
+  commentId: M:Lustie.UnityDocfx.SomeExtensions.CopyToClipboard(System.String)
+  name.vb: CopyToClipboard(String)
+  fullName: Lustie.UnityDocfx.SomeExtensions.CopyToClipboard(string)
+  fullName.vb: Lustie.UnityDocfx.SomeExtensions.CopyToClipboard(String)
+  nameWithType: SomeExtensions.CopyToClipboard(string)
+  nameWithType.vb: SomeExtensions.CopyToClipboard(String)
+- uid: Lustie.UnityDocfx.SomeExtensions.CopyToClipboard*
+  name: CopyToClipboard
+  href: api/Lustie.UnityDocfx.SomeExtensions.html#Lustie_UnityDocfx_SomeExtensions_CopyToClipboard_
+  commentId: Overload:Lustie.UnityDocfx.SomeExtensions.CopyToClipboard
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.SomeExtensions.CopyToClipboard
+  nameWithType: SomeExtensions.CopyToClipboard
 - uid: Lustie.UnityDocfx.SortOption
   name: SortOption
   href: api/Lustie.UnityDocfx.SortOption.html

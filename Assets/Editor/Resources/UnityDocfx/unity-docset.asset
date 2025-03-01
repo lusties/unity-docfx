@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce96d657814a9a4c90a4a6d8b1eb8c7, type: 3}
   m_Name: unity-docset
   m_EditorClassIdentifier: 
-  folder: Documentaion
+  folder: Documentation
   docfxJson:
     src:
     - Assets/**/*.cs

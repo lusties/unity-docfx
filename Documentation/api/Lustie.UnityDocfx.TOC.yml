@@ -20,7 +20,7 @@ items:
   source:
     id: TOC
     path: ''
-    startLine: 842
+    startLine: 1080
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -61,7 +61,7 @@ items:
   source:
     id: name
     path: ''
-    startLine: 845
+    startLine: 1083
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -84,7 +84,7 @@ items:
   source:
     id: href
     path: ''
-    startLine: 846
+    startLine: 1084
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -107,7 +107,7 @@ items:
   source:
     id: sortOption
     path: ''
-    startLine: 847
+    startLine: 1085
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -130,7 +130,7 @@ items:
   source:
     id: sortOrder
     path: ''
-    startLine: 848
+    startLine: 1086
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -153,7 +153,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 850
+    startLine: 1088
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx

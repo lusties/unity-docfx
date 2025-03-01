@@ -8,8 +8,7 @@
             "Assets/**/*.cs"
           ],
           "exclude": [
-            "Assets/Plugins/**",
-            "Assets/Editor/**"
+            "Assets/Plugins/**"
           ]
         }
       ],
@@ -19,7 +18,7 @@
   ],
   "build": {
     "globalMetadata": {
-      "_appTitle": "Unity Docfx title wtf baby a",
+      "_appTitle": "Unity Docfx title",
       "_appFooter": "Unity Docfx footer",
       "_enableSearch": true
     },
@@ -76,6 +75,6 @@
     "xrefService": [
       "https://xref.docs.microsoft.com/query?uid={uid}"
     ],
-    "dest": "C:/Unity Projects/My Packages/unity-docfx/docs"
+    "dest": "../docs"
   }
 }

@@ -2,8 +2,10 @@
 - uid: Lustie.UnityDocfx
   name: Lustie.UnityDocfx
   items:
-  - uid: Lustie.UnityDocfx.Docfx
-    name: Docfx
+  - uid: Lustie.UnityDocfx.DocfxData
+    name: DocfxData
+  - uid: Lustie.UnityDocfx.DocfxService
+    name: DocfxService
   - uid: Lustie.UnityDocfx.DocfxSetupTool
     name: DocfxSetupTool
   - uid: Lustie.UnityDocfx.DocfxTemplatesPath
@@ -12,6 +14,8 @@
     name: JObjectExtensions
   - uid: Lustie.UnityDocfx.LiveServer
     name: LiveServer
+  - uid: Lustie.UnityDocfx.SomeExtensions
+    name: SomeExtensions
   - uid: Lustie.UnityDocfx.SortOption
     name: SortOption
   - uid: Lustie.UnityDocfx.SortOrder
