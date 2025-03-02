@@ -4,15 +4,20 @@ items:
   commentId: N:Lustie.UnityDocfx
   id: Lustie.UnityDocfx
   children:
+  - Lustie.UnityDocfx.Build
+  - Lustie.UnityDocfx.Content
   - Lustie.UnityDocfx.DocfxData
   - Lustie.UnityDocfx.DocfxService
   - Lustie.UnityDocfx.DocfxSetupTool
   - Lustie.UnityDocfx.DocfxTemplatesPath
+  - Lustie.UnityDocfx.GlobalMetadata
   - Lustie.UnityDocfx.JObjectExtensions
   - Lustie.UnityDocfx.LiveServer
+  - Lustie.UnityDocfx.Metadata
   - Lustie.UnityDocfx.SomeExtensions
   - Lustie.UnityDocfx.SortOption
   - Lustie.UnityDocfx.SortOrder
+  - Lustie.UnityDocfx.Src
   - Lustie.UnityDocfx.TOC
   - Lustie.UnityDocfx.UIPath
   - Lustie.UnityDocfx.UnityDocset
@@ -26,12 +31,6 @@ items:
   assemblies:
   - cs.temp.dll
 references:
-- uid: Lustie.UnityDocfx.DocfxData
-  commentId: T:Lustie.UnityDocfx.DocfxData
-  parent: Lustie.UnityDocfx
-  name: DocfxData
-  nameWithType: DocfxData
-  fullName: Lustie.UnityDocfx.DocfxData
 - uid: Lustie.UnityDocfx.DocfxService
   commentId: T:Lustie.UnityDocfx.DocfxService
   name: DocfxService
@@ -43,22 +42,12 @@ references:
   name: DocfxSetupTool
   nameWithType: DocfxSetupTool
   fullName: Lustie.UnityDocfx.DocfxSetupTool
-- uid: Lustie.UnityDocfx.JObjectExtensions
-  commentId: T:Lustie.UnityDocfx.JObjectExtensions
-  name: JObjectExtensions
-  nameWithType: JObjectExtensions
-  fullName: Lustie.UnityDocfx.JObjectExtensions
 - uid: Lustie.UnityDocfx.LiveServer
   commentId: T:Lustie.UnityDocfx.LiveServer
   parent: Lustie.UnityDocfx
   name: LiveServer
   nameWithType: LiveServer
   fullName: Lustie.UnityDocfx.LiveServer
-- uid: Lustie.UnityDocfx.SomeExtensions
-  commentId: T:Lustie.UnityDocfx.SomeExtensions
-  name: SomeExtensions
-  nameWithType: SomeExtensions
-  fullName: Lustie.UnityDocfx.SomeExtensions
 - uid: Lustie.UnityDocfx.SortOption
   commentId: T:Lustie.UnityDocfx.SortOption
   parent: Lustie.UnityDocfx
@@ -71,27 +60,70 @@ references:
   name: SortOrder
   nameWithType: SortOrder
   fullName: Lustie.UnityDocfx.SortOrder
-- uid: Lustie.UnityDocfx.TOC
-  commentId: T:Lustie.UnityDocfx.TOC
-  name: TOC
-  nameWithType: TOC
-  fullName: Lustie.UnityDocfx.TOC
 - uid: Lustie.UnityDocfx.UIPath
   commentId: T:Lustie.UnityDocfx.UIPath
   name: UIPath
   nameWithType: UIPath
   fullName: Lustie.UnityDocfx.UIPath
+- uid: Lustie.UnityDocfx.DocfxData
+  commentId: T:Lustie.UnityDocfx.DocfxData
+  parent: Lustie.UnityDocfx
+  name: DocfxData
+  nameWithType: DocfxData
+  fullName: Lustie.UnityDocfx.DocfxData
+- uid: Lustie.UnityDocfx.TOC
+  commentId: T:Lustie.UnityDocfx.TOC
+  name: TOC
+  nameWithType: TOC
+  fullName: Lustie.UnityDocfx.TOC
 - uid: Lustie.UnityDocfx.UnityDocset
   commentId: T:Lustie.UnityDocfx.UnityDocset
   parent: Lustie.UnityDocfx
   name: UnityDocset
   nameWithType: UnityDocset
   fullName: Lustie.UnityDocfx.UnityDocset
+- uid: Lustie.UnityDocfx.Metadata
+  commentId: T:Lustie.UnityDocfx.Metadata
+  name: Metadata
+  nameWithType: Metadata
+  fullName: Lustie.UnityDocfx.Metadata
+- uid: Lustie.UnityDocfx.Src
+  commentId: T:Lustie.UnityDocfx.Src
+  name: Src
+  nameWithType: Src
+  fullName: Lustie.UnityDocfx.Src
+- uid: Lustie.UnityDocfx.Build
+  commentId: T:Lustie.UnityDocfx.Build
+  parent: Lustie.UnityDocfx
+  name: Build
+  nameWithType: Build
+  fullName: Lustie.UnityDocfx.Build
+- uid: Lustie.UnityDocfx.GlobalMetadata
+  commentId: T:Lustie.UnityDocfx.GlobalMetadata
+  parent: Lustie.UnityDocfx
+  name: GlobalMetadata
+  nameWithType: GlobalMetadata
+  fullName: Lustie.UnityDocfx.GlobalMetadata
+- uid: Lustie.UnityDocfx.Content
+  commentId: T:Lustie.UnityDocfx.Content
+  name: Content
+  nameWithType: Content
+  fullName: Lustie.UnityDocfx.Content
 - uid: Lustie.UnityDocfx.DocfxTemplatesPath
   commentId: T:Lustie.UnityDocfx.DocfxTemplatesPath
   name: DocfxTemplatesPath
   nameWithType: DocfxTemplatesPath
   fullName: Lustie.UnityDocfx.DocfxTemplatesPath
+- uid: Lustie.UnityDocfx.JObjectExtensions
+  commentId: T:Lustie.UnityDocfx.JObjectExtensions
+  name: JObjectExtensions
+  nameWithType: JObjectExtensions
+  fullName: Lustie.UnityDocfx.JObjectExtensions
+- uid: Lustie.UnityDocfx.SomeExtensions
+  commentId: T:Lustie.UnityDocfx.SomeExtensions
+  name: SomeExtensions
+  nameWithType: SomeExtensions
+  fullName: Lustie.UnityDocfx.SomeExtensions
 - uid: Lustie.UnityDocfx
   commentId: N:Lustie.UnityDocfx
   name: Lustie.UnityDocfx

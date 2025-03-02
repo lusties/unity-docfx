@@ -6,6 +6,7 @@ items:
   parent: Lustie.UnityDocfx
   children:
   - Lustie.UnityDocfx.SomeExtensions.CopyToClipboard(System.String)
+  - Lustie.UnityDocfx.SomeExtensions.MakeReorderable(ListView)
   langs:
   - csharp
   - vb
@@ -16,7 +17,7 @@ items:
   source:
     id: SomeExtensions
     path: ''
-    startLine: 1052
+    startLine: 1380
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -48,7 +49,7 @@ items:
   source:
     id: CopyToClipboard
     path: ''
-    startLine: 1054
+    startLine: 1382
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -62,6 +63,32 @@ items:
   nameWithType.vb: SomeExtensions.CopyToClipboard(String)
   fullName.vb: Lustie.UnityDocfx.SomeExtensions.CopyToClipboard(String)
   name.vb: CopyToClipboard(String)
+- uid: Lustie.UnityDocfx.SomeExtensions.MakeReorderable(ListView)
+  commentId: M:Lustie.UnityDocfx.SomeExtensions.MakeReorderable(ListView)
+  id: MakeReorderable(ListView)
+  isExtensionMethod: true
+  parent: Lustie.UnityDocfx.SomeExtensions
+  langs:
+  - csharp
+  - vb
+  name: MakeReorderable(ListView)
+  nameWithType: SomeExtensions.MakeReorderable(ListView)
+  fullName: Lustie.UnityDocfx.SomeExtensions.MakeReorderable(ListView)
+  type: Method
+  source:
+    id: MakeReorderable
+    path: ''
+    startLine: 1387
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public static void MakeReorderable(this ListView listView)
+    parameters:
+    - id: listView
+      type: Global.ListView
+    content.vb: Public Shared Sub MakeReorderable(listView As ListView)
+  overload: Lustie.UnityDocfx.SomeExtensions.MakeReorderable*
 references:
 - uid: Lustie.UnityDocfx
   commentId: N:Lustie.UnityDocfx
@@ -299,3 +326,14 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: Lustie.UnityDocfx.SomeExtensions.MakeReorderable*
+  commentId: Overload:Lustie.UnityDocfx.SomeExtensions.MakeReorderable
+  name: MakeReorderable
+  nameWithType: SomeExtensions.MakeReorderable
+  fullName: Lustie.UnityDocfx.SomeExtensions.MakeReorderable
+- uid: Global.ListView
+  commentId: '!:Global.ListView'
+  isExternal: true
+  name: ListView
+  nameWithType: ListView
+  fullName: ListView

@@ -6,6 +6,7 @@ items:
   parent: Lustie.UnityDocfx
   children:
   - Lustie.UnityDocfx.DocfxService.CheckInstallation(System.Version@)
+  - Lustie.UnityDocfx.DocfxService.GenDocfxJson(Lustie.UnityDocfx.UnityDocset)
   - Lustie.UnityDocfx.DocfxService.GetDocfxCommand(System.String,System.String)
   - Lustie.UnityDocfx.DocfxService.installCommand
   - Lustie.UnityDocfx.DocfxService.InstallDocfx(System.EventHandler)
@@ -22,7 +23,7 @@ items:
   source:
     id: DocfxService
     path: ''
-    startLine: 59
+    startLine: 17
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -55,7 +56,7 @@ items:
   source:
     id: maxSupportVersion
     path: ''
-    startLine: 61
+    startLine: 19
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -78,7 +79,7 @@ items:
   source:
     id: uninstallCommand
     path: ''
-    startLine: 62
+    startLine: 20
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -101,7 +102,7 @@ items:
   source:
     id: installCommand
     path: ''
-    startLine: 63
+    startLine: 21
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -124,7 +125,7 @@ items:
   source:
     id: CheckInstallation
     path: ''
-    startLine: 80
+    startLine: 38
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -158,7 +159,7 @@ items:
   source:
     id: InstallDocfx
     path: ''
-    startLine: 115
+    startLine: 73
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -185,7 +186,7 @@ items:
   source:
     id: OpenCmd
     path: ''
-    startLine: 138
+    startLine: 96
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -221,7 +222,7 @@ items:
   source:
     id: GetDocfxCommand
     path: ''
-    startLine: 164
+    startLine: 122
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -237,13 +238,38 @@ items:
       type: System.String
       description: The folder containing the docfx.json file.
     return:
-      type: Global.Process
+      type: System.Diagnostics.Process
       description: A process configured to run the docfx command.
     content.vb: Public Shared Function GetDocfxCommand(argument As String, folder As String) As Process
   overload: Lustie.UnityDocfx.DocfxService.GetDocfxCommand*
   nameWithType.vb: DocfxService.GetDocfxCommand(String, String)
   fullName.vb: Lustie.UnityDocfx.DocfxService.GetDocfxCommand(String, String)
   name.vb: GetDocfxCommand(String, String)
+- uid: Lustie.UnityDocfx.DocfxService.GenDocfxJson(Lustie.UnityDocfx.UnityDocset)
+  commentId: M:Lustie.UnityDocfx.DocfxService.GenDocfxJson(Lustie.UnityDocfx.UnityDocset)
+  id: GenDocfxJson(Lustie.UnityDocfx.UnityDocset)
+  parent: Lustie.UnityDocfx.DocfxService
+  langs:
+  - csharp
+  - vb
+  name: GenDocfxJson(UnityDocset)
+  nameWithType: DocfxService.GenDocfxJson(UnityDocset)
+  fullName: Lustie.UnityDocfx.DocfxService.GenDocfxJson(Lustie.UnityDocfx.UnityDocset)
+  type: Method
+  source:
+    id: GenDocfxJson
+    path: ''
+    startLine: 165
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public static void GenDocfxJson(UnityDocset docset)
+    parameters:
+    - id: docset
+      type: Lustie.UnityDocfx.UnityDocset
+    content.vb: Public Shared Sub GenDocfxJson(docset As UnityDocset)
+  overload: Lustie.UnityDocfx.DocfxService.GenDocfxJson*
 references:
 - uid: Lustie.UnityDocfx
   commentId: N:Lustie.UnityDocfx
@@ -520,9 +546,43 @@ references:
   name: GetDocfxCommand
   nameWithType: DocfxService.GetDocfxCommand
   fullName: Lustie.UnityDocfx.DocfxService.GetDocfxCommand
-- uid: Global.Process
-  commentId: '!:Global.Process'
+- uid: System.Diagnostics.Process
+  commentId: T:System.Diagnostics.Process
+  parent: System.Diagnostics
   isExternal: true
   name: Process
   nameWithType: Process
-  fullName: Process
+  fullName: System.Diagnostics.Process
+- uid: System.Diagnostics
+  commentId: N:System.Diagnostics
+  isExternal: true
+  name: System.Diagnostics
+  nameWithType: System.Diagnostics
+  fullName: System.Diagnostics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+  - name: .
+  - uid: System.Diagnostics
+    name: Diagnostics
+    isExternal: true
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+  - name: .
+  - uid: System.Diagnostics
+    name: Diagnostics
+    isExternal: true
+- uid: Lustie.UnityDocfx.DocfxService.GenDocfxJson*
+  commentId: Overload:Lustie.UnityDocfx.DocfxService.GenDocfxJson
+  name: GenDocfxJson
+  nameWithType: DocfxService.GenDocfxJson
+  fullName: Lustie.UnityDocfx.DocfxService.GenDocfxJson
+- uid: Lustie.UnityDocfx.UnityDocset
+  commentId: T:Lustie.UnityDocfx.UnityDocset
+  parent: Lustie.UnityDocfx
+  name: UnityDocset
+  nameWithType: UnityDocset
+  fullName: Lustie.UnityDocfx.UnityDocset

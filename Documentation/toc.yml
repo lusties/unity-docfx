@@ -1,5 +1,5 @@
 - name: Home
-  href: index.md
+  href: README.md to index.md
 - name: Manual
   href: manual/
 - name: API

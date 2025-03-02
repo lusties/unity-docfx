@@ -18,23 +18,18 @@
   ],
   "build": {
     "globalMetadata": {
-      "_appTitle": "Unity Docfx title",
-      "_appFooter": "Unity Docfx footer",
+      "_appTitle": "Unity Docfx",
+      "_appFooter": "Made by Unity-Docfx: https://github.com/lusties/unity-docfx",
       "_enableSearch": true
     },
     "content": [
       {
+        "src": "",
         "files": [
           "toc.yml",
           "index.md"
-        ]
-      },
-      {
-        "src": "api",
-        "files": [
-          "*.yml"
         ],
-        "dest": "api"
+        "dest": ""
       },
       {
         "src": "manual",
@@ -43,37 +38,14 @@
           "*.md"
         ],
         "dest": "manual"
-      }
-    ],
-    "overwrite": [
+      },
       {
-        "src": "..",
+        "src": "api",
         "files": [
-          "Assets/Scripts/**/*.md"
-        ]
+          "*.yml"
+        ],
+        "dest": "api"
       }
-    ],
-    "resource": [
-      {
-        "files": [
-          "resources/**/*"
-        ]
-      }
-    ],
-    "sitemap": {
-      "baseUrl": "https://your-username.github.io/your-repo",
-      "changefreq": "weekly",
-      "fileOptions": {
-        "api/*": {
-          "changefreq": "daily"
-        }
-      }
-    },
-    "xref": [
-      "https://your-username.github.io/UnityXrefMaps/xrefmap.yml"
-    ],
-    "xrefService": [
-      "https://xref.docs.microsoft.com/query?uid={uid}"
     ],
     "dest": "../docs"
   }

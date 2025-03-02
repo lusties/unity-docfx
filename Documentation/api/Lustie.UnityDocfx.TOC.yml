@@ -5,8 +5,11 @@ items:
   id: TOC
   parent: Lustie.UnityDocfx
   children:
-  - Lustie.UnityDocfx.TOC.#ctor(System.String,System.String)
+  - Lustie.UnityDocfx.TOC.#ctor(System.String,System.String,System.String)
   - Lustie.UnityDocfx.TOC.href
+  - Lustie.UnityDocfx.TOC.HREF_CUSTOM
+  - Lustie.UnityDocfx.TOC.HREF_README
+  - Lustie.UnityDocfx.TOC.hrefOption
   - Lustie.UnityDocfx.TOC.name
   - Lustie.UnityDocfx.TOC.sortOption
   - Lustie.UnityDocfx.TOC.sortOrder
@@ -20,7 +23,7 @@ items:
   source:
     id: TOC
     path: ''
-    startLine: 1080
+    startLine: 1122
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -61,7 +64,7 @@ items:
   source:
     id: name
     path: ''
-    startLine: 1083
+    startLine: 1125
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -84,7 +87,7 @@ items:
   source:
     id: href
     path: ''
-    startLine: 1084
+    startLine: 1126
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -107,7 +110,7 @@ items:
   source:
     id: sortOption
     path: ''
-    startLine: 1085
+    startLine: 1127
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -130,7 +133,7 @@ items:
   source:
     id: sortOrder
     path: ''
-    startLine: 1086
+    startLine: 1128
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -139,36 +142,107 @@ items:
     return:
       type: Lustie.UnityDocfx.SortOrder
     content.vb: Public sortOrder As SortOrder
-- uid: Lustie.UnityDocfx.TOC.#ctor(System.String,System.String)
-  commentId: M:Lustie.UnityDocfx.TOC.#ctor(System.String,System.String)
-  id: '#ctor(System.String,System.String)'
+- uid: Lustie.UnityDocfx.TOC.HREF_CUSTOM
+  commentId: F:Lustie.UnityDocfx.TOC.HREF_CUSTOM
+  id: HREF_CUSTOM
   parent: Lustie.UnityDocfx.TOC
   langs:
   - csharp
   - vb
-  name: TOC(string, string)
-  nameWithType: TOC.TOC(string, string)
-  fullName: Lustie.UnityDocfx.TOC.TOC(string, string)
-  type: Constructor
+  name: HREF_CUSTOM
+  nameWithType: TOC.HREF_CUSTOM
+  fullName: Lustie.UnityDocfx.TOC.HREF_CUSTOM
+  type: Field
   source:
-    id: .ctor
+    id: HREF_CUSTOM
     path: ''
-    startLine: 1088
+    startLine: 1130
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
   syntax:
-    content: public TOC(string name, string href)
+    content: public const string HREF_CUSTOM = "Custom"
+    return:
+      type: System.String
+    content.vb: Public Const HREF_CUSTOM As String = "Custom"
+- uid: Lustie.UnityDocfx.TOC.HREF_README
+  commentId: F:Lustie.UnityDocfx.TOC.HREF_README
+  id: HREF_README
+  parent: Lustie.UnityDocfx.TOC
+  langs:
+  - csharp
+  - vb
+  name: HREF_README
+  nameWithType: TOC.HREF_README
+  fullName: Lustie.UnityDocfx.TOC.HREF_README
+  type: Field
+  source:
+    id: HREF_README
+    path: ''
+    startLine: 1131
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public const string HREF_README = "README.md to index.md"
+    return:
+      type: System.String
+    content.vb: Public Const HREF_README As String = "README.md to index.md"
+- uid: Lustie.UnityDocfx.TOC.hrefOption
+  commentId: F:Lustie.UnityDocfx.TOC.hrefOption
+  id: hrefOption
+  parent: Lustie.UnityDocfx.TOC
+  langs:
+  - csharp
+  - vb
+  name: hrefOption
+  nameWithType: TOC.hrefOption
+  fullName: Lustie.UnityDocfx.TOC.hrefOption
+  type: Field
+  source:
+    id: hrefOption
+    path: ''
+    startLine: 1132
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public string hrefOption
+    return:
+      type: System.String
+    content.vb: Public hrefOption As String
+- uid: Lustie.UnityDocfx.TOC.#ctor(System.String,System.String,System.String)
+  commentId: M:Lustie.UnityDocfx.TOC.#ctor(System.String,System.String,System.String)
+  id: '#ctor(System.String,System.String,System.String)'
+  parent: Lustie.UnityDocfx.TOC
+  langs:
+  - csharp
+  - vb
+  name: TOC(string, string, string)
+  nameWithType: TOC.TOC(string, string, string)
+  fullName: Lustie.UnityDocfx.TOC.TOC(string, string, string)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 1134
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public TOC(string name, string href, string hrefOption)
     parameters:
     - id: name
       type: System.String
     - id: href
       type: System.String
-    content.vb: Public Sub New(name As String, href As String)
+    - id: hrefOption
+      type: System.String
+    content.vb: Public Sub New(name As String, href As String, hrefOption As String)
   overload: Lustie.UnityDocfx.TOC.#ctor*
-  nameWithType.vb: TOC.New(String, String)
-  fullName.vb: Lustie.UnityDocfx.TOC.New(String, String)
-  name.vb: New(String, String)
+  nameWithType.vb: TOC.New(String, String, String)
+  fullName.vb: Lustie.UnityDocfx.TOC.New(String, String, String)
+  name.vb: New(String, String, String)
 references:
 - uid: Lustie.UnityDocfx
   commentId: N:Lustie.UnityDocfx

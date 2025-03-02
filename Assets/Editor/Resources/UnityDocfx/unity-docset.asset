@@ -14,26 +14,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   folder: Documentation
   docfxJson:
-    src:
-    - Assets/**/*.cs
-    exclude:
-    - Assets/Plugins/**
-    _appTitle: Unity Docfx title
-    _appFooter: Unity Docfx footer
-    _enableSearch: 1
-    baseUrl: 
-    dest: ../docs
+    metadata:
+    - src:
+      - src: ..
+        files:
+        - Assets/**/*.cs
+        exclude:
+        - Assets/Plugins/**
+      globalNamespaceId: Global
+      dest: api
+    build:
+      globalMetadata:
+        _appTitle: Unity Docfx
+        _appFooter: 'Made by Unity-Docfx: https://github.com/lusties/unity-docfx'
+        _enableSearch: 1
+      content:
+      - src: api
+        files:
+        - '*.yml'
+        dest: api
+      dest: ../docs
   TOC:
   - name: Home
-    href: index.md
+    href: README.md to index.md
     sortOption: 0
     sortOrder: 0
+    hrefOption: README.md to index.md
   - name: Manual
     href: manual/
     sortOption: 0
     sortOrder: 0
+    hrefOption: Custom
   - name: API
-    href: api/
+    href: api
     sortOption: 0
     sortOrder: 0
+    hrefOption: api
   port: 18080

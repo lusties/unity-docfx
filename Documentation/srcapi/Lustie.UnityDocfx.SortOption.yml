@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: Lustie.UnityDocfx.SortOption
+  commentId: T:Lustie.UnityDocfx.SortOption
+  id: SortOption
+  parent: Lustie.UnityDocfx
+  children:
+  - Lustie.UnityDocfx.SortOption.Custom
+  - Lustie.UnityDocfx.SortOption.Name
+  langs:
+  - csharp
+  - vb
+  name: SortOption
+  nameWithType: SortOption
+  fullName: Lustie.UnityDocfx.SortOption
+  type: Enum
+  source:
+    id: SortOption
+    path: ''
+    startLine: 1089
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public enum SortOption
+    content.vb: Public Enum SortOption
+- uid: Lustie.UnityDocfx.SortOption.Name
+  commentId: F:Lustie.UnityDocfx.SortOption.Name
+  id: Name
+  parent: Lustie.UnityDocfx.SortOption
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: SortOption.Name
+  fullName: Lustie.UnityDocfx.SortOption.Name
+  type: Field
+  source:
+    id: Name
+    path: ''
+    startLine: 1091
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: Name = 0
+    return:
+      type: Lustie.UnityDocfx.SortOption
+- uid: Lustie.UnityDocfx.SortOption.Custom
+  commentId: F:Lustie.UnityDocfx.SortOption.Custom
+  id: Custom
+  parent: Lustie.UnityDocfx.SortOption
+  langs:
+  - csharp
+  - vb
+  name: Custom
+  nameWithType: SortOption.Custom
+  fullName: Lustie.UnityDocfx.SortOption.Custom
+  type: Field
+  source:
+    id: Custom
+    path: ''
+    startLine: 1092
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: Custom = 1
+    return:
+      type: Lustie.UnityDocfx.SortOption
+references:
+- uid: Lustie.UnityDocfx
+  commentId: N:Lustie.UnityDocfx
+  name: Lustie.UnityDocfx
+  nameWithType: Lustie.UnityDocfx
+  fullName: Lustie.UnityDocfx
+  spec.csharp:
+  - uid: Lustie
+    name: Lustie
+  - name: .
+  - uid: Lustie.UnityDocfx
+    name: UnityDocfx
+  spec.vb:
+  - uid: Lustie
+    name: Lustie
+  - name: .
+  - uid: Lustie.UnityDocfx
+    name: UnityDocfx
+- uid: Lustie.UnityDocfx.SortOption
+  commentId: T:Lustie.UnityDocfx.SortOption
+  parent: Lustie.UnityDocfx
+  name: SortOption
+  nameWithType: SortOption
+  fullName: Lustie.UnityDocfx.SortOption

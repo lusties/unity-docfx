@@ -1,4 +1,4 @@
-- name: manual
-  href: manual.md
-- name: Tutorial
-  href: Tutorial.md
+- name: Manual
+  href: Manual.md
+- name: Markdown
+  href: Markdown.md

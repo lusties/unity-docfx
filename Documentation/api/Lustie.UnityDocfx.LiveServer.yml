@@ -21,7 +21,7 @@ items:
   source:
     id: LiveServer
     path: ''
-    startLine: 923
+    startLine: 930
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -54,7 +54,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 931
+    startLine: 938
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -84,7 +84,7 @@ items:
   source:
     id: Run
     path: ''
-    startLine: 942
+    startLine: 949
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -106,7 +106,7 @@ items:
   source:
     id: Dispose
     path: ''
-    startLine: 1033
+    startLine: 1040
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -130,7 +130,7 @@ items:
   source:
     id: IsRunning
     path: ''
-    startLine: 1040
+    startLine: 1047
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -155,7 +155,7 @@ items:
   source:
     id: GetUrl
     path: ''
-    startLine: 1042
+    startLine: 1049
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -179,7 +179,7 @@ items:
   source:
     id: op_Implicit
     path: ''
-    startLine: 1044
+    startLine: 1051
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx

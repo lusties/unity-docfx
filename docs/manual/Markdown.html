@@ -1,0 +1,610 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Markdown | Unity Docfx </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Markdown | Unity Docfx ">
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="markdown">Markdown</h1>
+
+<p><a href="https://daringfireball.net/projects/markdown/">Markdown</a> is a lightweight markup language with plain text formatting syntax. Docfx supports <a href="https://commonmark.org/">CommonMark</a> compliant Markdown parsed through the <a href="https://github.com/xoofx/markdig">Markdig</a> parsing engine.</p>
+<h2 id="markdown-extensions">Markdown Extensions</h2>
+<p>Docfx supports additional markdown syntax that provide richer content. These syntax are specific to docfx and won't be rendered elsewhere like GitHub.  In addition to its own extensions, docfx also supports the use of the markdown extensions provided by <a href="https://github.com/xoofx/markdig?tab=readme-ov-file#features">Markdig</a>.</p>
+<p>The following list of Markdig extensions are enabled by default for docfx:</p>
+<ul>
+<li><a href="https://github.com/xoofx/markdig/blob/master/src/Markdig.Tests/Specs/MathSpecs.md">Mathematics</a></li>
+<li><a href="https://github.com/xoofx/markdig/blob/master/src/Markdig.Tests/Specs/EmphasisExtraSpecs.md">Emphasis Extras</a></li>
+<li><a href="https://github.com/xoofx/markdig/blob/master/src/Markdig.Tests/Specs/AutoIdentifierSpecs.md">Auto Identifiers</a></li>
+<li><a href="https://github.com/xoofx/markdig/blob/master/src/Markdig.Tests/Specs/MediaSpecs.md">Media Links</a></li>
+<li><a href="https://github.com/xoofx/markdig/blob/master/src/Markdig.Tests/Specs/PipeTableSpecs.md">Pipe Tables</a></li>
+<li><a href="https://github.com/xoofx/markdig/blob/master/src/Markdig.Tests/Specs/AutoLinks.md">Auto Links</a></li>
+<li><a href="https://github.com/xoofx/markdig/blob/master/src/Markdig.Tests/Specs/EmojiSpecs.md">Emoji</a></li>
+</ul>
+<p>To use other custom markdown extensions:</p>
+<ol>
+<li>Use docfx as a NuGet library:</li>
+</ol>
+<pre><code class="lang-xml">&lt;PackageReference Include=&quot;Docfx.App&quot; Version=&quot;2.70.0&quot; /&gt;
+</code></pre>
+<ol start="2">
+<li>Configure the markdig markdown pipeline:</li>
+</ol>
+<pre><code class="lang-cs">var options = new BuildOptions
+{
+    // Enable custom markdown extensions here
+    ConfigureMarkdig = pipeline =&gt; pipeline.UseAbbreviations().UseFootnotes(),
+}
+
+await Docset.Build(&quot;docfx.json&quot;, options);
+</code></pre>
+<p>Alternatively, set the <code>build.markdownEngineProperties.markdigExtensions</code> property in <code>docfx.json</code> to the list of additional extensions to use:</p>
+<pre><code class="lang-json">{
+  &quot;build&quot;: {
+    &quot;markdownEngineProperties&quot;: {
+      &quot;markdigExtensions&quot;: [
+          &quot;Abbreviations&quot;,
+          &quot;Footnotes&quot;
+      ]
+    }
+  }
+}
+</code></pre>
+<p>The known extension names are listed in <a href="https://github.com/xoofx/markdig/blob/master/src/Markdig/MarkdownExtensions.cs">MardownExtensions.Configure</a> method in the MarkDig project.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The custom configuration of extensions via the <code>build.markdownEngineProperties.markdigExtensions</code> property is not supported.</p>
+</div>
+<h2 id="yaml-header">YAML header</h2>
+<p>Also referred to as YAML Front Matter, the YAML header is used to annotate a Markdown file with various metadata elements.  It should appear at the top of the document.  Here's an example:</p>
+<pre><code class="lang-markdown">---
+uid: fileA
+---
+
+# This is fileA
+...
+</code></pre>
+<p>In this example, the UID provides a unique identifier for the file and is intended to be unique inside a project. If you define duplicate UID for two files, the resolve result is undetermined.</p>
+<p>For API reference files, the UID is auto generated by mangling the API's signature. For example, the System.String class's UID is <code>System.String</code>. You can open a generated YAML file to lookup the value of its UID.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Conceptual Markdown file doesn't have UID generated by default. So it cannot be cross referenced unless you give it a UID.</p>
+</div>
+<p>See the list of <a href="../reference/docfx-json-reference.md#predefined-metadata">predefined metadata</a> for applicable options for inclusion in the YAML header.</p>
+<h2 id="alerts">Alerts</h2>
+<p>Alerts are block quotes that render with colors and icons that indicate the significance of the content.</p>
+<p>The following alert types are supported:</p>
+<pre><code class="lang-markdown">&gt; [!NOTE]
+&gt; Information the user should notice even if skimming.
+
+&gt; [!TIP]
+&gt; Optional information to help a user be more successful.
+
+&gt; [!IMPORTANT]
+&gt; Essential information required for user success.
+
+&gt; [!CAUTION]
+&gt; Negative potential consequences of an action.
+
+&gt; [!WARNING]
+&gt; Dangerous certain consequences of an action.
+</code></pre>
+<p>They look like this in rendered page:</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Information the user should notice even if skimming.</p>
+</div>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Optional information to help a user be more successful.</p>
+</div>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Essential information required for user success.</p>
+</div>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>Negative potential consequences of an action.</p>
+</div>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Dangerous certain consequences of an action.</p>
+</div>
+<h3 id="custom-alerts">Custom Alerts</h3>
+<p>You can define custom alerts with the <code>build.markdownEngineProperties.alerts</code> property in <code>docfx.json</code> and use it in markdown files. The key specifies the markdown keyword without the surrounding <code>[!</code>, <code>]</code> symbols. The value is the CSS class names:</p>
+<pre><code class="lang-json">{
+  &quot;build&quot;: {
+    &quot;markdownEngineProperties&quot;: {
+      &quot;alerts&quot;: {
+        &quot;TODO&quot;: &quot;alert alert-secondary&quot;
+      }
+    }
+  }
+}
+</code></pre>
+<pre><code class="lang-md">&gt; [!TODO]
+&gt; This is a custom TODO section
+</code></pre>
+<p>The above custom alert looks like this in rendered page:</p>
+<blockquote>
+<p>[!TODO]
+This is a custom TODO section</p>
+</blockquote>
+<p>DocFX allows you to customize the display of alert titles in your documentation. By default, alert titles are displayed as the keyword in upper case. To change this behavior, you can create a custom template and use a <code>token.json</code> file to define your custom alert titles:</p>
+<ol>
+<li><strong>Create a custom template</strong>: Follow the steps in the [Custom Template Guide](<a href="./template.md#custom-template">create a custom template</a>) to create your own template.</li>
+<li><strong>Create a <code>token.json</code> file</strong>: In your custom template folder, create a new file named <code>token.json</code>. This file will be used to define your custom alert titles. The format should be as follows:</li>
+</ol>
+<pre><code class="lang-md">{
+  &quot;todo&quot;: &quot;MY TODO&quot;
+}
+</code></pre>
+<p>In this example, the key is the alert keyword in <strong>lower case</strong> (e.g., &quot;todo&quot;), and the value is the custom display title of the alert (e.g., &quot;MY TODO&quot;).</p>
+<h2 id="video">Video</h2>
+<p>You can embed a video in your page by using the following Markdown syntax:</p>
+<pre><code class="lang-md">&gt; [!Video embed_link]
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-md">&gt; [!Video https://www.youtube.com/embed/Sz1lCeedcPI]
+</code></pre>
+<p>This will be rendered as:</p>
+<div class="embeddedvideo"><iframe src="https://www.youtube-nocookie.com/embed/Sz1lCeedcPI" frameborder="0" allowfullscreen="true"></iframe></div>
+<h2 id="image">Image</h2>
+<p>You can embed a image in your page by using the following Markdown syntax:</p>
+<pre><code class="lang-md">![ &lt;alt-text&gt; ]( &lt;image-link&gt; )
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-md">![alt-text](https://learn.microsoft.com/en-us/media/learn/not-found/learn-not-found-light-mode.png?branch=main)
+</code></pre>
+<p>This will be rendered as:</p>
+<p><img src="https://learn.microsoft.com/en-us/media/learn/not-found/learn-not-found-light-mode.png?branch=main" alt="alt-text"></p>
+<h2 id="math-expressions">Math Expressions</h2>
+<p>Docfx supports <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">LaTeX formatted math expressions</a> within markdown using <a href="https://docs.mathjax.org/en/latest/#">MathJax</a>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Math expressions is only supported in the <code>modern</code> template.</p>
+</div>
+<p>To include a math expression inline with your text, delimit the expression with a dollar symbol $.</p>
+<pre><code class="lang-md">This sentence uses `$` delimiters to show math inline:  $\sqrt{3x-1}+(1+x)^2$
+</code></pre>
+<p>This sentence uses <code>$</code> delimiters to show math inline:  $\sqrt{3x-1}+(1+x)^2$</p>
+<p>To add a math expression as a block, start a new line and delimit the expression with two dollar symbols $$.</p>
+<pre><code class="lang-md">**The Cauchy-Schwarz Inequality**
+
+$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
+</code></pre>
+<p><strong>The Cauchy-Schwarz Inequality</strong></p>
+<p>$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$</p>
+<h2 id="mermaid-diagrams">Mermaid Diagrams</h2>
+<p>You can embed <a href="https://mermaid.js.org/">mermaid</a> diagrams using markdown code block:</p>
+<p>Example:</p>
+<pre><code>```mermaid
+flowchart LR
+
+A[Hard] --&gt;|Text| B(Round)
+B --&gt; C{Decision}
+C --&gt;|One| D[Result 1]
+C --&gt;|Two| E[Result 2]
+```
+</code></pre>
+<p>This will be rendered as:</p>
+<pre><code class="lang-mermaid">flowchart LR
+
+A[Hard] --&gt;|Text| B(Round)
+B --&gt; C{Decision}
+C --&gt;|One| D[Result 1]
+C --&gt;|Two| E[Result 2]
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Mermaid diagrams is only supported in the <code>modern</code> template.</p>
+</div>
+<p>There are plenty of other diagrams supported by mermaid such as:</p>
+<p>Pie chart</p>
+<pre><code class="lang-mermaid">pie
+&quot;Dogs&quot; : 386
+&quot;Cats&quot; : 85.9
+&quot;Rats&quot; : 15
+</code></pre>
+<p>Bar chart</p>
+<pre><code class="lang-mermaid">gantt
+    title Git Issues - days since last update
+    dateFormat  X
+    axisFormat %s
+
+    section Issue19062
+    71   : 0, 71
+    section Issue19401
+    36   : 0, 36
+    section Issue193
+    34   : 0, 34
+    section Issue7441
+    9    : 0, 9
+    section Issue1300
+    5    : 0, 5
+</code></pre>
+<p>User Journey diagram</p>
+<pre><code class="lang-mermaid">journey
+  title My working day
+  section Go to work
+    Make tea: 5: Me
+    Go upstairs: 3: Me
+    Do work: 1: Me, Cat
+  section Go home
+    Go downstairs: 5: Me
+    Sit down: 3: Me
+</code></pre>
+<p>Class diagram</p>
+<pre><code class="lang-mermaid">classDiagram
+Class01 &lt;|-- AveryLongClass : Cool
+&lt;&lt;Interface&gt;&gt; Class01
+Class09 --&gt; C2 : Where am I?
+Class09 --* C3
+Class09 --|&gt; Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+class Class10 {
+  &lt;&lt;service&gt;&gt;
+  int id
+  size()
+}
+</code></pre>
+<h2 id="plantuml-diagrams">PlantUML Diagrams</h2>
+<p>You can embed <a href="https://plantuml.com/">PlantUML</a> diagrams using markdown code blocks:</p>
+<p>Example:</p>
+<pre><code>```plantuml
+Bob -&gt; Alice : hello
+```
+</code></pre>
+<p>This will be rendered as:</p>
+<p><img src="https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80" alt="alt-text"></p>
+<p>There are plenty of other diagrams supported by PlantUML such as:</p>
+<ul>
+<li><a href="http://plantuml.com/sequence-diagram">Sequence diagram</a></li>
+<li><a href="http://plantuml.com/use-case-diagram">Use Case diagram</a></li>
+<li><a href="http://plantuml.com/activity-diagram-beta">Class diagram</a></li>
+<li><a href="http://plantuml.com/activity-diagram-beta">Activity diagram</a></li>
+<li><a href="http://plantuml.com/component-diagram">Component diagram</a></li>
+<li><a href="http://plantuml.com/state-diagram">State diagram</a></li>
+<li><a href="https://plantuml.com/gantt-diagram">Gantt diagram</a></li>
+<li><a href="http://plantuml.com/deployment-diagram">Deployment diagram</a></li>
+<li><a href="https://plantuml.com/mindmap-diagram">Mindmap diagram</a></li>
+</ul>
+<p>Refer to the <a href="http://plantuml.com/PlantUML_Language_Reference_Guide.pdf">PlantUml reference guide</a> for more details.</p>
+<h3 id="settings">Settings</h3>
+<p>The PlantUML extension can be configured using the <code>build.markdownEngineProperties.plantUml</code> property of your <code>docfx.json</code> file:</p>
+<pre><code class="lang-json">{
+  &quot;build&quot;: {
+    &quot;markdownEngineProperties&quot;: {
+      &quot;plantUml&quot;: {
+          &quot;outputFormat&quot;: &quot;svg&quot;,
+          &quot;remoteUrl&quot;: &quot;http://www.plantuml.com/plantuml/&quot;,
+          &quot;renderingMode&quot;: &quot;remote&quot;
+      }
+    }
+  }
+}
+</code></pre>
+<p>The following settings are available for configuration:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>javaPath</code></td>
+<td>path to java installation</td>
+<td>uses the JAVA_HOME environment variable</td>
+</tr>
+<tr>
+<td><code>localGraphvizDotPath</code></td>
+<td>path to graphviz dot exe (required for local rendering mode only)</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>localPlantUmlPath</code></td>
+<td>path to plantuml.jar</td>
+<td>will look in project directory</td>
+</tr>
+<tr>
+<td><code>outputFormat</code></td>
+<td>format of generated images (svg, ascii, ascii_unicode)</td>
+<td>svg</td>
+</tr>
+<tr>
+<td><code>remoteUrl</code></td>
+<td>url to remote PlantUml server (required for remote rendering mode only)</td>
+<td><a href="http://www.plantuml.com/plantuml/">http://www.plantuml.com/plantuml/</a></td>
+</tr>
+<tr>
+<td><code>renderingMode</code></td>
+<td>remote or local</td>
+<td>remote</td>
+</tr>
+</tbody>
+</table>
+<h3 id="local-rendering">Local Rendering</h3>
+<p>By default, PlantUML diagrams will be rendered on the remote server. Local rendering mode uses a <a href="https://plantuml.com/faq-install">local copy</a> of PlantUML to render diagrams.  Local rendering mode can be configured in your <code>docfx.json</code> file:</p>
+<pre><code class="lang-json">{
+  &quot;build&quot;: {
+    &quot;markdownEngineProperties&quot;: {
+      &quot;plantUml&quot;: {
+          &quot;localPlantUmlPath&quot;: &quot;path/to/plantuml.jar&quot;,
+          &quot;renderingMode&quot;: &quot;local&quot;
+      }
+    }
+  }
+}
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>GraphViz Dot is required for local rendering mode of any diagram other than sequence. Refer to the <a href="http://plantuml.com/graphviz-dot">PlantUML documentation</a> for more detailed instructions.</p>
+</div>
+<h2 id="include-markdown-files">Include Markdown Files</h2>
+<p>Where markdown files need to be repeated in multiple articles, you can use an include file. The includes feature replace the reference with the contents of the included file at build time.</p>
+<p>You can reuse a common text snippet within a sentence using inline include:</p>
+<pre><code class="lang-markdown">Text before [!INCLUDE [&lt;title&gt;](&lt;filepath&gt;)] and after.
+</code></pre>
+<p>Or reuse an entire Markdown file as a block, nested within a section of an article. Block include is on its own line:</p>
+<pre><code class="lang-markdown">[!INCLUDE [&lt;title&gt;](&lt;filepath&gt;)]
+</code></pre>
+<p>Where <code>&lt;title&gt;</code> is the name of the file and <code>&lt;filepath&gt;</code> is the relative path to the file.</p>
+<p>Example:</p>
+<pre><code class="lang-markdown">[!INCLUDE [my-markdown-block](../../includes/my-markdown-block.md)]
+</code></pre>
+<p>Included markdown files needs to be excluded from build, they are usually placed in the <code>/includes</code> folder.</p>
+<h2 id="code-snippet">Code Snippet</h2>
+<p>There are several ways to include code in an article. The code snippet syntax replaces code from another file:</p>
+<pre><code class="lang-markdown">[!code-csharp[](Program.cs)]
+</code></pre>
+<p>You can include selected lines from the code snippet using region or line range syntax:</p>
+<pre><code class="lang-markdown">[!code-csharp[](Program.cs#region)]
+[!code-csharp[](Program.cs#L12-L16)]
+</code></pre>
+<p>Code snippets are indicated by using a specific link syntax described as follows:</p>
+<pre><code class="lang-markdown">[!code-&lt;language&gt;[](&lt;filepath&gt;&lt;query-options&gt;)]
+</code></pre>
+<p>Where <code>&lt;language&gt;</code> is the syntax highlighting language of the code and <code>&lt;filepath&gt;</code> is the relative path to the markdown file.</p>
+<h3 id="highlight-selected-lines">Highlight Selected Lines</h3>
+<p>Code Snippets typically include more code than necessary in order to provide context. It helps readability when you highlight the key lines that you're focusing on. To highlight key lines, use the <code>highlight</code> query options:</p>
+<pre><code class="lang-markdown">[!code-csharp[](Program.cs?highlight=2,5-7,9-)]
+</code></pre>
+<p>The example highlights lines 2, line 5 to 7 and lines 9 to the end of the file.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>It looks like the sample you are looking for does not exist.</p>
+</div><h2 id="tabs">Tabs</h2>
+<p>Tabs enable content that is multi-faceted. They allow sections of a document to contain variant content renderings and eliminates duplicate content.</p>
+<p>Here's an example of the tab experience:</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_linux" role="tab" aria-controls="tabpanel_bHGHmlrG6S_linux" data-tab="linux" tabindex="0" aria-selected="true">Linux</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_windows" role="tab" aria-controls="tabpanel_bHGHmlrG6S_windows" data-tab="windows" tabindex="-1">Windows</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S_linux" role="tabpanel" data-tab="linux">
+
+<p>Content for Linux...</p>
+</section>
+<section id="tabpanel_bHGHmlrG6S_windows" role="tabpanel" data-tab="windows" aria-hidden="true" hidden="hidden">
+
+<p>Content for Windows...</p>
+</section>
+</div>
+
+<p>The above tab group was created with the following syntax:</p>
+<pre><code class="lang-markdown"># [Linux](#tab/linux)
+
+Content for Linux...
+
+# [Windows](#tab/windows)
+
+Content for Windows...
+
+---
+</code></pre>
+<p>Tabs are indicated by using a specific link syntax within a Markdown header. The syntax can be described as follows:</p>
+<pre><code class="lang-markdown"># [Tab Display Name](#tab/tab-id)
+</code></pre>
+<p>A tab starts with a Markdown header, <code>#</code>, and is followed by a Markdown link <code>[]()</code>. The text of the link will become the text of the tab header, displayed to the customer. In order for the header to be recognized as a tab, the link itself must start with <code>#tab/</code> and be followed by an ID representing the content of the tab. The ID is used to sync all same-ID tabs across the page. Using the above example, when a user selects a tab with the link <code>#tab/windows</code>, all tabs with the link <code>#tab/windows</code> on the page will be selected.</p>
+<h3 id="dependent-tabs">Dependent tabs</h3>
+<p>It's possible to make the selection in one set of tabs dependent on the selection in another set of tabs. Here's an example of that in action:</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-1_dotnet_linux" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_dotnet_linux" data-tab="dotnet" data-condition="linux" tabindex="0" aria-selected="true">.NET</a>
+</li>
+<li role="presentation" aria-hidden="true" hidden="hidden">
+<a href="#tabpanel_bHGHmlrG6S-1_dotnet_windows" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_dotnet_windows" data-tab="dotnet" data-condition="windows" tabindex="-1">.NET</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-1_typescript_linux" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_typescript_linux" data-tab="typescript" data-condition="linux" tabindex="-1">TypeScript</a>
+</li>
+<li role="presentation" aria-hidden="true" hidden="hidden">
+<a href="#tabpanel_bHGHmlrG6S-1_typescript_windows" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_typescript_windows" data-tab="typescript" data-condition="windows" tabindex="-1">TypeScript</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-1_rest" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_rest" data-tab="rest" tabindex="-1">REST API</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-1_dotnet_linux" role="tabpanel" data-tab="dotnet" data-condition="linux">
+
+<p>.NET content for Linux...</p>
+</section>
+<section id="tabpanel_bHGHmlrG6S-1_dotnet_windows" role="tabpanel" data-tab="dotnet" data-condition="windows" aria-hidden="true" hidden="hidden">
+
+<p>.NET content for Windows...</p>
+</section>
+<section id="tabpanel_bHGHmlrG6S-1_typescript_linux" role="tabpanel" data-tab="typescript" data-condition="linux" aria-hidden="true" hidden="hidden">
+
+<p>TypeScript content for Linux...</p>
+</section>
+<section id="tabpanel_bHGHmlrG6S-1_typescript_windows" role="tabpanel" data-tab="typescript" data-condition="windows" aria-hidden="true" hidden="hidden">
+
+<p>TypeScript content for Windows...</p>
+</section>
+<section id="tabpanel_bHGHmlrG6S-1_rest" role="tabpanel" data-tab="rest" aria-hidden="true" hidden="hidden">
+
+<p>REST API content, independent of platform...</p>
+</section>
+</div>
+
+<p>Notice how changing the Linux/Windows selection above changes the content in the .NET and TypeScript tabs. This is because the tab group defines two versions for each .NET and TypeScript, where the Windows/Linux selection above determines which version is shown for .NET/TypeScript. Here's the markup that shows how this is done:</p>
+<pre><code class="lang-markdown"># [.NET](#tab/dotnet/linux)
+
+.NET content for Linux...
+
+# [.NET](#tab/dotnet/windows)
+
+.NET content for Windows...
+
+# [TypeScript](#tab/typescript/linux)
+
+TypeScript content for Linux...
+
+# [TypeScript](#tab/typescript/windows)
+
+TypeScript content for Windows...
+
+# [REST API](#tab/rest)
+
+REST API content, independent of platform...
+
+---
+</code></pre>
+<h2 id="differences-introduced-by-dfm-syntax">Differences introduced by DFM syntax</h2>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Please note that DFM introduces more syntax to support more functionalities. When GFM does not support them, preview the
+Markdown file inside <em>GFM Preview</em> can lead to different results.</p>
+</div>
+<h3 id="text-after-block-extension">Text after block extension</h3>
+<p>Some block extension in DFM cannot be recognized in GFM.
+In GFM, it would be treated as a part of paragraph.
+Then, following content would be treated as a part of paragraph.</p>
+<p>For example:</p>
+<pre><code class="lang-md">&gt; [!NOTE]
+&gt;     This is code.
+</code></pre>
+<p>In GFM, it will be rendered as a paragraph with content <code>[!NOTE] This is code.</code> in blockquote.
+In DFM, it will be rendered as a code in note.</p>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/lusties/unity-docfx/blob/main/Documentation/manual/Markdown.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      Made by Unity-Docfx: https://github.com/lusties/unity-docfx
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

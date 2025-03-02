@@ -5,13 +5,8 @@ items:
   id: DocfxData
   parent: Lustie.UnityDocfx
   children:
-  - Lustie.UnityDocfx.DocfxData._appFooter
-  - Lustie.UnityDocfx.DocfxData._appTitle
-  - Lustie.UnityDocfx.DocfxData._enableSearch
-  - Lustie.UnityDocfx.DocfxData.baseUrl
-  - Lustie.UnityDocfx.DocfxData.dest
-  - Lustie.UnityDocfx.DocfxData.exclude
-  - Lustie.UnityDocfx.DocfxData.src
+  - Lustie.UnityDocfx.DocfxData.build
+  - Lustie.UnityDocfx.DocfxData.metadata
   langs:
   - csharp
   - vb
@@ -22,7 +17,7 @@ items:
   source:
     id: DocfxData
     path: ''
-    startLine: 5
+    startLine: 1109
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -49,181 +44,52 @@ items:
   - type: System.SerializableAttribute
     ctor: System.SerializableAttribute.#ctor
     arguments: []
-- uid: Lustie.UnityDocfx.DocfxData.src
-  commentId: F:Lustie.UnityDocfx.DocfxData.src
-  id: src
+- uid: Lustie.UnityDocfx.DocfxData.metadata
+  commentId: F:Lustie.UnityDocfx.DocfxData.metadata
+  id: metadata
   parent: Lustie.UnityDocfx.DocfxData
   langs:
   - csharp
   - vb
-  name: src
-  nameWithType: DocfxData.src
-  fullName: Lustie.UnityDocfx.DocfxData.src
+  name: metadata
+  nameWithType: DocfxData.metadata
+  fullName: Lustie.UnityDocfx.DocfxData.metadata
   type: Field
   source:
-    id: src
+    id: metadata
     path: ''
-    startLine: 11
+    startLine: 1112
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
-  summary: "\nmetadata.src.files\n"
-  example: []
   syntax:
-    content: public List<string> src
+    content: public List<Metadata> metadata
     return:
-      type: System.Collections.Generic.List{System.String}
-    content.vb: Public src As List(Of String)
-- uid: Lustie.UnityDocfx.DocfxData.exclude
-  commentId: F:Lustie.UnityDocfx.DocfxData.exclude
-  id: exclude
+      type: System.Collections.Generic.List{Lustie.UnityDocfx.Metadata}
+    content.vb: Public metadata As List(Of Metadata)
+- uid: Lustie.UnityDocfx.DocfxData.build
+  commentId: F:Lustie.UnityDocfx.DocfxData.build
+  id: build
   parent: Lustie.UnityDocfx.DocfxData
   langs:
   - csharp
   - vb
-  name: exclude
-  nameWithType: DocfxData.exclude
-  fullName: Lustie.UnityDocfx.DocfxData.exclude
+  name: build
+  nameWithType: DocfxData.build
+  fullName: Lustie.UnityDocfx.DocfxData.build
   type: Field
   source:
-    id: exclude
+    id: build
     path: ''
-    startLine: 16
+    startLine: 1114
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
-  summary: "\nmetadata.src.exclude\n"
-  example: []
   syntax:
-    content: public List<string> exclude
+    content: public Build build
     return:
-      type: System.Collections.Generic.List{System.String}
-    content.vb: Public exclude As List(Of String)
-- uid: Lustie.UnityDocfx.DocfxData._appTitle
-  commentId: F:Lustie.UnityDocfx.DocfxData._appTitle
-  id: _appTitle
-  parent: Lustie.UnityDocfx.DocfxData
-  langs:
-  - csharp
-  - vb
-  name: _appTitle
-  nameWithType: DocfxData._appTitle
-  fullName: Lustie.UnityDocfx.DocfxData._appTitle
-  type: Field
-  source:
-    id: _appTitle
-    path: ''
-    startLine: 21
-  assemblies:
-  - cs.temp.dll
-  namespace: Lustie.UnityDocfx
-  summary: "\nbuild.globalMetadata._appTitle\n"
-  example: []
-  syntax:
-    content: public string _appTitle
-    return:
-      type: System.String
-    content.vb: Public _appTitle As String
-- uid: Lustie.UnityDocfx.DocfxData._appFooter
-  commentId: F:Lustie.UnityDocfx.DocfxData._appFooter
-  id: _appFooter
-  parent: Lustie.UnityDocfx.DocfxData
-  langs:
-  - csharp
-  - vb
-  name: _appFooter
-  nameWithType: DocfxData._appFooter
-  fullName: Lustie.UnityDocfx.DocfxData._appFooter
-  type: Field
-  source:
-    id: _appFooter
-    path: ''
-    startLine: 26
-  assemblies:
-  - cs.temp.dll
-  namespace: Lustie.UnityDocfx
-  summary: "\nbuild.globalMetadata._appFooter\n"
-  example: []
-  syntax:
-    content: public string _appFooter
-    return:
-      type: System.String
-    content.vb: Public _appFooter As String
-- uid: Lustie.UnityDocfx.DocfxData._enableSearch
-  commentId: F:Lustie.UnityDocfx.DocfxData._enableSearch
-  id: _enableSearch
-  parent: Lustie.UnityDocfx.DocfxData
-  langs:
-  - csharp
-  - vb
-  name: _enableSearch
-  nameWithType: DocfxData._enableSearch
-  fullName: Lustie.UnityDocfx.DocfxData._enableSearch
-  type: Field
-  source:
-    id: _enableSearch
-    path: ''
-    startLine: 31
-  assemblies:
-  - cs.temp.dll
-  namespace: Lustie.UnityDocfx
-  summary: "\nbuild.globalMetadata._enableSearch\n"
-  example: []
-  syntax:
-    content: public bool _enableSearch
-    return:
-      type: System.Boolean
-    content.vb: Public _enableSearch As Boolean
-- uid: Lustie.UnityDocfx.DocfxData.baseUrl
-  commentId: F:Lustie.UnityDocfx.DocfxData.baseUrl
-  id: baseUrl
-  parent: Lustie.UnityDocfx.DocfxData
-  langs:
-  - csharp
-  - vb
-  name: baseUrl
-  nameWithType: DocfxData.baseUrl
-  fullName: Lustie.UnityDocfx.DocfxData.baseUrl
-  type: Field
-  source:
-    id: baseUrl
-    path: ''
-    startLine: 36
-  assemblies:
-  - cs.temp.dll
-  namespace: Lustie.UnityDocfx
-  summary: "\nsitemap.baseUrl\n"
-  example: []
-  syntax:
-    content: public string baseUrl
-    return:
-      type: System.String
-    content.vb: Public baseUrl As String
-- uid: Lustie.UnityDocfx.DocfxData.dest
-  commentId: F:Lustie.UnityDocfx.DocfxData.dest
-  id: dest
-  parent: Lustie.UnityDocfx.DocfxData
-  langs:
-  - csharp
-  - vb
-  name: dest
-  nameWithType: DocfxData.dest
-  fullName: Lustie.UnityDocfx.DocfxData.dest
-  type: Field
-  source:
-    id: dest
-    path: ''
-    startLine: 41
-  assemblies:
-  - cs.temp.dll
-  namespace: Lustie.UnityDocfx
-  summary: "\nbuild.dest\n"
-  example: []
-  syntax:
-    content: public string dest
-    return:
-      type: System.String
-    content.vb: Public dest As String
+      type: Lustie.UnityDocfx.Build
+    content.vb: Public build As Build
 references:
 - uid: Lustie.UnityDocfx
   commentId: N:Lustie.UnityDocfx
@@ -446,24 +312,23 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: System.Collections.Generic.List{System.String}
-  commentId: T:System.Collections.Generic.List{System.String}
+- uid: System.Collections.Generic.List{Lustie.UnityDocfx.Metadata}
+  commentId: T:System.Collections.Generic.List{Lustie.UnityDocfx.Metadata}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.List`1
-  name: List<string>
-  nameWithType: List<string>
-  fullName: System.Collections.Generic.List<string>
-  nameWithType.vb: List(Of String)
-  fullName.vb: System.Collections.Generic.List(Of String)
-  name.vb: List(Of String)
+  name: List<Metadata>
+  nameWithType: List<Metadata>
+  fullName: System.Collections.Generic.List<Lustie.UnityDocfx.Metadata>
+  nameWithType.vb: List(Of Metadata)
+  fullName.vb: System.Collections.Generic.List(Of Lustie.UnityDocfx.Metadata)
+  name.vb: List(Of Metadata)
   spec.csharp:
   - uid: System.Collections.Generic.List`1
     name: List
     isExternal: true
   - name: <
-  - uid: System.String
-    name: string
-    isExternal: true
+  - uid: Lustie.UnityDocfx.Metadata
+    name: Metadata
   - name: '>'
   spec.vb:
   - uid: System.Collections.Generic.List`1
@@ -472,9 +337,8 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: System.String
-    name: String
-    isExternal: true
+  - uid: Lustie.UnityDocfx.Metadata
+    name: Metadata
   - name: )
 - uid: System.Collections.Generic.List`1
   commentId: T:System.Collections.Generic.List`1
@@ -531,23 +395,9 @@ references:
   - uid: System.Collections.Generic
     name: Generic
     isExternal: true
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+- uid: Lustie.UnityDocfx.Build
+  commentId: T:Lustie.UnityDocfx.Build
+  parent: Lustie.UnityDocfx
+  name: Build
+  nameWithType: Build
+  fullName: Lustie.UnityDocfx.Build

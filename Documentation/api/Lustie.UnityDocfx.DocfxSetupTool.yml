@@ -19,7 +19,7 @@ items:
   source:
     id: DocfxSetupTool
     path: ''
-    startLine: 226
+    startLine: 249
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -42,7 +42,7 @@ items:
   source:
     id: Open
     path: ''
-    startLine: 811
+    startLine: 888
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -64,7 +64,7 @@ items:
   source:
     id: ShowWindow
     path: ''
-    startLine: 818
+    startLine: 895
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -89,7 +89,7 @@ items:
   source:
     id: GetWindow
     path: ''
-    startLine: 824
+    startLine: 901
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -113,7 +113,7 @@ items:
   source:
     id: OpenAsset
     path: ''
-    startLine: 829
+    startLine: 906
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx

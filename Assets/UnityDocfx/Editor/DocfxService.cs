@@ -1,8 +1,10 @@
 ﻿using System;
-using System.IO;
-using System.Diagnostics;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Text.RegularExpressions;
+using Unity.Plastic.Newtonsoft.Json;
+using Unity.Plastic.Newtonsoft.Json.Serialization;
 using UnityEditor;
 using UnityEngine;
 
@@ -106,7 +108,7 @@ namespace Lustie.UnityDocfx
             using Process process = new Process { StartInfo = startInfo };
             process.Disposed += onDisposed;
             process.Start();
-            if(cmdOption == "/K")
+            if (cmdOption == "/K")
                 EditorUtility.DisplayDialog("Run Cmd", "See cmd window", "OK");
             process.WaitForExit();
         }
@@ -158,6 +160,118 @@ namespace Lustie.UnityDocfx
             };
 
             return process;
+        }
+
+        /// <summary>
+        /// Generates a docfx.json file for the UnityDocset.
+        /// </summary>
+        /// <param name="unityDocset">The UnityDocset object containing the docfx.json data.</param>
+        public static void GenDocfxJson(UnityDocset unityDocset)
+        {
+            // Gen buid.content
+            GenBuildContent(unityDocset);
+
+            var settings = new JsonSerializerSettings
+            {
+                ContractResolver = new DefaultContractResolver
+                {
+                    NamingStrategy = new CamelCaseNamingStrategy(),
+                    IgnoreSerializableAttribute = true
+                },
+                Formatting = Formatting.Indented
+            };
+
+            string docsetJson = JsonConvert.SerializeObject(unityDocset.docfxJson, settings);
+
+            string docfxFolderPath = Path.Combine(Directory.GetCurrentDirectory(), unityDocset.folder);
+
+            if (!Directory.Exists(docfxFolderPath))
+            {
+                Directory.CreateDirectory(docfxFolderPath);
+            }
+
+            string tocFilePath = Path.Combine(docfxFolderPath, "docfx.json");
+
+            File.WriteAllText(tocFilePath, docsetJson);
+            UnityEngine.Debug.Log("docfx.json generated at " + tocFilePath);
+        }
+
+        private static void GenBuildContent(UnityDocset unityDocset)
+        {
+            // Gen buid.content
+            var content = unityDocset.docfxJson.build.content;
+            content.Clear();
+
+            bool copyReadme = false;
+
+            foreach (var toc in unityDocset.TOC)
+            {
+                var hrefOption = toc.hrefOption;
+                string href = toc.href[^1] == '/' ? toc.href[..^1] : toc.href;
+                if (hrefOption == TOC.HREF_README)
+                {
+                    content.Add(new Content()
+                    {
+                        src = "",
+                        files = new List<string>() { "toc.yml", "index.md" },
+                        dest = ""
+                    });
+
+                    if (!copyReadme)
+                    {
+                        CopyReadmeToIndex(unityDocset.folder);
+                        copyReadme = true;
+                    }
+                    continue;
+                }
+                if (hrefOption == TOC.HREF_CUSTOM)
+                {
+                    content.Add(new Content()
+                    {
+                        src = href,
+                        files = new List<string>() { "toc.yml", "*.md" },
+                        dest = href
+                    });
+                    continue;
+                }
+                content.Add(new Content()
+                {
+                    src = href,
+                    files = new List<string>() { "*.yml" },
+                    dest = href
+                });
+            }
+        }
+
+        private static void CopyReadmeToIndex(string folderPath)
+        {
+            string readmePath = Path.Combine(Directory.GetCurrentDirectory(), "README.md");
+            string indexPath = Path.Combine(Directory.GetCurrentDirectory(), folderPath, "index.md");
+
+
+            if (!Directory.Exists(Path.Combine(Directory.GetCurrentDirectory(), folderPath)))
+            {
+                Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory(), folderPath));
+            }
+
+
+            if (File.Exists(readmePath))
+            {
+                File.Copy(readmePath, indexPath, true);
+                UnityEngine.Debug.Log($"Copied README.md to {indexPath}");
+            }
+            else
+            {
+
+                if (!DocfxTemplatesPath.LoadTemplates("README_Template.md", out string template))
+                {
+                    UnityEngine.Debug.LogWarning("No template README.md found.\nNo README_Template.md found.");
+                    File.WriteAllText(indexPath, "# Welcome to UnityDocfx\n\nThis is a default index.md file. You can replace this with your own README.md file.");
+                    return;
+                }
+                File.Copy(template, indexPath);
+                UnityEngine.Debug.Log($"No README.md found.\nCreated a default index.md at {indexPath}");
+            }
         }
     }
 }

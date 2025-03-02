@@ -7,54 +7,85 @@ references:
   commentId: N:Lustie.UnityDocfx
   fullName: Lustie.UnityDocfx
   nameWithType: Lustie.UnityDocfx
+- uid: Lustie.UnityDocfx.Build
+  name: Build
+  href: api/Lustie.UnityDocfx.Build.html
+  commentId: T:Lustie.UnityDocfx.Build
+  fullName: Lustie.UnityDocfx.Build
+  nameWithType: Build
+- uid: Lustie.UnityDocfx.Build.content
+  name: content
+  href: api/Lustie.UnityDocfx.Build.html#Lustie_UnityDocfx_Build_content
+  commentId: F:Lustie.UnityDocfx.Build.content
+  fullName: Lustie.UnityDocfx.Build.content
+  nameWithType: Build.content
+- uid: Lustie.UnityDocfx.Build.dest
+  name: dest
+  href: api/Lustie.UnityDocfx.Build.html#Lustie_UnityDocfx_Build_dest
+  commentId: F:Lustie.UnityDocfx.Build.dest
+  fullName: Lustie.UnityDocfx.Build.dest
+  nameWithType: Build.dest
+- uid: Lustie.UnityDocfx.Build.fullDest
+  name: fullDest
+  href: api/Lustie.UnityDocfx.Build.html#Lustie_UnityDocfx_Build_fullDest
+  commentId: P:Lustie.UnityDocfx.Build.fullDest
+  fullName: Lustie.UnityDocfx.Build.fullDest
+  nameWithType: Build.fullDest
+- uid: Lustie.UnityDocfx.Build.fullDest*
+  name: fullDest
+  href: api/Lustie.UnityDocfx.Build.html#Lustie_UnityDocfx_Build_fullDest_
+  commentId: Overload:Lustie.UnityDocfx.Build.fullDest
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.Build.fullDest
+  nameWithType: Build.fullDest
+- uid: Lustie.UnityDocfx.Build.globalMetadata
+  name: globalMetadata
+  href: api/Lustie.UnityDocfx.Build.html#Lustie_UnityDocfx_Build_globalMetadata
+  commentId: F:Lustie.UnityDocfx.Build.globalMetadata
+  fullName: Lustie.UnityDocfx.Build.globalMetadata
+  nameWithType: Build.globalMetadata
+- uid: Lustie.UnityDocfx.Content
+  name: Content
+  href: api/Lustie.UnityDocfx.Content.html
+  commentId: T:Lustie.UnityDocfx.Content
+  fullName: Lustie.UnityDocfx.Content
+  nameWithType: Content
+- uid: Lustie.UnityDocfx.Content.dest
+  name: dest
+  href: api/Lustie.UnityDocfx.Content.html#Lustie_UnityDocfx_Content_dest
+  commentId: F:Lustie.UnityDocfx.Content.dest
+  fullName: Lustie.UnityDocfx.Content.dest
+  nameWithType: Content.dest
+- uid: Lustie.UnityDocfx.Content.files
+  name: files
+  href: api/Lustie.UnityDocfx.Content.html#Lustie_UnityDocfx_Content_files
+  commentId: F:Lustie.UnityDocfx.Content.files
+  fullName: Lustie.UnityDocfx.Content.files
+  nameWithType: Content.files
+- uid: Lustie.UnityDocfx.Content.src
+  name: src
+  href: api/Lustie.UnityDocfx.Content.html#Lustie_UnityDocfx_Content_src
+  commentId: F:Lustie.UnityDocfx.Content.src
+  fullName: Lustie.UnityDocfx.Content.src
+  nameWithType: Content.src
 - uid: Lustie.UnityDocfx.DocfxData
   name: DocfxData
   href: api/Lustie.UnityDocfx.DocfxData.html
   commentId: T:Lustie.UnityDocfx.DocfxData
   fullName: Lustie.UnityDocfx.DocfxData
   nameWithType: DocfxData
-- uid: Lustie.UnityDocfx.DocfxData._appFooter
-  name: _appFooter
-  href: api/Lustie.UnityDocfx.DocfxData.html#Lustie_UnityDocfx_DocfxData__appFooter
-  commentId: F:Lustie.UnityDocfx.DocfxData._appFooter
-  fullName: Lustie.UnityDocfx.DocfxData._appFooter
-  nameWithType: DocfxData._appFooter
-- uid: Lustie.UnityDocfx.DocfxData._appTitle
-  name: _appTitle
-  href: api/Lustie.UnityDocfx.DocfxData.html#Lustie_UnityDocfx_DocfxData__appTitle
-  commentId: F:Lustie.UnityDocfx.DocfxData._appTitle
-  fullName: Lustie.UnityDocfx.DocfxData._appTitle
-  nameWithType: DocfxData._appTitle
-- uid: Lustie.UnityDocfx.DocfxData._enableSearch
-  name: _enableSearch
-  href: api/Lustie.UnityDocfx.DocfxData.html#Lustie_UnityDocfx_DocfxData__enableSearch
-  commentId: F:Lustie.UnityDocfx.DocfxData._enableSearch
-  fullName: Lustie.UnityDocfx.DocfxData._enableSearch
-  nameWithType: DocfxData._enableSearch
-- uid: Lustie.UnityDocfx.DocfxData.baseUrl
-  name: baseUrl
-  href: api/Lustie.UnityDocfx.DocfxData.html#Lustie_UnityDocfx_DocfxData_baseUrl
-  commentId: F:Lustie.UnityDocfx.DocfxData.baseUrl
-  fullName: Lustie.UnityDocfx.DocfxData.baseUrl
-  nameWithType: DocfxData.baseUrl
-- uid: Lustie.UnityDocfx.DocfxData.dest
-  name: dest
-  href: api/Lustie.UnityDocfx.DocfxData.html#Lustie_UnityDocfx_DocfxData_dest
-  commentId: F:Lustie.UnityDocfx.DocfxData.dest
-  fullName: Lustie.UnityDocfx.DocfxData.dest
-  nameWithType: DocfxData.dest
-- uid: Lustie.UnityDocfx.DocfxData.exclude
-  name: exclude
-  href: api/Lustie.UnityDocfx.DocfxData.html#Lustie_UnityDocfx_DocfxData_exclude
-  commentId: F:Lustie.UnityDocfx.DocfxData.exclude
-  fullName: Lustie.UnityDocfx.DocfxData.exclude
-  nameWithType: DocfxData.exclude
-- uid: Lustie.UnityDocfx.DocfxData.src
-  name: src
-  href: api/Lustie.UnityDocfx.DocfxData.html#Lustie_UnityDocfx_DocfxData_src
-  commentId: F:Lustie.UnityDocfx.DocfxData.src
-  fullName: Lustie.UnityDocfx.DocfxData.src
-  nameWithType: DocfxData.src
+- uid: Lustie.UnityDocfx.DocfxData.build
+  name: build
+  href: api/Lustie.UnityDocfx.DocfxData.html#Lustie_UnityDocfx_DocfxData_build
+  commentId: F:Lustie.UnityDocfx.DocfxData.build
+  fullName: Lustie.UnityDocfx.DocfxData.build
+  nameWithType: DocfxData.build
+- uid: Lustie.UnityDocfx.DocfxData.metadata
+  name: metadata
+  href: api/Lustie.UnityDocfx.DocfxData.html#Lustie_UnityDocfx_DocfxData_metadata
+  commentId: F:Lustie.UnityDocfx.DocfxData.metadata
+  fullName: Lustie.UnityDocfx.DocfxData.metadata
+  nameWithType: DocfxData.metadata
 - uid: Lustie.UnityDocfx.DocfxService
   name: DocfxService
   href: api/Lustie.UnityDocfx.DocfxService.html
@@ -77,6 +108,19 @@ references:
   isSpec: "True"
   fullName: Lustie.UnityDocfx.DocfxService.CheckInstallation
   nameWithType: DocfxService.CheckInstallation
+- uid: Lustie.UnityDocfx.DocfxService.GenDocfxJson(Lustie.UnityDocfx.UnityDocset)
+  name: GenDocfxJson(UnityDocset)
+  href: api/Lustie.UnityDocfx.DocfxService.html#Lustie_UnityDocfx_DocfxService_GenDocfxJson_Lustie_UnityDocfx_UnityDocset_
+  commentId: M:Lustie.UnityDocfx.DocfxService.GenDocfxJson(Lustie.UnityDocfx.UnityDocset)
+  fullName: Lustie.UnityDocfx.DocfxService.GenDocfxJson(Lustie.UnityDocfx.UnityDocset)
+  nameWithType: DocfxService.GenDocfxJson(UnityDocset)
+- uid: Lustie.UnityDocfx.DocfxService.GenDocfxJson*
+  name: GenDocfxJson
+  href: api/Lustie.UnityDocfx.DocfxService.html#Lustie_UnityDocfx_DocfxService_GenDocfxJson_
+  commentId: Overload:Lustie.UnityDocfx.DocfxService.GenDocfxJson
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.DocfxService.GenDocfxJson
+  nameWithType: DocfxService.GenDocfxJson
 - uid: Lustie.UnityDocfx.DocfxService.GetDocfxCommand(System.String,System.String)
   name: GetDocfxCommand(string, string)
   href: api/Lustie.UnityDocfx.DocfxService.html#Lustie_UnityDocfx_DocfxService_GetDocfxCommand_System_String_System_String_
@@ -236,6 +280,30 @@ references:
   isSpec: "True"
   fullName: Lustie.UnityDocfx.DocfxTemplatesPath.LoadTemplates
   nameWithType: DocfxTemplatesPath.LoadTemplates
+- uid: Lustie.UnityDocfx.GlobalMetadata
+  name: GlobalMetadata
+  href: api/Lustie.UnityDocfx.GlobalMetadata.html
+  commentId: T:Lustie.UnityDocfx.GlobalMetadata
+  fullName: Lustie.UnityDocfx.GlobalMetadata
+  nameWithType: GlobalMetadata
+- uid: Lustie.UnityDocfx.GlobalMetadata._appFooter
+  name: _appFooter
+  href: api/Lustie.UnityDocfx.GlobalMetadata.html#Lustie_UnityDocfx_GlobalMetadata__appFooter
+  commentId: F:Lustie.UnityDocfx.GlobalMetadata._appFooter
+  fullName: Lustie.UnityDocfx.GlobalMetadata._appFooter
+  nameWithType: GlobalMetadata._appFooter
+- uid: Lustie.UnityDocfx.GlobalMetadata._appTitle
+  name: _appTitle
+  href: api/Lustie.UnityDocfx.GlobalMetadata.html#Lustie_UnityDocfx_GlobalMetadata__appTitle
+  commentId: F:Lustie.UnityDocfx.GlobalMetadata._appTitle
+  fullName: Lustie.UnityDocfx.GlobalMetadata._appTitle
+  nameWithType: GlobalMetadata._appTitle
+- uid: Lustie.UnityDocfx.GlobalMetadata._enableSearch
+  name: _enableSearch
+  href: api/Lustie.UnityDocfx.GlobalMetadata.html#Lustie_UnityDocfx_GlobalMetadata__enableSearch
+  commentId: F:Lustie.UnityDocfx.GlobalMetadata._enableSearch
+  fullName: Lustie.UnityDocfx.GlobalMetadata._enableSearch
+  nameWithType: GlobalMetadata._enableSearch
 - uid: Lustie.UnityDocfx.JObjectExtensions
   name: JObjectExtensions
   href: api/Lustie.UnityDocfx.JObjectExtensions.html
@@ -417,6 +485,30 @@ references:
   isSpec: "True"
   fullName: Lustie.UnityDocfx.LiveServer.Run
   nameWithType: LiveServer.Run
+- uid: Lustie.UnityDocfx.Metadata
+  name: Metadata
+  href: api/Lustie.UnityDocfx.Metadata.html
+  commentId: T:Lustie.UnityDocfx.Metadata
+  fullName: Lustie.UnityDocfx.Metadata
+  nameWithType: Metadata
+- uid: Lustie.UnityDocfx.Metadata.dest
+  name: dest
+  href: api/Lustie.UnityDocfx.Metadata.html#Lustie_UnityDocfx_Metadata_dest
+  commentId: F:Lustie.UnityDocfx.Metadata.dest
+  fullName: Lustie.UnityDocfx.Metadata.dest
+  nameWithType: Metadata.dest
+- uid: Lustie.UnityDocfx.Metadata.globalNamespaceId
+  name: globalNamespaceId
+  href: api/Lustie.UnityDocfx.Metadata.html#Lustie_UnityDocfx_Metadata_globalNamespaceId
+  commentId: F:Lustie.UnityDocfx.Metadata.globalNamespaceId
+  fullName: Lustie.UnityDocfx.Metadata.globalNamespaceId
+  nameWithType: Metadata.globalNamespaceId
+- uid: Lustie.UnityDocfx.Metadata.src
+  name: src
+  href: api/Lustie.UnityDocfx.Metadata.html#Lustie_UnityDocfx_Metadata_src
+  commentId: F:Lustie.UnityDocfx.Metadata.src
+  fullName: Lustie.UnityDocfx.Metadata.src
+  nameWithType: Metadata.src
 - uid: Lustie.UnityDocfx.SomeExtensions
   name: SomeExtensions
   href: api/Lustie.UnityDocfx.SomeExtensions.html
@@ -439,6 +531,19 @@ references:
   isSpec: "True"
   fullName: Lustie.UnityDocfx.SomeExtensions.CopyToClipboard
   nameWithType: SomeExtensions.CopyToClipboard
+- uid: Lustie.UnityDocfx.SomeExtensions.MakeReorderable(ListView)
+  name: MakeReorderable(ListView)
+  href: api/Lustie.UnityDocfx.SomeExtensions.html#Lustie_UnityDocfx_SomeExtensions_MakeReorderable_ListView_
+  commentId: M:Lustie.UnityDocfx.SomeExtensions.MakeReorderable(ListView)
+  fullName: Lustie.UnityDocfx.SomeExtensions.MakeReorderable(ListView)
+  nameWithType: SomeExtensions.MakeReorderable(ListView)
+- uid: Lustie.UnityDocfx.SomeExtensions.MakeReorderable*
+  name: MakeReorderable
+  href: api/Lustie.UnityDocfx.SomeExtensions.html#Lustie_UnityDocfx_SomeExtensions_MakeReorderable_
+  commentId: Overload:Lustie.UnityDocfx.SomeExtensions.MakeReorderable
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.SomeExtensions.MakeReorderable
+  nameWithType: SomeExtensions.MakeReorderable
 - uid: Lustie.UnityDocfx.SortOption
   name: SortOption
   href: api/Lustie.UnityDocfx.SortOption.html
@@ -475,21 +580,45 @@ references:
   commentId: F:Lustie.UnityDocfx.SortOrder.Decending
   fullName: Lustie.UnityDocfx.SortOrder.Decending
   nameWithType: SortOrder.Decending
+- uid: Lustie.UnityDocfx.Src
+  name: Src
+  href: api/Lustie.UnityDocfx.Src.html
+  commentId: T:Lustie.UnityDocfx.Src
+  fullName: Lustie.UnityDocfx.Src
+  nameWithType: Src
+- uid: Lustie.UnityDocfx.Src.exclude
+  name: exclude
+  href: api/Lustie.UnityDocfx.Src.html#Lustie_UnityDocfx_Src_exclude
+  commentId: F:Lustie.UnityDocfx.Src.exclude
+  fullName: Lustie.UnityDocfx.Src.exclude
+  nameWithType: Src.exclude
+- uid: Lustie.UnityDocfx.Src.files
+  name: files
+  href: api/Lustie.UnityDocfx.Src.html#Lustie_UnityDocfx_Src_files
+  commentId: F:Lustie.UnityDocfx.Src.files
+  fullName: Lustie.UnityDocfx.Src.files
+  nameWithType: Src.files
+- uid: Lustie.UnityDocfx.Src.src
+  name: src
+  href: api/Lustie.UnityDocfx.Src.html#Lustie_UnityDocfx_Src_src
+  commentId: F:Lustie.UnityDocfx.Src.src
+  fullName: Lustie.UnityDocfx.Src.src
+  nameWithType: Src.src
 - uid: Lustie.UnityDocfx.TOC
   name: TOC
   href: api/Lustie.UnityDocfx.TOC.html
   commentId: T:Lustie.UnityDocfx.TOC
   fullName: Lustie.UnityDocfx.TOC
   nameWithType: TOC
-- uid: Lustie.UnityDocfx.TOC.#ctor(System.String,System.String)
-  name: TOC(string, string)
-  href: api/Lustie.UnityDocfx.TOC.html#Lustie_UnityDocfx_TOC__ctor_System_String_System_String_
-  commentId: M:Lustie.UnityDocfx.TOC.#ctor(System.String,System.String)
-  name.vb: New(String, String)
-  fullName: Lustie.UnityDocfx.TOC.TOC(string, string)
-  fullName.vb: Lustie.UnityDocfx.TOC.New(String, String)
-  nameWithType: TOC.TOC(string, string)
-  nameWithType.vb: TOC.New(String, String)
+- uid: Lustie.UnityDocfx.TOC.#ctor(System.String,System.String,System.String)
+  name: TOC(string, string, string)
+  href: api/Lustie.UnityDocfx.TOC.html#Lustie_UnityDocfx_TOC__ctor_System_String_System_String_System_String_
+  commentId: M:Lustie.UnityDocfx.TOC.#ctor(System.String,System.String,System.String)
+  name.vb: New(String, String, String)
+  fullName: Lustie.UnityDocfx.TOC.TOC(string, string, string)
+  fullName.vb: Lustie.UnityDocfx.TOC.New(String, String, String)
+  nameWithType: TOC.TOC(string, string, string)
+  nameWithType.vb: TOC.New(String, String, String)
 - uid: Lustie.UnityDocfx.TOC.#ctor*
   name: TOC
   href: api/Lustie.UnityDocfx.TOC.html#Lustie_UnityDocfx_TOC__ctor_
@@ -506,6 +635,24 @@ references:
   commentId: F:Lustie.UnityDocfx.TOC.href
   fullName: Lustie.UnityDocfx.TOC.href
   nameWithType: TOC.href
+- uid: Lustie.UnityDocfx.TOC.HREF_CUSTOM
+  name: HREF_CUSTOM
+  href: api/Lustie.UnityDocfx.TOC.html#Lustie_UnityDocfx_TOC_HREF_CUSTOM
+  commentId: F:Lustie.UnityDocfx.TOC.HREF_CUSTOM
+  fullName: Lustie.UnityDocfx.TOC.HREF_CUSTOM
+  nameWithType: TOC.HREF_CUSTOM
+- uid: Lustie.UnityDocfx.TOC.HREF_README
+  name: HREF_README
+  href: api/Lustie.UnityDocfx.TOC.html#Lustie_UnityDocfx_TOC_HREF_README
+  commentId: F:Lustie.UnityDocfx.TOC.HREF_README
+  fullName: Lustie.UnityDocfx.TOC.HREF_README
+  nameWithType: TOC.HREF_README
+- uid: Lustie.UnityDocfx.TOC.hrefOption
+  name: hrefOption
+  href: api/Lustie.UnityDocfx.TOC.html#Lustie_UnityDocfx_TOC_hrefOption
+  commentId: F:Lustie.UnityDocfx.TOC.hrefOption
+  fullName: Lustie.UnityDocfx.TOC.hrefOption
+  nameWithType: TOC.hrefOption
 - uid: Lustie.UnityDocfx.TOC.name
   name: name
   href: api/Lustie.UnityDocfx.TOC.html#Lustie_UnityDocfx_TOC_name
