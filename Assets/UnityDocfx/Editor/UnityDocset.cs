@@ -6,6 +6,9 @@ using UnityEngine;
 
 namespace Lustie.UnityDocfx
 {
+    /// <summary>
+    /// Unity Docset data
+    /// </summary>
     [CreateAssetMenu(fileName = "UnityDocset", menuName = "UnityDocfx/UnityDocset")]
     public class UnityDocset : ScriptableObject
     {
@@ -13,6 +16,11 @@ namespace Lustie.UnityDocfx
         /// Folder
         /// </summary>
         public string folder = "Documentation";
+
+        /// <summary>
+        /// Get current documentaion directory where contains docfx.json
+        /// </summary>
+        public string currentDocfxFolderPath => Path.Combine(Directory.GetCurrentDirectory(), folder);
 
         /// <summary>
         /// docfx.json data
@@ -65,7 +73,12 @@ namespace Lustie.UnityDocfx
                     }
                 },
 
-                dest = "../docs"
+                dest = "../docs",
+
+                template = new List<string>()
+                {
+                    "default",
+                }
             }
         };
 
@@ -98,6 +111,22 @@ namespace Lustie.UnityDocfx
         public const string HREF_CUSTOM = "Custom";
         public const string HREF_README = "README.md to index.md";
         public string hrefOption;
+
+        public string trueHref
+        {
+            get
+            {
+                if (hrefOption == HREF_README)
+                {
+                    return "index.md";
+                }
+                else if (hrefOption == HREF_CUSTOM)
+                {
+                    return href;
+                }
+                return href[^1] != '/' ? $"{href}/" : href;
+            }
+        }
 
         public TOC(string name, string href, string hrefOption)
         {
@@ -141,7 +170,7 @@ namespace Lustie.UnityDocfx
         public GlobalMetadata globalMetadata;
         public List<Content> content;
         public string dest;
-
+        public List<string> template;
 
         [JsonIgnore]
         /// <summary>
@@ -151,11 +180,22 @@ namespace Lustie.UnityDocfx
             => dest.StartsWith("../") ? string.Join('\\', Directory.GetCurrentDirectory(), dest.Replace("../", "")) : dest;
     }
 
+    /// <summary>
+    /// template metadata: https://dotnet.github.io/docfx/docs/template.html?tabs=modern#template-metadata
+    /// </summary>
     [Serializable]
     public class GlobalMetadata
     {
+        [Tooltip("A string append to every page title.")]
         public string _appTitle;
+
+        [Tooltip("The name of the site displayed after logo.")]
+        public string _appName;
+
+        [Tooltip("The footer HTML.")]
         public string _appFooter;
+
+        [Tooltip("Whether to show the search box")]
         public bool _enableSearch;
     }
 

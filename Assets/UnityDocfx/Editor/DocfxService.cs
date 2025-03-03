@@ -183,7 +183,7 @@ namespace Lustie.UnityDocfx
 
             string docsetJson = JsonConvert.SerializeObject(unityDocset.docfxJson, settings);
 
-            string docfxFolderPath = Path.Combine(Directory.GetCurrentDirectory(), unityDocset.folder);
+            string docfxFolderPath = unityDocset.currentDocfxFolderPath;
 
             if (!Directory.Exists(docfxFolderPath))
             {
@@ -241,6 +241,11 @@ namespace Lustie.UnityDocfx
                     dest = href
                 });
             }
+        }
+
+        private static void GenTemplate(UnityDocset unityDocset)
+        {
+            var template = unityDocset.docfxJson.build.template;
         }
 
         private static void CopyReadmeToIndex(string folderPath)

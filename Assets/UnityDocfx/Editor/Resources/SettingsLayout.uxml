@@ -15,7 +15,7 @@
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="docfx-json-settings" class="settings-area" style="flex-grow: 1;">
-            <ui:Foldout text="Metadata:" name="Foldout" value="true" class="label-s">
+            <ui:Foldout text="Metadata" name="Foldout" value="false" class="label-s">
                 <ui:Instance template="horizontal-line" name="horizontal-line" />
                 <ui:VisualElement name="docfx-s-container" style="flex-grow: 1; font-size: 12px;">
                     <ui:ListView show-foldout-header="true" header-title="Src:" name="metadata-src" fixed-item-height="45" virtualization-method="DynamicHeight" reorderable="true" show-border="false" selection-type="Multiple" horizontal-scrolling="false" show-add-remove-footer="true" reorder-mode="Animated" />
@@ -42,7 +42,7 @@
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="toc-settings" class="settings-area" style="flex-grow: 1;">
-            <ui:Foldout text="Table of contents" value="true" class="label-s">
+            <ui:Foldout text="Table of contents" value="false" class="label-s">
                 <ui:Instance template="horizontal-line" name="horizontal-line" />
                 <ui:VisualElement name="toc-content-container" style="flex-grow: 1; flex-direction: row; margin-top: 5px; font-size: 12px;">
                     <ui:ListView name="list-toc" style="flex-grow: 1; width: 25%;" />
@@ -53,6 +53,28 @@
                         <ui:EnumField label="Sort Option:" type="Lustie.UnityDocfx.SortOption, Lustie.UnityDocfx" name="sort-option" value="Name" />
                         <ui:EnumField label="Sort Order:" type="Lustie.UnityDocfx.SortOrder, Lustie.UnityDocfx" name="sort-order" />
                     </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:Foldout>
+        </ui:VisualElement>
+        <ui:VisualElement name="template-container" class="settings-area" style="flex-grow: 1;">
+            <ui:Foldout text="Template" name="Foldout" value="false" class="label-s">
+                <ui:Instance template="horizontal-line" name="horizontal-line" />
+                <ui:VisualElement style="flex-grow: 1; font-size: 12px;">
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-left-color: rgb(32, 32, 32); border-right-color: rgb(32, 32, 32); border-top-color: rgb(32, 32, 32); border-bottom-color: rgb(32, 32, 32); padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px;">
+                        <ui:VisualElement style="flex-grow: 1; width: 40%;">
+                            <ui:Label tabindex="-1" text="Avaiable templates:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" style="margin-bottom: 6px; -unity-font-style: bold;" />
+                            <ui:ListView name="list-available-templates" selection-type="Multiple" show-bound-collection-size="false" show-border="true" horizontal-scrolling="true" style="flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 1; align-self: center; align-items: center; margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px;">
+                            <ui:Button text="&gt;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btn-shift-right" style="height: 20px; justify-content: space-between; align-self: center; width: 100%;" />
+                            <ui:Button text="&lt;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btn-shift-left" style="height: 20px; justify-content: space-between; align-self: center; width: 100%;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 1; width: 40%;">
+                            <ui:Label tabindex="-1" text="Build templates:" parse-escape-sequences="true" display-tooltip-when-elided="true" style="margin-bottom: 6px; -unity-font-style: bold;" />
+                            <ui:ListView name="list-templates" selection-type="Multiple" show-border="true" reorderable="true" reorder-mode="Animated" horizontal-scrolling="true" style="flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:Foldout text="Downaload templates" name="template-link-header" value="false" />
                 </ui:VisualElement>
             </ui:Foldout>
         </ui:VisualElement>

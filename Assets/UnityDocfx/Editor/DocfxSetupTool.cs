@@ -13,6 +13,9 @@ using Debug = UnityEngine.Debug;
 
 namespace Lustie.UnityDocfx
 {
+    /// <summary>
+    /// UnityDocfx Tool Window
+    /// </summary>
     public class DocfxSetupTool : EditorWindow
     {
         private string unityVersion = "2022.3.27f1";
@@ -41,7 +44,7 @@ namespace Lustie.UnityDocfx
 
             contentContainer.Q<Button>("btn-open-github").RegisterCallback<ClickEvent>(evt =>
             {
-                if(UnityEngine.Random.Range(0, 2) == 0)
+                if (UnityEngine.Random.Range(0, 2) == 0)
                     Application.OpenURL("https://github.com/lusties/unity-docfx");
                 else
                     Application.OpenURL("https://lusties.github.io/unity-docfx/");
@@ -87,6 +90,7 @@ namespace Lustie.UnityDocfx
             QueryMetadata();
             QueryTOCLSettings();
             QueryOutputSettings();
+            QueryTemplateSettings();
             QueryServerSettings();
         }
 
@@ -286,6 +290,63 @@ namespace Lustie.UnityDocfx
 
         #endregion
 
+        void QueryTemplateSettings()
+        {
+            VisualElement templateContainer = rootVisualElement.Q<VisualElement>("template-container");
+            ListView templateList = templateContainer.Q<ListView>("list-templates");
+            templateList.itemsSource = unityDocset.docfxJson.build.template;
+
+            CreateTemplateLinkButtons(templateContainer.Q<VisualElement>("template-link-header"));
+
+            ListView availableTemplatesList = rootVisualElement.Q<ListView>("list-available-templates");
+            string templateFolderPath = $"{unityDocset.currentDocfxFolderPath}/templates";
+
+            if (Directory.Exists(templateFolderPath))
+            {
+                string[] availableTemplates = Directory.GetDirectories(templateFolderPath)
+                    .Select(d => d.Replace($"{unityDocset.currentDocfxFolderPath}/", "").Replace("\\", "/"))
+                    .Where(t => !templateList.itemsSource.Contains(t))
+                    .ToArray();
+
+                availableTemplatesList.itemsSource = availableTemplates;
+            }
+
+            RegisterTemplateShiftButtons(templateContainer, templateList, availableTemplatesList);
+        }
+
+        void CreateTemplateLinkButtons(VisualElement templateLinkHeader)
+        {
+            foreach (var templateLink in DocfxTemplates.templateLinks)
+            {
+                Button btn = new Button { text = templateLink.title };
+                btn.RegisterCallback<ClickEvent>(evt => Application.OpenURL(templateLink.url));
+                templateLinkHeader.Add(btn);
+            }
+        }
+
+        void RegisterTemplateShiftButtons(VisualElement templateContainer, ListView templateList, ListView availableTemplatesList)
+        {
+            templateContainer.Q<Button>("btn-shift-right").RegisterCallback<ClickEvent>(evt =>
+            {
+                var selectedTemplates = availableTemplatesList.selectedItems.Cast<string>().ToList();
+                unityDocset.docfxJson.build.template.AddRange(selectedTemplates);
+                availableTemplatesList.itemsSource = availableTemplatesList.itemsSource.Cast<string>().Where(t => !selectedTemplates.Contains(t)).ToList();
+                templateList.RefreshItems();
+            });
+
+            templateContainer.Q<Button>("btn-shift-left").RegisterCallback<ClickEvent>(evt =>
+            {
+                var selectedTemplates = templateList.selectedItems.Cast<string>().ToList();
+                unityDocset.docfxJson.build.template = unityDocset.docfxJson.build.template.Where(t => !selectedTemplates.Contains(t)).ToList();
+                var availableTemplates = availableTemplatesList.itemsSource.Cast<string>().ToList();
+                availableTemplates.AddRange(selectedTemplates);
+                availableTemplatesList.itemsSource = availableTemplates;
+                availableTemplatesList.RefreshItems();
+                templateList.itemsSource = unityDocset.docfxJson.build.template;
+                templateList.RefreshItems();
+            });
+        }
+
         #region TABLE OF CONTENTS
         ListView listViewTOC;
         int selectedTOCIndex => listViewTOC.selectedIndex;
@@ -420,7 +481,7 @@ jobs:
                 return;
             }
 
-            string docfxFolderPath = Path.Combine(Directory.GetCurrentDirectory(), unityDocset.folder);
+            string docfxFolderPath = unityDocset.currentDocfxFolderPath;
 
             if (!Directory.Exists(docfxFolderPath))
             {
@@ -435,29 +496,30 @@ jobs:
 
         private void GenerateTocYml()
         {
-            string docfxFolderPath = Path.Combine(Directory.GetCurrentDirectory(), unityDocset.folder);
+            string docfxFolderPath = unityDocset.currentDocfxFolderPath;
 
             List<TOC> TOC = unityDocset.TOC;
             StringBuilder docTOCContent = new StringBuilder();
             foreach (TOC toc in TOC)
             {
+                string trueHref = toc.trueHref;
                 // Main TOC
                 docTOCContent.AppendLine($"- name: {toc.name}");
-                docTOCContent.AppendLine($"  href: {toc.href}");
+                docTOCContent.AppendLine($"  href: {trueHref}");
 
                 // TOC Directory
-                if (toc.href == "api/")
+                if (trueHref == "api/")
                 {
                     continue;
                 }
 
-                if (toc.href.Contains(".md") || !toc.href.Contains("/"))
+                if (trueHref.Contains(".md") || !trueHref.Contains("/"))
                 {
                     continue;
                 }
 
                 // Create Directory
-                string tocFolderPath = Path.Combine(docfxFolderPath, toc.href);
+                string tocFolderPath = Path.Combine(docfxFolderPath, trueHref);
                 var directoryInfo = Directory.CreateDirectory(tocFolderPath);
                 StringBuilder tocContent = new StringBuilder();
 
@@ -504,16 +566,11 @@ jobs:
             docfxProcess.Exited += (sender, e) => { Debug.Log("finished"); };
             docfxProcess.Disposed += (sender, e) => { Debug.Log("finished"); };
 
-            int port = 18080;
             string folderPath = unityDocset.docfxJson.build.fullDest;
 
-            if (server)
-            {
-                server.Dispose();
-            }
-            server = new LiveServer(folderPath, port);
-            server.Run();
-            Application.OpenURL(server.GetUrl());
+            if (isServerLiving)
+                DisposeServer();
+            GoLiveServer();
         }
 
         #endregion

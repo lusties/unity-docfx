@@ -26,14 +26,28 @@ MonoBehaviour:
     build:
       globalMetadata:
         _appTitle: Unity Docfx
+        _appName: 
         _appFooter: 'Made by Unity-Docfx: https://github.com/lusties/unity-docfx'
         _enableSearch: 1
       content:
+      - src: 
+        files:
+        - toc.yml
+        - index.md
+        dest: 
+      - src: manual
+        files:
+        - toc.yml
+        - '*.md'
+        dest: manual
       - src: api
         files:
         - '*.yml'
         dest: api
       dest: ../docs
+      template:
+      - default
+      - templates/darkfx
   TOC:
   - name: Home
     href: README.md to index.md
@@ -46,7 +60,7 @@ MonoBehaviour:
     sortOrder: 0
     hrefOption: Custom
   - name: API
-    href: api
+    href: api/
     sortOption: 0
     sortOrder: 0
     hrefOption: api

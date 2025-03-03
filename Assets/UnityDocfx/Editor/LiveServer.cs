@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Lustie.UnityDocfx
 {
+    /// <summary>
+    /// Simple HTTP server to serve static websites.
+    /// </summary>
     public class LiveServer : IDisposable
     {
         const string http = "http://localhost:";

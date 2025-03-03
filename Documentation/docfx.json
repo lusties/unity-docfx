@@ -19,6 +19,7 @@
   "build": {
     "globalMetadata": {
       "_appTitle": "Unity Docfx",
+      "_appName": "",
       "_appFooter": "Made by Unity-Docfx: https://github.com/lusties/unity-docfx",
       "_enableSearch": true
     },
@@ -47,6 +48,10 @@
         "dest": "api"
       }
     ],
-    "dest": "../docs"
+    "dest": "../docs",
+    "template": [
+      "default",
+      "templates/darkfx"
+    ]
   }
 }
