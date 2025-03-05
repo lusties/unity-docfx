@@ -1,0 +1,106 @@
+### YamlMime:ManagedReference
+items:
+- uid: Lustie.UnityDocfx.PathField.PathType
+  commentId: T:Lustie.UnityDocfx.PathField.PathType
+  id: PathField.PathType
+  parent: Lustie.UnityDocfx
+  children:
+  - Lustie.UnityDocfx.PathField.PathType.Directory
+  - Lustie.UnityDocfx.PathField.PathType.File
+  langs:
+  - csharp
+  - vb
+  name: PathField.PathType
+  nameWithType: PathField.PathType
+  fullName: Lustie.UnityDocfx.PathField.PathType
+  type: Enum
+  source:
+    id: PathType
+    path: ''
+    startLine: 1552
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public enum PathField.PathType
+    content.vb: Public Enum PathField.PathType
+- uid: Lustie.UnityDocfx.PathField.PathType.File
+  commentId: F:Lustie.UnityDocfx.PathField.PathType.File
+  id: File
+  parent: Lustie.UnityDocfx.PathField.PathType
+  langs:
+  - csharp
+  - vb
+  name: File
+  nameWithType: PathField.PathType.File
+  fullName: Lustie.UnityDocfx.PathField.PathType.File
+  type: Field
+  source:
+    id: File
+    path: ''
+    startLine: 1554
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: File = 0
+    return:
+      type: Lustie.UnityDocfx.PathField.PathType
+- uid: Lustie.UnityDocfx.PathField.PathType.Directory
+  commentId: F:Lustie.UnityDocfx.PathField.PathType.Directory
+  id: Directory
+  parent: Lustie.UnityDocfx.PathField.PathType
+  langs:
+  - csharp
+  - vb
+  name: Directory
+  nameWithType: PathField.PathType.Directory
+  fullName: Lustie.UnityDocfx.PathField.PathType.Directory
+  type: Field
+  source:
+    id: Directory
+    path: ''
+    startLine: 1555
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: Directory = 1
+    return:
+      type: Lustie.UnityDocfx.PathField.PathType
+references:
+- uid: Lustie.UnityDocfx
+  commentId: N:Lustie.UnityDocfx
+  name: Lustie.UnityDocfx
+  nameWithType: Lustie.UnityDocfx
+  fullName: Lustie.UnityDocfx
+  spec.csharp:
+  - uid: Lustie
+    name: Lustie
+  - name: .
+  - uid: Lustie.UnityDocfx
+    name: UnityDocfx
+  spec.vb:
+  - uid: Lustie
+    name: Lustie
+  - name: .
+  - uid: Lustie.UnityDocfx
+    name: UnityDocfx
+- uid: Lustie.UnityDocfx.PathField.PathType
+  commentId: T:Lustie.UnityDocfx.PathField.PathType
+  parent: Lustie.UnityDocfx
+  name: PathField.PathType
+  nameWithType: PathField.PathType
+  fullName: Lustie.UnityDocfx.PathField.PathType
+  spec.csharp:
+  - uid: Lustie.UnityDocfx.PathField
+    name: PathField
+  - name: .
+  - uid: Lustie.UnityDocfx.PathField.PathType
+    name: PathType
+  spec.vb:
+  - uid: Lustie.UnityDocfx.PathField
+    name: PathField
+  - name: .
+  - uid: Lustie.UnityDocfx.PathField.PathType
+    name: PathType

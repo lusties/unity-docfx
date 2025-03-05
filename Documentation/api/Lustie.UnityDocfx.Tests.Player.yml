@@ -1,0 +1,128 @@
+### YamlMime:ManagedReference
+items:
+- uid: Lustie.UnityDocfx.Tests.Player
+  commentId: T:Lustie.UnityDocfx.Tests.Player
+  id: Player
+  parent: Lustie.UnityDocfx.Tests
+  children:
+  - Lustie.UnityDocfx.Tests.Player.Start
+  - Lustie.UnityDocfx.Tests.Player.Update
+  langs:
+  - csharp
+  - vb
+  name: Player
+  nameWithType: Player
+  fullName: Lustie.UnityDocfx.Tests.Player
+  type: Class
+  source:
+    id: Player
+    path: ''
+    startLine: 1718
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx.Tests
+  summary: "\nPlayer controller\n"
+  example: []
+  syntax:
+    content: 'public class Player : MonoBehaviour'
+    content.vb: Public Class Player Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Lustie.UnityDocfx.Tests.Player.Start
+  commentId: M:Lustie.UnityDocfx.Tests.Player.Start
+  id: Start
+  parent: Lustie.UnityDocfx.Tests.Player
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: Player.Start()
+  fullName: Lustie.UnityDocfx.Tests.Player.Start()
+  type: Method
+  source:
+    id: Start
+    path: ''
+    startLine: 1723
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx.Tests
+  summary: "\nStart is called before the first frame update\n"
+  example: []
+  syntax:
+    content: public void Start()
+    content.vb: Public Sub Start()
+  overload: Lustie.UnityDocfx.Tests.Player.Start*
+- uid: Lustie.UnityDocfx.Tests.Player.Update
+  commentId: M:Lustie.UnityDocfx.Tests.Player.Update
+  id: Update
+  parent: Lustie.UnityDocfx.Tests.Player
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: Player.Update()
+  fullName: Lustie.UnityDocfx.Tests.Player.Update()
+  type: Method
+  source:
+    id: Update
+    path: ''
+    startLine: 1731
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx.Tests
+  summary: "\nUpdate is called once per frame\n"
+  example: []
+  syntax:
+    content: public void Update()
+    content.vb: Public Sub Update()
+  overload: Lustie.UnityDocfx.Tests.Player.Update*
+references:
+- uid: Lustie.UnityDocfx.Tests
+  commentId: N:Lustie.UnityDocfx.Tests
+  name: Lustie.UnityDocfx.Tests
+  nameWithType: Lustie.UnityDocfx.Tests
+  fullName: Lustie.UnityDocfx.Tests
+  spec.csharp:
+  - uid: Lustie
+    name: Lustie
+  - name: .
+  - uid: Lustie.UnityDocfx
+    name: UnityDocfx
+  - name: .
+  - uid: Lustie.UnityDocfx.Tests
+    name: Tests
+  spec.vb:
+  - uid: Lustie
+    name: Lustie
+  - name: .
+  - uid: Lustie.UnityDocfx
+    name: UnityDocfx
+  - name: .
+  - uid: Lustie.UnityDocfx.Tests
+    name: Tests
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Lustie.UnityDocfx.Tests.Player.Start*
+  commentId: Overload:Lustie.UnityDocfx.Tests.Player.Start
+  name: Start
+  nameWithType: Player.Start
+  fullName: Lustie.UnityDocfx.Tests.Player.Start
+- uid: Lustie.UnityDocfx.Tests.Player.Update*
+  commentId: Overload:Lustie.UnityDocfx.Tests.Player.Update
+  name: Update
+  nameWithType: Player.Update
+  fullName: Lustie.UnityDocfx.Tests.Player.Update

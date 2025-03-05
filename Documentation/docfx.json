@@ -19,9 +19,13 @@
   "build": {
     "globalMetadata": {
       "_appTitle": "Unity Docfx",
-      "_appName": "",
       "_appFooter": "Made by Unity-Docfx: https://github.com/lusties/unity-docfx",
-      "_enableSearch": true
+      "_appName": "Unity Documentaion",
+      "_appLogoPath": "icon/bruh.jpg",
+      "_appLogoUrl": "",
+      "_appFaviconPath": "icon/favicon.ico",
+      "_enableSearch": true,
+      "_disableContribution": true
     },
     "content": [
       {
@@ -48,10 +52,18 @@
         "dest": "api"
       }
     ],
+    "resource": [
+      {
+        "files": [
+          "icon/favicon.ico",
+          "icon/bruh.jpg"
+        ]
+      }
+    ],
     "dest": "../docs",
     "template": [
       "default",
-      "templates/darkfx"
+      "templates/unity"
     ]
   }
 }

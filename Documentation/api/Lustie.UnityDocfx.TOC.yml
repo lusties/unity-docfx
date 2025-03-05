@@ -13,6 +13,7 @@ items:
   - Lustie.UnityDocfx.TOC.name
   - Lustie.UnityDocfx.TOC.sortOption
   - Lustie.UnityDocfx.TOC.sortOrder
+  - Lustie.UnityDocfx.TOC.trueHref
   langs:
   - csharp
   - vb
@@ -23,7 +24,7 @@ items:
   source:
     id: TOC
     path: ''
-    startLine: 1122
+    startLine: 1262
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -64,7 +65,7 @@ items:
   source:
     id: name
     path: ''
-    startLine: 1125
+    startLine: 1265
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -87,7 +88,7 @@ items:
   source:
     id: href
     path: ''
-    startLine: 1126
+    startLine: 1266
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -110,7 +111,7 @@ items:
   source:
     id: sortOption
     path: ''
-    startLine: 1127
+    startLine: 1267
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -133,7 +134,7 @@ items:
   source:
     id: sortOrder
     path: ''
-    startLine: 1128
+    startLine: 1268
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -156,7 +157,7 @@ items:
   source:
     id: HREF_CUSTOM
     path: ''
-    startLine: 1130
+    startLine: 1270
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -179,7 +180,7 @@ items:
   source:
     id: HREF_README
     path: ''
-    startLine: 1131
+    startLine: 1271
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -202,7 +203,7 @@ items:
   source:
     id: hrefOption
     path: ''
-    startLine: 1132
+    startLine: 1272
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -211,6 +212,31 @@ items:
     return:
       type: System.String
     content.vb: Public hrefOption As String
+- uid: Lustie.UnityDocfx.TOC.trueHref
+  commentId: P:Lustie.UnityDocfx.TOC.trueHref
+  id: trueHref
+  parent: Lustie.UnityDocfx.TOC
+  langs:
+  - csharp
+  - vb
+  name: trueHref
+  nameWithType: TOC.trueHref
+  fullName: Lustie.UnityDocfx.TOC.trueHref
+  type: Property
+  source:
+    id: trueHref
+    path: ''
+    startLine: 1274
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public string trueHref { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property trueHref As String
+  overload: Lustie.UnityDocfx.TOC.trueHref*
 - uid: Lustie.UnityDocfx.TOC.#ctor(System.String,System.String,System.String)
   commentId: M:Lustie.UnityDocfx.TOC.#ctor(System.String,System.String,System.String)
   id: '#ctor(System.String,System.String,System.String)'
@@ -225,7 +251,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 1134
+    startLine: 1290
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -487,6 +513,11 @@ references:
   name: SortOrder
   nameWithType: SortOrder
   fullName: Lustie.UnityDocfx.SortOrder
+- uid: Lustie.UnityDocfx.TOC.trueHref*
+  commentId: Overload:Lustie.UnityDocfx.TOC.trueHref
+  name: trueHref
+  nameWithType: TOC.trueHref
+  fullName: Lustie.UnityDocfx.TOC.trueHref
 - uid: Lustie.UnityDocfx.TOC.#ctor*
   commentId: Overload:Lustie.UnityDocfx.TOC.#ctor
   name: TOC

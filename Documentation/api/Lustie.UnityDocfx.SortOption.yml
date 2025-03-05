@@ -17,7 +17,7 @@ items:
   source:
     id: SortOption
     path: ''
-    startLine: 1057
+    startLine: 1099
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -38,7 +38,7 @@ items:
   source:
     id: Name
     path: ''
-    startLine: 1059
+    startLine: 1101
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -60,7 +60,7 @@ items:
   source:
     id: Custom
     path: ''
-    startLine: 1060
+    startLine: 1102
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx

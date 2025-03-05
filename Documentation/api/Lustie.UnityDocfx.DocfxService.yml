@@ -23,7 +23,7 @@ items:
   source:
     id: DocfxService
     path: ''
-    startLine: 17
+    startLine: 16
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -56,7 +56,7 @@ items:
   source:
     id: maxSupportVersion
     path: ''
-    startLine: 19
+    startLine: 18
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -79,7 +79,7 @@ items:
   source:
     id: uninstallCommand
     path: ''
-    startLine: 20
+    startLine: 19
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -102,7 +102,7 @@ items:
   source:
     id: installCommand
     path: ''
-    startLine: 21
+    startLine: 20
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -125,7 +125,7 @@ items:
   source:
     id: CheckInstallation
     path: ''
-    startLine: 38
+    startLine: 37
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -159,7 +159,7 @@ items:
   source:
     id: InstallDocfx
     path: ''
-    startLine: 73
+    startLine: 72
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -186,7 +186,7 @@ items:
   source:
     id: OpenCmd
     path: ''
-    startLine: 96
+    startLine: 95
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -222,7 +222,7 @@ items:
   source:
     id: GetDocfxCommand
     path: ''
-    startLine: 122
+    startLine: 121
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -259,16 +259,19 @@ items:
   source:
     id: GenDocfxJson
     path: ''
-    startLine: 165
+    startLine: 168
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
+  summary: "\nGenerates a docfx.json file for the UnityDocset.\n"
+  example: []
   syntax:
-    content: public static void GenDocfxJson(UnityDocset docset)
+    content: public static void GenDocfxJson(UnityDocset unityDocset)
     parameters:
-    - id: docset
+    - id: unityDocset
       type: Lustie.UnityDocfx.UnityDocset
-    content.vb: Public Shared Sub GenDocfxJson(docset As UnityDocset)
+      description: The UnityDocset object containing the docfx.json data.
+    content.vb: Public Shared Sub GenDocfxJson(unityDocset As UnityDocset)
   overload: Lustie.UnityDocfx.DocfxService.GenDocfxJson*
 references:
 - uid: Lustie.UnityDocfx

@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: Lustie.UnityDocfx.Tests
+  commentId: N:Lustie.UnityDocfx.Tests
+  id: Lustie.UnityDocfx.Tests
+  children:
+  - Lustie.UnityDocfx.Tests.Enemy
+  - Lustie.UnityDocfx.Tests.Player
+  langs:
+  - csharp
+  - vb
+  name: Lustie.UnityDocfx.Tests
+  nameWithType: Lustie.UnityDocfx.Tests
+  fullName: Lustie.UnityDocfx.Tests
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Lustie.UnityDocfx.Tests.Enemy
+  commentId: T:Lustie.UnityDocfx.Tests.Enemy
+  name: Enemy
+  nameWithType: Enemy
+  fullName: Lustie.UnityDocfx.Tests.Enemy
+- uid: Lustie.UnityDocfx.Tests.Player
+  commentId: T:Lustie.UnityDocfx.Tests.Player
+  name: Player
+  nameWithType: Player
+  fullName: Lustie.UnityDocfx.Tests.Player

@@ -1,0 +1,504 @@
+### YamlMime:ManagedReference
+items:
+- uid: Lustie.UnityDocfx.PathField
+  commentId: T:Lustie.UnityDocfx.PathField
+  id: PathField
+  parent: Lustie.UnityDocfx
+  children:
+  - Lustie.UnityDocfx.PathField.#ctor
+  - Lustie.UnityDocfx.PathField.binding
+  - Lustie.UnityDocfx.PathField.bindingPath
+  - Lustie.UnityDocfx.PathField.buttonBrowseLabel
+  - Lustie.UnityDocfx.PathField.buttonViewLabel
+  - Lustie.UnityDocfx.PathField.extensions
+  - Lustie.UnityDocfx.PathField.FullPath
+  - Lustie.UnityDocfx.PathField.label
+  - Lustie.UnityDocfx.PathField.pathType
+  - Lustie.UnityDocfx.PathField.SetValueWithoutNotify(System.String)
+  - Lustie.UnityDocfx.PathField.value
+  langs:
+  - csharp
+  - vb
+  name: PathField
+  nameWithType: PathField
+  fullName: Lustie.UnityDocfx.PathField
+  type: Class
+  source:
+    id: PathField
+    path: ''
+    startLine: 1443
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: 'public class PathField : VisualElement, IBindable, INotifyValueChanged<string>'
+    content.vb: Public Class PathField Inherits VisualElement Implements IBindable, INotifyValueChanged(Of String)
+  inheritance:
+  - System.Object
+  implements:
+  - Global.IBindable
+  - Global.INotifyValueChanged{System.String}
+- uid: Lustie.UnityDocfx.PathField.value
+  commentId: P:Lustie.UnityDocfx.PathField.value
+  id: value
+  parent: Lustie.UnityDocfx.PathField
+  langs:
+  - csharp
+  - vb
+  name: value
+  nameWithType: PathField.value
+  fullName: Lustie.UnityDocfx.PathField.value
+  type: Property
+  source:
+    id: value
+    path: ''
+    startLine: 1445
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public string value { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property value As String
+  overload: Lustie.UnityDocfx.PathField.value*
+- uid: Lustie.UnityDocfx.PathField.label
+  commentId: P:Lustie.UnityDocfx.PathField.label
+  id: label
+  parent: Lustie.UnityDocfx.PathField
+  langs:
+  - csharp
+  - vb
+  name: label
+  nameWithType: PathField.label
+  fullName: Lustie.UnityDocfx.PathField.label
+  type: Property
+  source:
+    id: label
+    path: ''
+    startLine: 1459
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public string label { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property label As String
+  overload: Lustie.UnityDocfx.PathField.label*
+- uid: Lustie.UnityDocfx.PathField.buttonBrowseLabel
+  commentId: P:Lustie.UnityDocfx.PathField.buttonBrowseLabel
+  id: buttonBrowseLabel
+  parent: Lustie.UnityDocfx.PathField
+  langs:
+  - csharp
+  - vb
+  name: buttonBrowseLabel
+  nameWithType: PathField.buttonBrowseLabel
+  fullName: Lustie.UnityDocfx.PathField.buttonBrowseLabel
+  type: Property
+  source:
+    id: buttonBrowseLabel
+    path: ''
+    startLine: 1465
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public string buttonBrowseLabel { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property buttonBrowseLabel As String
+  overload: Lustie.UnityDocfx.PathField.buttonBrowseLabel*
+- uid: Lustie.UnityDocfx.PathField.buttonViewLabel
+  commentId: P:Lustie.UnityDocfx.PathField.buttonViewLabel
+  id: buttonViewLabel
+  parent: Lustie.UnityDocfx.PathField
+  langs:
+  - csharp
+  - vb
+  name: buttonViewLabel
+  nameWithType: PathField.buttonViewLabel
+  fullName: Lustie.UnityDocfx.PathField.buttonViewLabel
+  type: Property
+  source:
+    id: buttonViewLabel
+    path: ''
+    startLine: 1471
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public string buttonViewLabel { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property buttonViewLabel As String
+  overload: Lustie.UnityDocfx.PathField.buttonViewLabel*
+- uid: Lustie.UnityDocfx.PathField.pathType
+  commentId: P:Lustie.UnityDocfx.PathField.pathType
+  id: pathType
+  parent: Lustie.UnityDocfx.PathField
+  langs:
+  - csharp
+  - vb
+  name: pathType
+  nameWithType: PathField.pathType
+  fullName: Lustie.UnityDocfx.PathField.pathType
+  type: Property
+  source:
+    id: pathType
+    path: ''
+    startLine: 1477
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public PathField.PathType pathType { get; set; }
+    parameters: []
+    return:
+      type: Lustie.UnityDocfx.PathField.PathType
+    content.vb: Public Property pathType As PathField.PathType
+  overload: Lustie.UnityDocfx.PathField.pathType*
+- uid: Lustie.UnityDocfx.PathField.extensions
+  commentId: P:Lustie.UnityDocfx.PathField.extensions
+  id: extensions
+  parent: Lustie.UnityDocfx.PathField
+  langs:
+  - csharp
+  - vb
+  name: extensions
+  nameWithType: PathField.extensions
+  fullName: Lustie.UnityDocfx.PathField.extensions
+  type: Property
+  source:
+    id: extensions
+    path: ''
+    startLine: 1479
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public string extensions { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property extensions As String
+  overload: Lustie.UnityDocfx.PathField.extensions*
+- uid: Lustie.UnityDocfx.PathField.FullPath
+  commentId: P:Lustie.UnityDocfx.PathField.FullPath
+  id: FullPath
+  parent: Lustie.UnityDocfx.PathField
+  langs:
+  - csharp
+  - vb
+  name: FullPath
+  nameWithType: PathField.FullPath
+  fullName: Lustie.UnityDocfx.PathField.FullPath
+  type: Property
+  source:
+    id: FullPath
+    path: ''
+    startLine: 1481
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public string FullPath { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property FullPath As String
+  overload: Lustie.UnityDocfx.PathField.FullPath*
+- uid: Lustie.UnityDocfx.PathField.binding
+  commentId: P:Lustie.UnityDocfx.PathField.binding
+  id: binding
+  parent: Lustie.UnityDocfx.PathField
+  langs:
+  - csharp
+  - vb
+  name: binding
+  nameWithType: PathField.binding
+  fullName: Lustie.UnityDocfx.PathField.binding
+  type: Property
+  source:
+    id: binding
+    path: ''
+    startLine: 1484
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public IBinding binding { get; set; }
+    parameters: []
+    return:
+      type: Global.IBinding
+    content.vb: Public Property binding As IBinding
+  overload: Lustie.UnityDocfx.PathField.binding*
+- uid: Lustie.UnityDocfx.PathField.bindingPath
+  commentId: P:Lustie.UnityDocfx.PathField.bindingPath
+  id: bindingPath
+  parent: Lustie.UnityDocfx.PathField
+  langs:
+  - csharp
+  - vb
+  name: bindingPath
+  nameWithType: PathField.bindingPath
+  fullName: Lustie.UnityDocfx.PathField.bindingPath
+  type: Property
+  source:
+    id: bindingPath
+    path: ''
+    startLine: 1485
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public string bindingPath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property bindingPath As String
+  overload: Lustie.UnityDocfx.PathField.bindingPath*
+- uid: Lustie.UnityDocfx.PathField.#ctor
+  commentId: M:Lustie.UnityDocfx.PathField.#ctor
+  id: '#ctor'
+  parent: Lustie.UnityDocfx.PathField
+  langs:
+  - csharp
+  - vb
+  name: PathField()
+  nameWithType: PathField.PathField()
+  fullName: Lustie.UnityDocfx.PathField.PathField()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 1494
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public PathField()
+    content.vb: Public Sub New()
+  overload: Lustie.UnityDocfx.PathField.#ctor*
+  nameWithType.vb: PathField.New()
+  fullName.vb: Lustie.UnityDocfx.PathField.New()
+  name.vb: New()
+- uid: Lustie.UnityDocfx.PathField.SetValueWithoutNotify(System.String)
+  commentId: M:Lustie.UnityDocfx.PathField.SetValueWithoutNotify(System.String)
+  id: SetValueWithoutNotify(System.String)
+  parent: Lustie.UnityDocfx.PathField
+  langs:
+  - csharp
+  - vb
+  name: SetValueWithoutNotify(string)
+  nameWithType: PathField.SetValueWithoutNotify(string)
+  fullName: Lustie.UnityDocfx.PathField.SetValueWithoutNotify(string)
+  type: Method
+  source:
+    id: SetValueWithoutNotify
+    path: ''
+    startLine: 1547
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public void SetValueWithoutNotify(string newValue)
+    parameters:
+    - id: newValue
+      type: System.String
+    content.vb: Public Sub SetValueWithoutNotify(newValue As String)
+  overload: Lustie.UnityDocfx.PathField.SetValueWithoutNotify*
+  nameWithType.vb: PathField.SetValueWithoutNotify(String)
+  fullName.vb: Lustie.UnityDocfx.PathField.SetValueWithoutNotify(String)
+  name.vb: SetValueWithoutNotify(String)
+references:
+- uid: Lustie.UnityDocfx
+  commentId: N:Lustie.UnityDocfx
+  name: Lustie.UnityDocfx
+  nameWithType: Lustie.UnityDocfx
+  fullName: Lustie.UnityDocfx
+  spec.csharp:
+  - uid: Lustie
+    name: Lustie
+  - name: .
+  - uid: Lustie.UnityDocfx
+    name: UnityDocfx
+  spec.vb:
+  - uid: Lustie
+    name: Lustie
+  - name: .
+  - uid: Lustie.UnityDocfx
+    name: UnityDocfx
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Global.IBindable
+  commentId: '!:Global.IBindable'
+  isExternal: true
+  name: IBindable
+  nameWithType: IBindable
+  fullName: IBindable
+- uid: Global.INotifyValueChanged{System.String}
+  commentId: '!:Global.INotifyValueChanged{System.String}'
+  definition: Global.INotifyValueChanged`1
+  name: INotifyValueChanged<string>
+  nameWithType: INotifyValueChanged<string>
+  fullName: INotifyValueChanged<string>
+  nameWithType.vb: INotifyValueChanged(Of String)
+  fullName.vb: INotifyValueChanged(Of String)
+  name.vb: INotifyValueChanged(Of String)
+  spec.csharp:
+  - uid: Global.INotifyValueChanged`1
+    name: INotifyValueChanged
+    isExternal: true
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Global.INotifyValueChanged`1
+    name: INotifyValueChanged
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.INotifyValueChanged`1
+  commentId: '!:Global.INotifyValueChanged`1'
+  isExternal: true
+  name: INotifyValueChanged<>
+  nameWithType: INotifyValueChanged<>
+  fullName: INotifyValueChanged<>
+  nameWithType.vb: INotifyValueChanged(Of )
+  fullName.vb: INotifyValueChanged(Of )
+  name.vb: INotifyValueChanged(Of )
+  spec.csharp:
+  - uid: Global.INotifyValueChanged`1
+    name: INotifyValueChanged
+    isExternal: true
+  - name: <
+  - name: ''
+  - name: '>'
+  spec.vb:
+  - uid: Global.INotifyValueChanged`1
+    name: INotifyValueChanged
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: ''
+  - name: )
+- uid: Lustie.UnityDocfx.PathField.value*
+  commentId: Overload:Lustie.UnityDocfx.PathField.value
+  name: value
+  nameWithType: PathField.value
+  fullName: Lustie.UnityDocfx.PathField.value
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Lustie.UnityDocfx.PathField.label*
+  commentId: Overload:Lustie.UnityDocfx.PathField.label
+  name: label
+  nameWithType: PathField.label
+  fullName: Lustie.UnityDocfx.PathField.label
+- uid: Lustie.UnityDocfx.PathField.buttonBrowseLabel*
+  commentId: Overload:Lustie.UnityDocfx.PathField.buttonBrowseLabel
+  name: buttonBrowseLabel
+  nameWithType: PathField.buttonBrowseLabel
+  fullName: Lustie.UnityDocfx.PathField.buttonBrowseLabel
+- uid: Lustie.UnityDocfx.PathField.buttonViewLabel*
+  commentId: Overload:Lustie.UnityDocfx.PathField.buttonViewLabel
+  name: buttonViewLabel
+  nameWithType: PathField.buttonViewLabel
+  fullName: Lustie.UnityDocfx.PathField.buttonViewLabel
+- uid: Lustie.UnityDocfx.PathField.pathType*
+  commentId: Overload:Lustie.UnityDocfx.PathField.pathType
+  name: pathType
+  nameWithType: PathField.pathType
+  fullName: Lustie.UnityDocfx.PathField.pathType
+- uid: Lustie.UnityDocfx.PathField.PathType
+  commentId: T:Lustie.UnityDocfx.PathField.PathType
+  parent: Lustie.UnityDocfx
+  name: PathField.PathType
+  nameWithType: PathField.PathType
+  fullName: Lustie.UnityDocfx.PathField.PathType
+  spec.csharp:
+  - uid: Lustie.UnityDocfx.PathField
+    name: PathField
+  - name: .
+  - uid: Lustie.UnityDocfx.PathField.PathType
+    name: PathType
+  spec.vb:
+  - uid: Lustie.UnityDocfx.PathField
+    name: PathField
+  - name: .
+  - uid: Lustie.UnityDocfx.PathField.PathType
+    name: PathType
+- uid: Lustie.UnityDocfx.PathField.extensions*
+  commentId: Overload:Lustie.UnityDocfx.PathField.extensions
+  name: extensions
+  nameWithType: PathField.extensions
+  fullName: Lustie.UnityDocfx.PathField.extensions
+- uid: Lustie.UnityDocfx.PathField.FullPath*
+  commentId: Overload:Lustie.UnityDocfx.PathField.FullPath
+  name: FullPath
+  nameWithType: PathField.FullPath
+  fullName: Lustie.UnityDocfx.PathField.FullPath
+- uid: Lustie.UnityDocfx.PathField.binding*
+  commentId: Overload:Lustie.UnityDocfx.PathField.binding
+  name: binding
+  nameWithType: PathField.binding
+  fullName: Lustie.UnityDocfx.PathField.binding
+- uid: Global.IBinding
+  commentId: '!:Global.IBinding'
+  isExternal: true
+  name: IBinding
+  nameWithType: IBinding
+  fullName: IBinding
+- uid: Lustie.UnityDocfx.PathField.bindingPath*
+  commentId: Overload:Lustie.UnityDocfx.PathField.bindingPath
+  name: bindingPath
+  nameWithType: PathField.bindingPath
+  fullName: Lustie.UnityDocfx.PathField.bindingPath
+- uid: Lustie.UnityDocfx.PathField.#ctor*
+  commentId: Overload:Lustie.UnityDocfx.PathField.#ctor
+  name: PathField
+  nameWithType: PathField.PathField
+  fullName: Lustie.UnityDocfx.PathField.PathField
+  nameWithType.vb: PathField.New
+  fullName.vb: Lustie.UnityDocfx.PathField.New
+  name.vb: New
+- uid: Lustie.UnityDocfx.PathField.SetValueWithoutNotify*
+  commentId: Overload:Lustie.UnityDocfx.PathField.SetValueWithoutNotify
+  name: SetValueWithoutNotify
+  nameWithType: PathField.SetValueWithoutNotify
+  fullName: Lustie.UnityDocfx.PathField.SetValueWithoutNotify

@@ -18,7 +18,7 @@ items:
   source:
     id: Content
     path: ''
-    startLine: 1270
+    startLine: 1374
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -59,7 +59,7 @@ items:
   source:
     id: src
     path: ''
-    startLine: 1273
+    startLine: 1377
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -82,7 +82,7 @@ items:
   source:
     id: files
     path: ''
-    startLine: 1274
+    startLine: 1378
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -105,7 +105,7 @@ items:
   source:
     id: dest
     path: ''
-    startLine: 1275
+    startLine: 1379
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx

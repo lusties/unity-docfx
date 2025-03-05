@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: Lustie.UnityDocfx.HelpBox
+  commentId: T:Lustie.UnityDocfx.HelpBox
+  id: HelpBox
+  parent: Lustie.UnityDocfx
+  children:
+  - Lustie.UnityDocfx.HelpBox.#ctor
+  langs:
+  - csharp
+  - vb
+  name: HelpBox
+  nameWithType: HelpBox
+  fullName: Lustie.UnityDocfx.HelpBox
+  type: Class
+  source:
+    id: HelpBox
+    path: ''
+    startLine: 1420
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: 'public class HelpBox : UnityEngine.UIElements.HelpBox'
+    content.vb: Public Class HelpBox Inherits UnityEngine.UIElements.HelpBox
+  inheritance:
+  - System.Object
+- uid: Lustie.UnityDocfx.HelpBox.#ctor
+  commentId: M:Lustie.UnityDocfx.HelpBox.#ctor
+  id: '#ctor'
+  parent: Lustie.UnityDocfx.HelpBox
+  langs:
+  - csharp
+  - vb
+  name: HelpBox()
+  nameWithType: HelpBox.HelpBox()
+  fullName: Lustie.UnityDocfx.HelpBox.HelpBox()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 1422
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public HelpBox()
+    content.vb: Public Sub New()
+  overload: Lustie.UnityDocfx.HelpBox.#ctor*
+  nameWithType.vb: HelpBox.New()
+  fullName.vb: Lustie.UnityDocfx.HelpBox.New()
+  name.vb: New()
+references:
+- uid: Lustie.UnityDocfx
+  commentId: N:Lustie.UnityDocfx
+  name: Lustie.UnityDocfx
+  nameWithType: Lustie.UnityDocfx
+  fullName: Lustie.UnityDocfx
+  spec.csharp:
+  - uid: Lustie
+    name: Lustie
+  - name: .
+  - uid: Lustie.UnityDocfx
+    name: UnityDocfx
+  spec.vb:
+  - uid: Lustie
+    name: Lustie
+  - name: .
+  - uid: Lustie.UnityDocfx
+    name: UnityDocfx
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Lustie.UnityDocfx.HelpBox.#ctor*
+  commentId: Overload:Lustie.UnityDocfx.HelpBox.#ctor
+  name: HelpBox
+  nameWithType: HelpBox.HelpBox
+  fullName: Lustie.UnityDocfx.HelpBox.HelpBox
+  nameWithType.vb: HelpBox.New
+  fullName.vb: Lustie.UnityDocfx.HelpBox.New
+  name.vb: New

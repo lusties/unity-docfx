@@ -12,16 +12,26 @@
     name: DocfxService
   - uid: Lustie.UnityDocfx.DocfxSetupTool
     name: DocfxSetupTool
+  - uid: Lustie.UnityDocfx.DocfxTemplates
+    name: DocfxTemplates
   - uid: Lustie.UnityDocfx.DocfxTemplatesPath
     name: DocfxTemplatesPath
   - uid: Lustie.UnityDocfx.GlobalMetadata
     name: GlobalMetadata
+  - uid: Lustie.UnityDocfx.HelpBox
+    name: HelpBox
   - uid: Lustie.UnityDocfx.JObjectExtensions
     name: JObjectExtensions
   - uid: Lustie.UnityDocfx.LiveServer
     name: LiveServer
   - uid: Lustie.UnityDocfx.Metadata
     name: Metadata
+  - uid: Lustie.UnityDocfx.PathField
+    name: PathField
+  - uid: Lustie.UnityDocfx.PathField.PathType
+    name: PathField.PathType
+  - uid: Lustie.UnityDocfx.Resource
+    name: Resource
   - uid: Lustie.UnityDocfx.SomeExtensions
     name: SomeExtensions
   - uid: Lustie.UnityDocfx.SortOption
@@ -36,3 +46,10 @@
     name: UIPath
   - uid: Lustie.UnityDocfx.UnityDocset
     name: UnityDocset
+- uid: Lustie.UnityDocfx.Tests
+  name: Lustie.UnityDocfx.Tests
+  items:
+  - uid: Lustie.UnityDocfx.Tests.Enemy
+    name: Enemy
+  - uid: Lustie.UnityDocfx.Tests.Player
+    name: Player

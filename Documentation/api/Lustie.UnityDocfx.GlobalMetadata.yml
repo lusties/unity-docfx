@@ -5,8 +5,13 @@ items:
   id: GlobalMetadata
   parent: Lustie.UnityDocfx
   children:
+  - Lustie.UnityDocfx.GlobalMetadata._appFaviconPath
   - Lustie.UnityDocfx.GlobalMetadata._appFooter
+  - Lustie.UnityDocfx.GlobalMetadata._appLogoPath
+  - Lustie.UnityDocfx.GlobalMetadata._appLogoUrl
+  - Lustie.UnityDocfx.GlobalMetadata._appName
   - Lustie.UnityDocfx.GlobalMetadata._appTitle
+  - Lustie.UnityDocfx.GlobalMetadata._disableContribution
   - Lustie.UnityDocfx.GlobalMetadata._enableSearch
   langs:
   - csharp
@@ -18,10 +23,12 @@ items:
   source:
     id: GlobalMetadata
     path: ''
-    startLine: 1262
+    startLine: 1346
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
+  summary: "\ntemplate metadata: https://dotnet.github.io/docfx/docs/template.html?tabs=modern#template-metadata\n"
+  example: []
   syntax:
     content: >-
       [Serializable]
@@ -59,7 +66,7 @@ items:
   source:
     id: _appTitle
     path: ''
-    startLine: 1265
+    startLine: 1350
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -82,7 +89,7 @@ items:
   source:
     id: _appFooter
     path: ''
-    startLine: 1266
+    startLine: 1353
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -91,6 +98,98 @@ items:
     return:
       type: System.String
     content.vb: Public _appFooter As String
+- uid: Lustie.UnityDocfx.GlobalMetadata._appName
+  commentId: F:Lustie.UnityDocfx.GlobalMetadata._appName
+  id: _appName
+  parent: Lustie.UnityDocfx.GlobalMetadata
+  langs:
+  - csharp
+  - vb
+  name: _appName
+  nameWithType: GlobalMetadata._appName
+  fullName: Lustie.UnityDocfx.GlobalMetadata._appName
+  type: Field
+  source:
+    id: _appName
+    path: ''
+    startLine: 1356
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public string _appName
+    return:
+      type: System.String
+    content.vb: Public _appName As String
+- uid: Lustie.UnityDocfx.GlobalMetadata._appLogoPath
+  commentId: F:Lustie.UnityDocfx.GlobalMetadata._appLogoPath
+  id: _appLogoPath
+  parent: Lustie.UnityDocfx.GlobalMetadata
+  langs:
+  - csharp
+  - vb
+  name: _appLogoPath
+  nameWithType: GlobalMetadata._appLogoPath
+  fullName: Lustie.UnityDocfx.GlobalMetadata._appLogoPath
+  type: Field
+  source:
+    id: _appLogoPath
+    path: ''
+    startLine: 1359
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public string _appLogoPath
+    return:
+      type: System.String
+    content.vb: Public _appLogoPath As String
+- uid: Lustie.UnityDocfx.GlobalMetadata._appLogoUrl
+  commentId: F:Lustie.UnityDocfx.GlobalMetadata._appLogoUrl
+  id: _appLogoUrl
+  parent: Lustie.UnityDocfx.GlobalMetadata
+  langs:
+  - csharp
+  - vb
+  name: _appLogoUrl
+  nameWithType: GlobalMetadata._appLogoUrl
+  fullName: Lustie.UnityDocfx.GlobalMetadata._appLogoUrl
+  type: Field
+  source:
+    id: _appLogoUrl
+    path: ''
+    startLine: 1362
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public string _appLogoUrl
+    return:
+      type: System.String
+    content.vb: Public _appLogoUrl As String
+- uid: Lustie.UnityDocfx.GlobalMetadata._appFaviconPath
+  commentId: F:Lustie.UnityDocfx.GlobalMetadata._appFaviconPath
+  id: _appFaviconPath
+  parent: Lustie.UnityDocfx.GlobalMetadata
+  langs:
+  - csharp
+  - vb
+  name: _appFaviconPath
+  nameWithType: GlobalMetadata._appFaviconPath
+  fullName: Lustie.UnityDocfx.GlobalMetadata._appFaviconPath
+  type: Field
+  source:
+    id: _appFaviconPath
+    path: ''
+    startLine: 1365
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public string _appFaviconPath
+    return:
+      type: System.String
+    content.vb: Public _appFaviconPath As String
 - uid: Lustie.UnityDocfx.GlobalMetadata._enableSearch
   commentId: F:Lustie.UnityDocfx.GlobalMetadata._enableSearch
   id: _enableSearch
@@ -105,7 +204,7 @@ items:
   source:
     id: _enableSearch
     path: ''
-    startLine: 1267
+    startLine: 1368
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -114,6 +213,29 @@ items:
     return:
       type: System.Boolean
     content.vb: Public _enableSearch As Boolean
+- uid: Lustie.UnityDocfx.GlobalMetadata._disableContribution
+  commentId: F:Lustie.UnityDocfx.GlobalMetadata._disableContribution
+  id: _disableContribution
+  parent: Lustie.UnityDocfx.GlobalMetadata
+  langs:
+  - csharp
+  - vb
+  name: _disableContribution
+  nameWithType: GlobalMetadata._disableContribution
+  fullName: Lustie.UnityDocfx.GlobalMetadata._disableContribution
+  type: Field
+  source:
+    id: _disableContribution
+    path: ''
+    startLine: 1371
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public bool _disableContribution
+    return:
+      type: System.Boolean
+    content.vb: Public _disableContribution As Boolean
 references:
 - uid: Lustie.UnityDocfx
   commentId: N:Lustie.UnityDocfx

@@ -17,7 +17,7 @@ items:
   source:
     id: DocfxData
     path: ''
-    startLine: 1109
+    startLine: 1302
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -58,7 +58,7 @@ items:
   source:
     id: metadata
     path: ''
-    startLine: 1112
+    startLine: 1305
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -81,7 +81,7 @@ items:
   source:
     id: build
     path: ''
-    startLine: 1114
+    startLine: 1307
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx

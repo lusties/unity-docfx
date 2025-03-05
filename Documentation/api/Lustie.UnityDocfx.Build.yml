@@ -9,6 +9,8 @@ items:
   - Lustie.UnityDocfx.Build.dest
   - Lustie.UnityDocfx.Build.fullDest
   - Lustie.UnityDocfx.Build.globalMetadata
+  - Lustie.UnityDocfx.Build.resource
+  - Lustie.UnityDocfx.Build.template
   langs:
   - csharp
   - vb
@@ -19,7 +21,7 @@ items:
   source:
     id: Build
     path: ''
-    startLine: 1246
+    startLine: 1326
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -60,7 +62,7 @@ items:
   source:
     id: globalMetadata
     path: ''
-    startLine: 1249
+    startLine: 1329
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -83,7 +85,7 @@ items:
   source:
     id: content
     path: ''
-    startLine: 1250
+    startLine: 1330
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -92,6 +94,29 @@ items:
     return:
       type: System.Collections.Generic.List{Lustie.UnityDocfx.Content}
     content.vb: Public content As List(Of Content)
+- uid: Lustie.UnityDocfx.Build.resource
+  commentId: F:Lustie.UnityDocfx.Build.resource
+  id: resource
+  parent: Lustie.UnityDocfx.Build
+  langs:
+  - csharp
+  - vb
+  name: resource
+  nameWithType: Build.resource
+  fullName: Lustie.UnityDocfx.Build.resource
+  type: Field
+  source:
+    id: resource
+    path: ''
+    startLine: 1331
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public List<Resource> resource
+    return:
+      type: System.Collections.Generic.List{Lustie.UnityDocfx.Resource}
+    content.vb: Public resource As List(Of Resource)
 - uid: Lustie.UnityDocfx.Build.dest
   commentId: F:Lustie.UnityDocfx.Build.dest
   id: dest
@@ -106,7 +131,7 @@ items:
   source:
     id: dest
     path: ''
-    startLine: 1251
+    startLine: 1332
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -115,6 +140,29 @@ items:
     return:
       type: System.String
     content.vb: Public dest As String
+- uid: Lustie.UnityDocfx.Build.template
+  commentId: F:Lustie.UnityDocfx.Build.template
+  id: template
+  parent: Lustie.UnityDocfx.Build
+  langs:
+  - csharp
+  - vb
+  name: template
+  nameWithType: Build.template
+  fullName: Lustie.UnityDocfx.Build.template
+  type: Field
+  source:
+    id: template
+    path: ''
+    startLine: 1333
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx
+  syntax:
+    content: public List<string> template
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public template As List(Of String)
 - uid: Lustie.UnityDocfx.Build.fullDest
   commentId: P:Lustie.UnityDocfx.Build.fullDest
   id: fullDest
@@ -129,7 +177,7 @@ items:
   source:
     id: fullDest
     path: ''
-    startLine: 1254
+    startLine: 1335
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -451,6 +499,34 @@ references:
   - uid: System.Collections.Generic
     name: Generic
     isExternal: true
+- uid: System.Collections.Generic.List{Lustie.UnityDocfx.Resource}
+  commentId: T:System.Collections.Generic.List{Lustie.UnityDocfx.Resource}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Resource>
+  nameWithType: List<Resource>
+  fullName: System.Collections.Generic.List<Lustie.UnityDocfx.Resource>
+  nameWithType.vb: List(Of Resource)
+  fullName.vb: System.Collections.Generic.List(Of Lustie.UnityDocfx.Resource)
+  name.vb: List(Of Resource)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - uid: Lustie.UnityDocfx.Resource
+    name: Resource
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Lustie.UnityDocfx.Resource
+    name: Resource
+  - name: )
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -461,6 +537,36 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+  - name: )
 - uid: Lustie.UnityDocfx.Build.fullDest*
   commentId: Overload:Lustie.UnityDocfx.Build.fullDest
   name: fullDest

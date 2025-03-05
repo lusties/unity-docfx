@@ -9,11 +9,16 @@ items:
   - Lustie.UnityDocfx.DocfxData
   - Lustie.UnityDocfx.DocfxService
   - Lustie.UnityDocfx.DocfxSetupTool
+  - Lustie.UnityDocfx.DocfxTemplates
   - Lustie.UnityDocfx.DocfxTemplatesPath
   - Lustie.UnityDocfx.GlobalMetadata
+  - Lustie.UnityDocfx.HelpBox
   - Lustie.UnityDocfx.JObjectExtensions
   - Lustie.UnityDocfx.LiveServer
   - Lustie.UnityDocfx.Metadata
+  - Lustie.UnityDocfx.PathField
+  - Lustie.UnityDocfx.PathField.PathType
+  - Lustie.UnityDocfx.Resource
   - Lustie.UnityDocfx.SomeExtensions
   - Lustie.UnityDocfx.SortOption
   - Lustie.UnityDocfx.SortOrder
@@ -42,6 +47,11 @@ references:
   name: DocfxSetupTool
   nameWithType: DocfxSetupTool
   fullName: Lustie.UnityDocfx.DocfxSetupTool
+- uid: Lustie.UnityDocfx.DocfxTemplates
+  commentId: T:Lustie.UnityDocfx.DocfxTemplates
+  name: DocfxTemplates
+  nameWithType: DocfxTemplates
+  fullName: Lustie.UnityDocfx.DocfxTemplates
 - uid: Lustie.UnityDocfx.LiveServer
   commentId: T:Lustie.UnityDocfx.LiveServer
   parent: Lustie.UnityDocfx
@@ -65,23 +75,23 @@ references:
   name: UIPath
   nameWithType: UIPath
   fullName: Lustie.UnityDocfx.UIPath
-- uid: Lustie.UnityDocfx.DocfxData
-  commentId: T:Lustie.UnityDocfx.DocfxData
-  parent: Lustie.UnityDocfx
-  name: DocfxData
-  nameWithType: DocfxData
-  fullName: Lustie.UnityDocfx.DocfxData
-- uid: Lustie.UnityDocfx.TOC
-  commentId: T:Lustie.UnityDocfx.TOC
-  name: TOC
-  nameWithType: TOC
-  fullName: Lustie.UnityDocfx.TOC
 - uid: Lustie.UnityDocfx.UnityDocset
   commentId: T:Lustie.UnityDocfx.UnityDocset
   parent: Lustie.UnityDocfx
   name: UnityDocset
   nameWithType: UnityDocset
   fullName: Lustie.UnityDocfx.UnityDocset
+- uid: Lustie.UnityDocfx.TOC
+  commentId: T:Lustie.UnityDocfx.TOC
+  name: TOC
+  nameWithType: TOC
+  fullName: Lustie.UnityDocfx.TOC
+- uid: Lustie.UnityDocfx.DocfxData
+  commentId: T:Lustie.UnityDocfx.DocfxData
+  parent: Lustie.UnityDocfx
+  name: DocfxData
+  nameWithType: DocfxData
+  fullName: Lustie.UnityDocfx.DocfxData
 - uid: Lustie.UnityDocfx.Metadata
   commentId: T:Lustie.UnityDocfx.Metadata
   name: Metadata
@@ -109,11 +119,44 @@ references:
   name: Content
   nameWithType: Content
   fullName: Lustie.UnityDocfx.Content
+- uid: Lustie.UnityDocfx.Resource
+  commentId: T:Lustie.UnityDocfx.Resource
+  name: Resource
+  nameWithType: Resource
+  fullName: Lustie.UnityDocfx.Resource
 - uid: Lustie.UnityDocfx.DocfxTemplatesPath
   commentId: T:Lustie.UnityDocfx.DocfxTemplatesPath
   name: DocfxTemplatesPath
   nameWithType: DocfxTemplatesPath
   fullName: Lustie.UnityDocfx.DocfxTemplatesPath
+- uid: Lustie.UnityDocfx.HelpBox
+  commentId: T:Lustie.UnityDocfx.HelpBox
+  name: HelpBox
+  nameWithType: HelpBox
+  fullName: Lustie.UnityDocfx.HelpBox
+- uid: Lustie.UnityDocfx.PathField
+  commentId: T:Lustie.UnityDocfx.PathField
+  name: PathField
+  nameWithType: PathField
+  fullName: Lustie.UnityDocfx.PathField
+- uid: Lustie.UnityDocfx.PathField.PathType
+  commentId: T:Lustie.UnityDocfx.PathField.PathType
+  parent: Lustie.UnityDocfx
+  name: PathField.PathType
+  nameWithType: PathField.PathType
+  fullName: Lustie.UnityDocfx.PathField.PathType
+  spec.csharp:
+  - uid: Lustie.UnityDocfx.PathField
+    name: PathField
+  - name: .
+  - uid: Lustie.UnityDocfx.PathField.PathType
+    name: PathType
+  spec.vb:
+  - uid: Lustie.UnityDocfx.PathField
+    name: PathField
+  - name: .
+  - uid: Lustie.UnityDocfx.PathField.PathType
+    name: PathType
 - uid: Lustie.UnityDocfx.JObjectExtensions
   commentId: T:Lustie.UnityDocfx.JObjectExtensions
   name: JObjectExtensions

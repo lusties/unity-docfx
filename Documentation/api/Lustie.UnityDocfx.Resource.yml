@@ -1,29 +1,22 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Lustie.UnityDocfx.DocfxData
-  commentId: T:Lustie.UnityDocfx.DocfxData
-  id: DocfxData
+- uid: Lustie.UnityDocfx.Resource
+  commentId: T:Lustie.UnityDocfx.Resource
+  id: Resource
   parent: Lustie.UnityDocfx
   children:
-  - Lustie.UnityDocfx.DocfxData._appFooter
-  - Lustie.UnityDocfx.DocfxData._appTitle
-  - Lustie.UnityDocfx.DocfxData._enableSearch
-  - Lustie.UnityDocfx.DocfxData.baseUrl
-  - Lustie.UnityDocfx.DocfxData.dest
-  - Lustie.UnityDocfx.DocfxData.exclude
-  - Lustie.UnityDocfx.DocfxData.fullDest
-  - Lustie.UnityDocfx.DocfxData.src
+  - Lustie.UnityDocfx.Resource.files
   langs:
   - csharp
   - vb
-  name: DocfxData
-  nameWithType: DocfxData
-  fullName: Lustie.UnityDocfx.DocfxData
+  name: Resource
+  nameWithType: Resource
+  fullName: Lustie.UnityDocfx.Resource
   type: Class
   source:
-    id: DocfxData
+    id: Resource
     path: ''
-    startLine: 6
+    startLine: 1382
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -31,11 +24,11 @@ items:
     content: >-
       [Serializable]
 
-      public class DocfxData
+      public class Resource
     content.vb: >-
       <Serializable>
 
-      Public Class DocfxData
+      Public Class Resource
   inheritance:
   - System.Object
   inheritedMembers:
@@ -50,208 +43,29 @@ items:
   - type: System.SerializableAttribute
     ctor: System.SerializableAttribute.#ctor
     arguments: []
-- uid: Lustie.UnityDocfx.DocfxData.src
-  commentId: F:Lustie.UnityDocfx.DocfxData.src
-  id: src
-  parent: Lustie.UnityDocfx.DocfxData
+- uid: Lustie.UnityDocfx.Resource.files
+  commentId: F:Lustie.UnityDocfx.Resource.files
+  id: files
+  parent: Lustie.UnityDocfx.Resource
   langs:
   - csharp
   - vb
-  name: src
-  nameWithType: DocfxData.src
-  fullName: Lustie.UnityDocfx.DocfxData.src
+  name: files
+  nameWithType: Resource.files
+  fullName: Lustie.UnityDocfx.Resource.files
   type: Field
   source:
-    id: src
+    id: files
     path: ''
-    startLine: 12
+    startLine: 1385
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
-  summary: "\nmetadata.src.files\n"
-  example: []
   syntax:
-    content: public List<string> src
+    content: public List<string> files
     return:
       type: System.Collections.Generic.List{System.String}
-    content.vb: Public src As List(Of String)
-- uid: Lustie.UnityDocfx.DocfxData.exclude
-  commentId: F:Lustie.UnityDocfx.DocfxData.exclude
-  id: exclude
-  parent: Lustie.UnityDocfx.DocfxData
-  langs:
-  - csharp
-  - vb
-  name: exclude
-  nameWithType: DocfxData.exclude
-  fullName: Lustie.UnityDocfx.DocfxData.exclude
-  type: Field
-  source:
-    id: exclude
-    path: ''
-    startLine: 17
-  assemblies:
-  - cs.temp.dll
-  namespace: Lustie.UnityDocfx
-  summary: "\nmetadata.src.exclude\n"
-  example: []
-  syntax:
-    content: public List<string> exclude
-    return:
-      type: System.Collections.Generic.List{System.String}
-    content.vb: Public exclude As List(Of String)
-- uid: Lustie.UnityDocfx.DocfxData._appTitle
-  commentId: F:Lustie.UnityDocfx.DocfxData._appTitle
-  id: _appTitle
-  parent: Lustie.UnityDocfx.DocfxData
-  langs:
-  - csharp
-  - vb
-  name: _appTitle
-  nameWithType: DocfxData._appTitle
-  fullName: Lustie.UnityDocfx.DocfxData._appTitle
-  type: Field
-  source:
-    id: _appTitle
-    path: ''
-    startLine: 22
-  assemblies:
-  - cs.temp.dll
-  namespace: Lustie.UnityDocfx
-  summary: "\nbuild.globalMetadata._appTitle\n"
-  example: []
-  syntax:
-    content: public string _appTitle
-    return:
-      type: System.String
-    content.vb: Public _appTitle As String
-- uid: Lustie.UnityDocfx.DocfxData._appFooter
-  commentId: F:Lustie.UnityDocfx.DocfxData._appFooter
-  id: _appFooter
-  parent: Lustie.UnityDocfx.DocfxData
-  langs:
-  - csharp
-  - vb
-  name: _appFooter
-  nameWithType: DocfxData._appFooter
-  fullName: Lustie.UnityDocfx.DocfxData._appFooter
-  type: Field
-  source:
-    id: _appFooter
-    path: ''
-    startLine: 27
-  assemblies:
-  - cs.temp.dll
-  namespace: Lustie.UnityDocfx
-  summary: "\nbuild.globalMetadata._appFooter\n"
-  example: []
-  syntax:
-    content: public string _appFooter
-    return:
-      type: System.String
-    content.vb: Public _appFooter As String
-- uid: Lustie.UnityDocfx.DocfxData._enableSearch
-  commentId: F:Lustie.UnityDocfx.DocfxData._enableSearch
-  id: _enableSearch
-  parent: Lustie.UnityDocfx.DocfxData
-  langs:
-  - csharp
-  - vb
-  name: _enableSearch
-  nameWithType: DocfxData._enableSearch
-  fullName: Lustie.UnityDocfx.DocfxData._enableSearch
-  type: Field
-  source:
-    id: _enableSearch
-    path: ''
-    startLine: 32
-  assemblies:
-  - cs.temp.dll
-  namespace: Lustie.UnityDocfx
-  summary: "\nbuild.globalMetadata._enableSearch\n"
-  example: []
-  syntax:
-    content: public bool _enableSearch
-    return:
-      type: System.Boolean
-    content.vb: Public _enableSearch As Boolean
-- uid: Lustie.UnityDocfx.DocfxData.baseUrl
-  commentId: F:Lustie.UnityDocfx.DocfxData.baseUrl
-  id: baseUrl
-  parent: Lustie.UnityDocfx.DocfxData
-  langs:
-  - csharp
-  - vb
-  name: baseUrl
-  nameWithType: DocfxData.baseUrl
-  fullName: Lustie.UnityDocfx.DocfxData.baseUrl
-  type: Field
-  source:
-    id: baseUrl
-    path: ''
-    startLine: 37
-  assemblies:
-  - cs.temp.dll
-  namespace: Lustie.UnityDocfx
-  summary: "\nsitemap.baseUrl\n"
-  example: []
-  syntax:
-    content: public string baseUrl
-    return:
-      type: System.String
-    content.vb: Public baseUrl As String
-- uid: Lustie.UnityDocfx.DocfxData.dest
-  commentId: F:Lustie.UnityDocfx.DocfxData.dest
-  id: dest
-  parent: Lustie.UnityDocfx.DocfxData
-  langs:
-  - csharp
-  - vb
-  name: dest
-  nameWithType: DocfxData.dest
-  fullName: Lustie.UnityDocfx.DocfxData.dest
-  type: Field
-  source:
-    id: dest
-    path: ''
-    startLine: 42
-  assemblies:
-  - cs.temp.dll
-  namespace: Lustie.UnityDocfx
-  summary: "\nbuild.dest\n"
-  example: []
-  syntax:
-    content: public string dest
-    return:
-      type: System.String
-    content.vb: Public dest As String
-- uid: Lustie.UnityDocfx.DocfxData.fullDest
-  commentId: P:Lustie.UnityDocfx.DocfxData.fullDest
-  id: fullDest
-  parent: Lustie.UnityDocfx.DocfxData
-  langs:
-  - csharp
-  - vb
-  name: fullDest
-  nameWithType: DocfxData.fullDest
-  fullName: Lustie.UnityDocfx.DocfxData.fullDest
-  type: Property
-  source:
-    id: fullDest
-    path: ''
-    startLine: 48
-  assemblies:
-  - cs.temp.dll
-  namespace: Lustie.UnityDocfx
-  summary: "\nGets the full destination path.\n"
-  example: []
-  syntax:
-    content: public string fullDest { get; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public ReadOnly Property fullDest As String
-  overload: Lustie.UnityDocfx.DocfxData.fullDest*
+    content.vb: Public files As List(Of String)
 references:
 - uid: Lustie.UnityDocfx
   commentId: N:Lustie.UnityDocfx
@@ -559,28 +373,3 @@ references:
   - uid: System.Collections.Generic
     name: Generic
     isExternal: true
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
-- uid: Lustie.UnityDocfx.DocfxData.fullDest*
-  commentId: Overload:Lustie.UnityDocfx.DocfxData.fullDest
-  name: fullDest
-  nameWithType: DocfxData.fullDest
-  fullName: Lustie.UnityDocfx.DocfxData.fullDest

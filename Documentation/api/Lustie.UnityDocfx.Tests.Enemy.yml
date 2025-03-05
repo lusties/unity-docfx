@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Lustie.UnityDocfx.Tests.Enemy
+  commentId: T:Lustie.UnityDocfx.Tests.Enemy
+  id: Enemy
+  parent: Lustie.UnityDocfx.Tests
+  children:
+  - Lustie.UnityDocfx.Tests.Enemy.armor
+  - Lustie.UnityDocfx.Tests.Enemy.health
+  - Lustie.UnityDocfx.Tests.Enemy.Move(Vector2)
+  langs:
+  - csharp
+  - vb
+  name: Enemy
+  nameWithType: Enemy
+  fullName: Lustie.UnityDocfx.Tests.Enemy
+  type: Class
+  source:
+    id: Enemy
+    path: ''
+    startLine: 1688
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx.Tests
+  summary: "\nRepresents an enemy in the game\n"
+  example: []
+  syntax:
+    content: 'public class Enemy : MonoBehaviour'
+    content.vb: Public Class Enemy Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Lustie.UnityDocfx.Tests.Enemy.health
+  commentId: F:Lustie.UnityDocfx.Tests.Enemy.health
+  id: health
+  parent: Lustie.UnityDocfx.Tests.Enemy
+  langs:
+  - csharp
+  - vb
+  name: health
+  nameWithType: Enemy.health
+  fullName: Lustie.UnityDocfx.Tests.Enemy.health
+  type: Field
+  source:
+    id: health
+    path: ''
+    startLine: 1693
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx.Tests
+  summary: "\nThe health of the enemy\n"
+  example: []
+  syntax:
+    content: public int health
+    return:
+      type: System.Int32
+    content.vb: Public health As Integer
+- uid: Lustie.UnityDocfx.Tests.Enemy.armor
+  commentId: P:Lustie.UnityDocfx.Tests.Enemy.armor
+  id: armor
+  parent: Lustie.UnityDocfx.Tests.Enemy
+  langs:
+  - csharp
+  - vb
+  name: armor
+  nameWithType: Enemy.armor
+  fullName: Lustie.UnityDocfx.Tests.Enemy.armor
+  type: Property
+  source:
+    id: armor
+    path: ''
+    startLine: 1698
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx.Tests
+  summary: "\nThe armor of the enemy\n"
+  example: []
+  syntax:
+    content: public float armor { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property armor As Single
+  overload: Lustie.UnityDocfx.Tests.Enemy.armor*
+- uid: Lustie.UnityDocfx.Tests.Enemy.Move(Vector2)
+  commentId: M:Lustie.UnityDocfx.Tests.Enemy.Move(Vector2)
+  id: Move(Vector2)
+  parent: Lustie.UnityDocfx.Tests.Enemy
+  langs:
+  - csharp
+  - vb
+  name: Move(Vector2)
+  nameWithType: Enemy.Move(Vector2)
+  fullName: Lustie.UnityDocfx.Tests.Enemy.Move(Vector2)
+  type: Method
+  source:
+    id: Move
+    path: ''
+    startLine: 1704
+  assemblies:
+  - cs.temp.dll
+  namespace: Lustie.UnityDocfx.Tests
+  summary: "\nMove the enemy\n"
+  example: []
+  syntax:
+    content: public void Move(Vector2 direction)
+    parameters:
+    - id: direction
+      type: Global.Vector2
+      description: move direction
+    content.vb: Public Sub Move(direction As Vector2)
+  overload: Lustie.UnityDocfx.Tests.Enemy.Move*
+references:
+- uid: Lustie.UnityDocfx.Tests
+  commentId: N:Lustie.UnityDocfx.Tests
+  name: Lustie.UnityDocfx.Tests
+  nameWithType: Lustie.UnityDocfx.Tests
+  fullName: Lustie.UnityDocfx.Tests
+  spec.csharp:
+  - uid: Lustie
+    name: Lustie
+  - name: .
+  - uid: Lustie.UnityDocfx
+    name: UnityDocfx
+  - name: .
+  - uid: Lustie.UnityDocfx.Tests
+    name: Tests
+  spec.vb:
+  - uid: Lustie
+    name: Lustie
+  - name: .
+  - uid: Lustie.UnityDocfx
+    name: UnityDocfx
+  - name: .
+  - uid: Lustie.UnityDocfx.Tests
+    name: Tests
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Lustie.UnityDocfx.Tests.Enemy.armor*
+  commentId: Overload:Lustie.UnityDocfx.Tests.Enemy.armor
+  name: armor
+  nameWithType: Enemy.armor
+  fullName: Lustie.UnityDocfx.Tests.Enemy.armor
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Lustie.UnityDocfx.Tests.Enemy.Move*
+  commentId: Overload:Lustie.UnityDocfx.Tests.Enemy.Move
+  name: Move
+  nameWithType: Enemy.Move
+  fullName: Lustie.UnityDocfx.Tests.Enemy.Move
+- uid: Global.Vector2
+  commentId: '!:Global.Vector2'
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Vector2

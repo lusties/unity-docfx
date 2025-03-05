@@ -19,10 +19,12 @@ items:
   source:
     id: DocfxSetupTool
     path: ''
-    startLine: 249
+    startLine: 312
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
+  summary: "\nUnityDocfx Tool Window\n"
+  example: []
   syntax:
     content: 'public class DocfxSetupTool : EditorWindow'
     content.vb: Public Class DocfxSetupTool Inherits EditorWindow
@@ -42,7 +44,7 @@ items:
   source:
     id: Open
     path: ''
-    startLine: 888
+    startLine: 904
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -64,7 +66,7 @@ items:
   source:
     id: ShowWindow
     path: ''
-    startLine: 895
+    startLine: 911
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -89,7 +91,7 @@ items:
   source:
     id: GetWindow
     path: ''
-    startLine: 901
+    startLine: 917
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -113,7 +115,7 @@ items:
   source:
     id: OpenAsset
     path: ''
-    startLine: 906
+    startLine: 922
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx

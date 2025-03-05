@@ -21,10 +21,12 @@ items:
   source:
     id: LiveServer
     path: ''
-    startLine: 930
+    startLine: 972
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
+  summary: "\nSimple HTTP server to serve static websites.\n"
+  example: []
   syntax:
     content: 'public class LiveServer : IDisposable'
     content.vb: Public Class LiveServer Implements IDisposable
@@ -54,7 +56,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 938
+    startLine: 980
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -84,7 +86,7 @@ items:
   source:
     id: Run
     path: ''
-    startLine: 949
+    startLine: 991
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -106,7 +108,7 @@ items:
   source:
     id: Dispose
     path: ''
-    startLine: 1040
+    startLine: 1082
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -130,7 +132,7 @@ items:
   source:
     id: IsRunning
     path: ''
-    startLine: 1047
+    startLine: 1089
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -155,7 +157,7 @@ items:
   source:
     id: GetUrl
     path: ''
-    startLine: 1049
+    startLine: 1091
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
@@ -179,7 +181,7 @@ items:
   source:
     id: op_Implicit
     path: ''
-    startLine: 1051
+    startLine: 1093
   assemblies:
   - cs.temp.dll
   namespace: Lustie.UnityDocfx
