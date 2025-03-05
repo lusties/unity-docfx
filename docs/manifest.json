@@ -376,7 +376,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/Manual.html",
-          "hash": "+0iHDeasw59FeTQPtE25k7Tt9Mew4yoSSL/X8uBRyaw="
+          "hash": "3yF2z3WDaxfYnvLPIFmBZ3bC+Gz8EYXjXUv+M4wcZNU="
         }
       },
       "is_incremental": false,
@@ -384,8 +384,8 @@
     },
     {
       "log_codes": [
-        "InvalidFileLink",
-        "codesnippet-not-found"
+        "codesnippet-not-found",
+        "InvalidFileLink"
       ],
       "type": "Conceptual",
       "source_relative_path": "manual/Markdown.md",

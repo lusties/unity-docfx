@@ -136,8 +136,8 @@
   },
   "manual/Manual.html": {
     "href": "manual/Manual.html",
-    "title": "| Unity Docfx",
-    "keywords": "Note Information the user should notice even if skimming. Tip Optional information to help a user be more successful. Important Essential information required for user success. Caution Negative potential consequences of an action. Warning Dangerous certain consequences of an action. This sentence uses $ delimiters to show math inline: $\\sqrt{3x-1}+(1+x)^2$ flowchart LR A[Hard] -->|Text| B(Round) B --> C{Decision} C -->|One| D[Result 1] C -->|Two| E[Result 2] Linux Windows Content for Linux... Content for Windows..."
+    "title": "Manual | Unity Docfx",
+    "keywords": "Manual"
   },
   "manual/Markdown.html": {
     "href": "manual/Markdown.html",
