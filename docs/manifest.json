@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.Build.html",
-          "hash": "CMFQCB4T5LqsuH7X79s570C9w3sEkgI5BEtrNW8/PIw="
+          "hash": "zMPitrm5olXK5S2g6T52i5nvzzomT2y+jDedF7YObII="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.Content.html",
-          "hash": "WCsXM0cr7RFftmV3u13LxWiG6jbmaJbuIktZe6ZRPsM="
+          "hash": "qrDuVA3UuH5KNYOIG7YLr9Qz5uFNx0RlG3EY5WXYxeU="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.DocfxData.html",
-          "hash": "xbZGmY+XU9qOpDqUIa7A8L+Gn9q65hDA8y31XVBc1jU="
+          "hash": "VMMtFGvxn2vcaSEU8qZCP2Ar+EOqE0jh7/0ru3yTePY="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.DocfxService.html",
-          "hash": "r2CWpAEpdMM+ZDCJRAYVADlkWS+MgUbcjkPd8XxZ9FQ="
+          "hash": "NdulxejPaNwe2dI4jaeD2t9n+Jp+okg3O0LHN0JHObE="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.DocfxSetupTool.html",
-          "hash": "oLZCqP1F6m7S5q7GKu9yCMoCmp67YUe6HcCBeWLvvR4="
+          "hash": "5nHUS/uzklb4Id+UEuX1kYWztASo3sNwomsaaR43vdc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lustie.UnityDocfx.DocfxTemplates.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lustie.UnityDocfx.DocfxTemplates.html",
+          "hash": "l3cDPU7JG+DySvdNjFtPApSj8ZilemOx3KaYZ8BLgxY="
         }
       },
       "is_incremental": false,
@@ -78,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.DocfxTemplatesPath.html",
-          "hash": "rztgr32hGVQhZgd2MYPTgGuTiDfyg91XERUsI2mDAYM="
+          "hash": "8upt+a7jjpHCO5Tf9xunvG1eCuXscpiEc6cyoHUZip0="
         }
       },
       "is_incremental": false,
@@ -90,7 +102,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.GlobalMetadata.html",
-          "hash": "VqhYmqLtTONRVLyHvp75OKxVyYehCBt0Q0ZC+hTGqq0="
+          "hash": "MM5pH5xuHn1s8GSx6vJXDy8hUZbi0C0baHaCf5aIBLE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lustie.UnityDocfx.HelpBox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lustie.UnityDocfx.HelpBox.html",
+          "hash": "M5xL7qKV2LXGFmmQ7la/DSIg6kcCvkIE+dkgMFy3L7I="
         }
       },
       "is_incremental": false,
@@ -102,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.JObjectExtensions.html",
-          "hash": "4fUWgoGVIwUiLQDe3qVo3eeYQu97B0JZ7HP2vZ1q6b8="
+          "hash": "MVzByI0jV9ls5KMTAWSxFy/rjrCF7eIkojy4o2rF2cE="
         }
       },
       "is_incremental": false,
@@ -114,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.LiveServer.html",
-          "hash": "0AMDHF3SpTDUNfUFzifZiUMglGk+syJiz4VUnVvNAX4="
+          "hash": "zS3ZjFwdJsHC+I+i9TsHkoWLt/btsdyrovv62If+jac="
         }
       },
       "is_incremental": false,
@@ -126,7 +150,43 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.Metadata.html",
-          "hash": "9MUkipdfFdlSZrSLm+dKaW5tJ5LZJ5wCMSDF8ZJESkU="
+          "hash": "m9RGHolzl82n4n77gqvpSS8poabzC6QYxsQpuFsUJs8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lustie.UnityDocfx.PathField.PathType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lustie.UnityDocfx.PathField.PathType.html",
+          "hash": "bBno0ss5ByJRJhJUH/DfMgONcN5kly9sq8OgQkUvAfs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lustie.UnityDocfx.PathField.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lustie.UnityDocfx.PathField.html",
+          "hash": "vD5MnC1RyYZqVqol+iQ4C/GVi3oVlxr4x8DRKsuSNEc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lustie.UnityDocfx.Resource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lustie.UnityDocfx.Resource.html",
+          "hash": "xZN2yMjNJ217O1rFh0w2OAqMo68c5cKLocNfQZyon80="
         }
       },
       "is_incremental": false,
@@ -138,7 +198,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.SomeExtensions.html",
-          "hash": "o47qEdlQSVp7S/dl2rM6Rdi4VpcrZnx35O8xHyFePUM="
+          "hash": "VRqDxT5ZMg9fwAaUX4NyV57XwzBiwxWjSC23BCE2kto="
         }
       },
       "is_incremental": false,
@@ -150,7 +210,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.SortOption.html",
-          "hash": "RlwJP1eWjmBE0w1O5In+sxviyhrR2Zaq2v5fifV6Nmk="
+          "hash": "afRiX6i/Z4urGYyWP8AcSomUhLuxZvprBbtjIXnhhak="
         }
       },
       "is_incremental": false,
@@ -162,7 +222,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.SortOrder.html",
-          "hash": "Cbpwaf0HwatyWD3ZyJw0TPGCL43vqaacGxXzO1tneKw="
+          "hash": "h+aJuXQ7undcafS6pz1yrTcJ/+nD3I6CoYgXo3OY8P4="
         }
       },
       "is_incremental": false,
@@ -174,7 +234,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.Src.html",
-          "hash": "sjR8TAt3ma+5ILth6katZA3pcVkd1qDPMTS+bVyt5jg="
+          "hash": "8DPI3VZ6sLosPDMXqo1NG95lw1Xq/wGNijTrRvRGbLY="
         }
       },
       "is_incremental": false,
@@ -186,7 +246,43 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.TOC.html",
-          "hash": "tzXpKBLntH3ejEZy8hrHIouY1vLsyHOrfZOzJRgHPu8="
+          "hash": "IJp2e1NKKkJpZBv6OX1XcF9qV0MPN4hhX4AAUL4Sjok="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lustie.UnityDocfx.Tests.Enemy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lustie.UnityDocfx.Tests.Enemy.html",
+          "hash": "Gq4ytfcmQ891JeiYJMyeX9QQU+bfoG9fg/BIjTO8QqQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lustie.UnityDocfx.Tests.Player.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lustie.UnityDocfx.Tests.Player.html",
+          "hash": "vejA4xE+fk8eD9dO817BBBWBT3D9zBvVvJocv/dbduM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lustie.UnityDocfx.Tests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lustie.UnityDocfx.Tests.html",
+          "hash": "4Xxpdny3LwYuwUrJ38tXkQlsYt0SbNCv2yVOo0/62pE="
         }
       },
       "is_incremental": false,
@@ -198,7 +294,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.UIPath.html",
-          "hash": "hAQ3I/xWTq3MG2Q9JhYJsqizAMvAFRURGVPNLmDnFbU="
+          "hash": "5qODuLAPwg7njLrMepwOUssv+VrVpRIod8z5s42yWm8="
         }
       },
       "is_incremental": false,
@@ -210,7 +306,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.UnityDocset.html",
-          "hash": "g2wtb6EWP0okL1ET8Nj4+uQ+T+jxBHriKwUu/KXjMR0="
+          "hash": "rb6BkWvcx3LwZ/qLqsezVe5qgksrPdoUrdjh8rzpv4E="
         }
       },
       "is_incremental": false,
@@ -222,7 +318,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lustie.UnityDocfx.html",
-          "hash": "C+xPsRKtnJz5gT9pbEjQr8+ystMNT/bKduRL+gEBqJs="
+          "hash": "Pau3uQ16UqskQrU7hbKwAL2OLOv2bR9T6h/pMUCAGwg="
         }
       },
       "is_incremental": false,
@@ -234,7 +330,29 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "6LFelhLQM7NCHDMmlxVh8UyD/QLVfmJ/H7iased87o0="
+          "hash": "V8+jZ/O5Kdwdrlp2oSSQQGTRsir/wmHpusF5ilAwJbQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "icon/bruh.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "icon/bruh.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "icon/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "icon/favicon.ico"
         }
       },
       "is_incremental": false,
@@ -246,7 +364,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "ksB2ZkbCwYtT3z0d0sPUPiLqVgby+9A1tD+wczy0BPg="
+          "hash": "y4DyBuWDdbWqXYlWOEr9CopsggyCKQtuOeyvKXmn0Lw="
         }
       },
       "is_incremental": false,
@@ -258,7 +376,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/Manual.html",
-          "hash": "0y5ThAHNrpVrNVkpP9qMjchRBN0M6XrS+04i3pCE/OA="
+          "hash": "+0iHDeasw59FeTQPtE25k7Tt9Mew4yoSSL/X8uBRyaw="
         }
       },
       "is_incremental": false,
@@ -274,7 +392,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/Markdown.html",
-          "hash": "qSfKTVxSYq/hW8xRJkPbNDwJR6To0A1bAzAmPi/aBw4="
+          "hash": "G8zOf7sqbh7FGoOnIujHSE0LlA350RdDTXWNGpFZ7x4="
         }
       },
       "is_incremental": false,
@@ -325,7 +443,14 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 18,
+          "total_file_count": 26,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

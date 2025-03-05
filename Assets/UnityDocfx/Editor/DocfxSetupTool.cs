@@ -145,7 +145,7 @@ namespace Lustie.UnityDocfx
             }
 
             //Help box message
-            HelpBox helpBox = new HelpBox(helpBoxMessage, helpBoxType);
+            UnityEngine.UIElements.HelpBox helpBox = new UnityEngine.UIElements.HelpBox(helpBoxMessage, helpBoxType);
             helpBox.style.flexShrink = helpBox.style.flexGrow = 1;
 
             VisualElement installInfoContainer = rootVisualElement.Q<VisualElement>("docfx").Q<VisualElement>("install-info");
@@ -234,37 +234,13 @@ namespace Lustie.UnityDocfx
             };
             srcListView.itemsChosen += (items) => { OnTOCItemSelected(); };
             srcListView.selectedIndex = 0;
-
-            docfxSettingsContainer.Q<TextField>("_appTitle").BindProperty(FindProp("docfxJson.build.globalMetadata._appTitle"));
-            docfxSettingsContainer.Q<TextField>("_appFooter").BindProperty(FindProp("docfxJson.build.globalMetadata._appFooter"));
-            docfxSettingsContainer.Q<Toggle>("_enableSearch").BindProperty(FindProp("docfxJson.build.globalMetadata._enableSearch"));
         }
 
         void QueryOutputSettings()
         {
             VisualElement outputContainer = rootVisualElement.Q<VisualElement>("output-container");
-            var txtDest = outputContainer.Q<TextField>("dest");
-            txtDest.BindProperty(FindProp("docfxJson.build.dest"));
-
-            outputContainer.Q<Button>("btn-output-browse").RegisterCallback<ClickEvent>(evt =>
-            {
-                string outputDir = EditorUtility.OpenFolderPanel("Browse Output Directory", "", "");
-                if (!string.IsNullOrWhiteSpace(outputDir))
-                    txtDest.value = outputDir;
-            });
-
-            outputContainer.Q<Button>("btn-output-view").RegisterCallback<ClickEvent>(evt =>
-            {
-                string folderPath = unityDocset.docfxJson.build.fullDest;
-                if (Directory.Exists(folderPath))
-                {
-                    Process.Start("explorer.exe", folderPath);
-                }
-                else
-                {
-                    EditorUtility.DisplayDialog("Path doesn't exist", $"Path: {folderPath} DOES NOT EXIST", "OK");
-                }
-            });
+            PathField destField = outputContainer.Q<PathField>();
+            destField.BindProperty(FindProp("docfxJson.build.dest"));
         }
 
         void QueryServerSettings()
@@ -293,6 +269,18 @@ namespace Lustie.UnityDocfx
         void QueryTemplateSettings()
         {
             VisualElement templateContainer = rootVisualElement.Q<VisualElement>("template-container");
+
+            // template metadata
+            string globalMetadata = "docfxJson.build.globalMetadata";
+            templateContainer.Q<TextField>("_appTitle").BindProperty(FindProp($"{globalMetadata}._appTitle"));
+            templateContainer.Q<TextField>("_appName").BindProperty(FindProp($"{globalMetadata}._appName"));
+            templateContainer.Q<TextField>("_appFooter").BindProperty(FindProp($"{globalMetadata}._appFooter"));
+            templateContainer.Q<PathField>("_appLogoPath").BindProperty(FindProp($"{globalMetadata}._appLogoPath"));
+            templateContainer.Q<PathField>("_appFaviconPath").BindProperty(FindProp($"{globalMetadata}._appFaviconPath"));
+            templateContainer.Q<Toggle>("_enableSearch").BindProperty(FindProp($"{globalMetadata}._enableSearch"));
+            templateContainer.Q<Toggle>("_disableContribution").BindProperty(FindProp($"{globalMetadata}._disableContribution"));
+
+            // template list
             ListView templateList = templateContainer.Q<ListView>("list-templates");
             templateList.itemsSource = unityDocset.docfxJson.build.template;
 
@@ -558,7 +546,7 @@ jobs:
 
         void ServeDocfxCommand()
         {
-            using Process docfxProcess = DocfxService.GetDocfxCommand("serve", unityDocset.folder);
+            using Process docfxProcess = DocfxService.GetDocfxCommand("--serve", unityDocset.folder);
             docfxProcess.Start();
             docfxProcess.BeginOutputReadLine();
             docfxProcess.BeginErrorReadLine();

@@ -2,7 +2,7 @@
   "api/Lustie.UnityDocfx.Build.html": {
     "href": "api/Lustie.UnityDocfx.Build.html",
     "title": "Class Build | Unity Docfx",
-    "keywords": "Class Build Inheritance object Build Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax [Serializable] public class Build Fields content Declaration public List<Content> content Field Value Type Description System.Collections.Generic.List<T><Content> dest Declaration public string dest Field Value Type Description string globalMetadata Declaration public GlobalMetadata globalMetadata Field Value Type Description GlobalMetadata template Declaration public List<string> template Field Value Type Description System.Collections.Generic.List<T><string> Properties fullDest Declaration public string fullDest { get; } Property Value Type Description string"
+    "keywords": "Class Build Inheritance object Build Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax [Serializable] public class Build Fields content Declaration public List<Content> content Field Value Type Description System.Collections.Generic.List<T><Content> dest Declaration public string dest Field Value Type Description string globalMetadata Declaration public GlobalMetadata globalMetadata Field Value Type Description GlobalMetadata resource Declaration public List<Resource> resource Field Value Type Description System.Collections.Generic.List<T><Resource> template Declaration public List<string> template Field Value Type Description System.Collections.Generic.List<T><string> Properties fullDest Declaration public string fullDest { get; } Property Value Type Description string"
   },
   "api/Lustie.UnityDocfx.Content.html": {
     "href": "api/Lustie.UnityDocfx.Content.html",
@@ -22,7 +22,12 @@
   "api/Lustie.UnityDocfx.DocfxSetupTool.html": {
     "href": "api/Lustie.UnityDocfx.DocfxSetupTool.html",
     "title": "Class DocfxSetupTool | Unity Docfx",
-    "keywords": "Class DocfxSetupTool Inheritance object DocfxSetupTool Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax public class DocfxSetupTool : EditorWindow Methods GetWindow() Declaration public static DocfxSetupTool GetWindow() Returns Type Description DocfxSetupTool Open() Declaration public static void Open() OpenAsset(int, int) Declaration public static bool OpenAsset(int instanceID, int line) Parameters Type Name Description int instanceID int line Returns Type Description bool ShowWindow(UnityDocset) Declaration public static void ShowWindow(UnityDocset unityDocset) Parameters Type Name Description UnityDocset unityDocset"
+    "keywords": "Class DocfxSetupTool UnityDocfx Tool Window Inheritance object DocfxSetupTool Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax public class DocfxSetupTool : EditorWindow Methods GetWindow() Declaration public static DocfxSetupTool GetWindow() Returns Type Description DocfxSetupTool Open() Declaration public static void Open() OpenAsset(int, int) Declaration public static bool OpenAsset(int instanceID, int line) Parameters Type Name Description int instanceID int line Returns Type Description bool ShowWindow(UnityDocset) Declaration public static void ShowWindow(UnityDocset unityDocset) Parameters Type Name Description UnityDocset unityDocset"
+  },
+  "api/Lustie.UnityDocfx.DocfxTemplates.html": {
+    "href": "api/Lustie.UnityDocfx.DocfxTemplates.html",
+    "title": "Class DocfxTemplates | Unity Docfx",
+    "keywords": "Class DocfxTemplates Contains template links for Docfx. Inheritance object DocfxTemplates Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax public class DocfxTemplates Fields templateLinks List of the template links. Declaration public static readonly (string title, string url)[] templateLinks Field Value Type Description (string title, string url)[]"
   },
   "api/Lustie.UnityDocfx.DocfxTemplatesPath.html": {
     "href": "api/Lustie.UnityDocfx.DocfxTemplatesPath.html",
@@ -32,12 +37,17 @@
   "api/Lustie.UnityDocfx.GlobalMetadata.html": {
     "href": "api/Lustie.UnityDocfx.GlobalMetadata.html",
     "title": "Class GlobalMetadata | Unity Docfx",
-    "keywords": "Class GlobalMetadata template metadata: https://dotnet.github.io/docfx/docs/template.html?tabs=modern#template-metadata Inheritance object GlobalMetadata Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax [Serializable] public class GlobalMetadata Fields _appFooter Declaration public string _appFooter Field Value Type Description string _appName Declaration public string _appName Field Value Type Description string _appTitle Declaration public string _appTitle Field Value Type Description string _enableSearch Declaration public bool _enableSearch Field Value Type Description bool"
+    "keywords": "Class GlobalMetadata template metadata: https://dotnet.github.io/docfx/docs/template.html?tabs=modern#template-metadata Inheritance object GlobalMetadata Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax [Serializable] public class GlobalMetadata Fields _appFaviconPath Declaration public string _appFaviconPath Field Value Type Description string _appFooter Declaration public string _appFooter Field Value Type Description string _appLogoPath Declaration public string _appLogoPath Field Value Type Description string _appLogoUrl Declaration public string _appLogoUrl Field Value Type Description string _appName Declaration public string _appName Field Value Type Description string _appTitle Declaration public string _appTitle Field Value Type Description string _disableContribution Declaration public bool _disableContribution Field Value Type Description bool _enableSearch Declaration public bool _enableSearch Field Value Type Description bool"
+  },
+  "api/Lustie.UnityDocfx.HelpBox.html": {
+    "href": "api/Lustie.UnityDocfx.HelpBox.html",
+    "title": "Class HelpBox | Unity Docfx",
+    "keywords": "Class HelpBox Inheritance object HelpBox Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax public class HelpBox : UnityEngine.UIElements.HelpBox Constructors HelpBox() Declaration public HelpBox()"
   },
   "api/Lustie.UnityDocfx.html": {
     "href": "api/Lustie.UnityDocfx.html",
     "title": "Namespace Lustie.UnityDocfx | Unity Docfx",
-    "keywords": "Namespace Lustie.UnityDocfx Classes Build Content DocfxData DocfxService Provides services for interacting with docfx, including checking installation, installing docfx, opening command prompts, and running docfx commands. DocfxSetupTool DocfxTemplatesPath GlobalMetadata template metadata: https://dotnet.github.io/docfx/docs/template.html?tabs=modern#template-metadata JObjectExtensions LiveServer Metadata SomeExtensions Src TOC UIPath UnityDocset Enums SortOption SortOrder"
+    "keywords": "Namespace Lustie.UnityDocfx Classes Build Content DocfxData DocfxService Provides services for interacting with docfx, including checking installation, installing docfx, opening command prompts, and running docfx commands. DocfxSetupTool UnityDocfx Tool Window DocfxTemplates Contains template links for Docfx. DocfxTemplatesPath GlobalMetadata template metadata: https://dotnet.github.io/docfx/docs/template.html?tabs=modern#template-metadata HelpBox JObjectExtensions LiveServer Simple HTTP server to serve static websites. Metadata PathField Resource SomeExtensions Src TOC UIPath UnityDocset Unity Docset data Enums PathField.PathType SortOption SortOrder"
   },
   "api/Lustie.UnityDocfx.JObjectExtensions.html": {
     "href": "api/Lustie.UnityDocfx.JObjectExtensions.html",
@@ -47,12 +57,27 @@
   "api/Lustie.UnityDocfx.LiveServer.html": {
     "href": "api/Lustie.UnityDocfx.LiveServer.html",
     "title": "Class LiveServer | Unity Docfx",
-    "keywords": "Class LiveServer Inheritance object LiveServer Implements System.IDisposable Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax public class LiveServer : IDisposable Constructors LiveServer(string, int) Declaration public LiveServer(string folderPath, int port) Parameters Type Name Description string folderPath int port Properties IsRunning Declaration public bool IsRunning { get; } Property Value Type Description bool Methods Dispose() Declaration public void Dispose() GetUrl() Declaration public string GetUrl() Returns Type Description string Run() Declaration public void Run() Operators implicit operator bool(LiveServer) Declaration public static implicit operator bool(LiveServer server) Parameters Type Name Description LiveServer server Returns Type Description bool Implements System.IDisposable"
+    "keywords": "Class LiveServer Simple HTTP server to serve static websites. Inheritance object LiveServer Implements System.IDisposable Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax public class LiveServer : IDisposable Constructors LiveServer(string, int) Declaration public LiveServer(string folderPath, int port) Parameters Type Name Description string folderPath int port Properties IsRunning Declaration public bool IsRunning { get; } Property Value Type Description bool Methods Dispose() Declaration public void Dispose() GetUrl() Declaration public string GetUrl() Returns Type Description string Run() Declaration public void Run() Operators implicit operator bool(LiveServer) Declaration public static implicit operator bool(LiveServer server) Parameters Type Name Description LiveServer server Returns Type Description bool Implements System.IDisposable"
   },
   "api/Lustie.UnityDocfx.Metadata.html": {
     "href": "api/Lustie.UnityDocfx.Metadata.html",
     "title": "Class Metadata | Unity Docfx",
     "keywords": "Class Metadata Inheritance object Metadata Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax [Serializable] public class Metadata Fields dest Declaration public string dest Field Value Type Description string globalNamespaceId Declaration public string globalNamespaceId Field Value Type Description string src Declaration public List<Src> src Field Value Type Description System.Collections.Generic.List<T><Src>"
+  },
+  "api/Lustie.UnityDocfx.PathField.html": {
+    "href": "api/Lustie.UnityDocfx.PathField.html",
+    "title": "Class PathField | Unity Docfx",
+    "keywords": "Class PathField Inheritance object PathField Implements IBindable INotifyValueChanged<><string> Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax public class PathField : VisualElement, IBindable, INotifyValueChanged<string> Constructors PathField() Declaration public PathField() Properties binding Declaration public IBinding binding { get; set; } Property Value Type Description IBinding bindingPath Declaration public string bindingPath { get; set; } Property Value Type Description string buttonBrowseLabel Declaration public string buttonBrowseLabel { get; set; } Property Value Type Description string buttonViewLabel Declaration public string buttonViewLabel { get; set; } Property Value Type Description string extensions Declaration public string extensions { get; set; } Property Value Type Description string FullPath Declaration public string FullPath { get; } Property Value Type Description string label Declaration public string label { get; set; } Property Value Type Description string pathType Declaration public PathField.PathType pathType { get; set; } Property Value Type Description PathField.PathType value Declaration public string value { get; set; } Property Value Type Description string Methods SetValueWithoutNotify(string) Declaration public void SetValueWithoutNotify(string newValue) Parameters Type Name Description string newValue Implements IBindable INotifyValueChanged<>"
+  },
+  "api/Lustie.UnityDocfx.PathField.PathType.html": {
+    "href": "api/Lustie.UnityDocfx.PathField.PathType.html",
+    "title": "Enum PathField.PathType | Unity Docfx",
+    "keywords": "Enum PathField.PathType Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax public enum PathField.PathType Fields Name Description Directory File"
+  },
+  "api/Lustie.UnityDocfx.Resource.html": {
+    "href": "api/Lustie.UnityDocfx.Resource.html",
+    "title": "Class Resource | Unity Docfx",
+    "keywords": "Class Resource Inheritance object Resource Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax [Serializable] public class Resource Fields files Declaration public List<string> files Field Value Type Description System.Collections.Generic.List<T><string>"
   },
   "api/Lustie.UnityDocfx.SomeExtensions.html": {
     "href": "api/Lustie.UnityDocfx.SomeExtensions.html",
@@ -74,6 +99,21 @@
     "title": "Class Src | Unity Docfx",
     "keywords": "Class Src Inheritance object Src Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax [Serializable] public class Src Fields exclude Declaration public List<string> exclude Field Value Type Description System.Collections.Generic.List<T><string> files Declaration public List<string> files Field Value Type Description System.Collections.Generic.List<T><string> src Declaration public string src Field Value Type Description string"
   },
+  "api/Lustie.UnityDocfx.Tests.Enemy.html": {
+    "href": "api/Lustie.UnityDocfx.Tests.Enemy.html",
+    "title": "Class Enemy | Unity Docfx",
+    "keywords": "Class Enemy Represents an enemy in the game Inheritance object Enemy Namespace: Lustie.UnityDocfx.Tests Assembly: cs.temp.dll.dll Syntax public class Enemy : MonoBehaviour Fields health The health of the enemy Declaration public int health Field Value Type Description int Properties armor The armor of the enemy Declaration public float armor { get; set; } Property Value Type Description float Methods Move(Vector2) Move the enemy Declaration public void Move(Vector2 direction) Parameters Type Name Description Vector2 direction move direction"
+  },
+  "api/Lustie.UnityDocfx.Tests.html": {
+    "href": "api/Lustie.UnityDocfx.Tests.html",
+    "title": "Namespace Lustie.UnityDocfx.Tests | Unity Docfx",
+    "keywords": "Namespace Lustie.UnityDocfx.Tests Classes Enemy Represents an enemy in the game Player Player controller"
+  },
+  "api/Lustie.UnityDocfx.Tests.Player.html": {
+    "href": "api/Lustie.UnityDocfx.Tests.Player.html",
+    "title": "Class Player | Unity Docfx",
+    "keywords": "Class Player Player controller Inheritance object Player Namespace: Lustie.UnityDocfx.Tests Assembly: cs.temp.dll.dll Syntax public class Player : MonoBehaviour Methods Start() Start is called before the first frame update Declaration public void Start() Update() Update is called once per frame Declaration public void Update()"
+  },
   "api/Lustie.UnityDocfx.TOC.html": {
     "href": "api/Lustie.UnityDocfx.TOC.html",
     "title": "Class TOC | Unity Docfx",
@@ -87,7 +127,7 @@
   "api/Lustie.UnityDocfx.UnityDocset.html": {
     "href": "api/Lustie.UnityDocfx.UnityDocset.html",
     "title": "Class UnityDocset | Unity Docfx",
-    "keywords": "Class UnityDocset Inheritance object UnityDocset Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax public class UnityDocset : ScriptableObject Fields docfxJson docfx.json data Declaration public DocfxData docfxJson Field Value Type Description DocfxData folder Folder Declaration public string folder Field Value Type Description string port Server's port Declaration public int port Field Value Type Description int TOC Table of contents list Declaration public List<TOC> TOC Field Value Type Description System.Collections.Generic.List<T><TOC> Properties currentDocfxFolderPath Get current documentaion directory where contains docfx.json Declaration public string currentDocfxFolderPath { get; } Property Value Type Description string"
+    "keywords": "Class UnityDocset Unity Docset data Inheritance object UnityDocset Namespace: Lustie.UnityDocfx Assembly: cs.temp.dll.dll Syntax public class UnityDocset : ScriptableObject Fields docfxJson docfx.json data Declaration public DocfxData docfxJson Field Value Type Description DocfxData folder Folder Declaration public string folder Field Value Type Description string port Server's port Declaration public int port Field Value Type Description int TOC Table of contents list Declaration public List<TOC> TOC Field Value Type Description System.Collections.Generic.List<T><TOC> Properties currentDocfxFolderPath Get current documentaion directory where contains docfx.json Declaration public string currentDocfxFolderPath { get; } Property Value Type Description string"
   },
   "index.html": {
     "href": "index.html",

@@ -44,6 +44,12 @@ references:
   commentId: F:Lustie.UnityDocfx.Build.globalMetadata
   fullName: Lustie.UnityDocfx.Build.globalMetadata
   nameWithType: Build.globalMetadata
+- uid: Lustie.UnityDocfx.Build.resource
+  name: resource
+  href: api/Lustie.UnityDocfx.Build.html#Lustie_UnityDocfx_Build_resource
+  commentId: F:Lustie.UnityDocfx.Build.resource
+  fullName: Lustie.UnityDocfx.Build.resource
+  nameWithType: Build.resource
 - uid: Lustie.UnityDocfx.Build.template
   name: template
   href: api/Lustie.UnityDocfx.Build.html#Lustie_UnityDocfx_Build_template
@@ -251,6 +257,18 @@ references:
   isSpec: "True"
   fullName: Lustie.UnityDocfx.DocfxSetupTool.ShowWindow
   nameWithType: DocfxSetupTool.ShowWindow
+- uid: Lustie.UnityDocfx.DocfxTemplates
+  name: DocfxTemplates
+  href: api/Lustie.UnityDocfx.DocfxTemplates.html
+  commentId: T:Lustie.UnityDocfx.DocfxTemplates
+  fullName: Lustie.UnityDocfx.DocfxTemplates
+  nameWithType: DocfxTemplates
+- uid: Lustie.UnityDocfx.DocfxTemplates.templateLinks
+  name: templateLinks
+  href: api/Lustie.UnityDocfx.DocfxTemplates.html#Lustie_UnityDocfx_DocfxTemplates_templateLinks
+  commentId: F:Lustie.UnityDocfx.DocfxTemplates.templateLinks
+  fullName: Lustie.UnityDocfx.DocfxTemplates.templateLinks
+  nameWithType: DocfxTemplates.templateLinks
 - uid: Lustie.UnityDocfx.DocfxTemplatesPath
   name: DocfxTemplatesPath
   href: api/Lustie.UnityDocfx.DocfxTemplatesPath.html
@@ -292,12 +310,30 @@ references:
   commentId: T:Lustie.UnityDocfx.GlobalMetadata
   fullName: Lustie.UnityDocfx.GlobalMetadata
   nameWithType: GlobalMetadata
+- uid: Lustie.UnityDocfx.GlobalMetadata._appFaviconPath
+  name: _appFaviconPath
+  href: api/Lustie.UnityDocfx.GlobalMetadata.html#Lustie_UnityDocfx_GlobalMetadata__appFaviconPath
+  commentId: F:Lustie.UnityDocfx.GlobalMetadata._appFaviconPath
+  fullName: Lustie.UnityDocfx.GlobalMetadata._appFaviconPath
+  nameWithType: GlobalMetadata._appFaviconPath
 - uid: Lustie.UnityDocfx.GlobalMetadata._appFooter
   name: _appFooter
   href: api/Lustie.UnityDocfx.GlobalMetadata.html#Lustie_UnityDocfx_GlobalMetadata__appFooter
   commentId: F:Lustie.UnityDocfx.GlobalMetadata._appFooter
   fullName: Lustie.UnityDocfx.GlobalMetadata._appFooter
   nameWithType: GlobalMetadata._appFooter
+- uid: Lustie.UnityDocfx.GlobalMetadata._appLogoPath
+  name: _appLogoPath
+  href: api/Lustie.UnityDocfx.GlobalMetadata.html#Lustie_UnityDocfx_GlobalMetadata__appLogoPath
+  commentId: F:Lustie.UnityDocfx.GlobalMetadata._appLogoPath
+  fullName: Lustie.UnityDocfx.GlobalMetadata._appLogoPath
+  nameWithType: GlobalMetadata._appLogoPath
+- uid: Lustie.UnityDocfx.GlobalMetadata._appLogoUrl
+  name: _appLogoUrl
+  href: api/Lustie.UnityDocfx.GlobalMetadata.html#Lustie_UnityDocfx_GlobalMetadata__appLogoUrl
+  commentId: F:Lustie.UnityDocfx.GlobalMetadata._appLogoUrl
+  fullName: Lustie.UnityDocfx.GlobalMetadata._appLogoUrl
+  nameWithType: GlobalMetadata._appLogoUrl
 - uid: Lustie.UnityDocfx.GlobalMetadata._appName
   name: _appName
   href: api/Lustie.UnityDocfx.GlobalMetadata.html#Lustie_UnityDocfx_GlobalMetadata__appName
@@ -310,12 +346,43 @@ references:
   commentId: F:Lustie.UnityDocfx.GlobalMetadata._appTitle
   fullName: Lustie.UnityDocfx.GlobalMetadata._appTitle
   nameWithType: GlobalMetadata._appTitle
+- uid: Lustie.UnityDocfx.GlobalMetadata._disableContribution
+  name: _disableContribution
+  href: api/Lustie.UnityDocfx.GlobalMetadata.html#Lustie_UnityDocfx_GlobalMetadata__disableContribution
+  commentId: F:Lustie.UnityDocfx.GlobalMetadata._disableContribution
+  fullName: Lustie.UnityDocfx.GlobalMetadata._disableContribution
+  nameWithType: GlobalMetadata._disableContribution
 - uid: Lustie.UnityDocfx.GlobalMetadata._enableSearch
   name: _enableSearch
   href: api/Lustie.UnityDocfx.GlobalMetadata.html#Lustie_UnityDocfx_GlobalMetadata__enableSearch
   commentId: F:Lustie.UnityDocfx.GlobalMetadata._enableSearch
   fullName: Lustie.UnityDocfx.GlobalMetadata._enableSearch
   nameWithType: GlobalMetadata._enableSearch
+- uid: Lustie.UnityDocfx.HelpBox
+  name: HelpBox
+  href: api/Lustie.UnityDocfx.HelpBox.html
+  commentId: T:Lustie.UnityDocfx.HelpBox
+  fullName: Lustie.UnityDocfx.HelpBox
+  nameWithType: HelpBox
+- uid: Lustie.UnityDocfx.HelpBox.#ctor
+  name: HelpBox()
+  href: api/Lustie.UnityDocfx.HelpBox.html#Lustie_UnityDocfx_HelpBox__ctor
+  commentId: M:Lustie.UnityDocfx.HelpBox.#ctor
+  name.vb: New()
+  fullName: Lustie.UnityDocfx.HelpBox.HelpBox()
+  fullName.vb: Lustie.UnityDocfx.HelpBox.New()
+  nameWithType: HelpBox.HelpBox()
+  nameWithType.vb: HelpBox.New()
+- uid: Lustie.UnityDocfx.HelpBox.#ctor*
+  name: HelpBox
+  href: api/Lustie.UnityDocfx.HelpBox.html#Lustie_UnityDocfx_HelpBox__ctor_
+  commentId: Overload:Lustie.UnityDocfx.HelpBox.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Lustie.UnityDocfx.HelpBox.HelpBox
+  fullName.vb: Lustie.UnityDocfx.HelpBox.New
+  nameWithType: HelpBox.HelpBox
+  nameWithType.vb: HelpBox.New
 - uid: Lustie.UnityDocfx.JObjectExtensions
   name: JObjectExtensions
   href: api/Lustie.UnityDocfx.JObjectExtensions.html
@@ -521,6 +588,194 @@ references:
   commentId: F:Lustie.UnityDocfx.Metadata.src
   fullName: Lustie.UnityDocfx.Metadata.src
   nameWithType: Metadata.src
+- uid: Lustie.UnityDocfx.PathField
+  name: PathField
+  href: api/Lustie.UnityDocfx.PathField.html
+  commentId: T:Lustie.UnityDocfx.PathField
+  fullName: Lustie.UnityDocfx.PathField
+  nameWithType: PathField
+- uid: Lustie.UnityDocfx.PathField.#ctor
+  name: PathField()
+  href: api/Lustie.UnityDocfx.PathField.html#Lustie_UnityDocfx_PathField__ctor
+  commentId: M:Lustie.UnityDocfx.PathField.#ctor
+  name.vb: New()
+  fullName: Lustie.UnityDocfx.PathField.PathField()
+  fullName.vb: Lustie.UnityDocfx.PathField.New()
+  nameWithType: PathField.PathField()
+  nameWithType.vb: PathField.New()
+- uid: Lustie.UnityDocfx.PathField.#ctor*
+  name: PathField
+  href: api/Lustie.UnityDocfx.PathField.html#Lustie_UnityDocfx_PathField__ctor_
+  commentId: Overload:Lustie.UnityDocfx.PathField.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Lustie.UnityDocfx.PathField.PathField
+  fullName.vb: Lustie.UnityDocfx.PathField.New
+  nameWithType: PathField.PathField
+  nameWithType.vb: PathField.New
+- uid: Lustie.UnityDocfx.PathField.binding
+  name: binding
+  href: api/Lustie.UnityDocfx.PathField.html#Lustie_UnityDocfx_PathField_binding
+  commentId: P:Lustie.UnityDocfx.PathField.binding
+  fullName: Lustie.UnityDocfx.PathField.binding
+  nameWithType: PathField.binding
+- uid: Lustie.UnityDocfx.PathField.binding*
+  name: binding
+  href: api/Lustie.UnityDocfx.PathField.html#Lustie_UnityDocfx_PathField_binding_
+  commentId: Overload:Lustie.UnityDocfx.PathField.binding
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.PathField.binding
+  nameWithType: PathField.binding
+- uid: Lustie.UnityDocfx.PathField.bindingPath
+  name: bindingPath
+  href: api/Lustie.UnityDocfx.PathField.html#Lustie_UnityDocfx_PathField_bindingPath
+  commentId: P:Lustie.UnityDocfx.PathField.bindingPath
+  fullName: Lustie.UnityDocfx.PathField.bindingPath
+  nameWithType: PathField.bindingPath
+- uid: Lustie.UnityDocfx.PathField.bindingPath*
+  name: bindingPath
+  href: api/Lustie.UnityDocfx.PathField.html#Lustie_UnityDocfx_PathField_bindingPath_
+  commentId: Overload:Lustie.UnityDocfx.PathField.bindingPath
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.PathField.bindingPath
+  nameWithType: PathField.bindingPath
+- uid: Lustie.UnityDocfx.PathField.buttonBrowseLabel
+  name: buttonBrowseLabel
+  href: api/Lustie.UnityDocfx.PathField.html#Lustie_UnityDocfx_PathField_buttonBrowseLabel
+  commentId: P:Lustie.UnityDocfx.PathField.buttonBrowseLabel
+  fullName: Lustie.UnityDocfx.PathField.buttonBrowseLabel
+  nameWithType: PathField.buttonBrowseLabel
+- uid: Lustie.UnityDocfx.PathField.buttonBrowseLabel*
+  name: buttonBrowseLabel
+  href: api/Lustie.UnityDocfx.PathField.html#Lustie_UnityDocfx_PathField_buttonBrowseLabel_
+  commentId: Overload:Lustie.UnityDocfx.PathField.buttonBrowseLabel
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.PathField.buttonBrowseLabel
+  nameWithType: PathField.buttonBrowseLabel
+- uid: Lustie.UnityDocfx.PathField.buttonViewLabel
+  name: buttonViewLabel
+  href: api/Lustie.UnityDocfx.PathField.html#Lustie_UnityDocfx_PathField_buttonViewLabel
+  commentId: P:Lustie.UnityDocfx.PathField.buttonViewLabel
+  fullName: Lustie.UnityDocfx.PathField.buttonViewLabel
+  nameWithType: PathField.buttonViewLabel
+- uid: Lustie.UnityDocfx.PathField.buttonViewLabel*
+  name: buttonViewLabel
+  href: api/Lustie.UnityDocfx.PathField.html#Lustie_UnityDocfx_PathField_buttonViewLabel_
+  commentId: Overload:Lustie.UnityDocfx.PathField.buttonViewLabel
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.PathField.buttonViewLabel
+  nameWithType: PathField.buttonViewLabel
+- uid: Lustie.UnityDocfx.PathField.extensions
+  name: extensions
+  href: api/Lustie.UnityDocfx.PathField.html#Lustie_UnityDocfx_PathField_extensions
+  commentId: P:Lustie.UnityDocfx.PathField.extensions
+  fullName: Lustie.UnityDocfx.PathField.extensions
+  nameWithType: PathField.extensions
+- uid: Lustie.UnityDocfx.PathField.extensions*
+  name: extensions
+  href: api/Lustie.UnityDocfx.PathField.html#Lustie_UnityDocfx_PathField_extensions_
+  commentId: Overload:Lustie.UnityDocfx.PathField.extensions
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.PathField.extensions
+  nameWithType: PathField.extensions
+- uid: Lustie.UnityDocfx.PathField.FullPath
+  name: FullPath
+  href: api/Lustie.UnityDocfx.PathField.html#Lustie_UnityDocfx_PathField_FullPath
+  commentId: P:Lustie.UnityDocfx.PathField.FullPath
+  fullName: Lustie.UnityDocfx.PathField.FullPath
+  nameWithType: PathField.FullPath
+- uid: Lustie.UnityDocfx.PathField.FullPath*
+  name: FullPath
+  href: api/Lustie.UnityDocfx.PathField.html#Lustie_UnityDocfx_PathField_FullPath_
+  commentId: Overload:Lustie.UnityDocfx.PathField.FullPath
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.PathField.FullPath
+  nameWithType: PathField.FullPath
+- uid: Lustie.UnityDocfx.PathField.label
+  name: label
+  href: api/Lustie.UnityDocfx.PathField.html#Lustie_UnityDocfx_PathField_label
+  commentId: P:Lustie.UnityDocfx.PathField.label
+  fullName: Lustie.UnityDocfx.PathField.label
+  nameWithType: PathField.label
+- uid: Lustie.UnityDocfx.PathField.label*
+  name: label
+  href: api/Lustie.UnityDocfx.PathField.html#Lustie_UnityDocfx_PathField_label_
+  commentId: Overload:Lustie.UnityDocfx.PathField.label
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.PathField.label
+  nameWithType: PathField.label
+- uid: Lustie.UnityDocfx.PathField.pathType
+  name: pathType
+  href: api/Lustie.UnityDocfx.PathField.html#Lustie_UnityDocfx_PathField_pathType
+  commentId: P:Lustie.UnityDocfx.PathField.pathType
+  fullName: Lustie.UnityDocfx.PathField.pathType
+  nameWithType: PathField.pathType
+- uid: Lustie.UnityDocfx.PathField.PathType
+  name: PathField.PathType
+  href: api/Lustie.UnityDocfx.PathField.PathType.html
+  commentId: T:Lustie.UnityDocfx.PathField.PathType
+  fullName: Lustie.UnityDocfx.PathField.PathType
+  nameWithType: PathField.PathType
+- uid: Lustie.UnityDocfx.PathField.PathType.Directory
+  name: Directory
+  href: api/Lustie.UnityDocfx.PathField.PathType.html#Lustie_UnityDocfx_PathField_PathType_Directory
+  commentId: F:Lustie.UnityDocfx.PathField.PathType.Directory
+  fullName: Lustie.UnityDocfx.PathField.PathType.Directory
+  nameWithType: PathField.PathType.Directory
+- uid: Lustie.UnityDocfx.PathField.PathType.File
+  name: File
+  href: api/Lustie.UnityDocfx.PathField.PathType.html#Lustie_UnityDocfx_PathField_PathType_File
+  commentId: F:Lustie.UnityDocfx.PathField.PathType.File
+  fullName: Lustie.UnityDocfx.PathField.PathType.File
+  nameWithType: PathField.PathType.File
+- uid: Lustie.UnityDocfx.PathField.pathType*
+  name: pathType
+  href: api/Lustie.UnityDocfx.PathField.html#Lustie_UnityDocfx_PathField_pathType_
+  commentId: Overload:Lustie.UnityDocfx.PathField.pathType
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.PathField.pathType
+  nameWithType: PathField.pathType
+- uid: Lustie.UnityDocfx.PathField.SetValueWithoutNotify(System.String)
+  name: SetValueWithoutNotify(string)
+  href: api/Lustie.UnityDocfx.PathField.html#Lustie_UnityDocfx_PathField_SetValueWithoutNotify_System_String_
+  commentId: M:Lustie.UnityDocfx.PathField.SetValueWithoutNotify(System.String)
+  name.vb: SetValueWithoutNotify(String)
+  fullName: Lustie.UnityDocfx.PathField.SetValueWithoutNotify(string)
+  fullName.vb: Lustie.UnityDocfx.PathField.SetValueWithoutNotify(String)
+  nameWithType: PathField.SetValueWithoutNotify(string)
+  nameWithType.vb: PathField.SetValueWithoutNotify(String)
+- uid: Lustie.UnityDocfx.PathField.SetValueWithoutNotify*
+  name: SetValueWithoutNotify
+  href: api/Lustie.UnityDocfx.PathField.html#Lustie_UnityDocfx_PathField_SetValueWithoutNotify_
+  commentId: Overload:Lustie.UnityDocfx.PathField.SetValueWithoutNotify
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.PathField.SetValueWithoutNotify
+  nameWithType: PathField.SetValueWithoutNotify
+- uid: Lustie.UnityDocfx.PathField.value
+  name: value
+  href: api/Lustie.UnityDocfx.PathField.html#Lustie_UnityDocfx_PathField_value
+  commentId: P:Lustie.UnityDocfx.PathField.value
+  fullName: Lustie.UnityDocfx.PathField.value
+  nameWithType: PathField.value
+- uid: Lustie.UnityDocfx.PathField.value*
+  name: value
+  href: api/Lustie.UnityDocfx.PathField.html#Lustie_UnityDocfx_PathField_value_
+  commentId: Overload:Lustie.UnityDocfx.PathField.value
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.PathField.value
+  nameWithType: PathField.value
+- uid: Lustie.UnityDocfx.Resource
+  name: Resource
+  href: api/Lustie.UnityDocfx.Resource.html
+  commentId: T:Lustie.UnityDocfx.Resource
+  fullName: Lustie.UnityDocfx.Resource
+  nameWithType: Resource
+- uid: Lustie.UnityDocfx.Resource.files
+  name: files
+  href: api/Lustie.UnityDocfx.Resource.html#Lustie_UnityDocfx_Resource_files
+  commentId: F:Lustie.UnityDocfx.Resource.files
+  fullName: Lustie.UnityDocfx.Resource.files
+  nameWithType: Resource.files
 - uid: Lustie.UnityDocfx.SomeExtensions
   name: SomeExtensions
   href: api/Lustie.UnityDocfx.SomeExtensions.html
@@ -616,6 +871,82 @@ references:
   commentId: F:Lustie.UnityDocfx.Src.src
   fullName: Lustie.UnityDocfx.Src.src
   nameWithType: Src.src
+- uid: Lustie.UnityDocfx.Tests
+  name: Lustie.UnityDocfx.Tests
+  href: api/Lustie.UnityDocfx.Tests.html
+  commentId: N:Lustie.UnityDocfx.Tests
+  fullName: Lustie.UnityDocfx.Tests
+  nameWithType: Lustie.UnityDocfx.Tests
+- uid: Lustie.UnityDocfx.Tests.Enemy
+  name: Enemy
+  href: api/Lustie.UnityDocfx.Tests.Enemy.html
+  commentId: T:Lustie.UnityDocfx.Tests.Enemy
+  fullName: Lustie.UnityDocfx.Tests.Enemy
+  nameWithType: Enemy
+- uid: Lustie.UnityDocfx.Tests.Enemy.armor
+  name: armor
+  href: api/Lustie.UnityDocfx.Tests.Enemy.html#Lustie_UnityDocfx_Tests_Enemy_armor
+  commentId: P:Lustie.UnityDocfx.Tests.Enemy.armor
+  fullName: Lustie.UnityDocfx.Tests.Enemy.armor
+  nameWithType: Enemy.armor
+- uid: Lustie.UnityDocfx.Tests.Enemy.armor*
+  name: armor
+  href: api/Lustie.UnityDocfx.Tests.Enemy.html#Lustie_UnityDocfx_Tests_Enemy_armor_
+  commentId: Overload:Lustie.UnityDocfx.Tests.Enemy.armor
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.Tests.Enemy.armor
+  nameWithType: Enemy.armor
+- uid: Lustie.UnityDocfx.Tests.Enemy.health
+  name: health
+  href: api/Lustie.UnityDocfx.Tests.Enemy.html#Lustie_UnityDocfx_Tests_Enemy_health
+  commentId: F:Lustie.UnityDocfx.Tests.Enemy.health
+  fullName: Lustie.UnityDocfx.Tests.Enemy.health
+  nameWithType: Enemy.health
+- uid: Lustie.UnityDocfx.Tests.Enemy.Move(Vector2)
+  name: Move(Vector2)
+  href: api/Lustie.UnityDocfx.Tests.Enemy.html#Lustie_UnityDocfx_Tests_Enemy_Move_Vector2_
+  commentId: M:Lustie.UnityDocfx.Tests.Enemy.Move(Vector2)
+  fullName: Lustie.UnityDocfx.Tests.Enemy.Move(Vector2)
+  nameWithType: Enemy.Move(Vector2)
+- uid: Lustie.UnityDocfx.Tests.Enemy.Move*
+  name: Move
+  href: api/Lustie.UnityDocfx.Tests.Enemy.html#Lustie_UnityDocfx_Tests_Enemy_Move_
+  commentId: Overload:Lustie.UnityDocfx.Tests.Enemy.Move
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.Tests.Enemy.Move
+  nameWithType: Enemy.Move
+- uid: Lustie.UnityDocfx.Tests.Player
+  name: Player
+  href: api/Lustie.UnityDocfx.Tests.Player.html
+  commentId: T:Lustie.UnityDocfx.Tests.Player
+  fullName: Lustie.UnityDocfx.Tests.Player
+  nameWithType: Player
+- uid: Lustie.UnityDocfx.Tests.Player.Start
+  name: Start()
+  href: api/Lustie.UnityDocfx.Tests.Player.html#Lustie_UnityDocfx_Tests_Player_Start
+  commentId: M:Lustie.UnityDocfx.Tests.Player.Start
+  fullName: Lustie.UnityDocfx.Tests.Player.Start()
+  nameWithType: Player.Start()
+- uid: Lustie.UnityDocfx.Tests.Player.Start*
+  name: Start
+  href: api/Lustie.UnityDocfx.Tests.Player.html#Lustie_UnityDocfx_Tests_Player_Start_
+  commentId: Overload:Lustie.UnityDocfx.Tests.Player.Start
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.Tests.Player.Start
+  nameWithType: Player.Start
+- uid: Lustie.UnityDocfx.Tests.Player.Update
+  name: Update()
+  href: api/Lustie.UnityDocfx.Tests.Player.html#Lustie_UnityDocfx_Tests_Player_Update
+  commentId: M:Lustie.UnityDocfx.Tests.Player.Update
+  fullName: Lustie.UnityDocfx.Tests.Player.Update()
+  nameWithType: Player.Update()
+- uid: Lustie.UnityDocfx.Tests.Player.Update*
+  name: Update
+  href: api/Lustie.UnityDocfx.Tests.Player.html#Lustie_UnityDocfx_Tests_Player_Update_
+  commentId: Overload:Lustie.UnityDocfx.Tests.Player.Update
+  isSpec: "True"
+  fullName: Lustie.UnityDocfx.Tests.Player.Update
+  nameWithType: Player.Update
 - uid: Lustie.UnityDocfx.TOC
   name: TOC
   href: api/Lustie.UnityDocfx.TOC.html

@@ -18,15 +18,7 @@
             <ui:Foldout text="Metadata" name="Foldout" value="false" class="label-s">
                 <ui:Instance template="horizontal-line" name="horizontal-line" />
                 <ui:VisualElement name="docfx-s-container" style="flex-grow: 1; font-size: 12px;">
-                    <ui:ListView show-foldout-header="true" header-title="Src:" name="metadata-src" fixed-item-height="45" virtualization-method="DynamicHeight" reorderable="true" show-border="false" selection-type="Multiple" horizontal-scrolling="false" show-add-remove-footer="true" reorder-mode="Animated" />
-                    <ui:TextField picking-mode="Ignore" label="Title:" value="Unity docfx title" name="_appTitle" />
-                    <ui:TextField picking-mode="Ignore" label="Footer:" value="Unity docfx footer" name="_appFooter" multiline="true" />
-                    <ui:Toggle label="Enable Search:" value="true" name="_enableSearch" />
-                    <ui:Toggle label="Enable Darkmode:" value="true" />
-                    <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                        <ui:TextField picking-mode="Ignore" label="Enabl" value="filler text" style="flex-shrink: 1; flex-grow: 1;" />
-                        <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 50px;" />
-                    </ui:VisualElement>
+                    <ui:ListView show-foldout-header="false" header-title="Src:" name="metadata-src" fixed-item-height="45" virtualization-method="DynamicHeight" reorderable="true" show-border="false" selection-type="Multiple" horizontal-scrolling="false" show-add-remove-footer="true" reorder-mode="Animated" show-bound-collection-size="true" />
                 </ui:VisualElement>
             </ui:Foldout>
         </ui:VisualElement>
@@ -57,9 +49,18 @@
             </ui:Foldout>
         </ui:VisualElement>
         <ui:VisualElement name="template-container" class="settings-area" style="flex-grow: 1;">
-            <ui:Foldout text="Template" name="Foldout" value="false" class="label-s">
+            <ui:Foldout text="Template" name="Foldout" value="true" class="label-s">
                 <ui:Instance template="horizontal-line" name="horizontal-line" />
                 <ui:VisualElement style="flex-grow: 1; font-size: 12px;">
+                    <ui:TextField picking-mode="Ignore" label="Title:" name="_appTitle" />
+                    <ui:TextField picking-mode="Ignore" label="Footer:" name="_appFooter" multiline="true" />
+                    <ui:TextField picking-mode="Ignore" label="App Name:" name="_appName" multiline="true" />
+                    <Lustie.UnityDocfx.HelpBox text="Some templates do not support app name" message-type="Info" />
+                    <Lustie.UnityDocfx.PathField Label="App Logo Path:" name="_appLogoPath" path-type="File" />
+                    <Lustie.UnityDocfx.PathField Label="App Favicon Path:" name="_appFaviconPath" path-type="File" />
+                    <ui:Toggle label="Enable Search:" value="true" name="_enableSearch" />
+                    <ui:Toggle label="Disable Contribution" name="_disableContribution" />
+                    <ui:VisualElement name="spacing" style="flex-grow: 1; height: 28px;" />
                     <ui:VisualElement style="flex-grow: 1; flex-direction: row; border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-left-color: rgb(32, 32, 32); border-right-color: rgb(32, 32, 32); border-top-color: rgb(32, 32, 32); border-bottom-color: rgb(32, 32, 32); padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px;">
                         <ui:VisualElement style="flex-grow: 1; width: 40%;">
                             <ui:Label tabindex="-1" text="Avaiable templates:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" style="margin-bottom: 6px; -unity-font-style: bold;" />
@@ -83,11 +84,7 @@
                 <ui:Label tabindex="-1" text="Output" parse-escape-sequences="true" display-tooltip-when-elided="true" class="label-s" style="margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; -unity-text-align: middle-left;" />
             </ui:VisualElement>
             <ui:TextField picking-mode="Ignore" label="Folder:" value="filler text" name="txt-doc-folder" />
-            <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                <ui:TextField picking-mode="Ignore" label="Output:" name="dest" tooltip="Destination of the final document web project containing index.html. If you are about to build with GitHub Pages, you should keep it in the &apos;docs&apos; folder." style="flex-shrink: 1; flex-grow: 1;" />
-                <ui:Button text="Browse" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btn-output-browse" style="width: 50px;" />
-                <ui:Button text="View" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btn-output-view" style="width: 50px;" />
-            </ui:VisualElement>
+            <Lustie.UnityDocfx.PathField />
         </ui:VisualElement>
         <ui:VisualElement style="flex-grow: 1; margin-top: 35px;">
             <ui:Button text="Generate config files" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btn-build" class="btn-cmd" />

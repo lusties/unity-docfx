@@ -121,11 +121,11 @@ namespace Lustie.UnityDocfx
         /// <returns>A process configured to run the docfx command.</returns>
         public static Process GetDocfxCommand(string argument, string folder)
         {
-            string docfxJsonFullPath = Path.Combine(Directory.GetCurrentDirectory(), folder, "docfx.json");
+            string docfxJsonFullPath = string.Join("/", folder, "docfx.json");
             ProcessStartInfo psi = new ProcessStartInfo
             {
                 FileName = "cmd.exe",
-                Arguments = $"/C docfx \"{docfxJsonFullPath}\" {argument}",
+                Arguments = $"/C docfx {docfxJsonFullPath} {argument}",
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
                 UseShellExecute = false,
@@ -170,6 +170,8 @@ namespace Lustie.UnityDocfx
         {
             // Gen buid.content
             GenBuildContent(unityDocset);
+            // Gen build.resource
+            GenResource(unityDocset);
 
             var settings = new JsonSerializerSettings
             {
@@ -243,9 +245,18 @@ namespace Lustie.UnityDocfx
             }
         }
 
-        private static void GenTemplate(UnityDocset unityDocset)
+        private static void GenResource(UnityDocset unityDocset)
         {
-            var template = unityDocset.docfxJson.build.template;
+            var resource = unityDocset.docfxJson.build.resource;
+            if (resource.Count == 0)
+                resource.Add(new Resource());
+            resource[0].files.Clear();
+            string _appFaviconPath = unityDocset.docfxJson.build.globalMetadata._appFaviconPath;
+            if(!_appFaviconPath.StartsWith("http"))
+                resource[0].files.Add(_appFaviconPath);
+            string _appLogoPath = unityDocset.docfxJson.build.globalMetadata._appLogoPath;
+            if (!_appFaviconPath.StartsWith("http"))
+                resource[0].files.Add(_appLogoPath);
         }
 
         private static void CopyReadmeToIndex(string folderPath)

@@ -56,8 +56,10 @@ namespace Lustie.UnityDocfx
                 globalMetadata = new GlobalMetadata()
                 {
                     _appTitle = "Unity Docfx",
+                    _appName = "Unity Documentaion",
                     _appFooter = "Made by Unity-Docfx: https://github.com/lusties/unity-docfx",
-                    _enableSearch = true
+                    _enableSearch = true,
+                    _disableContribution = false,
                 },
 
                 content = new List<Content>()
@@ -70,6 +72,18 @@ namespace Lustie.UnityDocfx
                             "*.yml"
                         },
                         dest = "api"
+                    }
+                },
+
+                resource = new List<Resource>()
+                {
+                    new Resource()
+                    {
+                        files = new List<string>()
+                        {
+                            "icons/**",
+                            "resources/**"
+                        }
                     }
                 },
 
@@ -169,6 +183,7 @@ namespace Lustie.UnityDocfx
     {
         public GlobalMetadata globalMetadata;
         public List<Content> content;
+        public List<Resource> resource;
         public string dest;
         public List<string> template;
 
@@ -186,17 +201,29 @@ namespace Lustie.UnityDocfx
     [Serializable]
     public class GlobalMetadata
     {
-        [Tooltip("A string append to every page title.")]
+        [Tooltip("A string append to every page title")]
         public string _appTitle;
 
-        [Tooltip("The name of the site displayed after logo.")]
+        [Tooltip("The footer HTML")]
+        public string _appFooter;
+
+        [Tooltip("The name of the site displayed after logo")]
         public string _appName;
 
-        [Tooltip("The footer HTML.")]
-        public string _appFooter;
+        [Tooltip("Path to the app logo")]
+        public string _appLogoPath;
+
+        [Tooltip("URL for the app logo")]
+        public string _appLogoUrl;
+
+        [Tooltip("Favicon URL path")]
+        public string _appFaviconPath;
 
         [Tooltip("Whether to show the search box")]
         public bool _enableSearch;
+
+        [Tooltip("Whether to show the \"Edit this page\" button")]
+        public bool _disableContribution;
     }
 
     [Serializable]
@@ -205,7 +232,12 @@ namespace Lustie.UnityDocfx
         public string src;
         public List<string> files;
         public string dest;
+    }
 
+    [Serializable]
+    public class Resource
+    {
+        public List<string> files;
     }
 
     #endregion
